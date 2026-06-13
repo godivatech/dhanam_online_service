@@ -1,0 +1,617 @@
+Create a WORLD-CLASS MULTI-PAGE corporate website for A.B. Dhanam Online Services.
+
+IMPORTANT:
+This is NOT a landing page.
+This is NOT a one-page website.
+This is NOT a template business website.
+
+Build a complete premium multi-page website architecture similar to large legal firms, consulting firms, and enterprise service companies.
+
+The website should feel like it was designed by a top-tier agency with a budget of ₹5–10 Lakhs.
+
+=================================================
+COMPANY INFORMATION
+=================================================
+
+Company:
+A.B. Dhanam Online Services
+
+Tagline:
+Fast • Reliable • Professional
+
+Managing Director:
+A.B. Alagiri Rajan
+
+Experience:
+9+ Years
+
+Customers:
+5000+
+
+Industry:
+Registration & Documentation Consultancy
+
+Core Services:
+
+Property Registration
+Marriage Registration
+Trust Registration
+Society Registration
+Encumbrance Certificate
+Certified Copy
+Legal Documentation Support
+
+=================================================
+WEBSITE SITEMAP
+=================================================
+
+HOME
+
+ABOUT US
+
+SERVICES
+├── Property Registration
+├── Marriage Registration
+├── Trust Registration
+├── Society Registration
+├── Encumbrance Certificate
+├── Certified Copy Services
+└── Legal Documentation
+
+PROJECTS & CLIENTS
+
+WHY CHOOSE US
+
+TESTIMONIALS
+
+FAQ
+
+BLOG / RESOURCES
+
+CONTACT US
+
+BOOK CONSULTATION
+
+=================================================
+HOME PAGE
+=================================================
+
+Luxury Hero Section
+
+Premium background
+
+Headline:
+
+Tamil Nadu's Trusted Registration &
+Documentation Experts
+
+Subheadline:
+
+Professional registration and documentation services backed by experience, transparency, and customer trust.
+
+Trust Badges:
+
+5000+ Customers
+9+ Years Experience
+Professional Documentation
+Fast Processing
+
+Sections:
+
+Hero
+
+About Preview
+
+Featured Services
+
+Statistics
+
+Process Timeline
+
+Projects Showcase
+
+Testimonials Preview
+
+FAQ Preview
+
+Final CTA
+
+=================================================
+ABOUT PAGE
+=================================================
+
+Premium Storytelling Layout
+
+Sections:
+
+Company Overview
+
+Founder Profile
+
+Mission
+
+Vision
+
+Core Values
+
+Company Journey Timeline
+
+Achievements
+
+Business Network
+
+Why Clients Trust Us
+
+CTA
+
+=================================================
+SERVICES PAGE
+=================================================
+
+Premium Service Directory
+
+Show all services.
+
+Each service gets its own detailed page.
+
+-------------------------------------------------
+
+PROPERTY REGISTRATION PAGE
+
+Include:
+
+Sale Deed Registration
+
+Settlement Deed
+
+Partition Deed
+
+Release Deed
+
+Lease Deed
+
+Mortgage Documentation
+
+Power of Attorney
+
+Partnership Deed
+
+Required Documents
+
+Process
+
+Timeline
+
+Benefits
+
+FAQ
+
+Contact CTA
+
+-------------------------------------------------
+
+MARRIAGE REGISTRATION PAGE
+
+Include:
+
+Hindu Marriage
+
+Christian Marriage
+
+Muslim Marriage
+
+Special Marriage
+
+Required Documents
+
+Eligibility
+
+Process
+
+Timeline
+
+FAQ
+
+CTA
+
+-------------------------------------------------
+
+TRUST REGISTRATION PAGE
+
+Overview
+
+Requirements
+
+Benefits
+
+Process
+
+Documents
+
+FAQ
+
+CTA
+
+-------------------------------------------------
+
+SOCIETY REGISTRATION PAGE
+
+Overview
+
+Documents
+
+Process
+
+Benefits
+
+FAQ
+
+CTA
+
+-------------------------------------------------
+
+ENCUMBRANCE CERTIFICATE PAGE
+
+Overview
+
+Importance
+
+Process
+
+Timeline
+
+FAQ
+
+CTA
+
+-------------------------------------------------
+
+CERTIFIED COPY PAGE
+
+Overview
+
+Benefits
+
+Procedure
+
+Documents
+
+FAQ
+
+CTA
+
+-------------------------------------------------
+
+LEGAL DOCUMENTATION PAGE
+
+Overview
+
+Documentation Services
+
+Consultation Process
+
+Benefits
+
+FAQ
+
+CTA
+
+=================================================
+PROJECTS PAGE
+=================================================
+
+Premium Portfolio Layout
+
+Showcase:
+
+Srinivasa Nagar Layout
+
+Srinivasa Nagar Extension
+
+Srinivasa Nagar Phase II
+
+Yoga Narasimhar Nagar
+
+AR Residency
+
+Meenakshi Amman Nagar
+
+Sathyabama Nagar
+
+Andal Alagar Garden
+
+Viceroy's Garden
+
+Amman Nagar
+
+For each project:
+
+Project Overview
+
+Services Provided
+
+Completion Details
+
+Gallery Placeholder
+
+=================================================
+WHY CHOOSE US PAGE
+=================================================
+
+Detailed Trust Page
+
+5000+ Customers
+
+9+ Years Experience
+
+Professional Team
+
+Transparent Process
+
+Fast Service
+
+Dedicated Support
+
+Client-Centric Approach
+
+=================================================
+TESTIMONIAL PAGE
+=================================================
+
+Dedicated review page.
+
+Luxury testimonial cards.
+
+Star Ratings.
+
+Success Stories.
+
+Client Experience Timeline.
+
+=================================================
+BLOG PAGE
+=================================================
+
+Professional knowledge center.
+
+Categories:
+
+Property Registration
+
+Marriage Registration
+
+Trust Registration
+
+Society Registration
+
+Documentation Tips
+
+Legal Updates
+
+SEO optimized blog structure.
+
+=================================================
+FAQ PAGE
+=================================================
+
+Categorized FAQs.
+
+Property Registration
+
+Marriage Registration
+
+Trust Registration
+
+Society Registration
+
+General Queries
+
+Search Functionality.
+
+=================================================
+CONTACT PAGE
+=================================================
+
+Premium Contact Experience.
+
+Google Maps
+
+Contact Form
+
+Phone
+
+Email
+
+WhatsApp
+
+Business Hours
+
+Office Address
+
+=================================================
+BOOK CONSULTATION PAGE
+=================================================
+
+Premium lead-generation page.
+
+Multi-step consultation form.
+
+Fields:
+
+Name
+
+Phone
+
+Email
+
+Service Type
+
+Preferred Date
+
+Preferred Time
+
+Message
+
+Success Confirmation Page
+
+=================================================
+DESIGN SYSTEM
+=================================================
+
+Style:
+
+Luxury Corporate
+
+Enterprise Grade
+
+Premium Consulting Firm
+
+Modern Legal Practice
+
+High Trust
+
+Elegant
+
+Professional
+
+Minimal Yet Premium
+
+=================================================
+COLORS
+=================================================
+
+Primary:
+#0A2540
+
+Secondary:
+#0F4C81
+
+Accent:
+#D4AF37
+
+Background:
+#F8FAFC
+
+Text:
+#111827
+
+=================================================
+TYPOGRAPHY
+=================================================
+
+Headings:
+Playfair Display
+
+Body:
+Inter
+
+=================================================
+PREMIUM FEATURES
+=================================================
+
+Mega Menu Navigation
+
+Sticky Navbar
+
+Dark Mode
+
+Smooth Page Transitions
+
+Framer Motion Animations
+
+Animated Statistics
+
+Premium Hover Effects
+
+Parallax Scrolling
+
+Scroll Progress Bar
+
+WhatsApp Integration
+
+Call Now Integration
+
+Google Maps
+
+Schema Markup
+
+SEO Optimization
+
+Open Graph Metadata
+
+Breadcrumb Navigation
+
+Advanced Search
+
+Blog CMS Structure
+
+Lead Capture System
+
+Inquiry Management Structure
+
+Newsletter Subscription
+
+Premium Footer
+
+=================================================
+TECH STACK
+=================================================
+
+Next.js 15
+
+TypeScript
+
+Tailwind CSS
+
+ShadCN UI
+
+Framer Motion
+
+Lucide Icons
+
+React Hook Form
+
+Zod Validation
+
+=================================================
+DEVELOPMENT REQUIREMENTS
+=================================================
+
+Create a complete production-ready multi-page website.
+
+Generate:
+
+Folder Structure
+
+All Pages
+
+All Components
+
+Layouts
+
+Navigation
+
+Animations
+
+Responsive Design
+
+SEO Metadata
+
+Forms
+
+Page Transitions
+
+Loading States
+
+404 Page
+
+Privacy Policy Page
+
+Terms & Conditions Page
+
+Thank You Page
+
+The final result should look comparable to websites built for Deloitte, KPMG, EY, premium legal firms, or enterprise consulting companies.
+
+Avoid generic templates.
+Create a unique, premium, high-conversion, trust-focused corporate experience.

@@ -1,0 +1,53 @@
+import { Layout } from "@/components/layout/Layout";
+import { Link } from "wouter";
+import { CheckCircle2 } from "lucide-react";
+
+export default function LegalDocumentation() {
+  return (
+    <Layout>
+      <div className="bg-primary py-20 text-primary-foreground">
+        <div className="container mx-auto px-4">
+          <h1 className="text-4xl md:text-5xl font-serif font-bold mb-4">Legal Documentation</h1>
+          <p className="text-lg text-primary-foreground/80 max-w-2xl">
+            Expert drafting and vetting of all legal agreements and deeds in Tamil Nadu.
+          </p>
+        </div>
+      </div>
+      <div className="container mx-auto px-4 py-16">
+        <div className="grid md:grid-cols-3 gap-12">
+          <div className="md:col-span-2 space-y-8">
+            <h2 className="text-3xl font-serif font-bold">Bulletproof Legal Agreements</h2>
+            <p className="text-muted-foreground text-lg">
+              A well-drafted legal document prevents future disputes. Our team, led by A.B. Alagiri Rajan, brings over 9 years of experience in creating precise, comprehensive legal agreements tailored to your specific needs.
+            </p>
+            
+            <h3 className="text-2xl font-serif font-bold">Documentation Services</h3>
+            <ul className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              {['Rental / Lease Agreements', 'Partnership Deeds', 'Business Contracts', 'Will Drafting', 'Affidavits & Indemnity Bonds', 'Memorandum of Understanding (MoU)'].map(doc => (
+                <li key={doc} className="flex items-center gap-3">
+                  <CheckCircle2 className="text-accent w-5 h-5 flex-shrink-0" />
+                  <span className="font-medium">{doc}</span>
+                </li>
+              ))}
+            </ul>
+            
+            <h3 className="text-2xl font-serif font-bold">Our Approach</h3>
+            <ul className="list-disc pl-5 space-y-2 text-muted-foreground">
+              <li>Detailed consultation to understand your requirements</li>
+              <li>Drafting based on the latest legal frameworks</li>
+              <li>Review and revision cycles with the client</li>
+              <li>Execution and notarization/registration as required</li>
+            </ul>
+          </div>
+          <div className="bg-muted p-8 rounded-xl h-fit">
+            <h3 className="text-xl font-bold font-serif mb-4">Need a Document Drafted?</h3>
+            <p className="text-muted-foreground mb-6">Ensure your agreements are legally sound and protect your interests.</p>
+            <Link href="/book-consultation" className="block w-full text-center bg-accent text-primary px-6 py-3 rounded-md font-bold hover:bg-accent/90 transition-colors">
+              Book Consultation
+            </Link>
+          </div>
+        </div>
+      </div>
+    </Layout>
+  );
+}
