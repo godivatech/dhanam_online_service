@@ -1,21 +1,33 @@
-import { Card, CardContent } from "@/components/ui/card";
-import { AlertCircle } from "lucide-react";
+import { Layout } from "@/components/layout/Layout";
+import { Link } from "wouter";
+import { motion } from "framer-motion";
+import { ArrowRight, Home } from "lucide-react";
 
 export default function NotFound() {
   return (
-    <div className="min-h-screen w-full flex items-center justify-center bg-gray-50">
-      <Card className="w-full max-w-md mx-4">
-        <CardContent className="pt-6">
-          <div className="flex mb-4 gap-2">
-            <AlertCircle className="h-8 w-8 text-red-500" />
-            <h1 className="text-2xl font-bold text-gray-900">404 Page Not Found</h1>
-          </div>
-
-          <p className="mt-4 text-sm text-gray-600">
-            Did you forget to add the page to the router?
+    <Layout>
+      <div className="min-h-[80vh] flex items-center justify-center bg-background">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          className="text-center max-w-xl px-6"
+        >
+          <div className="font-serif text-[12rem] font-bold text-[#D4AF37]/15 leading-none mb-4">404</div>
+          <h1 className="font-serif text-4xl font-bold text-primary mb-4 -mt-8">Page Not Found</h1>
+          <p className="text-muted-foreground text-lg mb-10 leading-relaxed">
+            The page you are looking for does not exist or has been moved. Return to our homepage or explore our services.
           </p>
-        </CardContent>
-      </Card>
-    </div>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link href="/" className="inline-flex items-center justify-center bg-[#D4AF37] text-[#0A2540] px-8 py-4 font-bold text-sm uppercase tracking-wider hover:bg-[#c9a630] transition-all" data-testid="button-404-home">
+              <Home className="mr-2 w-4 h-4" /> Back to Home
+            </Link>
+            <Link href="/contact" className="inline-flex items-center justify-center border border-border px-8 py-4 font-bold text-sm uppercase tracking-wider hover:border-[#D4AF37] hover:text-[#D4AF37] transition-all" data-testid="button-404-contact">
+              Contact Us <ArrowRight className="ml-2 w-4 h-4" />
+            </Link>
+          </div>
+        </motion.div>
+      </div>
+    </Layout>
   );
 }
