@@ -6,6 +6,7 @@ import {
   ArrowRight, Building2, Heart, Landmark, Users, FileCheck,
   Copy, Scale, CheckCircle, ChevronRight, Phone, Star
 } from "lucide-react";
+import RegistryAssistant from "@/components/RegistryAssistant";
 
 const SERVICES = [
   { icon: Building2, title: "Property Registration", desc: "Sale deeds, partition deeds, mortgage documentation, and power of attorney with complete legal scrutiny.", href: "/services/property-registration" },
@@ -319,6 +320,9 @@ export default function Home() {
           </motion.div>
         </div>
       </section>
+
+      {/* ── REGISTRY ASSISTANT (HIDDEN BY CUSTOMER REQUEST - UNCOMMENT THE LINE BELOW TO ENABLE IT) ── */}
+      {/* <RegistryAssistant /> */}
 
       {/* ── PROCESS TIMELINE ─────────────────────────────────────────────── */}
       <section className="py-28 bg-background">
