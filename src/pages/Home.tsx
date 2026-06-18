@@ -1,7 +1,7 @@
 import { Layout } from "@/components/layout/Layout";
 import { Link } from "wouter";
 import { useState, useEffect, useRef } from "react";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import {
   ArrowRight, Building2, Heart, Landmark, Users, FileCheck,
   Copy, Scale, CheckCircle, ChevronRight, Phone, Star
@@ -93,106 +93,111 @@ const stagger = {
 };
 
 export default function Home() {
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const slides = ["/images/hero section/1.png", "/images/hero section/2.png"];
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % slides.length);
+    }, 6000);
+    return () => clearInterval(timer);
+  }, []);
+
   return (
     <Layout>
       {/* ── HERO ─────────────────────────────────────────────────────────── */}
-      <section
-        className="relative min-h-screen bg-[#0A2540] text-white flex items-center overflow-hidden"
-        style={{
-          clipPath: "polygon(0 0, 100% 0, 100% 92%, 0 100%)",
-          paddingBottom: "8vw",
-        }}
-      >
-        {/* Mesh grid overlay */}
-        <div
-          className="absolute inset-0 opacity-[0.06]"
-          style={{
-            backgroundImage:
-              "linear-gradient(rgba(255,255,255,1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,1) 1px, transparent 1px)",
-            backgroundSize: "60px 60px",
-          }}
-        />
-        {/* Radial glow */}
-        <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-[#0F4C81] rounded-full opacity-20 blur-[120px] translate-x-1/4 -translate-y-1/4" />
-        <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-[#D4AF37] rounded-full opacity-10 blur-[100px] -translate-x-1/4 translate-y-1/4" />
+      {/* ── HERO ─────────────────────────────────────────────────────────── */}
+      {/* ── HERO ─────────────────────────────────────────────────────────── */}
+      <section className="relative min-h-[85vh] lg:min-h-screen flex items-center overflow-hidden bg-slate-900">
+        {/* Background Image Slider with Crossfade */}
+        <div className="absolute inset-0 z-0">
+          <AnimatePresence mode="wait">
+            <motion.div
+              key={currentSlide}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 1.0, ease: "easeInOut" }}
+              className="absolute inset-0 bg-cover bg-center"
+              style={{ backgroundImage: `url('${slides[currentSlide]}')` }}
+            />
+          </AnimatePresence>
+          {/* Subtle vignette gradient for a premium polish */}
+          <div className="absolute inset-0 bg-gradient-to-r from-black/20 via-transparent to-black/10 z-10 pointer-events-none" />
+        </div>
 
-        <div className="container mx-auto px-6 lg:px-12 relative z-10 py-24">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
-            {/* Left */}
+        <div className="container mx-auto px-6 lg:px-12 relative z-20 py-20 lg:py-32 flex items-center justify-start">
+          {/* Elegant Floating Light Card */}
+          <motion.div
+            initial={{ opacity: 0, x: -30 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8 }}
+            className="w-full max-w-xl bg-white/95 backdrop-blur-md p-8 md:p-12 rounded-2xl shadow-[0_20px_50px_rgba(0,0,0,0.18)] border border-slate-100/50"
+          >
             <motion.div variants={stagger} initial="hidden" animate="show">
-              <motion.p variants={fadeUp} className="text-xs uppercase tracking-[0.35em] text-[#D4AF37] font-semibold mb-6">
-                Tamil Nadu's Premier Legal Consultancy
+              {/* Tagline */}
+              <motion.p variants={fadeUp} className="text-xs uppercase tracking-[0.25em] text-[#D4AF37] font-semibold mb-5 font-sans">
+                A.B. Dhanam Online Services
               </motion.p>
-              <motion.div variants={fadeUp} className="w-16 h-0.5 bg-[#D4AF37] mb-8" />
-              <motion.h1 variants={fadeUp} className="font-serif text-5xl md:text-7xl lg:text-8xl font-bold leading-[1.0] mb-8">
-                Registration &<br />
-                <span className="text-[#D4AF37] italic">Excellence</span>
+
+              {/* Main Headline */}
+              <motion.h1 variants={fadeUp} className="text-3xl md:text-5xl font-extrabold leading-[1.2] mb-6 tracking-tight font-sans text-[#0A2540]">
+                Professional <br />
+                <span className="text-[#D4AF37]">Registration Services</span>
               </motion.h1>
-              <motion.p variants={fadeUp} className="text-white/70 text-lg md:text-xl leading-relaxed mb-10 max-w-lg">
-                A.B. Dhanam Online Services — led by A.B. Alagiri Rajan — brings 9+ years of trusted expertise to every property, marriage, and trust registration in Tamil Nadu.
+
+              {/* Supporting Subheadline */}
+              <motion.p variants={fadeUp} className="text-slate-600 text-sm md:text-base leading-relaxed mb-8 font-sans">
+                Fast, secure, and error-free legal documentation and registry services for property, marriage, and trusts in Tamil Nadu.
               </motion.p>
-              <motion.div variants={fadeUp} className="flex flex-col sm:flex-row gap-4 mb-14">
+
+              {/* Call to Actions */}
+              <motion.div variants={fadeUp} className="flex flex-col sm:flex-row gap-4 font-sans">
                 <Link
                   href="/book-consultation"
-                  className="inline-flex items-center justify-center bg-[#D4AF37] text-[#0A2540] px-8 py-4 font-bold text-sm tracking-wide hover:bg-[#c9a630] transition-all shadow-[0_8px_32px_rgba(212,175,55,0.35)] hover:shadow-[0_12px_40px_rgba(212,175,55,0.5)] hover:-translate-y-0.5"
+                  className="inline-flex items-center justify-center bg-[#0A2540] text-white px-7 py-3.5 font-bold text-xs uppercase tracking-wider hover:bg-[#12355a] transition-all rounded-lg shadow-md hover:-translate-y-0.5"
                   data-testid="button-book-consultation-hero"
                 >
                   Book Free Consultation <ArrowRight className="ml-2 w-4 h-4" />
                 </Link>
                 <Link
                   href="/services"
-                  className="inline-flex items-center justify-center border border-white/30 px-8 py-4 font-semibold text-sm tracking-wide hover:border-[#D4AF37] hover:text-[#D4AF37] transition-all"
+                  className="inline-flex items-center justify-center border border-slate-300 text-slate-700 hover:border-[#D4AF37] hover:text-[#D4AF37] transition-all hover:bg-slate-50 px-7 py-3.5 font-bold text-xs uppercase tracking-wider rounded-lg"
                   data-testid="button-explore-services-hero"
                 >
                   Explore Services
                 </Link>
               </motion.div>
-              <motion.div variants={fadeUp} className="flex flex-wrap gap-4">
-                {["5000+ Customers", "9+ Years Experience", "Fast Processing", "100% Transparent"].map((badge) => (
-                  <span key={badge} className="text-xs font-medium text-white/60 border border-white/15 px-4 py-2 tracking-wide">
-                    {badge}
-                  </span>
-                ))}
-              </motion.div>
             </motion.div>
+          </motion.div>
+        </div>
 
-            {/* Right — Decorative */}
-            <motion.div
-              initial={{ opacity: 0, scale: 0.9 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.9, delay: 0.3, ease: [0.22, 1, 0.36, 1] as [number, number, number, number] }}
-              className="hidden lg:flex justify-center items-center relative"
-            >
-              <div className="relative">
-                <div className="w-80 h-80 rounded-full border-2 border-[#D4AF37]/40 flex items-center justify-center">
-                  <div className="w-64 h-64 rounded-full border border-[#D4AF37]/20 flex items-center justify-center">
-                    <div className="text-center">
-                      <div className="font-serif text-8xl font-bold text-[#D4AF37] leading-none">9+</div>
-                      <div className="text-white/60 text-sm uppercase tracking-[0.2em] mt-2">Years of Trust</div>
-                    </div>
-                  </div>
-                </div>
-                {/* Floating badge 1 */}
-                <div className="absolute -top-6 -right-8 bg-white text-[#0A2540] px-5 py-3 shadow-2xl">
-                  <div className="font-serif text-2xl font-bold">5000+</div>
-                  <div className="text-xs font-medium text-[#0A2540]/60 uppercase tracking-wide">Happy Clients</div>
-                </div>
-                {/* Floating badge 2 */}
-                <div className="absolute -bottom-4 -left-10 bg-[#D4AF37] text-[#0A2540] px-5 py-3 shadow-2xl">
-                  <div className="font-serif text-2xl font-bold">98%</div>
-                  <div className="text-xs font-medium text-[#0A2540]/70 uppercase tracking-wide">Satisfaction</div>
-                </div>
-                {/* Orbiting dot */}
-                <div className="absolute top-4 left-4 w-3 h-3 rounded-full bg-[#D4AF37] opacity-60" />
-                <div className="absolute bottom-12 right-2 w-2 h-2 rounded-full bg-[#D4AF37] opacity-40" />
-              </div>
-            </motion.div>
+        {/* Floating Slide Indicator & Caption */}
+        <div className="absolute bottom-8 right-8 z-30 flex flex-col items-end gap-3 pointer-events-auto">
+          {/* Caption */}
+          <div className="text-[10px] font-semibold text-white tracking-widest uppercase flex items-center gap-2 bg-black/45 backdrop-blur-md px-3 py-1.5 rounded-md shadow-lg border border-white/5">
+            <span>{currentSlide === 0 ? "Property & Deeds Office" : "Marriage & Trust Signing"}</span>
+            <span className="w-1.5 h-1.5 rounded-full bg-[#D4AF37]" />
+            <span>Tamil Nadu</span>
+          </div>
+          {/* Indicators */}
+          <div className="flex gap-1.5">
+            {slides.map((_, index) => (
+              <button
+                key={index}
+                onClick={() => setCurrentSlide(index)}
+                className={`w-8 h-1 transition-all duration-300 rounded-full ${
+                  index === currentSlide ? "bg-[#D4AF37] w-12" : "bg-white/40 hover:bg-white/60"
+                }`}
+                aria-label={`Go to slide ${index + 1}`}
+              />
+            ))}
           </div>
         </div>
       </section>
 
       {/* ── STATS ──────────────────────────────────────────────────────────── */}
-      <section className="py-20 bg-background -mt-8 relative z-10">
+      <section className="py-20 bg-background relative z-10 border-t border-slate-100">
         <div className="container mx-auto px-6 lg:px-12">
           <motion.div
             variants={stagger}
@@ -203,7 +208,7 @@ export default function Home() {
           >
             {STATS.map((s) => (
               <motion.div key={s.label} variants={fadeUp} className="p-10 text-center">
-                <div className="font-serif text-4xl md:text-5xl font-bold text-primary mb-2">
+                <div className="font-sans text-4xl md:text-5xl font-extrabold text-[#0A2540] mb-2">
                   <AnimatedCounter target={s.value} suffix={s.suffix} />
                 </div>
                 <div className="text-xs uppercase tracking-[0.2em] text-muted-foreground font-medium">{s.label}</div>

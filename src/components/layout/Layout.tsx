@@ -1,6 +1,6 @@
 import { ReactNode, useState, useEffect } from "react";
 import { Link, useLocation } from "wouter";
-import { MessageCircle, Menu, X, ChevronDown, Moon, Sun, Scale, Building2, Heart, Landmark, Users, FileCheck, Copy } from "lucide-react";
+import { MessageCircle, Menu, X, ChevronDown, Scale, Building2, Heart, Landmark, Users, FileCheck, Copy } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const SERVICES = [
@@ -13,36 +13,6 @@ const SERVICES = [
   { title: "Legal Documentation", href: "/services/legal-documentation", icon: Scale, desc: "Drafting & vetting" },
 ];
 
-function ThemeToggle() {
-  const [isDark, setIsDark] = useState(false);
-
-  useEffect(() => {
-    const isDarkMode = document.documentElement.classList.contains("dark");
-    setIsDark(isDarkMode);
-  }, []);
-
-  const toggleTheme = () => {
-    const root = document.documentElement;
-    if (root.classList.contains("dark")) {
-      root.classList.remove("dark");
-      setIsDark(false);
-    } else {
-      root.classList.add("dark");
-      setIsDark(true);
-    }
-  };
-
-  return (
-    <button
-      onClick={toggleTheme}
-      className="p-2 rounded-full hover:bg-black/5 dark:hover:bg-white/10 transition-colors text-foreground"
-      aria-label="Toggle theme"
-      data-testid="button-theme-toggle"
-    >
-      {isDark ? <Sun className="w-4 h-4" /> : <Moon className="w-4 h-4" />}
-    </button>
-  );
-}
 
 export function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -112,7 +82,6 @@ export function Header() {
 
           <Link href="/projects" className="text-sm font-semibold tracking-wide text-foreground relative py-2 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-accent after:transition-all hover:after:w-full transition-colors">Projects</Link>
           <Link href="/contact" className="text-sm font-semibold tracking-wide text-foreground relative py-2 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-accent after:transition-all hover:after:w-full transition-colors">Contact</Link>
-          <ThemeToggle />
         </nav>
         
         <div className="flex items-center gap-4">
@@ -166,11 +135,6 @@ export function Header() {
                 
                 <Link href="/projects" className="text-lg font-serif font-bold text-foreground border-b border-border pb-2">Projects</Link>
                 <Link href="/contact" className="text-lg font-serif font-bold text-foreground border-b border-border pb-2">Contact</Link>
-                
-                <div className="flex justify-between items-center py-2">
-                  <span className="font-serif font-bold">Theme</span>
-                  <ThemeToggle />
-                </div>
               </div>
               
               <div className="p-6 border-t border-border">
