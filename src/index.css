@@ -41,7 +41,7 @@
   --color-destructive-border: var(--destructive-border);
 
   --font-sans: 'Poppins', sans-serif;
-  --font-serif: 'Playfair Display', serif;
+  --font-serif: 'Poppins', sans-serif;
   --font-mono: Menlo, monospace;
 
   --radius-sm: calc(var(--radius) - 4px);
@@ -130,7 +130,7 @@
     @apply font-sans antialiased bg-background text-foreground;
   }
   h1, h2, h3, h4, h5, h6 {
-    @apply font-serif;
+    @apply font-sans;
   }
 }
 
