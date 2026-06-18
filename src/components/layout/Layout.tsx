@@ -300,7 +300,7 @@ export function Footer() {
             <div className="space-y-5 text-sm text-white/80">
               <p className="flex flex-col gap-1">
                 <strong className="text-white">Address</strong>
-                <span className="leading-relaxed">123, Anna Salai,<br />Chennai, Tamil Nadu 600002</span>
+                <span className="leading-relaxed">123, Anna Salai,<br />Madurai, Tamil Nadu 625001</span>
               </p>
               <p className="flex flex-col gap-1">
                 <strong className="text-white">Phone</strong>
@@ -315,7 +315,20 @@ export function Footer() {
         </div>
         
         <div className="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-6 text-xs text-white/50 tracking-wide uppercase">
-          <p>© {new Date().getFullYear()} A.B. Dhanam Online Services. All rights reserved.</p>
+          <div className="space-y-2 text-center md:text-left">
+            <p>© {new Date().getFullYear()} A.B. Dhanam Online Services. All rights reserved.</p>
+            <p className="lowercase first-letter:uppercase">
+              Designed and developed by{" "}
+              <a
+                href="https://godivatech.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-accent transition-colors font-bold uppercase"
+              >
+                godivatech
+              </a>
+            </p>
+          </div>
           <div className="flex gap-8">
             <Link href="/privacy-policy" className="hover:text-accent transition-colors">Privacy Policy</Link>
             <Link href="/terms" className="hover:text-accent transition-colors">Terms & Conditions</Link>

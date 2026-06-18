@@ -72,7 +72,7 @@ export default function Contact() {
             <h1 className="font-serif text-5xl md:text-7xl font-bold leading-tight mb-6">
               Let's Start Your<br /><span className="text-[#D4AF37] italic">Conversation</span>
             </h1>
-            <p className="text-white/70 text-xl max-w-2xl">Reach us by phone, WhatsApp, email, or visit us in Chennai. We respond to every enquiry within one business hour.</p>
+            <p className="text-white/70 text-xl max-w-2xl">Reach us by phone, WhatsApp, email, or visit us in Madurai. We respond to every enquiry within one business hour.</p>
           </motion.div>
         </div>
       </section>
@@ -161,7 +161,7 @@ export default function Contact() {
                 {[
                   { icon: Phone, label: "Phone", value: "+91 98765 43210", href: "tel:+919876543210" },
                   { icon: Mail, label: "Email", value: "contact@abdhanam.com", href: "mailto:contact@abdhanam.com" },
-                  { icon: MapPin, label: "Office Address", value: "123, Anna Salai, Chennai, Tamil Nadu 600002", href: "#map" },
+                  { icon: MapPin, label: "Office Address", value: "123, Anna Salai, Madurai, Tamil Nadu 625001", href: "#map" },
                 ].map((item) => (
                   <a key={item.label} href={item.href} className="flex gap-5 p-6 border border-border hover:border-[#D4AF37] transition-colors group" data-testid={`link-contact-${item.label.toLowerCase()}`}>
                     <div className="w-12 h-12 bg-[#D4AF37]/10 flex items-center justify-center shrink-0 group-hover:bg-[#D4AF37] transition-colors">
@@ -199,7 +199,7 @@ export default function Contact() {
           {/* Map */}
           <div id="map" className="mt-16">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d497698.7039754489!2d79.87948708131157!3d13.047811989498218!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5265ea4f7d3361%3A0x6e61a70b6863d433!2sChennai%2C%20Tamil%20Nadu!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d125766.19565576281!2d78.04639148281313!3d9.917856793138814!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b00c582b118c53a%3A0x3406e9c390a3098c!2sMadurai%2C%20Tamil%20Nadu!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
               width="100%"
               height="450"
               style={{ border: 0 }}

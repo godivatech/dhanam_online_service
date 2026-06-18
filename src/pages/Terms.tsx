@@ -10,7 +10,7 @@ const SECTIONS = [
   { title: "Client Responsibilities", content: "Clients are responsible for providing accurate, complete, and truthful information for all documentation purposes. Any inaccuracies in documents resulting from incorrect information provided by the client are the client's responsibility. A.B. Dhanam cannot be held liable for consequences arising from incorrect information provided by clients." },
   { title: "Confidentiality", content: "All information shared with A.B. Dhanam in the course of providing services is treated as strictly confidential. We do not disclose client information to any third party except as necessary to complete the requested service (e.g., filing with government authorities) or as required by law." },
   { title: "Limitation of Liability", content: "A.B. Dhanam Online Services' liability is limited to the professional fees paid for the specific service in question. We are not liable for delays or outcomes attributable to government processing times, third-party actions, or circumstances beyond our reasonable control." },
-  { title: "Governing Law", content: "These Terms and Conditions are governed by the laws of India and the State of Tamil Nadu. Any disputes arising from the use of our services shall be subject to the exclusive jurisdiction of the courts of Chennai, Tamil Nadu." },
+  { title: "Governing Law", content: "These Terms and Conditions are governed by the laws of India and the State of Tamil Nadu. Any disputes arising from the use of our services shall be subject to the exclusive jurisdiction of the courts of Madurai, Tamil Nadu." },
   { title: "Contact", content: "For questions regarding these Terms and Conditions, please contact us at contact@abdhanam.com or +91 98765 43210." },
 ];
 

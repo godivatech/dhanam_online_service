@@ -10,8 +10,8 @@ const fadeUp = {
 const stagger = { hidden: {}, show: { transition: { staggerChildren: 0.12 } } };
 
 const TIMELINE = [
-  { year: "2015", title: "Foundation", desc: "A.B. Dhanam Online Services was established in Chennai with a singular vision: to make legal documentation transparent and accessible for every Tamil Nadu family and business." },
-  { year: "2018", title: "1000 Clients Milestone", desc: "Crossed 1,000 satisfied clients, earning our reputation as Chennai's most trusted property registration consultancy. Expanded service offerings to include trust and society registrations." },
+  { year: "2015", title: "Foundation", desc: "A.B. Dhanam Online Services was established in Madurai with a singular vision: to make legal documentation transparent and accessible for every Tamil Nadu family and business." },
+  { year: "2018", title: "1000 Clients Milestone", desc: "Crossed 1,000 satisfied clients, earning our reputation as Madurai's most trusted property registration consultancy. Expanded service offerings to include trust and society registrations." },
   { year: "2021", title: "Digital Transformation", desc: "Launched online consultation services, allowing clients across Tamil Nadu to access our expertise without geographical constraints. Processed over 5,000 documents digitally." },
   { year: "2023", title: "5000+ Client Family", desc: "Our client family crossed the 5,000 milestone — a testament to the unwavering trust Tamil Nadu places in A.B. Dhanam's expertise and integrity." },
   { year: "2025", title: "Today", desc: "Continuing our legacy of excellence with a team of dedicated legal professionals, serving clients across all major districts of Tamil Nadu with the same commitment as day one." },

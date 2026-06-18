@@ -39,10 +39,10 @@ const PROJECTS = [
 ];
 
 const PROCESS = [
-  { step: "01", title: "Initial Consultation", desc: "Discuss your requirements with our experts. We assess your case and outline the exact documents needed." },
-  { step: "02", title: "Document Preparation", desc: "Our team meticulously prepares and verifies all documents, ensuring legal accuracy at every step." },
-  { step: "03", title: "Submission & Processing", desc: "We handle all Sub-Registrar submissions and follow up on your behalf until processing is complete." },
-  { step: "04", title: "Certificate Delivery", desc: "Receive your certified documents. We brief you on next steps and remain available for any queries." },
+  { step: "01", icon: Phone, title: "Initial Consultation", desc: "Discuss your requirements with our experts. We assess your case and outline the exact documents needed." },
+  { step: "02", icon: FileCheck, title: "Document Preparation", desc: "Our team meticulously prepares and verifies all documents, ensuring legal accuracy at every step." },
+  { step: "03", icon: Scale, title: "Submission & Processing", desc: "We handle all Sub-Registrar submissions and follow up on your behalf until processing is complete." },
+  { step: "04", icon: CheckCircle, title: "Certificate Delivery", desc: "Receive your certified documents. We brief you on next steps and remain available for any queries." },
 ];
 
 function AnimatedCounter({ target, suffix }: { target: number; suffix: string }) {
@@ -95,6 +95,7 @@ const stagger = {
 
 export default function Home() {
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [activeStep, setActiveStep] = useState(0);
   const slides = ["/images/hero section/1.png", "/images/hero section/2.png"];
 
   useEffect(() => {
@@ -248,7 +249,7 @@ export default function Home() {
               className="space-y-6"
             >
               {[
-                { label: "Founding Year", value: "2015", desc: "Established in Chennai with a vision to simplify legal documentation for Tamil Nadu families and businesses." },
+                { label: "Founding Year", value: "2015", desc: "Established in Madurai with a vision to simplify legal documentation for Tamil Nadu families and businesses." },
                 { label: "Areas of Expertise", value: "7+", desc: "Specialised services spanning property, marriage, trust, society, and legal documentation consultancy." },
                 { label: "Projects Completed", value: "10+", desc: "Landmark residential layouts and commercial projects registered with zero disputes." },
               ].map((item) => (
@@ -351,41 +352,111 @@ export default function Home() {
       {/* <RegistryAssistant /> */}
 
       {/* ── PROCESS TIMELINE ─────────────────────────────────────────────── */}
-      <section className="py-28 bg-background">
+      <section className="py-28 bg-background relative overflow-hidden">
         <div className="container mx-auto px-6 lg:px-12">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-center mb-20"
+            className="text-center mb-16"
           >
             <p className="text-xs uppercase tracking-[0.35em] text-[#D4AF37] font-semibold mb-4">How It Works</p>
             <div className="w-12 h-0.5 bg-[#D4AF37] mx-auto mb-8" />
-            <h2 className="font-serif text-4xl md:text-5xl font-bold text-primary">Our Four-Step Process</h2>
+            <h2 className="font-serif text-4xl md:text-5xl font-bold text-foreground">Our Four-Step Process</h2>
           </motion.div>
 
-          <motion.div
-            variants={stagger}
-            initial="hidden"
-            whileInView="show"
-            viewport={{ once: true }}
-            className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 relative"
-          >
-            {/* Connecting line on desktop */}
-            <div className="absolute top-16 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#D4AF37]/40 to-transparent hidden lg:block" />
+          <div className="max-w-4xl mx-auto">
+            {/* Horizontal Interactive Steps Progress Bar */}
+            <div className="relative mb-20 px-4 md:px-10">
+              {/* Background horizontal line */}
+              <div className="absolute top-1/2 left-0 right-0 h-0.5 bg-border -translate-y-1/2" />
+              {/* Active filled horizontal line */}
+              <div
+                className="absolute top-1/2 left-0 h-0.5 bg-[#D4AF37] -translate-y-1/2 transition-all duration-500 ease-out"
+                style={{
+                  width: `${(activeStep / (PROCESS.length - 1)) * 100}%`,
+                }}
+              />
 
-            {PROCESS.map((p, i) => (
-              <motion.div key={p.step} variants={fadeUp} className="relative">
-                <div className="flex flex-col items-start">
-                  <div className="w-12 h-12 rounded-full bg-[#D4AF37] text-[#0A2540] flex items-center justify-center font-bold text-sm font-serif mb-6 relative z-10 shadow-[0_4px_20px_rgba(212,175,55,0.4)]">
-                    {i + 1}
+              {/* Step circle nodes */}
+              <div className="relative flex justify-between items-center z-10">
+                {PROCESS.map((p, idx) => {
+                  const isActive = idx <= activeStep;
+                  const isSelected = idx === activeStep;
+                  const StepIcon = p.icon;
+                  return (
+                    <button
+                      key={p.step}
+                      onClick={() => setActiveStep(idx)}
+                      className="flex flex-col items-center focus:outline-none group relative"
+                    >
+                      <div
+                        className={`w-12 h-12 md:w-16 md:h-16 rounded-full flex items-center justify-center border-2 transition-all duration-300 ${
+                          isSelected
+                            ? "bg-[#D4AF37] border-[#D4AF37] text-white scale-110 shadow-[0_0_20px_rgba(212,175,55,0.4)]"
+                            : isActive
+                            ? "bg-card border-[#D4AF37] text-[#D4AF37] shadow-[0_0_15px_rgba(212,175,55,0.15)]"
+                            : "bg-card border-border text-muted-foreground hover:border-muted-foreground/60"
+                        }`}
+                      >
+                        <StepIcon className="w-5 h-5 md:w-6 md:h-6" />
+                      </div>
+                      <span
+                        className={`absolute mt-14 md:mt-18 text-[10px] md:text-xs font-bold tracking-wider uppercase transition-colors duration-300 whitespace-nowrap ${
+                          isSelected ? "text-[#D4AF37]" : "text-muted-foreground group-hover:text-foreground"
+                        }`}
+                      >
+                        {p.title.split(" ")[0]}
+                      </span>
+                    </button>
+                  );
+                })}
+              </div>
+            </div>
+
+            {/* Step Content Card with Cross-fade transition */}
+            <div className="mt-24">
+              <AnimatePresence mode="wait">
+                <motion.div
+                  key={activeStep}
+                  initial={{ opacity: 0, y: 15 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -15 }}
+                  transition={{ duration: 0.35, ease: "easeInOut" }}
+                  className="grid md:grid-cols-12 gap-8 items-center bg-card border border-border/60 p-8 md:p-12 rounded-3xl shadow-xl min-h-[320px]"
+                >
+                  {/* Left Column: text content */}
+                  <div className="md:col-span-7 space-y-6">
+                    <div className="flex items-center gap-4">
+                      <span className="px-3 py-1 rounded-full bg-[#D4AF37]/10 text-[#D4AF37] text-[10px] font-bold tracking-widest uppercase">
+                        Step 0{activeStep + 1}
+                      </span>
+                    </div>
+                    <h3 className="font-serif text-3xl font-bold text-foreground">
+                      {PROCESS[activeStep].title}
+                    </h3>
+                    <p className="text-muted-foreground text-sm md:text-base leading-relaxed">
+                      {PROCESS[activeStep].desc}
+                    </p>
                   </div>
-                  <h3 className="font-serif text-xl font-bold text-primary mb-3">{p.title}</h3>
-                  <p className="text-muted-foreground text-sm leading-relaxed">{p.desc}</p>
-                </div>
-              </motion.div>
-            ))}
-          </motion.div>
+
+                  {/* Right Column: pulsing graphical elements */}
+                  <div className="md:col-span-5 flex justify-center">
+                    <div className="relative w-44 h-44 md:w-52 md:h-52 rounded-full border border-[#D4AF37]/20 bg-[#D4AF37]/5 flex items-center justify-center group">
+                      {/* Pulsing rings */}
+                      <div className="absolute inset-0 rounded-full border-2 border-[#D4AF37]/25 scale-100 group-hover:scale-110 transition-transform duration-1000 animate-ping opacity-25" />
+                      <div className="w-24 h-24 rounded-full bg-[#D4AF37]/10 flex items-center justify-center">
+                        {(() => {
+                          const CurrentIcon = PROCESS[activeStep].icon;
+                          return <CurrentIcon className="w-10 h-10 text-[#D4AF37]" />;
+                        })()}
+                      </div>
+                    </div>
+                  </div>
+                </motion.div>
+              </AnimatePresence>
+            </div>
+          </div>
         </div>
       </section>
 
