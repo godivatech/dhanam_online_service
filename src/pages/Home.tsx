@@ -69,14 +69,14 @@ function AnimatedCounter({ target, suffix }: { target: number; suffix: string })
           }, duration / steps);
         }
       },
-      { threshold: 0.5 }
+      { threshold: 0.1 }
     );
     if (ref.current) observer.observe(ref.current);
     return () => observer.disconnect();
   }, [target]);
 
   return (
-    <span ref={ref}>
+    <span ref={ref} translate="no" className="notranslate">
       {count.toLocaleString()}{suffix}
     </span>
   );

@@ -1,6 +1,6 @@
 import { ReactNode, useState, useEffect } from "react";
 import { Link, useLocation } from "wouter";
-import { MessageCircle, Menu, X, ChevronDown, Scale, Building2, Heart, Landmark, Users, FileCheck, Copy } from "lucide-react";
+import { MessageCircle, Menu, X, ChevronDown, Scale, Building2, Heart, Landmark, Users, FileCheck, Copy, Globe } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const SERVICES = [
@@ -10,9 +10,105 @@ const SERVICES = [
   { title: "Society Registration", href: "/services/society-registration", icon: Users, desc: "Associations & NGOs" },
   { title: "Encumbrance Certificate", href: "/services/encumbrance-certificate", icon: FileCheck, desc: "Property history verification" },
   { title: "Certified Copy", href: "/services/certified-copy", icon: Copy, desc: "Official document copies" },
-  { title: "Legal Documentation", href: "/services/legal-documentation", icon: Scale, desc: "Drafting & vetting" },
 ];
 
+function LanguageSelector() {
+  const [currentLang, setCurrentLang] = useState<"en" | "ta">("en");
+  const [dropdownOpen, setDropdownOpen] = useState(false);
+
+  useEffect(() => {
+    // Check for Google Translate cookie value
+    const getLanguageFromCookie = () => {
+      const match = document.cookie.match(/googtrans=\/en\/([^;]+)/);
+      if (match && (match[1] === "en" || match[1] === "ta")) {
+        return match[1] as "en" | "ta";
+      }
+      return "en";
+    };
+
+    // Periodically search for combo dropdown and sync state
+    const checkSelect = setInterval(() => {
+      const googleSelect = document.querySelector(".goog-te-combo") as HTMLSelectElement;
+      if (googleSelect) {
+        setCurrentLang((googleSelect.value as "en" | "ta") || getLanguageFromCookie());
+        clearInterval(checkSelect);
+      }
+    }, 500);
+
+    return () => clearInterval(checkSelect);
+  }, []);
+
+  const changeLanguage = (langCode: "en" | "ta") => {
+    setCurrentLang(langCode);
+    setDropdownOpen(false);
+
+    // 1. Explicitly set cookie values to hold the translation choice
+    document.cookie = `googtrans=/en/${langCode}; path=/`;
+    document.cookie = `googtrans=/en/${langCode}; path=/; domain=${window.location.hostname}`;
+    if (window.location.hostname === "localhost" || window.location.hostname === "127.0.0.1") {
+      document.cookie = `googtrans=/en/${langCode}; path=/; domain=`;
+    }
+
+    // 2. Trigger real-time translation widget selector
+    const googleSelect = document.querySelector(".goog-te-combo") as HTMLSelectElement;
+    if (googleSelect) {
+      googleSelect.value = langCode;
+      googleSelect.dispatchEvent(new Event("change"));
+    } else {
+      // 3. Fallback: reload the page to initialize cookie-based translation on startup
+      window.location.reload();
+    }
+  };
+
+  return (
+    <div className="relative font-sans">
+      <button
+        onClick={() => setDropdownOpen(!dropdownOpen)}
+        className="flex items-center gap-1.5 px-3 py-2 rounded-lg text-sm font-bold text-foreground hover:bg-slate-100 dark:hover:bg-white/10 transition-colors"
+        aria-label="Select Language"
+        data-testid="button-language-selector"
+      >
+        <Globe className="w-4 h-4 text-accent" />
+        <span>{currentLang === "en" ? "English" : "தமிழ்"}</span>
+        <ChevronDown className="w-3.5 h-3.5 opacity-60" />
+      </button>
+
+      <AnimatePresence>
+        {dropdownOpen && (
+          <>
+            <div className="fixed inset-0 z-40" onClick={() => setDropdownOpen(false)} />
+            <motion.div
+              initial={{ opacity: 0, y: 10, scale: 0.95 }}
+              animate={{ opacity: 1, y: 0, scale: 1 }}
+              exit={{ opacity: 0, y: 10, scale: 0.95 }}
+              transition={{ duration: 0.15 }}
+              className="absolute right-0 mt-1.5 w-32 bg-background border border-border shadow-xl rounded-lg overflow-hidden z-50"
+            >
+              <div className="py-1">
+                <button
+                  onClick={() => changeLanguage("en")}
+                  className={`w-full text-left px-4 py-2 text-sm font-semibold transition-colors ${
+                    currentLang === "en" ? "text-accent bg-accent/5" : "text-foreground hover:bg-muted"
+                  }`}
+                >
+                  English
+                </button>
+                <button
+                  onClick={() => changeLanguage("ta")}
+                  className={`w-full text-left px-4 py-2 text-sm font-semibold transition-colors ${
+                    currentLang === "ta" ? "text-accent bg-accent/5" : "text-foreground hover:bg-muted"
+                  }`}
+                >
+                  தமிழ்
+                </button>
+              </div>
+            </motion.div>
+          </>
+        )}
+      </AnimatePresence>
+    </div>
+  );
+}
 
 export function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -82,6 +178,7 @@ export function Header() {
 
           <Link href="/projects" className="text-sm font-semibold tracking-wide text-foreground relative py-2 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-accent after:transition-all hover:after:w-full transition-colors">Projects</Link>
           <Link href="/contact" className="text-sm font-semibold tracking-wide text-foreground relative py-2 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-accent after:transition-all hover:after:w-full transition-colors">Contact</Link>
+          <LanguageSelector />
         </nav>
         
         <div className="flex items-center gap-4">
@@ -135,6 +232,11 @@ export function Header() {
                 
                 <Link href="/projects" className="text-lg font-serif font-bold text-foreground border-b border-border pb-2">Projects</Link>
                 <Link href="/contact" className="text-lg font-serif font-bold text-foreground border-b border-border pb-2">Contact</Link>
+                
+                <div className="flex justify-between items-center py-2 border-b border-border pb-4">
+                  <span className="text-sm font-bold text-muted-foreground uppercase tracking-wider">Language / மொழி</span>
+                  <LanguageSelector />
+                </div>
               </div>
               
               <div className="p-6 border-t border-border">
