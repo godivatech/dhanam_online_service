@@ -67,22 +67,22 @@
   --popover-foreground: 221 39% 11%;
   --popover-border: 214 32% 91%;
   
-  --primary: 210 73% 15%;
+  --primary: 224 64% 8%; /* Deep midnight obsidian #0b0f1d */
   --primary-foreground: 210 33% 98%;
-  --secondary: 208 79% 28%;
+  --secondary: 243 75% 59%; /* Refined Indigo #635bff */
   --secondary-foreground: 210 33% 98%;
   
   --muted: 210 40% 96%;
   --muted-foreground: 215 16% 47%;
   
-  --accent: 46 65% 52%;
-  --accent-foreground: 210 73% 15%;
+  --accent: 243 100% 68%; /* Vibrant Stripe Indigo #635bff */
+  --accent-foreground: 0 0% 100%;
   
   --destructive: 0 84% 60%;
   --destructive-foreground: 210 40% 98%;
   
   --input: 214 32% 91%;
-  --ring: 46 65% 52%;
+  --ring: 243 100% 68%;
   
   --radius: 0.5rem;
 }
@@ -94,7 +94,7 @@
   --elevate-1: rgba(255,255,255, .04);
   --elevate-2: rgba(255,255,255, .09);
 
-  --background: 210 73% 15%;
+  --background: 224 64% 8%;
   --foreground: 210 33% 98%;
   --border: 215 28% 25%;
   --card: 221 39% 11%;
@@ -104,22 +104,22 @@
   --popover-foreground: 210 33% 98%;
   --popover-border: 215 28% 25%;
   
-  --primary: 46 65% 52%;
-  --primary-foreground: 210 73% 15%;
-  --secondary: 208 79% 28%;
+  --primary: 243 100% 68%;
+  --primary-foreground: 224 64% 8%;
+  --secondary: 224 64% 15%;
   --secondary-foreground: 210 33% 98%;
   
   --muted: 215 28% 25%;
   --muted-foreground: 215 20% 65%;
   
-  --accent: 46 65% 52%;
-  --accent-foreground: 210 73% 15%;
+  --accent: 243 100% 68%;
+  --accent-foreground: 224 64% 8%;
   
   --destructive: 0 62% 30%;
   --destructive-foreground: 210 40% 98%;
   
   --input: 215 28% 25%;
-  --ring: 46 65% 52%;
+  --ring: 243 100% 68%;
 }
 
 @layer base {
@@ -160,4 +160,97 @@ iframe.goog-te-banner-frame,
 }
 div.skiptranslate {
   display: none !important;
+}
+
+/* Color Palette Override to Premium Indigo/Midnight Standard */
+.bg-\[\#0A2540\], .bg-\[\#0a2540\],
+.from-\[\#0A2540\], .from-\[\#0a2540\] {
+  background-color: #0b0f1d !important;
+}
+.text-\[\#0A2540\], .text-\[\#0a2540\] {
+  color: #0b0f1d !important;
+}
+.border-\[\#0A2540\], .border-\[\#0a2540\],
+.border-l-\[\#0A2540\], .border-l-\[\#0a2540\],
+.border-r-\[\#0A2540\], .border-r-\[\#0a2540\],
+.border-t-\[\#0A2540\], .border-t-\[\#0a2540\],
+.border-b-\[\#0A2540\], .border-b-\[\#0a2540\] {
+  border-color: #0b0f1d !important;
+}
+.fill-\[\#0A2540\], .fill-\[\#0a2540\] {
+  fill: #0b0f1d !important;
+}
+.stroke-\[\#0A2540\], .stroke-\[\#0a2540\] {
+  stroke: #0b0f1d !important;
+}
+
+.bg-\[\#0F4C81\], .bg-\[\#0f4c81\] {
+  background-color: #1e293b !important;
+}
+.text-\[\#0F4C81\], .text-\[\#0f4c81\] {
+  color: #1e293b !important;
+}
+.border-\[\#0F4C81\], .border-\[\#0f4c81\] {
+  border-color: #1e293b !important;
+}
+.hover\:bg-\[\#0F4C81\]:hover, .hover\:bg-\[\#0f4c81\]:hover {
+  background-color: #334155 !important;
+}
+
+.bg-\[\#D4AF37\], .bg-\[\#d4af37\] {
+  background-color: #635bff !important;
+}
+.text-\[\#D4AF37\], .text-\[\#d4af37\] {
+  color: #635bff !important;
+}
+.border-\[\#D4AF37\], .border-\[\#d4af37\],
+.border-l-\[\#D4AF37\], .border-l-\[\#d4af37\],
+.border-r-\[\#D4AF37\], .border-r-\[\#d4af37\],
+.border-t-\[\#D4AF37\], .border-t-\[\#d4af37\],
+.border-b-\[\#D4AF37\], .border-b-\[\#d4af37\] {
+  border-color: #635bff !important;
+}
+.fill-\[\#D4AF37\], .fill-\[\d4af37\],
+.fill-\[d4af37\] {
+  fill: #f59e0b !important; /* rating stars stay gold */
+}
+.stroke-\[\#D4AF37\], .stroke-\[\#d4af37\],
+.stroke-\[d4af37\] {
+  stroke: #635bff !important;
+}
+
+.bg-\[\#D4AF37\]\/10, .bg-\[\#d4af37\]\/10, .bg-\[\#D4AF37\]\/5, .bg-\[\#d4af37\]\/5 {
+  background-color: rgba(99, 91, 255, 0.1) !important;
+}
+.border-\[\#D4AF37\]\/30, .border-\[\#d4af37\]\/30, .border-\[\#D4AF37\]\/20, .border-\[\#d4af37\]\/20 {
+  border-color: rgba(99, 91, 255, 0.2) !important;
+}
+
+.from-\[\#0A2540\], .from-\[\#0a2540\] {
+  --tw-gradient-from: #0b0f1d !important;
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(11, 15, 29, 0)) !important;
+}
+.to-\[\#0F4C81\], .to-\[\#0f4c81\] {
+  --tw-gradient-to: #1e293b !important;
+}
+
+.hover\:bg-\[\#c9a630\]:hover, .hover\:bg-\[\#C9A630\]:hover,
+.active\:bg-\[\#c9a630\]:active, .active\:bg-\[\#C9A630\]:active {
+  background-color: #4f46e5 !important;
+}
+.hover\:text-\[\#D4AF37\]:hover, .hover\:text-\[\#d4af37\]:hover {
+  color: #635bff !important;
+}
+.hover\:bg-\[\#D4AF37\]:hover, .hover\:bg-\[\#d4af37\]:hover {
+  background-color: #4f46e5 !important;
+}
+.hover\:border-\[\#D4AF37\]:hover, .hover\:border-\[\#d4af37\]:hover {
+  border-color: #635bff !important;
+}
+
+.focus\:ring-\[\#D4AF37\]:focus, .focus\:ring-\[\#d4af37\]:focus {
+  --tw-ring-color: #635bff !important;
+}
+.focus\:border-\[\#D4AF37\]:focus, .focus\:border-\[\#d4af37\]:focus {
+  border-color: #635bff !important;
 }
