@@ -55,35 +55,74 @@ export default function Projects() {
         <div className="container mx-auto px-6 lg:px-12">
           <motion.div variants={stagger} initial="hidden" whileInView="show" viewport={{ once: true }} className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {PROJECTS.map((p) => (
-              <motion.div key={p.name} variants={fadeUp} className="group border border-border hover:border-[#D4AF37] hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 overflow-hidden bg-white">
-                {/* Image placeholder */}
-                <div className="h-48 bg-gradient-to-br from-[#0A2540] to-[#0F4C81] flex items-end p-6 relative">
-                  <div className="font-serif text-6xl font-bold text-[#D4AF37]/20 absolute top-4 right-4">{p.num}</div>
-                  <div>
-                    <span className="text-xs uppercase tracking-wider text-[#D4AF37] font-semibold bg-[#D4AF37]/10 border border-[#D4AF37]/30 px-3 py-1">{p.type}</span>
-                  </div>
+              <motion.div 
+                key={p.name} 
+                variants={fadeUp} 
+                className="group relative border border-border/80 hover:border-[#D4AF37] hover:shadow-2xl transition-all duration-300 hover:-translate-y-1.5 overflow-hidden bg-white p-8 rounded-none flex flex-col justify-between min-h-[460px]"
+              >
+                {/* Gold Top Accent Line */}
+                <div className="absolute top-0 left-0 right-0 h-1 bg-[#D4AF37]" />
+                
+                {/* Number Watermark */}
+                <div className="absolute top-6 right-8 font-sans text-6xl font-extrabold text-slate-100 group-hover:text-[#D4AF37]/10 transition-colors duration-300 pointer-events-none select-none">
+                  {p.num}
                 </div>
-                <div className="p-8">
-                  <h3 className="font-serif text-2xl font-bold text-primary mb-3 leading-snug">{p.name}</h3>
-                  <div className="flex items-center gap-4 mb-4">
-                    <span className="flex items-center gap-1.5 text-xs text-muted-foreground">
-                      <MapPin className="w-3 h-3" />{p.location}
-                    </span>
-                    <span className="flex items-center gap-1.5 text-xs text-muted-foreground">
-                      <Calendar className="w-3 h-3" />{p.year}
+
+                <div className="flex-1 flex flex-col">
+                  {/* Category Badge */}
+                  <div className="mb-4">
+                    <span className="text-[10px] uppercase tracking-widest text-[#D4AF37] font-bold bg-[#D4AF37]/5 border border-[#D4AF37]/20 px-2.5 py-1">
+                      {p.type}
                     </span>
                   </div>
-                  <p className="text-sm text-muted-foreground leading-relaxed mb-6">{p.desc}</p>
-                  <div className="mb-6">
-                    <p className="text-xs uppercase tracking-[0.2em] text-[#D4AF37] font-semibold mb-3">Services Provided</p>
-                    {p.services.map((s) => (
-                      <div key={s} className="flex items-center gap-2 text-xs text-muted-foreground mb-1.5">
-                        <CheckCircle className="w-3 h-3 text-[#D4AF37] shrink-0" /> {s}
-                      </div>
-                    ))}
+
+                  {/* Project Name */}
+                  <h3 className="text-xl font-bold text-primary mb-2 leading-snug group-hover:text-[#D4AF37] transition-colors duration-300">
+                    {p.name}
+                  </h3>
+
+                  {/* Meta (Location & Year) */}
+                  <div className="flex items-center gap-4 mb-5 pb-4 border-b border-dashed border-border">
+                    <span className="flex items-center gap-1.5 text-xs text-muted-foreground font-medium">
+                      <MapPin className="w-3.5 h-3.5 text-[#D4AF37]" />
+                      {p.location}
+                    </span>
+                    <span className="flex items-center gap-1.5 text-xs text-muted-foreground font-medium">
+                      <Calendar className="w-3.5 h-3.5 text-[#D4AF37]" />
+                      {p.year}
+                    </span>
                   </div>
-                  <Link href="/contact" className="text-xs font-bold text-[#D4AF37] uppercase tracking-wider flex items-center gap-1.5 group-hover:gap-2.5 transition-all" data-testid={`link-project-${p.num}`}>
-                    Enquire About Similar Project <ArrowRight className="w-3 h-3" />
+
+                  {/* Description */}
+                  <p className="text-sm text-muted-foreground leading-relaxed mb-6">
+                    {p.desc}
+                  </p>
+                </div>
+
+                <div className="mt-auto">
+                  {/* Services Provided Section */}
+                  <div className="mb-6 pt-5 border-t border-border/60">
+                    <p className="text-[10px] uppercase tracking-wider text-muted-foreground font-bold mb-3">
+                      Services Provided
+                    </p>
+                    <div className="space-y-2">
+                      {p.services.map((s) => (
+                        <div key={s} className="flex items-start gap-2 text-xs text-primary">
+                          <CheckCircle className="w-3.5 h-3.5 text-[#D4AF37] shrink-0 mt-0.5" />
+                          <span>{s}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+
+                  {/* Action Link */}
+                  <Link 
+                    href="/contact" 
+                    className="inline-flex items-center gap-2 text-xs font-bold text-[#D4AF37] uppercase tracking-wider hover:text-primary transition-colors duration-300"
+                    data-testid={`link-project-${p.num}`}
+                  >
+                    Enquire About Similar Project 
+                    <ArrowRight className="w-3.5 h-3.5 transition-transform duration-300 group-hover:translate-x-1" />
                   </Link>
                 </div>
               </motion.div>
