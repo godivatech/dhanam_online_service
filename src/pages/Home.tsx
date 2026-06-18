@@ -286,22 +286,48 @@ export default function Home() {
             viewport={{ once: true }}
             className="grid md:grid-cols-2 lg:grid-cols-3 gap-px bg-white/10"
           >
-            {SERVICES.map((s) => (
-              <motion.div key={s.title} variants={fadeUp}>
-                <Link
-                  href={s.href}
-                  className="group flex flex-col h-full p-10 bg-[#0A2540] border-l-4 border-[#D4AF37]/0 hover:border-[#D4AF37] hover:bg-[#0F4C81]/30 transition-all duration-300"
-                  data-testid={`card-service-${s.title.toLowerCase().replace(/\s+/g, "-")}`}
+            {SERVICES.map((s, idx) => {
+              const isLast = idx === SERVICES.length - 1;
+              return (
+                <motion.div
+                  key={s.title}
+                  variants={fadeUp}
+                  className={isLast ? "md:col-span-2 lg:col-span-3" : ""}
                 >
-                  <s.icon className="w-9 h-9 text-[#D4AF37] mb-6" />
-                  <h3 className="font-serif text-xl font-bold mb-3">{s.title}</h3>
-                  <p className="text-white/60 text-sm leading-relaxed mb-6 flex-1">{s.desc}</p>
-                  <span className="text-[#D4AF37] text-xs font-bold uppercase tracking-wider flex items-center gap-2 group-hover:gap-3 transition-all">
-                    Learn More <ArrowRight className="w-3 h-3" />
-                  </span>
-                </Link>
-              </motion.div>
-            ))}
+                  <Link
+                    href={s.href}
+                    className={`group flex flex-col h-full p-10 bg-[#0A2540] border-l-4 border-[#D4AF37]/0 hover:border-[#D4AF37] hover:bg-[#0F4C81]/30 transition-all duration-300 ${
+                      isLast ? "md:flex-row md:items-center md:justify-between md:gap-10" : ""
+                    }`}
+                    data-testid={`card-service-${s.title.toLowerCase().replace(/\s+/g, "-")}`}
+                  >
+                    {isLast ? (
+                      <>
+                        <div className="flex items-start gap-6 md:max-w-3xl">
+                          <s.icon className="w-10 h-10 mt-1 text-[#D4AF37] shrink-0" />
+                          <div>
+                            <h3 className="font-serif text-xl font-bold mb-3">{s.title}</h3>
+                            <p className="text-white/60 text-sm leading-relaxed">{s.desc}</p>
+                          </div>
+                        </div>
+                        <span className="text-[#D4AF37] text-xs font-bold uppercase tracking-wider flex items-center gap-2 group-hover:gap-3 transition-all shrink-0 mt-6 md:mt-0">
+                          Learn More <ArrowRight className="w-3 h-3" />
+                        </span>
+                      </>
+                    ) : (
+                      <>
+                        <s.icon className="w-9 h-9 text-[#D4AF37] mb-6" />
+                        <h3 className="font-serif text-xl font-bold mb-3">{s.title}</h3>
+                        <p className="text-white/60 text-sm leading-relaxed mb-6 flex-1">{s.desc}</p>
+                        <span className="text-[#D4AF37] text-xs font-bold uppercase tracking-wider flex items-center gap-2 group-hover:gap-3 transition-all">
+                          Learn More <ArrowRight className="w-3 h-3" />
+                        </span>
+                      </>
+                    )}
+                  </Link>
+                </motion.div>
+              );
+            })}
           </motion.div>
 
           <motion.div
