@@ -58,7 +58,6 @@ export default function WhyChooseUs() {
     <Layout>
       <section
         className="relative bg-[#0A2540] text-white py-32 overflow-hidden"
-        style={{ clipPath: "polygon(0 0, 100% 0, 100% 90%, 0 100%)", paddingBottom: "6vw" }}
       >
         <div className="absolute inset-0 opacity-[0.06]"
           style={{ backgroundImage: "linear-gradient(rgba(255,255,255,1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,1) 1px, transparent 1px)", backgroundSize: "60px 60px" }}
@@ -82,7 +81,7 @@ export default function WhyChooseUs() {
         </div>
       </section>
 
-      <section className="py-24 bg-background -mt-4">
+      <section className="py-24 bg-background">
         <div className="container mx-auto px-6 lg:px-12">
           <div className="space-y-0">
             {REASONS.map((r, i) => (

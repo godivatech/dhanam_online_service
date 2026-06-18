@@ -45,7 +45,7 @@ function FAQItem({ q, a }: { q: string; a: string }) {
 export default function LegalDocumentation() {
   return (
     <Layout>
-      <section className="relative bg-[#0A2540] text-white py-32 overflow-hidden" style={{ clipPath: "polygon(0 0, 100% 0, 100% 90%, 0 100%)", paddingBottom: "6vw" }}>
+      <section className="relative bg-[#0A2540] text-white py-32 overflow-hidden">
         <div className="absolute inset-0 opacity-[0.06]" style={{ backgroundImage: "linear-gradient(rgba(255,255,255,1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,1) 1px, transparent 1px)", backgroundSize: "60px 60px" }} />
         <div className="container mx-auto px-6 lg:px-12 relative z-10">
           <div className="flex items-center gap-2 text-xs text-white/40 mb-10 uppercase tracking-wider flex-wrap">
@@ -64,7 +64,7 @@ export default function LegalDocumentation() {
         </div>
       </section>
 
-      <section className="py-24 bg-background -mt-4">
+      <section className="py-24 bg-background">
         <div className="container mx-auto px-6 lg:px-12">
           <div className="mb-12">
             <p className="text-xs uppercase tracking-[0.35em] text-[#D4AF37] font-semibold mb-4">Services Offered</p>

@@ -39,7 +39,6 @@ export default function About() {
       {/* Hero */}
       <section
         className="relative bg-[#0A2540] text-white py-32 overflow-hidden"
-        style={{ clipPath: "polygon(0 0, 100% 0, 100% 90%, 0 100%)", paddingBottom: "6vw" }}
       >
         <div className="absolute inset-0 opacity-[0.06]"
           style={{
@@ -67,7 +66,7 @@ export default function About() {
       </section>
 
       {/* Overview */}
-      <section className="py-28 bg-background -mt-4">
+      <section className="py-28 bg-background">
         <div className="container mx-auto px-6 lg:px-12">
           <div className="grid lg:grid-cols-2 gap-20 items-start">
             <motion.div initial={{ opacity: 0, x: -40 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.7 }}>

@@ -16,7 +16,7 @@ const SECTIONS = [
 export default function PrivacyPolicy() {
   return (
     <Layout>
-      <section className="relative bg-[#0A2540] text-white py-28 overflow-hidden" style={{ clipPath: "polygon(0 0, 100% 0, 100% 90%, 0 100%)", paddingBottom: "5vw" }}>
+      <section className="relative bg-[#0A2540] text-white py-28 overflow-hidden">
         <div className="absolute inset-0 opacity-[0.06]" style={{ backgroundImage: "linear-gradient(rgba(255,255,255,1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,1) 1px, transparent 1px)", backgroundSize: "60px 60px" }} />
         <div className="container mx-auto px-6 lg:px-12 relative z-10">
           <div className="flex items-center gap-2 text-xs text-white/40 mb-10 uppercase tracking-wider">
@@ -33,7 +33,7 @@ export default function PrivacyPolicy() {
         </div>
       </section>
 
-      <section className="py-20 bg-background -mt-4">
+      <section className="py-20 bg-background">
         <div className="container mx-auto px-6 lg:px-12 max-w-3xl">
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
             <p className="text-muted-foreground leading-relaxed text-lg mb-12">
