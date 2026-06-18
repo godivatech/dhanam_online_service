@@ -5,7 +5,8 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import * as z from "zod";
 import { useState } from "react";
-import { Phone, Mail, MapPin, Clock, MessageCircle, ArrowRight, ChevronRight, CheckCircle } from "lucide-react";
+import { Phone, Mail, MapPin, Clock, ArrowRight, ChevronRight, CheckCircle } from "lucide-react";
+import { WhatsAppIcon } from "@/components/icons/WhatsAppIcon";
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -175,7 +176,7 @@ export default function Contact() {
 
                 {/* WhatsApp */}
                 <a href="https://wa.me/919876543210" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-3 bg-[#25D366] text-white py-4 font-bold text-sm uppercase tracking-wider hover:bg-[#1ebd5a] transition-all" data-testid="button-whatsapp-contact">
-                  <MessageCircle className="w-5 h-5" /> Chat on WhatsApp
+                  <WhatsAppIcon className="w-5 h-5" size={20} /> Chat on WhatsApp
                 </a>
 
                 {/* Hours */}

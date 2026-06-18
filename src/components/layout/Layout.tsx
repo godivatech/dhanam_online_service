@@ -1,7 +1,8 @@
 import { ReactNode, useState, useEffect } from "react";
 import { Link, useLocation } from "wouter";
-import { MessageCircle, Menu, X, ChevronDown, Scale, Building2, Heart, Landmark, Users, FileCheck, Copy, Globe } from "lucide-react";
+import { Menu, X, ChevronDown, Scale, Building2, Heart, Landmark, Users, FileCheck, Copy, Globe } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import { WhatsAppIcon } from "../icons/WhatsAppIcon";
 
 const SERVICES = [
   { title: "Property Registration", href: "/services/property-registration", icon: Building2, desc: "Sale & settlement deeds" },
@@ -337,7 +338,7 @@ export function WhatsAppButton() {
     >
       <div className="absolute inset-0 bg-[#25D366] rounded-full animate-ping opacity-70" />
       <div className="relative bg-[#25D366] p-4 text-white rounded-full shadow-2xl hover:scale-110 transition-transform flex items-center justify-center border-2 border-white/20">
-        <MessageCircle className="w-8 h-8" />
+        <WhatsAppIcon className="w-8 h-8" size={32} />
       </div>
       <span className="absolute right-full mr-4 top-1/2 -translate-y-1/2 bg-black text-white px-3 py-1.5 rounded text-xs font-bold uppercase tracking-wider opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none shadow-xl">
         Chat with us
