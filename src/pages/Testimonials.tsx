@@ -64,23 +64,50 @@ export default function Testimonials() {
         </div>
       </section>
 
-      {/* Testimonials masonry */}
-      <section className="py-28 bg-[#FAFBFC]">
+      {/* Testimonials Uniform Grid */}
+      <section className="py-24 bg-[#FAFBFC]">
         <div className="container mx-auto px-6 lg:px-12">
-          <motion.div variants={stagger} initial="hidden" whileInView="show" viewport={{ once: true }} className="columns-1 md:columns-2 lg:columns-3 gap-6 space-y-6">
+          <motion.div 
+            variants={stagger} 
+            initial="hidden" 
+            whileInView="show" 
+            viewport={{ once: true }} 
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+          >
             {TESTIMONIALS.map((t) => (
-              <motion.div key={t.name} variants={fadeUp} className="break-inside-avoid bg-white border border-[#DCE3EA] border-l-4 border-l-[#E5A019] p-8 hover:shadow-xl transition-all duration-300 inline-block w-full mb-6">
-                <div className="text-5xl font-serif text-[#E5A019]/25 leading-none mb-4">"</div>
-                <div className="flex gap-1 mb-4">
-                  {Array.from({ length: t.stars }).map((_, i) => (
-                    <Star key={i} className="w-4 h-4 fill-[#E5A019] text-[#E5A019]" />
-                  ))}
+              <motion.div 
+                key={t.name} 
+                variants={fadeUp} 
+                className="bg-white border border-[#DCE3EA] rounded-xl p-7 hover:shadow-xl hover:border-[#123E73]/40 transition-all duration-300 flex flex-col justify-between"
+              >
+                <div>
+                  {/* Top Bar with Star Rating & Service Tag */}
+                  <div className="flex items-center justify-between mb-4">
+                    <div className="flex gap-1">
+                      {Array.from({ length: t.stars }).map((_, i) => (
+                        <Star key={i} className="w-4 h-4 fill-[#E5A019] text-[#E5A019]" />
+                      ))}
+                    </div>
+                    <span className="text-[11px] font-semibold uppercase tracking-wider text-[#123E73] bg-[#F1F5F9] px-2.5 py-1 rounded">
+                      {t.service}
+                    </span>
+                  </div>
+
+                  {/* Review Text */}
+                  <p className="text-[#334155] text-sm leading-relaxed mb-6 italic">
+                    "{t.content}"
+                  </p>
                 </div>
-                <p className="text-[#334155] leading-relaxed mb-6 italic">{t.content}</p>
-                <div className="border-t border-[#DCE3EA] pt-5">
-                  <div className="font-serif font-bold text-[#102F56] text-lg">{t.name}</div>
-                  <div className="text-xs text-[#E5A019] uppercase tracking-wider font-semibold mt-1">{t.role}</div>
-                  <div className="text-xs text-[#334155]/70 mt-1">Service: {t.service}</div>
+
+                {/* Author Info with Initial Avatar */}
+                <div className="border-t border-[#DCE3EA] pt-4 flex items-center gap-3.5 mt-auto">
+                  <div className="w-10 h-10 rounded-full bg-[#102F56] text-white flex items-center justify-center font-bold text-sm shrink-0 border border-[#E5A019]/40">
+                    {t.name.split(" ").map((n) => n[0]).slice(0, 2).join("")}
+                  </div>
+                  <div>
+                    <div className="font-serif font-bold text-[#102F56] text-base leading-tight">{t.name}</div>
+                    <div className="text-xs text-[#E5A019] font-medium tracking-wide mt-0.5">{t.role}</div>
+                  </div>
                 </div>
               </motion.div>
             ))}

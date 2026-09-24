@@ -308,7 +308,7 @@ export function Footer() {
               <li><Link href="/about" className="hover:text-[#E5A019] transition-colors flex items-center gap-2 group"><span className="w-1.5 h-1.5 rounded-full bg-[#E5A019]/40 group-hover:bg-[#E5A019] transition-colors"></span> About Us</Link></li>
               <li><Link href="/why-choose-us" className="hover:text-[#E5A019] transition-colors flex items-center gap-2 group"><span className="w-1.5 h-1.5 rounded-full bg-[#E5A019]/40 group-hover:bg-[#E5A019] transition-colors"></span> Why Choose Us</Link></li>
               <li><Link href="/projects" className="hover:text-[#E5A019] transition-colors flex items-center gap-2 group"><span className="w-1.5 h-1.5 rounded-full bg-[#E5A019]/40 group-hover:bg-[#E5A019] transition-colors"></span> Landmark Projects</Link></li>
-              <li><Link href="/testimonials" className="hover:text-[#E5A019] transition-colors flex items-center gap-2 group"><span className="w-1.5 h-1.5 rounded-full bg-[#E5A019]/40 group-hover:bg-[#E5A019] transition-colors"></span> Client Reviews</Link></li>
+              <li><Link href="/faq" className="hover:text-[#E5A019] transition-colors flex items-center gap-2 group"><span className="w-1.5 h-1.5 rounded-full bg-[#E5A019]/40 group-hover:bg-[#E5A019] transition-colors"></span> FAQs & Answers</Link></li>
               <li><Link href="/blog" className="hover:text-[#E5A019] transition-colors flex items-center gap-2 group"><span className="w-1.5 h-1.5 rounded-full bg-[#E5A019]/40 group-hover:bg-[#E5A019] transition-colors"></span> Legal Blog</Link></li>
             </ul>
           </div>
