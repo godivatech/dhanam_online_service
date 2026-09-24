@@ -498,12 +498,16 @@ export default function Home() {
           >
             {PROJECTS.map((p) => (
               <motion.div key={p.name} variants={fadeUp}>
-                <Link href="/projects" className="group block p-8 bg-white border border-[#DCE3EA] hover:border-[#123E73] hover:shadow-md transition-all duration-300 rounded" data-testid={`card-project-${p.num}`}>
+                <Link href="/projects" className="group block p-8 bg-white border border-[#DCE3EA] hover:border-[#123E73] hover:shadow-lg transition-all duration-300 rounded-xl" data-testid={`card-project-${p.num}`}>
                   <div className="font-serif text-4xl font-bold text-[#123E73]/20 group-hover:text-[#E5A019] transition-colors mb-3">{p.num}</div>
-                  <h3 className="font-serif text-lg font-bold text-[#102F56] mb-2 leading-snug">{p.name}</h3>
-                  <p className="text-xs uppercase tracking-wider text-[#334155]/70 mb-5">{p.type}</p>
+                  <h3 className="font-serif text-xl font-bold text-[#102F56] mb-3 leading-snug">{p.name}</h3>
+                  <div className="mb-5">
+                    <span className="inline-block text-xs uppercase tracking-wider font-semibold text-[#123E73] bg-[#F1F5F9] px-3 py-1 rounded border border-[#DCE3EA]">
+                      {p.type}
+                    </span>
+                  </div>
                   <span className="text-xs font-bold text-[#123E73] group-hover:text-[#092747] uppercase tracking-wider flex items-center gap-1.5 transition-colors">
-                    View Details <ArrowRight className="w-3 h-3 text-[#E5A019]" />
+                    View Details <ArrowRight className="w-3.5 h-3.5 text-[#E5A019]" />
                   </span>
                 </Link>
               </motion.div>

@@ -123,7 +123,7 @@ export default function Projects() {
                   <div className="flex-1 flex flex-col">
                     {/* Category Badge */}
                     <div className="mb-4">
-                      <span className="text-[10px] uppercase tracking-widest text-[#E5A019] font-bold bg-[#E5A019]/10 border border-[#E5A019]/25 px-2.5 py-1">
+                      <span className="text-xs uppercase tracking-wider text-[#123E73] font-bold bg-[#F1F5F9] border border-[#DCE3EA] px-3 py-1 rounded">
                         {p.type}
                       </span>
                     </div>
