@@ -123,13 +123,13 @@ export function Header() {
 
   return (
     <header className="sticky top-0 z-50 w-full bg-[#FAFBFC]/95 backdrop-blur-md border-b border-[#DCE3EA] shadow-[0_1px_3px_rgba(16,47,86,0.04)] transition-all duration-300">
-      <div className="container mx-auto px-4 lg:px-8 h-28 md:h-32 flex items-center justify-between">
+      <div className="container mx-auto px-4 lg:px-8 h-32 md:h-36 flex items-center justify-between">
         {/* Official Logo Only */}
         <Link href="/" className="group flex items-center py-1" data-testid="link-home-logo" aria-label="AB DHANAM GROUP">
           <img
             src="/images/Logo.png"
             alt="AB DHANAM GROUP"
-            className="w-24 h-24 md:w-28 md:h-28 object-contain group-hover:scale-105 transition-transform duration-200"
+            className="w-28 h-28 md:w-36 md:h-36 object-contain group-hover:scale-105 transition-transform duration-200"
           />
         </Link>
 
@@ -179,7 +179,7 @@ export function Header() {
             </AnimatePresence>
           </div>
 
-          <Link href="/projects" className="text-sm font-medium tracking-wide text-[#334155] hover:text-[#102F56] relative py-2 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-[#E5A019] after:transition-all hover:after:w-full transition-colors">Projects</Link>
+          {/* <Link href="/projects" className="text-sm font-medium tracking-wide text-[#334155] hover:text-[#102F56] relative py-2 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-[#E5A019] after:transition-all hover:after:w-full transition-colors">Projects</Link> */}
           <Link href="/contact" className="text-sm font-medium tracking-wide text-[#334155] hover:text-[#102F56] relative py-2 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-[#E5A019] after:transition-all hover:after:w-full transition-colors">Contact</Link>
           <LanguageSelector />
         </nav>
@@ -227,7 +227,7 @@ export function Header() {
                   <img
                     src="/images/Logo.png"
                     alt="AB DHANAM GROUP"
-                    className="w-16 h-16 object-contain"
+                    className="w-20 h-20 object-contain"
                   />
                 </Link>
                 <button 
@@ -253,7 +253,7 @@ export function Header() {
                   </div>
                 </div>
                 
-                <Link href="/projects" className="text-base font-semibold text-[#102F56] py-2 border-b border-[#DCE3EA]/60">Projects</Link>
+                {/* <Link href="/projects" className="text-base font-semibold text-[#102F56] py-2 border-b border-[#DCE3EA]/60">Projects</Link> */}
                 <Link href="/contact" className="text-base font-semibold text-[#102F56] py-2 border-b border-[#DCE3EA]/60">Contact</Link>
                 
                 <div className="flex justify-between items-center py-3 border-b border-[#DCE3EA]/60">
@@ -287,7 +287,7 @@ export function Footer() {
           {/* Brand Col */}
           <div>
             <Link href="/" className="inline-block mb-6 group" data-testid="link-footer-logo" aria-label="AB DHANAM GROUP">
-              <div className="w-24 h-24 md:w-28 md:h-28 rounded-2xl bg-white p-2.5 shadow-md flex items-center justify-center border border-[#E5A019]/40 group-hover:border-[#E5A019] transition-all">
+              <div className="w-32 h-32 md:w-40 md:h-40 rounded-2xl bg-white p-3 shadow-md flex items-center justify-center border border-[#E5A019]/40 group-hover:border-[#E5A019] transition-all">
                 <img
                   src="/images/Logo.png"
                   alt="AB DHANAM GROUP"
@@ -307,7 +307,7 @@ export function Footer() {
             <ul className="space-y-3.5 text-sm text-[#DCE3EA]/85">
               <li><Link href="/about" className="hover:text-[#E5A019] transition-colors flex items-center gap-2 group"><span className="w-1.5 h-1.5 rounded-full bg-[#E5A019]/40 group-hover:bg-[#E5A019] transition-colors"></span> About Us</Link></li>
               <li><Link href="/why-choose-us" className="hover:text-[#E5A019] transition-colors flex items-center gap-2 group"><span className="w-1.5 h-1.5 rounded-full bg-[#E5A019]/40 group-hover:bg-[#E5A019] transition-colors"></span> Why Choose Us</Link></li>
-              <li><Link href="/projects" className="hover:text-[#E5A019] transition-colors flex items-center gap-2 group"><span className="w-1.5 h-1.5 rounded-full bg-[#E5A019]/40 group-hover:bg-[#E5A019] transition-colors"></span> Landmark Projects</Link></li>
+              {/* <li><Link href="/projects" className="hover:text-[#E5A019] transition-colors flex items-center gap-2 group"><span className="w-1.5 h-1.5 rounded-full bg-[#E5A019]/40 group-hover:bg-[#E5A019] transition-colors"></span> Landmark Projects</Link></li> */}
               <li><Link href="/faq" className="hover:text-[#E5A019] transition-colors flex items-center gap-2 group"><span className="w-1.5 h-1.5 rounded-full bg-[#E5A019]/40 group-hover:bg-[#E5A019] transition-colors"></span> FAQs & Answers</Link></li>
               <li><Link href="/blog" className="hover:text-[#E5A019] transition-colors flex items-center gap-2 group"><span className="w-1.5 h-1.5 rounded-full bg-[#E5A019]/40 group-hover:bg-[#E5A019] transition-colors"></span> Legal Blog</Link></li>
             </ul>

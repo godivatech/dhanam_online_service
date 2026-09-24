@@ -470,7 +470,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── PROJECTS PREVIEW (Alternating Section #F1F5F9) ──────────────────── */}
+      {/* ── PROJECTS PREVIEW (Commented out) ─────────────────────────────────── */}
+      {/* 
       <section className="py-28 bg-[#F1F5F9]">
         <div className="container mx-auto px-6 lg:px-12">
           <motion.div
@@ -515,6 +516,7 @@ export default function Home() {
           </motion.div>
         </div>
       </section>
+      */}
 
       {/* ── TESTIMONIALS PREVIEW (Deep Navy #102F56 Section) ───────────────── */}
       <section className="py-28 bg-[#102F56] text-white">
