@@ -26,22 +26,22 @@ export default function Testimonials() {
   return (
     <Layout>
       <section
-        className="relative bg-[#0A2540] text-white py-32 overflow-hidden"
+        className="relative bg-[#102F56] text-white py-32 overflow-hidden"
       >
         <div className="absolute inset-0 opacity-[0.06]"
           style={{ backgroundImage: "linear-gradient(rgba(255,255,255,1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,1) 1px, transparent 1px)", backgroundSize: "60px 60px" }}
         />
         <div className="container mx-auto px-6 lg:px-12 relative z-10">
           <div className="flex items-center gap-2 text-xs text-white/40 mb-10 uppercase tracking-wider">
-            <Link href="/" className="hover:text-[#D4AF37] transition-colors">Home</Link>
+            <Link href="/" className="hover:text-[#E5A019] transition-colors">Home</Link>
             <ChevronRight className="w-3 h-3" />
-            <span className="text-[#D4AF37]">Testimonials</span>
+            <span className="text-[#E5A019]">Testimonials</span>
           </div>
           <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }}>
-            <p className="text-xs uppercase tracking-[0.35em] text-[#D4AF37] font-semibold mb-4">Client Voices</p>
-            <div className="w-12 h-0.5 bg-[#D4AF37] mb-8" />
+            <p className="text-xs uppercase tracking-[0.35em] text-[#E5A019] font-semibold mb-4">Client Voices</p>
+            <div className="w-12 h-0.5 bg-[#E5A019] mb-8" />
             <h1 className="font-serif text-5xl md:text-7xl font-bold leading-tight mb-6">
-              What Our Clients<br /><span className="text-[#D4AF37] italic">Say About Us</span>
+              What Our Clients<br /><span className="text-[#E5A019] italic">Say About Us</span>
             </h1>
             <p className="text-white/70 text-xl max-w-2xl">
               Over 5,000 satisfied clients across Tamil Nadu — each one a story of stress eliminated and trust honoured.
@@ -51,13 +51,13 @@ export default function Testimonials() {
       </section>
 
       {/* Stats bar */}
-      <section className="py-12 bg-[#D4AF37]">
+      <section className="py-12 bg-[#F1F5F9] border-y border-[#DCE3EA]">
         <div className="container mx-auto px-6 lg:px-12">
-          <div className="flex flex-wrap justify-center gap-12 text-[#0A2540]">
+          <div className="flex flex-wrap justify-center gap-12 text-[#102F56]">
             {[["98%", "Client Satisfaction"], ["5000+", "Happy Clients"], ["9+", "Years of Trust"], ["0", "Documentation Errors"]].map(([val, lab]) => (
               <div key={lab} className="text-center">
                 <div className="font-serif text-3xl font-bold">{val}</div>
-                <div className="text-xs uppercase tracking-wider text-[#0A2540]/70 mt-1">{lab}</div>
+                <div className="text-xs uppercase tracking-wider text-[#334155]/80 mt-1">{lab}</div>
               </div>
             ))}
           </div>
@@ -65,22 +65,22 @@ export default function Testimonials() {
       </section>
 
       {/* Testimonials masonry */}
-      <section className="py-28 bg-background">
+      <section className="py-28 bg-[#FAFBFC]">
         <div className="container mx-auto px-6 lg:px-12">
           <motion.div variants={stagger} initial="hidden" whileInView="show" viewport={{ once: true }} className="columns-1 md:columns-2 lg:columns-3 gap-6 space-y-6">
             {TESTIMONIALS.map((t) => (
-              <motion.div key={t.name} variants={fadeUp} className="break-inside-avoid bg-white border border-border border-l-4 border-l-[#D4AF37] p-8 hover:shadow-2xl transition-all duration-300 inline-block w-full mb-6">
-                <div className="text-5xl font-serif text-[#D4AF37]/20 leading-none mb-4">"</div>
+              <motion.div key={t.name} variants={fadeUp} className="break-inside-avoid bg-white border border-[#DCE3EA] border-l-4 border-l-[#E5A019] p-8 hover:shadow-xl transition-all duration-300 inline-block w-full mb-6">
+                <div className="text-5xl font-serif text-[#E5A019]/25 leading-none mb-4">"</div>
                 <div className="flex gap-1 mb-4">
                   {Array.from({ length: t.stars }).map((_, i) => (
-                    <Star key={i} className="w-4 h-4 fill-[#D4AF37] text-[#D4AF37]" />
+                    <Star key={i} className="w-4 h-4 fill-[#E5A019] text-[#E5A019]" />
                   ))}
                 </div>
-                <p className="text-muted-foreground leading-relaxed mb-6 italic">{t.content}</p>
-                <div className="border-t border-border pt-5">
-                  <div className="font-serif font-bold text-primary text-lg">{t.name}</div>
-                  <div className="text-xs text-[#D4AF37] uppercase tracking-wider font-medium mt-1">{t.role}</div>
-                  <div className="text-xs text-muted-foreground mt-1">Service: {t.service}</div>
+                <p className="text-[#334155] leading-relaxed mb-6 italic">{t.content}</p>
+                <div className="border-t border-[#DCE3EA] pt-5">
+                  <div className="font-serif font-bold text-[#102F56] text-lg">{t.name}</div>
+                  <div className="text-xs text-[#E5A019] uppercase tracking-wider font-semibold mt-1">{t.role}</div>
+                  <div className="text-xs text-[#334155]/70 mt-1">Service: {t.service}</div>
                 </div>
               </motion.div>
             ))}
@@ -88,14 +88,14 @@ export default function Testimonials() {
         </div>
       </section>
 
-      <section className="py-24 bg-[#D4AF37]">
+      <section className="py-24 bg-[#102F56] text-white border-t border-[#DCE3EA]/20">
         <div className="container mx-auto px-6 lg:px-12 text-center">
           <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
-            <h2 className="font-serif text-4xl md:text-5xl font-bold text-[#0A2540] mb-6">Join 5,000+ Satisfied Clients</h2>
-            <p className="text-[#0A2540]/70 text-lg mb-10 max-w-xl mx-auto">
+            <h2 className="font-serif text-4xl md:text-5xl font-bold text-white mb-6">Join 5,000+ Satisfied Clients</h2>
+            <p className="text-[#DCE3EA]/80 text-lg mb-10 max-w-xl mx-auto">
               Your registration journey deserves the same precision and care that thousands before you have experienced.
             </p>
-            <Link href="/book-consultation" className="inline-flex items-center bg-[#0A2540] text-white px-10 py-4 font-bold text-sm uppercase tracking-wider hover:bg-[#0F4C81] transition-all shadow-xl" data-testid="button-cta-testimonials">
+            <Link href="/book-consultation" className="inline-flex items-center bg-[#123E73] hover:bg-[#092747] text-white px-10 py-4 font-bold text-sm uppercase tracking-wider transition-all shadow-xl border border-[#E5A019]/40" data-testid="button-cta-testimonials">
               Book Free Consultation <ArrowRight className="ml-2 w-4 h-4" />
             </Link>
           </motion.div>

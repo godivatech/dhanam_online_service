@@ -83,10 +83,10 @@ export default function BlogPost() {
   if (!post) {
     return (
       <Layout>
-        <div className="min-h-[60vh] flex items-center justify-center">
+        <div className="min-h-[60vh] flex items-center justify-center bg-[#FAFBFC]">
           <div className="text-center">
-            <h2 className="font-serif text-3xl font-bold text-primary mb-4">Article Not Found</h2>
-            <Link href="/blog" className="inline-flex items-center text-[#D4AF37] font-bold uppercase tracking-wider gap-2" data-testid="link-back-to-blog">
+            <h2 className="font-serif text-3xl font-bold text-[#102F56] mb-4">Article Not Found</h2>
+            <Link href="/blog" className="inline-flex items-center text-[#123E73] font-bold uppercase tracking-wider gap-2 hover:underline" data-testid="link-back-to-blog">
               <ArrowLeft className="w-4 h-4" /> Back to Blog
             </Link>
           </div>
@@ -97,56 +97,56 @@ export default function BlogPost() {
 
   return (
     <Layout>
-      <section className="relative bg-[#0A2540] text-white py-28 overflow-hidden">
+      <section className="relative bg-[#102F56] text-white py-28 overflow-hidden">
         <div className="absolute inset-0 opacity-[0.06]"
           style={{ backgroundImage: "linear-gradient(rgba(255,255,255,1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,1) 1px, transparent 1px)", backgroundSize: "60px 60px" }}
         />
         <div className="container mx-auto px-6 lg:px-12 relative z-10 max-w-4xl">
-          <div className="flex items-center gap-2 text-xs text-white/40 mb-10 uppercase tracking-wider">
-            <Link href="/" className="hover:text-[#D4AF37] transition-colors">Home</Link>
+          <div className="flex items-center gap-2 text-xs text-white/50 mb-10 uppercase tracking-wider">
+            <Link href="/" className="hover:text-[#E5A019] transition-colors">Home</Link>
             <ChevronRight className="w-3 h-3" />
-            <Link href="/blog" className="hover:text-[#D4AF37] transition-colors">Blog</Link>
+            <Link href="/blog" className="hover:text-[#E5A019] transition-colors">Blog</Link>
             <ChevronRight className="w-3 h-3" />
-            <span className="text-[#D4AF37]">Article</span>
+            <span className="text-[#E5A019]">Article</span>
           </div>
           <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }}>
-            <span className="text-xs uppercase tracking-[0.3em] text-[#D4AF37] font-semibold">{post.category}</span>
-            <div className="w-12 h-0.5 bg-[#D4AF37] my-6" />
+            <span className="text-xs uppercase tracking-[0.3em] text-[#E5A019] font-semibold">{post.category}</span>
+            <div className="w-12 h-0.5 bg-[#E5A019] my-6" />
             <h1 className="font-serif text-4xl md:text-5xl font-bold leading-tight mb-8">{post.title}</h1>
-            <div className="flex items-center gap-6 text-xs text-white/50">
-              <span className="flex items-center gap-1.5"><Calendar className="w-3 h-3" />{post.date}</span>
-              <span className="flex items-center gap-1.5"><Clock className="w-3 h-3" />{post.readTime}</span>
+            <div className="flex items-center gap-6 text-xs text-white/70">
+              <span className="flex items-center gap-1.5"><Calendar className="w-3 h-3 text-[#E5A019]" />{post.date}</span>
+              <span className="flex items-center gap-1.5"><Clock className="w-3 h-3 text-[#E5A019]" />{post.readTime}</span>
               <span>A.B. Dhanam Team</span>
             </div>
           </motion.div>
         </div>
       </section>
 
-      <section className="py-20 bg-background">
+      <section className="py-20 bg-[#FAFBFC]">
         <div className="container mx-auto px-6 lg:px-12 max-w-4xl">
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
-            <div className="prose prose-lg max-w-none prose-headings:font-serif prose-headings:text-primary prose-strong:text-primary prose-p:text-muted-foreground prose-p:leading-relaxed">
+            <div className="bg-white border border-[#DCE3EA] p-8 md:p-12 prose prose-lg max-w-none prose-headings:font-serif prose-headings:text-[#102F56] prose-strong:text-[#102F56] prose-p:text-[#334155] prose-p:leading-relaxed">
               {post.content.split("\n\n").map((block, i) => {
                 if (block.startsWith("**") && block.endsWith("**")) {
-                  return <h2 key={i} className="font-serif text-2xl font-bold text-primary mt-10 mb-4">{block.replace(/\*\*/g, "")}</h2>;
+                  return <h2 key={i} className="font-serif text-2xl font-bold text-[#102F56] mt-10 mb-4">{block.replace(/\*\*/g, "")}</h2>;
                 }
                 if (block.startsWith("**")) {
                   const parts = block.split("**");
                   return (
-                    <p key={i} className="text-muted-foreground leading-relaxed mb-6">
-                      {parts.map((p, j) => j % 2 === 1 ? <strong key={j} className="text-primary font-semibold">{p}</strong> : p)}
+                    <p key={i} className="text-[#334155] leading-relaxed mb-6">
+                      {parts.map((p, j) => j % 2 === 1 ? <strong key={j} className="text-[#102F56] font-semibold">{p}</strong> : p)}
                     </p>
                   );
                 }
-                return <p key={i} className="text-muted-foreground leading-relaxed mb-6">{block}</p>;
+                return <p key={i} className="text-[#334155] leading-relaxed mb-6">{block}</p>;
               })}
             </div>
 
-            <div className="mt-16 border-t border-border pt-12 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
-              <Link href="/blog" className="inline-flex items-center text-[#D4AF37] font-bold text-sm uppercase tracking-wider gap-2 hover:gap-3 transition-all" data-testid="link-back-blog">
+            <div className="mt-16 border-t border-[#DCE3EA] pt-12 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
+              <Link href="/blog" className="inline-flex items-center text-[#123E73] font-bold text-sm uppercase tracking-wider gap-2 hover:gap-3 transition-all" data-testid="link-back-blog">
                 <ArrowLeft className="w-4 h-4" /> Back to All Articles
               </Link>
-              <Link href="/book-consultation" className="inline-flex items-center bg-[#D4AF37] text-[#0A2540] px-8 py-4 font-bold text-sm uppercase tracking-wider hover:bg-[#c9a630] transition-all" data-testid="button-cta-blogpost">
+              <Link href="/book-consultation" className="inline-flex items-center bg-[#123E73] hover:bg-[#092747] text-white px-8 py-4 font-bold text-sm uppercase tracking-wider border border-[#E5A019]/40 shadow-xl transition-all" data-testid="button-cta-blogpost">
                 Book Free Consultation <ArrowRight className="ml-2 w-4 h-4" />
               </Link>
             </div>

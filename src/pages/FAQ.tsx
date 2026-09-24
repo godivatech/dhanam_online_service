@@ -48,14 +48,14 @@ const CATEGORY_KEYS = Object.keys(FAQS);
 function AccordionItem({ q, a }: { q: string; a: string }) {
   const [open, setOpen] = useState(false);
   return (
-    <div className="border-b border-border last:border-0">
+    <div className="border-b border-[#DCE3EA] last:border-0">
       <button
         className="w-full flex items-center justify-between py-6 text-left gap-6 group"
         onClick={() => setOpen(!open)}
         data-testid={`faq-toggle-${q.slice(0, 20).replace(/\s+/g, "-").toLowerCase()}`}
       >
-        <span className="font-serif text-lg font-semibold text-primary group-hover:text-[#0F4C81] transition-colors pr-4">{q}</span>
-        <ChevronDown className={`w-5 h-5 text-[#D4AF37] shrink-0 transition-transform duration-300 ${open ? "rotate-180" : ""}`} />
+        <span className="font-serif text-lg font-semibold text-[#102F56] group-hover:text-[#123E73] transition-colors pr-4">{q}</span>
+        <ChevronDown className={`w-5 h-5 text-[#E5A019] shrink-0 transition-transform duration-300 ${open ? "rotate-180" : ""}`} />
       </button>
       <AnimatePresence>
         {open && (
@@ -66,7 +66,7 @@ function AccordionItem({ q, a }: { q: string; a: string }) {
             transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] as [number, number, number, number] }}
             className="overflow-hidden"
           >
-            <p className="pb-6 text-muted-foreground leading-relaxed border-l-4 border-[#D4AF37] pl-6 ml-1">{a}</p>
+            <p className="pb-6 text-[#334155] leading-relaxed border-l-4 border-[#E5A019] pl-6 ml-1">{a}</p>
           </motion.div>
         )}
       </AnimatePresence>
@@ -85,29 +85,29 @@ export default function FAQ() {
   return (
     <Layout>
       <section
-        className="relative bg-[#0A2540] text-white py-32 overflow-hidden"
+        className="relative bg-[#102F56] text-white py-32 overflow-hidden"
       >
         <div className="absolute inset-0 opacity-[0.06]"
           style={{ backgroundImage: "linear-gradient(rgba(255,255,255,1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,1) 1px, transparent 1px)", backgroundSize: "60px 60px" }}
         />
         <div className="container mx-auto px-6 lg:px-12 relative z-10">
-          <div className="flex items-center gap-2 text-xs text-white/40 mb-10 uppercase tracking-wider">
-            <Link href="/" className="hover:text-[#D4AF37] transition-colors">Home</Link>
+          <div className="flex items-center gap-2 text-xs text-white/50 mb-10 uppercase tracking-wider">
+            <Link href="/" className="hover:text-[#E5A019] transition-colors">Home</Link>
             <ChevronRight className="w-3 h-3" />
-            <span className="text-[#D4AF37]">FAQ</span>
+            <span className="text-[#E5A019]">FAQ</span>
           </div>
           <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }}>
-            <p className="text-xs uppercase tracking-[0.35em] text-[#D4AF37] font-semibold mb-4">Frequently Asked</p>
-            <div className="w-12 h-0.5 bg-[#D4AF37] mb-8" />
+            <p className="text-xs uppercase tracking-[0.35em] text-[#E5A019] font-semibold mb-4">Frequently Asked</p>
+            <div className="w-12 h-0.5 bg-[#E5A019] mb-8" />
             <h1 className="font-serif text-5xl md:text-7xl font-bold leading-tight mb-6">
-              Questions &<br /><span className="text-[#D4AF37] italic">Answers</span>
+              Questions &<br /><span className="text-[#E5A019] italic">Answers</span>
             </h1>
-            <p className="text-white/70 text-xl max-w-2xl">Everything you need to know about registration and documentation services in Tamil Nadu.</p>
+            <p className="text-white/80 text-xl max-w-2xl leading-relaxed">Everything you need to know about registration and documentation services in Tamil Nadu.</p>
           </motion.div>
         </div>
       </section>
 
-      <section className="py-24 bg-background">
+      <section className="py-24 bg-[#FAFBFC]">
         <div className="container mx-auto px-6 lg:px-12">
           {/* Search */}
           <div className="relative max-w-2xl mx-auto mb-16">
@@ -117,7 +117,7 @@ export default function FAQ() {
               placeholder="Search all questions..."
               value={search}
               onChange={(e) => setSearch(e.target.value)}
-              className="w-full border border-border pl-14 pr-6 py-5 text-base focus:outline-none focus:border-[#D4AF37] transition-colors bg-background"
+              className="w-full border border-[#DCE3EA] pl-14 pr-6 py-5 text-base focus:outline-none focus:border-[#123E73] transition-colors bg-white text-[#334155]"
               data-testid="input-faq-search"
             />
           </div>
@@ -128,7 +128,7 @@ export default function FAQ() {
                 <button
                   key={cat}
                   onClick={() => setActiveCategory(cat)}
-                  className={`px-5 py-2.5 text-xs font-bold uppercase tracking-wider transition-all ${activeCategory === cat ? "bg-[#D4AF37] text-[#0A2540]" : "border border-border text-muted-foreground hover:border-[#D4AF37] hover:text-[#D4AF37]"}`}
+                  className={`px-5 py-2.5 text-xs font-bold uppercase tracking-wider transition-all ${activeCategory === cat ? "bg-[#123E73] text-white shadow-sm" : "border border-[#DCE3EA] bg-white text-[#334155] hover:border-[#123E73] hover:text-[#123E73]"}`}
                   data-testid={`faq-cat-${cat.toLowerCase().replace(/\s+/g, "-")}`}
                 >
                   {cat}
@@ -137,9 +137,9 @@ export default function FAQ() {
             </div>
           )}
 
-          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="max-w-4xl mx-auto border border-border divide-y-0">
+          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="max-w-4xl mx-auto bg-white border border-[#DCE3EA] p-8 divide-y-0">
             {search.trim() && filtered.length === 0 && (
-              <p className="text-center text-muted-foreground py-16">No results found for "{search}". Try different keywords or <Link href="/contact" className="text-[#D4AF37] font-medium">contact us directly</Link>.</p>
+              <p className="text-center text-[#334155] py-16">No results found for "{search}". Try different keywords or <Link href="/contact" className="text-[#123E73] hover:underline font-medium">contact us directly</Link>.</p>
             )}
             {filtered.map((faq, i) => (
               <AccordionItem key={i} q={faq.q} a={faq.a} />
@@ -147,8 +147,8 @@ export default function FAQ() {
           </motion.div>
 
           <div className="text-center mt-16">
-            <p className="text-muted-foreground mb-6">Still have questions? We are happy to help.</p>
-            <Link href="/book-consultation" className="inline-flex items-center bg-[#D4AF37] text-[#0A2540] px-10 py-4 font-bold text-sm uppercase tracking-wider hover:bg-[#c9a630] transition-all" data-testid="button-cta-faq">
+            <p className="text-[#334155] mb-6">Still have questions? We are happy to help.</p>
+            <Link href="/book-consultation" className="inline-flex items-center bg-[#123E73] hover:bg-[#092747] text-white px-10 py-4 font-bold text-sm uppercase tracking-wider border border-[#E5A019]/40 shadow-xl transition-all" data-testid="button-cta-faq">
               Book Free Consultation <ArrowRight className="ml-2 w-4 h-4" />
             </Link>
           </div>

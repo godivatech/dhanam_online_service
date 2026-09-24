@@ -42,22 +42,22 @@ export default function Projects() {
   return (
     <Layout>
       <section
-        className="relative bg-[#0A2540] text-white py-32 overflow-hidden"
+        className="relative bg-[#102F56] text-white py-32 overflow-hidden"
       >
         <div className="absolute inset-0 opacity-[0.06]"
           style={{ backgroundImage: "linear-gradient(rgba(255,255,255,1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,1) 1px, transparent 1px)", backgroundSize: "60px 60px" }}
         />
         <div className="container mx-auto px-6 lg:px-12 relative z-10">
           <div className="flex items-center gap-2 text-xs text-white/40 mb-10 uppercase tracking-wider">
-            <Link href="/" className="hover:text-[#D4AF37] transition-colors">Home</Link>
+            <Link href="/" className="hover:text-[#E5A019] transition-colors">Home</Link>
             <ChevronRight className="w-3 h-3" />
-            <span className="text-[#D4AF37]">Projects</span>
+            <span className="text-[#E5A019]">Projects</span>
           </div>
           <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }}>
-            <p className="text-xs uppercase tracking-[0.35em] text-[#D4AF37] font-semibold mb-4">Our Portfolio</p>
-            <div className="w-12 h-0.5 bg-[#D4AF37] mb-8" />
+            <p className="text-xs uppercase tracking-[0.35em] text-[#E5A019] font-semibold mb-4">Our Portfolio</p>
+            <div className="w-12 h-0.5 bg-[#E5A019] mb-8" />
             <h1 className="font-serif text-5xl md:text-7xl font-bold leading-tight mb-6">
-              Landmark Projects<br /><span className="text-[#D4AF37] italic">Across Tamil Nadu</span>
+              Landmark Projects<br /><span className="text-[#E5A019] italic">Across Tamil Nadu</span>
             </h1>
             <p className="text-white/70 text-xl max-w-2xl">
               Ten major residential and commercial projects — each representing the gold standard of legal documentation precision.
@@ -66,7 +66,7 @@ export default function Projects() {
         </div>
       </section>
 
-      <section className="py-24 bg-background">
+      <section className="py-24 bg-[#FAFBFC]">
         <div className="container mx-auto px-6 lg:px-12">
           {/* Modern Category Filter Tabs */}
           <div className="flex flex-wrap justify-center items-center gap-3 mb-16">
@@ -78,15 +78,15 @@ export default function Projects() {
                   onClick={() => setActiveCategory(cat)}
                   className={`relative px-6 py-2.5 text-xs font-bold uppercase tracking-widest transition-all duration-300 ${
                     isActive 
-                      ? "text-[#0A2540]" 
-                      : "text-muted-foreground hover:text-[#0A2540]"
+                      ? "text-[#102F56]" 
+                      : "text-[#334155] hover:text-[#102F56]"
                   }`}
                 >
                   {/* Sliding Pill Background using Framer Motion */}
                   {isActive && (
                     <motion.div
                       layoutId="activeTab"
-                      className="absolute inset-0 bg-[#D4AF37]/10 border border-[#D4AF37]/40 z-0"
+                      className="absolute inset-0 bg-[#E5A019]/10 border border-[#E5A019]/40 z-0"
                       transition={{ type: "spring", stiffness: 380, damping: 30 }}
                     />
                   )}
@@ -107,60 +107,60 @@ export default function Projects() {
                   exit={{ opacity: 0, scale: 0.9, transition: { duration: 0.2 } }}
                   transition={{ type: "spring", stiffness: 350, damping: 25 }}
                   key={p.name} 
-                  className="group relative border border-border/80 hover:border-[#D4AF37] hover:shadow-2xl transition-all duration-500 hover:-translate-y-1.5 overflow-hidden bg-white p-8 rounded-none flex flex-col justify-between min-h-[460px]"
+                  className="group relative border border-[#DCE3EA] hover:border-[#E5A019] hover:shadow-xl transition-all duration-500 hover:-translate-y-1.5 overflow-hidden bg-white p-8 rounded-none flex flex-col justify-between min-h-[460px]"
                 >
                   {/* Gold Top Accent Line */}
-                  <div className="absolute top-0 left-0 right-0 h-1 bg-[#D4AF37]" />
+                  <div className="absolute top-0 left-0 right-0 h-1 bg-[#E5A019]" />
                   
                   {/* Background Hover Glow */}
-                  <div className="absolute inset-0 bg-gradient-to-tr from-[#D4AF37]/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
+                  <div className="absolute inset-0 bg-gradient-to-tr from-[#E5A019]/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
 
                   {/* Number Watermark */}
-                  <div className="absolute top-6 right-8 font-sans text-6xl font-extrabold text-slate-100 group-hover:text-[#D4AF37]/10 transition-colors duration-300 pointer-events-none select-none">
+                  <div className="absolute top-6 right-8 font-sans text-6xl font-extrabold text-slate-100 group-hover:text-[#E5A019]/10 transition-colors duration-300 pointer-events-none select-none">
                     {p.num}
                   </div>
 
                   <div className="flex-1 flex flex-col">
                     {/* Category Badge */}
                     <div className="mb-4">
-                      <span className="text-[10px] uppercase tracking-widest text-[#D4AF37] font-bold bg-[#D4AF37]/5 border border-[#D4AF37]/20 px-2.5 py-1">
+                      <span className="text-[10px] uppercase tracking-widest text-[#E5A019] font-bold bg-[#E5A019]/10 border border-[#E5A019]/25 px-2.5 py-1">
                         {p.type}
                       </span>
                     </div>
 
                     {/* Project Name */}
-                    <h3 className="text-xl font-bold text-primary mb-2 leading-snug group-hover:text-[#D4AF37] transition-colors duration-300">
+                    <h3 className="text-xl font-bold text-[#102F56] mb-2 leading-snug group-hover:text-[#123E73] transition-colors duration-300">
                       {p.name}
                     </h3>
 
                     {/* Meta (Location & Year) */}
-                    <div className="flex items-center gap-4 mb-5 pb-4 border-b border-dashed border-border">
-                      <span className="flex items-center gap-1.5 text-xs text-muted-foreground font-medium">
-                        <MapPin className="w-3.5 h-3.5 text-[#D4AF37]" />
+                    <div className="flex items-center gap-4 mb-5 pb-4 border-b border-dashed border-[#DCE3EA]">
+                      <span className="flex items-center gap-1.5 text-xs text-[#334155] font-medium">
+                        <MapPin className="w-3.5 h-3.5 text-[#E5A019]" />
                         {p.location}
                       </span>
-                      <span className="flex items-center gap-1.5 text-xs text-muted-foreground font-medium">
-                        <Calendar className="w-3.5 h-3.5 text-[#D4AF37]" />
+                      <span className="flex items-center gap-1.5 text-xs text-[#334155] font-medium">
+                        <Calendar className="w-3.5 h-3.5 text-[#E5A019]" />
                         {p.year}
                       </span>
                     </div>
 
                     {/* Description */}
-                    <p className="text-sm text-muted-foreground leading-relaxed mb-6">
+                    <p className="text-sm text-[#334155] leading-relaxed mb-6">
                       {p.desc}
                     </p>
                   </div>
 
                   <div className="mt-auto">
                     {/* Services Provided Section */}
-                    <div className="mb-6 pt-5 border-t border-border/60">
-                      <p className="text-[10px] uppercase tracking-wider text-muted-foreground font-bold mb-3">
+                    <div className="mb-6 pt-5 border-t border-[#DCE3EA]">
+                      <p className="text-[10px] uppercase tracking-wider text-[#334155]/80 font-bold mb-3">
                         Services Provided
                       </p>
                       <div className="space-y-2">
                         {p.services.map((s) => (
-                          <div key={s} className="flex items-start gap-2 text-xs text-primary">
-                            <CheckCircle className="w-3.5 h-3.5 text-[#D4AF37] shrink-0 mt-0.5 transition-transform duration-500 group-hover:rotate-12 group-hover:scale-110" />
+                          <div key={s} className="flex items-start gap-2 text-xs text-[#102F56]">
+                            <CheckCircle className="w-3.5 h-3.5 text-[#E5A019] shrink-0 mt-0.5 transition-transform duration-500 group-hover:rotate-12 group-hover:scale-110" />
                             <span>{s}</span>
                           </div>
                         ))}
@@ -170,7 +170,7 @@ export default function Projects() {
                     {/* Action Link */}
                     <Link 
                       href="/contact" 
-                      className="inline-flex items-center gap-2 text-xs font-bold text-[#D4AF37] uppercase tracking-wider hover:text-primary transition-colors duration-300"
+                      className="inline-flex items-center gap-2 text-xs font-bold text-[#123E73] uppercase tracking-wider hover:text-[#092747] transition-colors duration-300"
                       data-testid={`link-project-${p.num}`}
                     >
                       Enquire About Similar Project 
@@ -184,14 +184,14 @@ export default function Projects() {
         </div>
       </section>
 
-      <section className="py-24 bg-[#D4AF37]">
+      <section className="py-24 bg-[#102F56] text-white border-t border-[#DCE3EA]/20">
         <div className="container mx-auto px-6 lg:px-12 text-center">
           <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
-            <h2 className="font-serif text-4xl md:text-5xl font-bold text-[#0A2540] mb-6">Planning a Layout or Development Project?</h2>
-            <p className="text-[#0A2540]/70 text-lg mb-10 max-w-xl mx-auto">
+            <h2 className="font-serif text-4xl md:text-5xl font-bold text-white mb-6">Planning a Layout or Development Project?</h2>
+            <p className="text-[#DCE3EA]/80 text-lg mb-10 max-w-xl mx-auto">
               Let our team handle all documentation and registration for your residential or commercial development — from day one to final certificate.
             </p>
-            <Link href="/book-consultation" className="inline-flex items-center bg-[#0A2540] text-white px-10 py-4 font-bold text-sm uppercase tracking-wider hover:bg-[#0F4C81] transition-all shadow-xl" data-testid="button-cta-projects">
+            <Link href="/book-consultation" className="inline-flex items-center bg-[#123E73] hover:bg-[#092747] text-white px-10 py-4 font-bold text-sm uppercase tracking-wider transition-all shadow-xl border border-[#E5A019]/40" data-testid="button-cta-projects">
               Get in Touch <ArrowRight className="ml-2 w-4 h-4" />
             </Link>
           </motion.div>

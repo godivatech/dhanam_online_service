@@ -51,22 +51,22 @@ export default function Services() {
   return (
     <Layout>
       <section
-        className="relative bg-[#0A2540] text-white py-32 overflow-hidden"
+        className="relative bg-[#102F56] text-white py-32 overflow-hidden"
       >
         <div className="absolute inset-0 opacity-[0.06]"
           style={{ backgroundImage: "linear-gradient(rgba(255,255,255,1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,1) 1px, transparent 1px)", backgroundSize: "60px 60px" }}
         />
         <div className="container mx-auto px-6 lg:px-12 relative z-10">
           <div className="flex items-center gap-2 text-xs text-white/40 mb-10 uppercase tracking-wider">
-            <Link href="/" className="hover:text-[#D4AF37] transition-colors">Home</Link>
+            <Link href="/" className="hover:text-[#E5A019] transition-colors">Home</Link>
             <ChevronRight className="w-3 h-3" />
-            <span className="text-[#D4AF37]">Services</span>
+            <span className="text-[#E5A019]">Services</span>
           </div>
           <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }}>
-            <p className="text-xs uppercase tracking-[0.35em] text-[#D4AF37] font-semibold mb-4">What We Do</p>
-            <div className="w-12 h-0.5 bg-[#D4AF37] mb-8" />
+            <p className="text-xs uppercase tracking-[0.35em] text-[#E5A019] font-semibold mb-4">What We Do</p>
+            <div className="w-12 h-0.5 bg-[#E5A019] mb-8" />
             <h1 className="font-serif text-5xl md:text-7xl font-bold leading-tight mb-6">
-              Complete Registration<br /><span className="text-[#D4AF37] italic">& Documentation</span>
+              Complete Registration<br /><span className="text-[#E5A019] italic">& Documentation</span>
             </h1>
             <p className="text-white/70 text-xl max-w-2xl">
               Seven specialised service areas covering every legal registration and documentation need in Tamil Nadu — all under one trusted roof.
@@ -75,29 +75,29 @@ export default function Services() {
         </div>
       </section>
 
-      <section className="py-24 bg-background">
+      <section className="py-24 bg-[#FAFBFC]">
         <div className="container mx-auto px-6 lg:px-12">
           <motion.div variants={stagger} initial="hidden" whileInView="show" viewport={{ once: true }} className="space-y-8">
             {SERVICES.map((s, i) => (
               <motion.div key={s.title} variants={fadeUp}>
-                <div className={`grid lg:grid-cols-5 gap-0 border border-border overflow-hidden hover:shadow-2xl transition-all duration-300 group ${i % 2 === 1 ? "bg-muted/20" : "bg-background"}`}>
-                  <div className="bg-[#0A2540] p-10 flex flex-col items-center justify-center text-center lg:col-span-1">
-                    <div className="font-serif text-5xl font-bold text-[#D4AF37]/30 group-hover:text-[#D4AF37]/50 transition-colors mb-4">{s.num}</div>
-                    <s.icon className="w-10 h-10 text-[#D4AF37]" />
+                <div className={`grid lg:grid-cols-5 gap-0 border border-[#DCE3EA] overflow-hidden hover:shadow-xl transition-all duration-300 group ${i % 2 === 1 ? "bg-[#F1F5F9]" : "bg-white"}`}>
+                  <div className="bg-[#102F56] p-10 flex flex-col items-center justify-center text-center lg:col-span-1">
+                    <div className="font-serif text-5xl font-bold text-[#E5A019]/40 group-hover:text-[#E5A019]/70 transition-colors mb-4">{s.num}</div>
+                    <s.icon className="w-10 h-10 text-[#E5A019]" />
                   </div>
-                  <div className="p-10 lg:col-span-2 border-l border-border">
-                    <h2 className="font-serif text-3xl font-bold text-primary mb-4">{s.title}</h2>
-                    <p className="text-muted-foreground leading-relaxed mb-6">{s.desc}</p>
-                    <Link href={s.href} className="inline-flex items-center bg-[#D4AF37] text-[#0A2540] px-6 py-3 font-bold text-sm uppercase tracking-wider hover:bg-[#c9a630] transition-all" data-testid={`button-service-${s.num}`}>
+                  <div className="p-10 lg:col-span-2 border-l border-[#DCE3EA]">
+                    <h2 className="font-serif text-3xl font-bold text-[#102F56] mb-4">{s.title}</h2>
+                    <p className="text-[#334155] leading-relaxed mb-6">{s.desc}</p>
+                    <Link href={s.href} className="inline-flex items-center bg-[#123E73] hover:bg-[#092747] text-white px-6 py-3 font-bold text-sm uppercase tracking-wider transition-all" data-testid={`button-service-${s.num}`}>
                       View Full Details <ArrowRight className="ml-2 w-4 h-4" />
                     </Link>
                   </div>
-                  <div className="p-10 lg:col-span-2 border-l border-border bg-muted/10">
-                    <p className="text-xs uppercase tracking-[0.2em] text-[#D4AF37] font-semibold mb-5">Includes</p>
+                  <div className="p-10 lg:col-span-2 border-l border-[#DCE3EA] bg-[#F1F5F9]/50">
+                    <p className="text-xs uppercase tracking-[0.2em] text-[#E5A019] font-semibold mb-5">Includes</p>
                     <ul className="space-y-2">
                       {s.items.map((item) => (
-                        <li key={item} className="flex items-center gap-3 text-sm text-muted-foreground">
-                          <div className="w-1.5 h-1.5 rounded-full bg-[#D4AF37] shrink-0" />
+                        <li key={item} className="flex items-center gap-3 text-sm text-[#334155]">
+                          <div className="w-1.5 h-1.5 rounded-full bg-[#E5A019] shrink-0" />
                           {item}
                         </li>
                       ))}
@@ -110,14 +110,14 @@ export default function Services() {
         </div>
       </section>
 
-      <section className="py-24 bg-[#D4AF37]">
+      <section className="py-24 bg-[#102F56] text-white border-t border-[#DCE3EA]/20">
         <div className="container mx-auto px-6 lg:px-12 text-center">
           <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
-            <h2 className="font-serif text-4xl md:text-5xl font-bold text-[#0A2540] mb-6">Not Sure Which Service You Need?</h2>
-            <p className="text-[#0A2540]/70 text-lg mb-10 max-w-xl mx-auto">
+            <h2 className="font-serif text-4xl md:text-5xl font-bold text-white mb-6">Not Sure Which Service You Need?</h2>
+            <p className="text-[#DCE3EA]/80 text-lg mb-10 max-w-xl mx-auto">
               Book a free consultation. Our experts will assess your situation and guide you to the right solution in minutes.
             </p>
-            <Link href="/book-consultation" className="inline-flex items-center bg-[#0A2540] text-white px-10 py-4 font-bold text-sm uppercase tracking-wider hover:bg-[#0F4C81] transition-all shadow-xl" data-testid="button-cta-services">
+            <Link href="/book-consultation" className="inline-flex items-center bg-[#123E73] hover:bg-[#092747] text-white px-10 py-4 font-bold text-sm uppercase tracking-wider transition-all shadow-xl border border-[#E5A019]/40" data-testid="button-cta-services">
               Book Free Consultation <ArrowRight className="ml-2 w-4 h-4" />
             </Link>
           </motion.div>

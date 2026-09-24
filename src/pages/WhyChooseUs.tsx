@@ -57,22 +57,22 @@ export default function WhyChooseUs() {
   return (
     <Layout>
       <section
-        className="relative bg-[#0A2540] text-white py-32 overflow-hidden"
+        className="relative bg-[#102F56] text-white py-32 overflow-hidden"
       >
         <div className="absolute inset-0 opacity-[0.06]"
           style={{ backgroundImage: "linear-gradient(rgba(255,255,255,1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,1) 1px, transparent 1px)", backgroundSize: "60px 60px" }}
         />
         <div className="container mx-auto px-6 lg:px-12 relative z-10">
           <div className="flex items-center gap-2 text-xs text-white/40 mb-10 uppercase tracking-wider">
-            <Link href="/" className="hover:text-[#D4AF37] transition-colors">Home</Link>
+            <Link href="/" className="hover:text-[#E5A019] transition-colors">Home</Link>
             <ChevronRight className="w-3 h-3" />
-            <span className="text-[#D4AF37]">Why Choose Us</span>
+            <span className="text-[#E5A019]">Why Choose Us</span>
           </div>
           <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }}>
-            <p className="text-xs uppercase tracking-[0.35em] text-[#D4AF37] font-semibold mb-4">The A.B. Dhanam Difference</p>
-            <div className="w-12 h-0.5 bg-[#D4AF37] mb-8" />
+            <p className="text-xs uppercase tracking-[0.35em] text-[#E5A019] font-semibold mb-4">The A.B. Dhanam Difference</p>
+            <div className="w-12 h-0.5 bg-[#E5A019] mb-8" />
             <h1 className="font-serif text-5xl md:text-7xl font-bold leading-tight mb-6">
-              Seven Reasons to<br /><span className="text-[#D4AF37] italic">Trust A.B. Dhanam</span>
+              Seven Reasons to<br /><span className="text-[#E5A019] italic">Trust A.B. Dhanam</span>
             </h1>
             <p className="text-white/70 text-xl max-w-2xl">
               In legal documentation, the difference between ordinary and extraordinary is everything. Here is what sets us apart.
@@ -81,7 +81,7 @@ export default function WhyChooseUs() {
         </div>
       </section>
 
-      <section className="py-24 bg-background">
+      <section className="py-24 bg-[#FAFBFC]">
         <div className="container mx-auto px-6 lg:px-12">
           <div className="space-y-0">
             {REASONS.map((r, i) => (
@@ -91,21 +91,21 @@ export default function WhyChooseUs() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.7 }}
-                className={`grid lg:grid-cols-2 gap-0 border-b border-border ${i === 0 ? "border-t" : ""}`}
+                className={`grid lg:grid-cols-2 gap-0 border-b border-[#DCE3EA] ${i === 0 ? "border-t" : ""}`}
               >
                 {/* Left: Icon + Number */}
-                <div className={`p-12 lg:p-16 flex items-center gap-8 ${i % 2 === 1 ? "lg:order-2 bg-muted/20" : "bg-background"}`}>
+                <div className={`p-12 lg:p-16 flex items-center gap-8 ${i % 2 === 1 ? "lg:order-2 bg-[#F1F5F9]" : "bg-white"}`}>
                   <div className="shrink-0">
-                    <div className="w-20 h-20 rounded-full bg-[#D4AF37]/10 border-2 border-[#D4AF37] flex items-center justify-center mb-4">
-                      <r.icon className="w-8 h-8 text-[#D4AF37]" />
+                    <div className="w-20 h-20 rounded-full bg-[#E5A019]/10 border-2 border-[#E5A019] flex items-center justify-center mb-4">
+                      <r.icon className="w-8 h-8 text-[#E5A019]" />
                     </div>
-                    <div className="font-serif text-4xl font-bold text-[#D4AF37]">{r.num}</div>
+                    <div className="font-serif text-4xl font-bold text-[#E5A019]">{r.num}</div>
                   </div>
-                  <h2 className="font-serif text-2xl md:text-3xl font-bold text-primary leading-snug">{r.title}</h2>
+                  <h2 className="font-serif text-2xl md:text-3xl font-bold text-[#102F56] leading-snug">{r.title}</h2>
                 </div>
                 {/* Right: Description */}
-                <div className={`p-12 lg:p-16 border-l border-border ${i % 2 === 1 ? "lg:order-1 border-r lg:border-r-0" : ""}`}>
-                  <p className="text-muted-foreground leading-relaxed text-lg">{r.desc}</p>
+                <div className={`p-12 lg:p-16 border-l border-[#DCE3EA] ${i % 2 === 1 ? "lg:order-1 border-r lg:border-r-0" : ""}`}>
+                  <p className="text-[#334155] leading-relaxed text-lg">{r.desc}</p>
                 </div>
               </motion.div>
             ))}
@@ -113,14 +113,14 @@ export default function WhyChooseUs() {
         </div>
       </section>
 
-      <section className="py-24 bg-[#D4AF37]">
+      <section className="py-24 bg-[#102F56] text-white border-t border-[#DCE3EA]/20">
         <div className="container mx-auto px-6 lg:px-12 text-center">
           <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
-            <h2 className="font-serif text-4xl md:text-5xl font-bold text-[#0A2540] mb-6">Experience the A.B. Dhanam Standard</h2>
-            <p className="text-[#0A2540]/70 text-lg mb-10 max-w-xl mx-auto">
+            <h2 className="font-serif text-4xl md:text-5xl font-bold text-white mb-6">Experience the A.B. Dhanam Standard</h2>
+            <p className="text-[#DCE3EA]/80 text-lg mb-10 max-w-xl mx-auto">
               Book a free consultation and discover why over 5,000 clients in Tamil Nadu trust us with their most important documents.
             </p>
-            <Link href="/book-consultation" className="inline-flex items-center bg-[#0A2540] text-white px-10 py-4 font-bold text-sm uppercase tracking-wider hover:bg-[#0F4C81] transition-all shadow-xl" data-testid="button-cta-why-choose-us">
+            <Link href="/book-consultation" className="inline-flex items-center bg-[#123E73] hover:bg-[#092747] text-white px-10 py-4 font-bold text-sm uppercase tracking-wider transition-all shadow-xl border border-[#E5A019]/40" data-testid="button-cta-why-choose-us">
               Book Free Consultation <ArrowRight className="ml-2 w-4 h-4" />
             </Link>
           </motion.div>
