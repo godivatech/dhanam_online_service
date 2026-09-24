@@ -583,10 +583,11 @@ export default function Home() {
               </Link>
               <a
                 href="tel:+919876543210"
-                className="inline-flex items-center justify-center border border-white/40 text-white px-8 py-3.5 font-bold text-xs uppercase tracking-wider hover:bg-white hover:text-[#102F56] transition-all rounded gap-2"
+                className="inline-flex items-center justify-center border border-white/50 bg-transparent text-white px-8 py-3.5 font-bold text-xs uppercase tracking-wider hover:bg-white hover:text-[#102F56] transition-all rounded gap-2 shadow-xs"
                 data-testid="button-call-now-cta"
               >
-                <Phone className="w-4 h-4 text-[#E5A019]" /> Call Now
+                <Phone className="w-4 h-4 text-[#E5A019]" />
+                <span className="text-white hover:text-[#102F56] font-bold">Call Now</span>
               </a>
             </div>
           </motion.div>

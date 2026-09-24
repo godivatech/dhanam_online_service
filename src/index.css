@@ -245,9 +245,9 @@ a[data-testid="button-back-home"]:hover {
   color: #FFFFFF !important;
 }
 
-/* Secondary outline / neutral buttons */
+/* Secondary outline / neutral buttons (light backgrounds) */
 a[data-testid*="button-explore-services"],
-a[data-testid*="button-call-now"],
+a[data-testid="button-thankyou-call"],
 button[data-testid*="button-step2-back"],
 button[data-testid*="button-step3-back"] {
   border-color: #DCE3EA !important;
@@ -255,11 +255,27 @@ button[data-testid*="button-step3-back"] {
   transition: all 0.2s ease !important;
 }
 a[data-testid*="button-explore-services"]:hover,
+a[data-testid="button-thankyou-call"]:hover,
 button[data-testid*="button-step2-back"]:hover,
 button[data-testid*="button-step3-back"]:hover {
   border-color: #123E73 !important;
   color: #102F56 !important;
   background-color: #F1F5F9 !important;
+}
+
+/* Call Now button on Dark Navy CTA section */
+a[data-testid*="button-call-now-cta"],
+a[data-testid*="call-now"] {
+  border-color: rgba(255, 255, 255, 0.45) !important;
+  color: #FFFFFF !important;
+  background-color: transparent !important;
+  transition: all 0.2s ease !important;
+}
+a[data-testid*="button-call-now-cta"]:hover,
+a[data-testid*="call-now"]:hover {
+  background-color: #FFFFFF !important;
+  color: #102F56 !important;
+  border-color: #FFFFFF !important;
 }
 
 /* ── Navy Mapping (#102F56 for major headings, dark cards & footer) ── */
