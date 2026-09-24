@@ -561,37 +561,42 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── CTA SECTION (Clean, Trustworthy Deep Navy #102F56 Background) ───── */}
-      <section className="py-24 bg-[#102F56] text-white border-t border-[#E5A019]/30 relative overflow-hidden">
-        <div className="container mx-auto px-6 lg:px-12 text-center relative z-10">
+      {/* ── CTA SECTION (Neat, Clean & Simple) ─────────────────────────────── */}
+      <section className="py-20 bg-[#102F56] text-white border-t border-[#E5A019]/30 relative overflow-hidden">
+        <div className="container mx-auto px-6 lg:px-12 text-center relative z-10 max-w-3xl">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
           >
-            <p className="text-xs uppercase tracking-[0.35em] text-[#E5A019] font-bold mb-4">Get Started Today</p>
-            <div className="w-12 h-0.5 bg-[#E5A019] mx-auto mb-6" />
-            <h2 className="font-serif text-3xl md:text-5xl font-bold text-white mb-6 leading-tight">
-              Ready to Begin Your<br />Registration Journey?
+            <span className="inline-block text-[11px] uppercase tracking-[0.25em] text-[#E5A019] font-bold bg-[#E5A019]/10 border border-[#E5A019]/25 px-3 py-1 rounded-full mb-6">
+              Get Started Today
+            </span>
+
+            <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4 leading-tight">
+              Ready to Begin Your Registration?
             </h2>
-            <p className="text-[#DCE3EA]/90 text-base md:text-lg mb-10 max-w-xl mx-auto leading-relaxed">
-              Book a free consultation today. Our consultants guide you through each documentation step with complete transparency and compliance.
+
+            <p className="text-[#DCE3EA]/80 text-sm md:text-base mb-8 max-w-lg mx-auto">
+              Book a free consultation with our documentation experts. Fast, transparent, and completely hassle-free.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+
+            <div className="flex flex-col sm:flex-row gap-3.5 justify-center items-center">
               <Link
                 href="/book-consultation"
-                className="inline-flex items-center justify-center bg-[#123E73] text-white px-8 py-3.5 font-bold text-xs uppercase tracking-wider hover:bg-[#092747] transition-all rounded shadow-md border border-[#E5A019]/40 hover:border-[#E5A019] gap-2"
+                className="w-full sm:w-auto inline-flex items-center justify-center bg-[#123E73] text-white px-8 py-3.5 font-bold text-xs uppercase tracking-wider hover:bg-[#092747] transition-all rounded shadow-md border border-[#E5A019]/40 hover:border-[#E5A019] gap-2"
                 data-testid="button-book-consultation-cta"
               >
                 Book Free Consultation <ArrowRight className="w-4 h-4" />
               </Link>
               <a
                 href="tel:+919876543210"
-                className="inline-flex items-center justify-center border border-white/50 bg-transparent text-white px-8 py-3.5 font-bold text-xs uppercase tracking-wider hover:bg-white hover:text-[#102F56] transition-all rounded gap-2 shadow-xs"
+                className="w-full sm:w-auto inline-flex items-center justify-center border border-white/40 bg-white/5 text-white px-8 py-3.5 font-bold text-xs uppercase tracking-wider hover:bg-white hover:text-[#102F56] transition-all rounded gap-2"
                 data-testid="button-call-now-cta"
               >
                 <Phone className="w-4 h-4 text-[#E5A019]" />
-                <span className="text-white hover:text-[#102F56] font-bold">Call Now</span>
+                <span className="text-white hover:text-[#102F56] font-bold">+91 98765 43210</span>
               </a>
             </div>
           </motion.div>
