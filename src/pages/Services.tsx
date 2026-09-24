@@ -12,36 +12,43 @@ const stagger = { hidden: {}, show: { transition: { staggerChildren: 0.1 } } };
 const SERVICES = [
   {
     num: "01", icon: Building2, title: "Property Registration", href: "/services/property-registration",
+    image: "/images/services/Property Registration.png",
     desc: "Complete property registration services for individuals, families, and businesses — handled with unmatched precision and speed across all Tamil Nadu Sub-Registrar offices.",
     items: ["Sale Deed Registration", "Settlement & Partition Deed", "Mortgage Documentation", "Power of Attorney", "Lease & Release Deed", "Partnership Deed"],
   },
   {
     num: "02", icon: Heart, title: "Marriage Registration", href: "/services/marriage-registration",
+    image: "/images/services/Marriage Registration.png",
     desc: "Legal marriage registration under all applicable acts — Hindu, Christian, Muslim, and Special Marriage Act — with complete documentation support and zero stress.",
     items: ["Hindu Marriage Registration", "Christian Marriage Registration", "Muslim Marriage Registration", "Special Marriage Act", "Document Verification", "Certificate Issuance"],
   },
   {
     num: "03", icon: Landmark, title: "Trust Registration", href: "/services/trust-registration",
+    image: "/images/services/Trust Registration.png",
     desc: "End-to-end trust formation services for charitable, educational, religious, and private purposes — from deed drafting to final government certificate.",
     items: ["Charitable Trust Registration", "Educational Trust Formation", "Private Trust Setup", "Trust Deed Drafting", "Government Compliance", "Post-Registration Support"],
   },
   {
     num: "04", icon: Users, title: "Society Registration", href: "/services/society-registration",
+    image: "/images/services/Society Registration.png",
     desc: "Register welfare societies, cultural organisations, sports clubs, and cooperative societies under the Tamil Nadu Societies Registration Act with full compliance.",
     items: ["Welfare Society Registration", "Cultural Organisation Setup", "Sports Club Registration", "Memorandum Drafting", "Bye-laws Preparation", "Registration Certificate"],
   },
   {
     num: "05", icon: FileCheck, title: "Encumbrance Certificate", href: "/services/encumbrance-certificate",
+    image: "/images/services/Encumbrance Certificate.png",
     desc: "Obtain encumbrance certificates for any property and any period — essential for property transactions, bank loans, and comprehensive legal due diligence.",
     items: ["EC for Home Loans", "Property Transaction EC", "Historical Period EC", "Online EC Application", "Sub-Registrar Liaison", "Fast Delivery"],
   },
   {
     num: "06", icon: Copy, title: "Certified Copy Services", href: "/services/certified-copy",
+    image: "/images/services/Certified Copy Services.png",
     desc: "Certified copies of all registered documents from Tamil Nadu Sub-Registrar offices — accurate legal reproductions with full evidentiary standing.",
     items: ["Sale Deed Certified Copy", "Marriage Certificate Copy", "Trust Deed Copy", "Historical Document Retrieval", "Court-Admissible Copies", "Apostille Ready"],
   },
   {
     num: "07", icon: Scale, title: "Legal Documentation", href: "/services/legal-documentation",
+    image: "/images/services/Legal Documentation and Advisory.png",
     desc: "Comprehensive legal drafting, review, notarisation, and consultation services for individuals and businesses across all documentation requirements.",
     items: ["Agreement Drafting", "Affidavit Preparation", "Notarisation Services", "Legal Review & Audit", "Contract Documentation", "Advisory Services"],
   },
@@ -80,29 +87,54 @@ export default function Services() {
           <motion.div variants={stagger} initial="hidden" whileInView="show" viewport={{ once: true }} className="space-y-8">
             {SERVICES.map((s, i) => (
               <motion.div key={s.title} variants={fadeUp}>
-                <div className={`grid lg:grid-cols-5 gap-0 border border-[#DCE3EA] overflow-hidden hover:shadow-xl transition-all duration-300 group ${i % 2 === 1 ? "bg-[#F1F5F9]" : "bg-white"}`}>
-                  <div className="bg-[#102F56] p-10 flex flex-col items-center justify-center text-center lg:col-span-1">
-                    <div className="font-serif text-5xl font-bold text-[#E5A019]/40 group-hover:text-[#E5A019]/70 transition-colors mb-4">{s.num}</div>
-                    <s.icon className="w-10 h-10 text-[#E5A019]" />
+                <div className={`grid lg:grid-cols-12 gap-0 border border-[#DCE3EA] overflow-hidden hover:shadow-2xl transition-all duration-300 group rounded-xl ${i % 2 === 1 ? "bg-[#F1F5F9]" : "bg-white"}`}>
+                  
+                  {/* Service Image with Number Badge & Icon Overlay */}
+                  <div className="relative lg:col-span-4 min-h-[240px] lg:min-h-[300px] overflow-hidden bg-[#102F56]">
+                    <img 
+                      src={s.image} 
+                      alt={s.title} 
+                      className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500 ease-out" 
+                      loading="lazy"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#102F56]/85 via-transparent to-black/20" />
+                    <div className="absolute top-4 left-4 flex items-center gap-2 bg-[#102F56]/90 backdrop-blur-md px-3.5 py-1.5 rounded-full border border-white/15">
+                      <s.icon className="w-4 h-4 text-[#E5A019]" />
+                      <span className="font-bold text-xs uppercase tracking-widest text-[#E5A019]">{s.num}</span>
+                    </div>
                   </div>
-                  <div className="p-10 lg:col-span-2 border-l border-[#DCE3EA]">
-                    <h2 className="font-serif text-3xl font-bold text-[#102F56] mb-4">{s.title}</h2>
-                    <p className="text-[#334155] leading-relaxed mb-6">{s.desc}</p>
-                    <Link href={s.href} className="inline-flex items-center bg-[#123E73] hover:bg-[#092747] text-white px-6 py-3 font-bold text-sm uppercase tracking-wider transition-all" data-testid={`button-service-${s.num}`}>
-                      View Full Details <ArrowRight className="ml-2 w-4 h-4" />
-                    </Link>
+
+                  {/* Main Service Info */}
+                  <div className="p-8 lg:p-10 lg:col-span-5 flex flex-col justify-between border-t lg:border-t-0 lg:border-l border-[#DCE3EA]">
+                    <div>
+                      <div className="flex items-center gap-2 mb-2">
+                        <span className="text-xs uppercase tracking-[0.25em] text-[#E5A019] font-bold">Service Area</span>
+                      </div>
+                      <h2 className="font-serif text-2xl lg:text-3xl font-bold text-[#102F56] mb-4 group-hover:text-[#123E73] transition-colors">{s.title}</h2>
+                      <p className="text-[#334155] text-sm md:text-base leading-relaxed mb-6">{s.desc}</p>
+                    </div>
+                    <div>
+                      <Link href={s.href} className="inline-flex items-center bg-[#123E73] hover:bg-[#092747] text-white px-6 py-3 rounded font-bold text-xs md:text-sm uppercase tracking-wider transition-all shadow-sm hover:gap-3 gap-2" data-testid={`button-service-${s.num}`}>
+                        View Full Details <ArrowRight className="w-4 h-4" />
+                      </Link>
+                    </div>
                   </div>
-                  <div className="p-10 lg:col-span-2 border-l border-[#DCE3EA] bg-[#F1F5F9]/50">
-                    <p className="text-xs uppercase tracking-[0.2em] text-[#E5A019] font-semibold mb-5">Includes</p>
-                    <ul className="space-y-2">
+
+                  {/* Includes / Key Deliverables */}
+                  <div className="p-8 lg:p-10 lg:col-span-3 border-t lg:border-t-0 lg:border-l border-[#DCE3EA] bg-[#F1F5F9]/60 flex flex-col justify-center">
+                    <p className="text-xs uppercase tracking-[0.2em] text-[#102F56] font-bold mb-4 flex items-center gap-2">
+                      <span className="w-2 h-2 rounded-full bg-[#E5A019]" /> Key Deliverables
+                    </p>
+                    <ul className="space-y-2.5">
                       {s.items.map((item) => (
-                        <li key={item} className="flex items-center gap-3 text-sm text-[#334155]">
-                          <div className="w-1.5 h-1.5 rounded-full bg-[#E5A019] shrink-0" />
-                          {item}
+                        <li key={item} className="flex items-start gap-2.5 text-xs md:text-sm text-[#334155]">
+                          <div className="w-1.5 h-1.5 rounded-full bg-[#E5A019] shrink-0 mt-1.5" />
+                          <span>{item}</span>
                         </li>
                       ))}
                     </ul>
                   </div>
+
                 </div>
               </motion.div>
             ))}

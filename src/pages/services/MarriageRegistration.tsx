@@ -55,7 +55,7 @@ function FAQItem({ q, a }: { q: string; a: string }) {
 export default function MarriageRegistration() {
   return (
     <Layout>
-      <section className="relative bg-[#102F56] text-white py-32 overflow-hidden">
+      <section className="relative bg-[#102F56] text-white py-24 md:py-32 overflow-hidden">
         <div className="absolute inset-0 opacity-[0.06]" style={{ backgroundImage: "linear-gradient(rgba(255,255,255,1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,1) 1px, transparent 1px)", backgroundSize: "60px 60px" }} />
         <div className="container mx-auto px-6 lg:px-12 relative z-10">
           <div className="flex items-center gap-2 text-xs text-white/40 mb-10 uppercase tracking-wider flex-wrap">
@@ -65,12 +65,24 @@ export default function MarriageRegistration() {
             <ChevronRight className="w-3 h-3" />
             <span className="text-[#E5A019]">Marriage Registration</span>
           </div>
-          <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }}>
-            <p className="text-xs uppercase tracking-[0.35em] text-[#E5A019] font-semibold mb-4">Our Services</p>
-            <div className="w-12 h-0.5 bg-[#E5A019] mb-8" />
-            <h1 className="font-serif text-5xl md:text-7xl font-bold leading-tight mb-6">Marriage<br /><span className="text-[#E5A019] italic">Registration</span></h1>
-            <p className="text-white/70 text-xl max-w-2xl">Legal marriage registration under all applicable acts — handled with care, precision, and complete documentation support for your most important milestone.</p>
-          </motion.div>
+          <div className="grid lg:grid-cols-12 gap-12 items-center">
+            <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} className="lg:col-span-7">
+              <p className="text-xs uppercase tracking-[0.35em] text-[#E5A019] font-semibold mb-4">Our Services</p>
+              <div className="w-12 h-0.5 bg-[#E5A019] mb-8" />
+              <h1 className="font-serif text-4xl sm:text-5xl md:text-6xl font-bold leading-tight mb-6">Marriage<br /><span className="text-[#E5A019] italic">Registration</span></h1>
+              <p className="text-white/70 text-lg md:text-xl max-w-2xl leading-relaxed">Legal marriage registration under all applicable acts — handled with care, precision, and complete documentation support for your most important milestone.</p>
+            </motion.div>
+            <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.6 }} className="lg:col-span-5">
+              <div className="relative rounded-2xl overflow-hidden border border-white/15 shadow-2xl">
+                <img 
+                  src="/images/services/Marriage Registration.png" 
+                  alt="Marriage Registration" 
+                  className="w-full aspect-[16/10] object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#102F56]/60 via-transparent to-transparent pointer-events-none" />
+              </div>
+            </motion.div>
+          </div>
         </div>
       </section>
 

@@ -9,13 +9,13 @@ import {
 import RegistryAssistant from "@/components/RegistryAssistant";
 
 const SERVICES = [
-  { icon: Building2, title: "Property Registration", desc: "Sale deeds, partition deeds, mortgage documentation, and power of attorney with complete legal scrutiny.", href: "/services/property-registration" },
-  { icon: Heart, title: "Marriage Registration", desc: "Hindu, Christian, Muslim, and Special Marriage Act registrations handled with care and precision.", href: "/services/marriage-registration" },
-  { icon: Landmark, title: "Trust Registration", desc: "End-to-end trust formation — charitable, public, and private trusts registered with full compliance.", href: "/services/trust-registration" },
-  { icon: Users, title: "Society Registration", desc: "Welfare societies, cultural organisations, and cooperative societies registered under Tamil Nadu law.", href: "/services/society-registration" },
-  { icon: FileCheck, title: "Encumbrance Certificate", desc: "Obtain encumbrance certificates for any property period — essential proof of clear title.", href: "/services/encumbrance-certificate" },
-  { icon: Copy, title: "Certified Copy", desc: "Certified copies of registered documents from the Sub-Registrar office, fast and accurate.", href: "/services/certified-copy" },
-  { icon: Scale, title: "Legal Documentation", desc: "Comprehensive legal drafting, review, and notarisation services for individuals and businesses.", href: "/services/legal-documentation" },
+  { icon: Building2, title: "Property Registration", desc: "Sale deeds, partition deeds, mortgage documentation, and power of attorney with complete legal scrutiny.", href: "/services/property-registration", image: "/images/services/Property Registration.png" },
+  { icon: Heart, title: "Marriage Registration", desc: "Hindu, Christian, Muslim, and Special Marriage Act registrations handled with care and precision.", href: "/services/marriage-registration", image: "/images/services/Marriage Registration.png" },
+  { icon: Landmark, title: "Trust Registration", desc: "End-to-end trust formation — charitable, public, and private trusts registered with full compliance.", href: "/services/trust-registration", image: "/images/services/Trust Registration.png" },
+  { icon: Users, title: "Society Registration", desc: "Welfare societies, cultural organisations, and cooperative societies registered under Tamil Nadu law.", href: "/services/society-registration", image: "/images/services/Society Registration.png" },
+  { icon: FileCheck, title: "Encumbrance Certificate", desc: "Obtain encumbrance certificates for any property period — essential proof of clear title.", href: "/services/encumbrance-certificate", image: "/images/services/Encumbrance Certificate.png" },
+  { icon: Copy, title: "Certified Copy", desc: "Certified copies of registered documents from the Sub-Registrar office, fast and accurate.", href: "/services/certified-copy", image: "/images/services/Certified Copy Services.png" },
+  { icon: Scale, title: "Legal Documentation", desc: "Comprehensive legal drafting, review, and notarisation services for individuals and businesses.", href: "/services/legal-documentation", image: "/images/services/Legal Documentation and Advisory.png" },
 ];
 
 const STATS = [
@@ -300,7 +300,7 @@ export default function Home() {
             initial="hidden"
             whileInView="show"
             viewport={{ once: true }}
-            className="grid md:grid-cols-2 lg:grid-cols-3 gap-px bg-white/10 rounded-lg overflow-hidden border border-white/10"
+            className="grid md:grid-cols-2 lg:grid-cols-3 gap-6"
           >
             {SERVICES.map((s, idx) => {
               const isLast = idx === SERVICES.length - 1;
@@ -312,34 +312,35 @@ export default function Home() {
                 >
                   <Link
                     href={s.href}
-                    className={`group flex flex-col h-full p-8 md:p-10 bg-[#102F56] hover:bg-[#123E73]/50 border-l-4 border-l-transparent hover:border-l-[#E5A019] transition-all duration-300 ${
-                      isLast ? "md:flex-row md:items-center md:justify-between md:gap-10" : ""
+                    className={`group flex flex-col h-full bg-[#102F56] border border-white/10 hover:border-[#E5A019]/60 rounded-xl overflow-hidden hover:shadow-2xl transition-all duration-300 ${
+                      isLast ? "md:flex-row md:items-stretch" : ""
                     }`}
                     data-testid={`card-service-${s.title.toLowerCase().replace(/\s+/g, "-")}`}
                   >
-                    {isLast ? (
-                      <>
-                        <div className="flex items-start gap-6 md:max-w-3xl">
-                          <s.icon className="w-9 h-9 mt-1 text-[#E5A019] shrink-0" />
-                          <div>
-                            <h3 className="font-serif text-xl font-bold mb-2 text-white">{s.title}</h3>
-                            <p className="text-[#DCE3EA]/80 text-sm leading-relaxed">{s.desc}</p>
-                          </div>
-                        </div>
-                        <span className="text-[#E5A019] text-xs font-bold uppercase tracking-wider flex items-center gap-2 group-hover:gap-3 transition-all shrink-0 mt-6 md:mt-0">
-                          Learn More <ArrowRight className="w-3.5 h-3.5" />
-                        </span>
-                      </>
-                    ) : (
-                      <>
-                        <s.icon className="w-8 h-8 text-[#E5A019] mb-5" />
-                        <h3 className="font-serif text-xl font-bold mb-2 text-white">{s.title}</h3>
-                        <p className="text-[#DCE3EA]/80 text-sm leading-relaxed mb-6 flex-1">{s.desc}</p>
-                        <span className="text-[#E5A019] text-xs font-bold uppercase tracking-wider flex items-center gap-2 group-hover:gap-3 transition-all">
-                          Learn More <ArrowRight className="w-3.5 h-3.5" />
-                        </span>
-                      </>
-                    )}
+                    {/* Thumbnail Image */}
+                    <div className={`relative overflow-hidden ${isLast ? "md:w-2/5 min-h-[200px]" : "h-48 w-full"}`}>
+                      <img 
+                        src={s.image} 
+                        alt={s.title} 
+                        className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500 ease-out" 
+                        loading="lazy"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-[#102F56] via-transparent to-black/30" />
+                      <div className="absolute top-3 left-3 bg-[#102F56]/90 backdrop-blur-md p-2 rounded-lg border border-white/10">
+                        <s.icon className="w-5 h-5 text-[#E5A019]" />
+                      </div>
+                    </div>
+
+                    {/* Card Content */}
+                    <div className={`p-6 md:p-8 flex flex-col justify-between flex-1 ${isLast ? "md:justify-center" : ""}`}>
+                      <div>
+                        <h3 className="font-serif text-xl font-bold mb-2 text-white group-hover:text-[#E5A019] transition-colors">{s.title}</h3>
+                        <p className="text-[#DCE3EA]/80 text-sm leading-relaxed mb-6">{s.desc}</p>
+                      </div>
+                      <span className="text-[#E5A019] text-xs font-bold uppercase tracking-wider flex items-center gap-2 group-hover:gap-3 transition-all">
+                        Learn More <ArrowRight className="w-3.5 h-3.5" />
+                      </span>
+                    </div>
                   </Link>
                 </motion.div>
               );
