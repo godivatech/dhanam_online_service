@@ -318,15 +318,14 @@ export default function Home() {
                     data-testid={`card-service-${s.title.toLowerCase().replace(/\s+/g, "-")}`}
                   >
                     {/* Thumbnail Image */}
-                    <div className={`relative overflow-hidden ${isLast ? "md:w-2/5 min-h-[200px]" : "h-48 w-full"}`}>
+                    <div className={`relative overflow-hidden aspect-[16/10] w-full bg-[#092747]`}>
                       <img 
-                        src={s.image} 
+                        src={encodeURI(s.image)} 
                         alt={s.title} 
                         className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500 ease-out" 
-                        loading="lazy"
                       />
-                      <div className="absolute inset-0 bg-gradient-to-t from-[#102F56] via-transparent to-black/30" />
-                      <div className="absolute top-3 left-3 bg-[#102F56]/90 backdrop-blur-md p-2 rounded-lg border border-white/10">
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent pointer-events-none" />
+                      <div className="absolute top-3 left-3 bg-[#102F56]/90 backdrop-blur-md p-2 rounded-lg border border-white/20 shadow-md">
                         <s.icon className="w-5 h-5 text-[#E5A019]" />
                       </div>
                     </div>
