@@ -123,22 +123,14 @@ export function Header() {
 
   return (
     <header className="sticky top-0 z-50 w-full bg-[#FAFBFC]/95 backdrop-blur-md border-b border-[#DCE3EA] shadow-[0_1px_3px_rgba(16,47,86,0.04)] transition-all duration-300">
-      <div className="container mx-auto px-4 lg:px-8 h-24 md:h-28 flex items-center justify-between">
-        {/* Supplied Official Navy & Gold Logo */}
-        <Link href="/" className="group flex items-center gap-4 py-1" data-testid="link-home-logo">
+      <div className="container mx-auto px-4 lg:px-8 h-28 md:h-32 flex items-center justify-between">
+        {/* Official Logo Only */}
+        <Link href="/" className="group flex items-center py-1" data-testid="link-home-logo" aria-label="AB DHANAM GROUP">
           <img
             src="/images/Logo.png"
-            alt="AB DHANAM GROUP Logo"
-            className="w-20 h-20 md:w-24 md:h-24 object-contain shrink-0 group-hover:scale-105 transition-transform duration-200"
+            alt="AB DHANAM GROUP"
+            className="w-24 h-24 md:w-28 md:h-28 object-contain group-hover:scale-105 transition-transform duration-200"
           />
-          <div className="hidden sm:flex flex-col justify-center">
-            <span className="font-extrabold text-2xl md:text-3xl text-[#102F56] tracking-tight leading-none">
-              AB DHANAM GROUP
-            </span>
-            <span className="text-[0.68rem] md:text-xs uppercase tracking-[0.22em] text-[#334155] font-semibold mt-1.5">
-              Legal & Registration Services
-            </span>
-          </div>
         </Link>
 
         {/* Desktop Navigation */}
@@ -231,21 +223,13 @@ export function Header() {
               className="fixed top-0 right-0 h-[100dvh] w-[300px] max-w-[85vw] bg-[#FAFBFC] shadow-2xl z-[70] lg:hidden flex flex-col border-l border-[#DCE3EA]"
             >
               <div className="flex justify-between items-center p-5 border-b border-[#DCE3EA] bg-white">
-                <div className="flex items-center gap-3">
+                <Link href="/" onClick={() => setIsOpen(false)} aria-label="AB DHANAM GROUP">
                   <img
                     src="/images/Logo.png"
-                    alt="AB DHANAM GROUP Logo"
-                    className="w-16 h-16 object-contain shrink-0"
+                    alt="AB DHANAM GROUP"
+                    className="w-16 h-16 object-contain"
                   />
-                  <div className="flex flex-col">
-                    <span className="font-extrabold text-lg text-[#102F56] leading-tight">
-                      AB DHANAM GROUP
-                    </span>
-                    <span className="text-[0.68rem] uppercase tracking-[0.2em] text-[#E5A019] font-bold">
-                      Online Services
-                    </span>
-                  </div>
-                </div>
+                </Link>
                 <button 
                   onClick={() => setIsOpen(false)} 
                   className="p-1.5 text-[#334155] hover:text-[#102F56] rounded hover:bg-[#F1F5F9]" 
@@ -302,21 +286,13 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-16 mb-16">
           {/* Brand Col */}
           <div>
-            <Link href="/" className="inline-flex items-center gap-4 mb-6 group">
-              <div className="w-20 h-20 md:w-24 md:h-24 rounded-2xl bg-white p-2 shadow-md flex items-center justify-center shrink-0 border border-[#E5A019]/40 group-hover:border-[#E5A019] transition-all">
+            <Link href="/" className="inline-block mb-6 group" data-testid="link-footer-logo" aria-label="AB DHANAM GROUP">
+              <div className="w-24 h-24 md:w-28 md:h-28 rounded-2xl bg-white p-2.5 shadow-md flex items-center justify-center border border-[#E5A019]/40 group-hover:border-[#E5A019] transition-all">
                 <img
                   src="/images/Logo.png"
-                  alt="AB DHANAM GROUP Logo"
+                  alt="AB DHANAM GROUP"
                   className="w-full h-full object-contain"
                 />
-              </div>
-              <div className="flex flex-col justify-center">
-                <span className="font-extrabold text-2xl md:text-3xl text-white tracking-tight leading-tight">
-                  AB DHANAM GROUP
-                </span>
-                <span className="text-xs uppercase tracking-[0.22em] text-[#E5A019] font-bold mt-1">
-                  A.B. Dhanam Online Services
-                </span>
               </div>
             </Link>
             <p className="text-sm text-[#DCE3EA]/85 leading-relaxed mb-6">
