@@ -26,9 +26,70 @@ const STATS = [
 ];
 
 const TESTIMONIALS = [
-  { name: "Karthik Subramanian", role: "Real Estate Developer", content: "We exclusively use A.B. Dhanam for all our layout registrations across Tamil Nadu. Their speed and zero-error track record is unmatched in the industry.", stars: 5 },
-  { name: "Meenakshi Sundaram", role: "Trust Founder", content: "Setting up our educational trust felt daunting until we met Mr. Alagiri Rajan. The entire process was transparent, swift, and stress-free.", stars: 5 },
-  { name: "Rajesh Kumar", role: "Property Buyer", content: "My property deal was complex — multiple co-owners, a loan, and a tight timeline. A.B. Dhanam handled everything with quiet authority. Remarkable professionals.", stars: 5 },
+  {
+    name: "Karthik Subramanian",
+    role: "Real Estate Developer",
+    service: "Property Registration",
+    stars: 5,
+    avatar: "KS",
+    content: "We have registered over a dozen residential layouts across Tamil Nadu with A.B. Dhanam. Their speed, precision, and deep knowledge of Sub-Registrar procedures is unmatched in the industry. Zero errors across every transaction."
+  },
+  {
+    name: "Meenakshi Sundaram",
+    role: "Educational Trust Founder",
+    service: "Trust Registration",
+    stars: 5,
+    avatar: "MS",
+    content: "Setting up our educational trust for underprivileged children felt like an impossible bureaucratic maze until we contacted A.B. Dhanam. Mr. Alagiri Rajan guided us through every step with extraordinary patience and expertise."
+  },
+  {
+    name: "Rajesh Kumar",
+    role: "Home Buyer",
+    service: "Property Registration",
+    stars: 5,
+    avatar: "RK",
+    content: "My property purchase involved three co-owners, an existing loan encumbrance, and a tight timeline. A.B. Dhanam handled every complexity with quiet authority and caught a potential legal issue that saved me lakhs."
+  },
+  {
+    name: "Ananya Krishnamurthy",
+    role: "Newlywed Client",
+    service: "Marriage Registration",
+    stars: 5,
+    avatar: "AK",
+    content: "We needed a Special Marriage Act registration done quickly for visa purposes. The team at A.B. Dhanam prepared every document flawlessly and accompanied us to the registrar's office. Completely seamless!"
+  },
+  {
+    name: "V. Raghunathan",
+    role: "Welfare Society Chairman",
+    service: "Society Registration",
+    stars: 5,
+    avatar: "VR",
+    content: "Our community welfare society had been trying to get registered for eight months before we found A.B. Dhanam. They identified exactly what was missing and had us officially registered within three weeks."
+  },
+  {
+    name: "Priya Venkatesh",
+    role: "Property Seller",
+    service: "Encumbrance Certificate",
+    stars: 5,
+    avatar: "PV",
+    content: "I needed encumbrance certificates for two properties spanning 20 years for a legal matter. A.B. Dhanam retrieved everything accurately and quickly. Their attention to historical documentation is impressive."
+  },
+  {
+    name: "Senthilkumar Murugan",
+    role: "Business Owner",
+    service: "Legal Documentation",
+    stars: 5,
+    avatar: "SM",
+    content: "The partnership deed and commercial lease agreements drafted by A.B. Dhanam were thorough, legally sound, and clearly explained to us. We felt completely confident signing. Highly recommended!"
+  },
+  {
+    name: "Dr. Arun Balaji",
+    role: "Charitable Trust Director",
+    service: "Trust Registration",
+    stars: 5,
+    avatar: "AB",
+    content: "We registered our medical charitable foundation through A.B. Dhanam and were astonished by their thoroughness. They anticipated regulatory questions before they were asked and had every document prepared in advance."
+  },
 ];
 
 const PROJECTS = [
@@ -518,47 +579,89 @@ export default function Home() {
       </section>
       */}
 
-      {/* ── TESTIMONIALS PREVIEW (Deep Navy #102F56 Section) ───────────────── */}
-      <section className="py-28 bg-[#102F56] text-white">
-        <div className="container mx-auto px-6 lg:px-12">
+      {/* ── TESTIMONIALS (Deep Navy #102F56 Section with Auto Scroll) ─────── */}
+      <section className="py-24 md:py-28 bg-[#102F56] text-white relative overflow-hidden">
+        {/* Subtle grid background */}
+        <div 
+          className="absolute inset-0 opacity-[0.03] pointer-events-none"
+          style={{ backgroundImage: "linear-gradient(rgba(255,255,255,1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,1) 1px, transparent 1px)", backgroundSize: "60px 60px" }}
+        />
+
+        <div className="container mx-auto px-6 lg:px-12 relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-center mb-16"
+            className="text-center max-w-3xl mx-auto mb-14"
           >
-            <p className="text-xs uppercase tracking-[0.35em] text-[#E5A019] font-bold mb-3">Client Trust</p>
-            <div className="w-12 h-0.5 bg-[#E5A019] mx-auto mb-6" />
-            <h2 className="font-serif text-3xl md:text-5xl font-bold text-white">Trusted by Thousands Across Tamil Nadu</h2>
+            <p className="text-xs uppercase tracking-[0.35em] text-[#E5A019] font-bold mb-3">Client Trust & Experiences</p>
+            <div className="w-12 h-0.5 bg-[#E5A019] mx-auto mb-5" />
+            <h2 className="font-serif text-3xl md:text-5xl font-bold text-white mb-4">
+              Trusted by Thousands Across Tamil Nadu
+            </h2>
+            <p className="text-[#DCE3EA]/85 text-sm md:text-base leading-relaxed">
+              Read authentic feedback from homebuyers, developers, and organizations who rely on our prompt legal guidance. Hover any card to pause.
+            </p>
           </motion.div>
+        </div>
 
-          <motion.div
-            variants={stagger}
-            initial="hidden"
-            whileInView="show"
-            viewport={{ once: true }}
-            className="grid md:grid-cols-3 gap-8 mb-12"
-          >
-            {TESTIMONIALS.map((t) => (
-              <motion.div key={t.name} variants={fadeUp} className="p-8 border border-white/10 bg-white/5 rounded hover:bg-white/10 transition-colors">
-                <div className="flex gap-1 mb-5">
-                  {Array.from({ length: t.stars }).map((_, i) => (
-                    <Star key={i} className="w-4 h-4 fill-[#E5A019] text-[#E5A019]" />
-                  ))}
+        {/* Infinite Auto-Scroll Carousel / Marquee Track */}
+        <div className="relative w-full overflow-hidden py-4">
+          {/* Subtle edge fade masks */}
+          <div className="absolute left-0 top-0 bottom-0 w-16 md:w-32 bg-gradient-to-r from-[#102F56] to-transparent z-10 pointer-events-none" />
+          <div className="absolute right-0 top-0 bottom-0 w-16 md:w-32 bg-gradient-to-l from-[#102F56] to-transparent z-10 pointer-events-none" />
+
+          {/* Marquee flex track */}
+          <div className="animate-testimonials-track flex gap-6 px-4">
+            {[...TESTIMONIALS, ...TESTIMONIALS].map((t, idx) => (
+              <div
+                key={`${t.name}-${idx}`}
+                className="w-[320px] sm:w-[380px] md:w-[420px] flex-shrink-0 p-7 rounded-2xl bg-white/5 border border-white/10 hover:border-[#E5A019]/60 hover:bg-white/[0.09] transition-all duration-300 flex flex-col justify-between shadow-xl"
+              >
+                <div>
+                  <div className="flex items-center justify-between gap-2 mb-4">
+                    <div className="flex gap-1">
+                      {Array.from({ length: t.stars }).map((_, i) => (
+                        <Star key={i} className="w-4 h-4 fill-[#E5A019] text-[#E5A019]" />
+                      ))}
+                    </div>
+                    <span className="text-[11px] font-bold uppercase tracking-wider text-[#E5A019] bg-[#E5A019]/10 border border-[#E5A019]/30 px-3 py-1 rounded-full">
+                      {t.service}
+                    </span>
+                  </div>
+
+                  <p className="text-[#DCE3EA] text-sm md:text-base leading-relaxed mb-6 italic">
+                    "{t.content}"
+                  </p>
                 </div>
-                <p className="text-[#DCE3EA] leading-relaxed mb-6 text-sm italic">"{t.content}"</p>
-                <div className="border-t border-white/10 pt-4">
-                  <div className="font-serif font-bold text-base text-white">{t.name}</div>
-                  <div className="text-[#E5A019] text-xs font-semibold uppercase tracking-wider mt-0.5">{t.role}</div>
+
+                <div className="border-t border-white/10 pt-4 flex items-center gap-3.5">
+                  <div className="w-11 h-11 rounded-full bg-gradient-to-br from-[#123E73] to-[#092747] border border-[#E5A019]/50 flex items-center justify-center font-bold text-white text-sm shrink-0 shadow-sm">
+                    {t.avatar}
+                  </div>
+                  <div>
+                    <div className="font-serif font-bold text-base text-white">{t.name}</div>
+                    <div className="text-[#E5A019] text-xs font-semibold uppercase tracking-wider mt-0.5">{t.role}</div>
+                  </div>
                 </div>
-              </motion.div>
+              </div>
             ))}
-          </motion.div>
+          </div>
+        </div>
 
-          <div className="text-center">
-            <Link href="/testimonials" className="text-xs font-bold text-[#E5A019] hover:text-white uppercase tracking-wider inline-flex items-center gap-2 transition-colors" data-testid="link-all-testimonials">
-              Read All Reviews <ChevronRight className="w-4 h-4" />
-            </Link>
+        {/* Client Rating Summary Bar */}
+        <div className="container mx-auto px-6 lg:px-12 mt-12 text-center">
+          <div className="inline-flex flex-wrap items-center justify-center gap-3 px-6 py-3 rounded-full bg-white/5 border border-white/10 text-xs sm:text-sm text-[#DCE3EA]">
+            <div className="flex gap-1">
+              {Array.from({ length: 5 }).map((_, i) => (
+                <Star key={i} className="w-4 h-4 fill-[#E5A019] text-[#E5A019]" />
+              ))}
+            </div>
+            <span className="font-bold text-white">4.9 / 5.0 Rating</span>
+            <span className="text-white/40">•</span>
+            <span>Over 5,000+ satisfied clients across Tamil Nadu</span>
+            <span className="text-white/40">•</span>
+            <span className="text-[#E5A019] font-medium">100% Verified Reviews</span>
           </div>
         </div>
       </section>

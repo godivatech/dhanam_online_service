@@ -19,7 +19,6 @@ import FAQ from "./pages/FAQ";
 import Contact from "./pages/Contact";
 import BookConsultation from "./pages/BookConsultation";
 import WhyChooseUs from "./pages/WhyChooseUs";
-import Testimonials from "./pages/Testimonials";
 import Blog from "./pages/Blog";
 import BlogPost from "./pages/BlogPost";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
@@ -50,7 +49,6 @@ function Router() {
       <Route path="/book-consultation" component={BookConsultation} />
       
       <Route path="/why-choose-us" component={WhyChooseUs} />
-      <Route path="/testimonials" component={Testimonials} />
       <Route path="/blog" component={Blog} />
       <Route path="/blog/:slug" component={BlogPost} />
       

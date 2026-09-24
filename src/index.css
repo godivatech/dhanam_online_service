@@ -379,3 +379,25 @@ input:focus, textarea:focus, select:focus {
   border-color: #123E73 !important;
   box-shadow: 0 0 0 2px rgba(18, 62, 115, 0.15) !important;
 }
+
+/* ── Testimonials Infinite Auto Scroll Marquee ── */
+@keyframes testimonial-marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-testimonials-track {
+  display: flex;
+  width: max-content;
+  animation: testimonial-marquee 42s linear infinite;
+  will-change: transform;
+}
+
+.animate-testimonials-track:hover {
+  animation-play-state: paused;
+}
+

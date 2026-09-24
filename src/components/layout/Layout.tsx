@@ -295,58 +295,58 @@ export function Footer() {
                 />
               </div>
             </Link>
-            <p className="text-sm text-[#DCE3EA]/85 leading-relaxed mb-6">
+            <p className="text-base md:text-lg text-[#DCE3EA] leading-relaxed mb-6 font-normal">
               Tamil Nadu's premier registration and legal documentation consultancy. Fast, dependable, and precision-driven advisory.
             </p>
-            <p className="text-[#E5A019] font-serif italic text-base">Fast • Reliable • Professional</p>
+            <p className="text-[#E5A019] font-serif italic text-lg md:text-xl font-medium">Fast • Reliable • Professional</p>
           </div>
           
           {/* Company Links */}
           <div>
-            <h4 className="font-bold text-xs mb-6 uppercase tracking-[0.22em] text-[#DCE3EA]/70 border-b border-[#DCE3EA]/15 pb-3">Company</h4>
-            <ul className="space-y-3.5 text-sm text-[#DCE3EA]/85">
-              <li><Link href="/about" className="hover:text-[#E5A019] transition-colors flex items-center gap-2 group"><span className="w-1.5 h-1.5 rounded-full bg-[#E5A019]/40 group-hover:bg-[#E5A019] transition-colors"></span> About Us</Link></li>
-              <li><Link href="/why-choose-us" className="hover:text-[#E5A019] transition-colors flex items-center gap-2 group"><span className="w-1.5 h-1.5 rounded-full bg-[#E5A019]/40 group-hover:bg-[#E5A019] transition-colors"></span> Why Choose Us</Link></li>
-              {/* <li><Link href="/projects" className="hover:text-[#E5A019] transition-colors flex items-center gap-2 group"><span className="w-1.5 h-1.5 rounded-full bg-[#E5A019]/40 group-hover:bg-[#E5A019] transition-colors"></span> Landmark Projects</Link></li> */}
-              <li><Link href="/faq" className="hover:text-[#E5A019] transition-colors flex items-center gap-2 group"><span className="w-1.5 h-1.5 rounded-full bg-[#E5A019]/40 group-hover:bg-[#E5A019] transition-colors"></span> FAQs & Answers</Link></li>
-              <li><Link href="/blog" className="hover:text-[#E5A019] transition-colors flex items-center gap-2 group"><span className="w-1.5 h-1.5 rounded-full bg-[#E5A019]/40 group-hover:bg-[#E5A019] transition-colors"></span> Legal Blog</Link></li>
+            <h4 className="font-bold text-base md:text-lg mb-6 uppercase tracking-[0.16em] text-white border-b border-[#DCE3EA]/25 pb-3.5">Company</h4>
+            <ul className="space-y-4 text-base md:text-lg text-[#DCE3EA] font-medium">
+              <li><Link href="/about" className="hover:text-[#E5A019] transition-colors flex items-center gap-2 group"><span className="w-2 h-2 rounded-full bg-[#E5A019]/40 group-hover:bg-[#E5A019] transition-colors"></span> About Us</Link></li>
+              <li><Link href="/why-choose-us" className="hover:text-[#E5A019] transition-colors flex items-center gap-2 group"><span className="w-2 h-2 rounded-full bg-[#E5A019]/40 group-hover:bg-[#E5A019] transition-colors"></span> Why Choose Us</Link></li>
+              {/* <li><Link href="/projects" className="hover:text-[#E5A019] transition-colors flex items-center gap-2 group"><span className="w-2 h-2 rounded-full bg-[#E5A019]/40 group-hover:bg-[#E5A019] transition-colors"></span> Landmark Projects</Link></li> */}
+              <li><Link href="/faq" className="hover:text-[#E5A019] transition-colors flex items-center gap-2 group"><span className="w-2 h-2 rounded-full bg-[#E5A019]/40 group-hover:bg-[#E5A019] transition-colors"></span> FAQs & Answers</Link></li>
+              <li><Link href="/blog" className="hover:text-[#E5A019] transition-colors flex items-center gap-2 group"><span className="w-2 h-2 rounded-full bg-[#E5A019]/40 group-hover:bg-[#E5A019] transition-colors"></span> Legal Blog</Link></li>
             </ul>
           </div>
           
           {/* Key Services */}
           <div>
-            <h4 className="font-bold text-xs mb-6 uppercase tracking-[0.22em] text-[#DCE3EA]/70 border-b border-[#DCE3EA]/15 pb-3">Key Services</h4>
-            <ul className="space-y-3.5 text-sm text-[#DCE3EA]/85">
+            <h4 className="font-bold text-base md:text-lg mb-6 uppercase tracking-[0.16em] text-white border-b border-[#DCE3EA]/25 pb-3.5">Key Services</h4>
+            <ul className="space-y-4 text-base md:text-lg text-[#DCE3EA] font-medium">
               <li><Link href="/services/property-registration" className="hover:text-[#E5A019] transition-colors block truncate">Property Registration</Link></li>
               <li><Link href="/services/marriage-registration" className="hover:text-[#E5A019] transition-colors block truncate">Marriage Registration</Link></li>
               <li><Link href="/services/trust-registration" className="hover:text-[#E5A019] transition-colors block truncate">Trust Registration</Link></li>
               <li><Link href="/services/society-registration" className="hover:text-[#E5A019] transition-colors block truncate">Society Registration</Link></li>
-              <li><Link href="/services" className="text-[#E5A019] font-semibold mt-4 inline-block hover:underline">View All Services &rarr;</Link></li>
+              <li><Link href="/services" className="text-[#E5A019] font-bold mt-2 inline-block hover:underline">View All Services &rarr;</Link></li>
             </ul>
           </div>
           
           {/* Contact Info */}
           <div>
-            <h4 className="font-bold text-xs mb-6 uppercase tracking-[0.22em] text-[#DCE3EA]/70 border-b border-[#DCE3EA]/15 pb-3">Contact Info</h4>
-            <div className="space-y-4 text-sm text-[#DCE3EA]/85">
-              <p className="flex flex-col gap-0.5">
-                <strong className="text-white text-xs uppercase tracking-wider">Office Address</strong>
-                <span className="leading-relaxed">123, Anna Salai,<br />Madurai, Tamil Nadu 625001</span>
+            <h4 className="font-bold text-base md:text-lg mb-6 uppercase tracking-[0.16em] text-white border-b border-[#DCE3EA]/25 pb-3.5">Contact Info</h4>
+            <div className="space-y-4 text-base md:text-lg text-[#DCE3EA]">
+              <p className="flex flex-col gap-1">
+                <strong className="text-[#E5A019] text-sm uppercase tracking-wider font-bold">Office Address</strong>
+                <span className="leading-relaxed font-normal">123, Anna Salai,<br />Madurai, Tamil Nadu 625001</span>
               </p>
-              <p className="flex flex-col gap-0.5">
-                <strong className="text-white text-xs uppercase tracking-wider">Phone</strong>
-                <span>+91 98765 43210</span>
+              <p className="flex flex-col gap-1">
+                <strong className="text-[#E5A019] text-sm uppercase tracking-wider font-bold">Phone</strong>
+                <span className="font-semibold">+91 98765 43210</span>
               </p>
-              <p className="flex flex-col gap-0.5">
-                <strong className="text-white text-xs uppercase tracking-wider">Email</strong>
-                <span>contact@abdhanam.com</span>
+              <p className="flex flex-col gap-1">
+                <strong className="text-[#E5A019] text-sm uppercase tracking-wider font-bold">Email</strong>
+                <span className="font-semibold">contact@abdhanam.com</span>
               </p>
             </div>
           </div>
         </div>
         
         {/* Footer Sub-bar */}
-        <div className="pt-8 border-t border-[#DCE3EA]/15 flex flex-col md:flex-row justify-between items-center gap-6 text-xs text-[#DCE3EA]/70 tracking-wide">
+        <div className="pt-8 border-t border-[#DCE3EA]/20 flex flex-col md:flex-row justify-between items-center gap-6 text-sm md:text-base text-[#DCE3EA]/90 tracking-wide">
           <div className="space-y-1.5 text-center md:text-left">
             <p>© {new Date().getFullYear()} AB DHANAM GROUP (A.B. Dhanam Online Services). All rights reserved.</p>
             <p>
@@ -361,7 +361,7 @@ export function Footer() {
               </a>
             </p>
           </div>
-          <div className="flex gap-8">
+          <div className="flex gap-8 font-semibold">
             <Link href="/privacy-policy" className="hover:text-[#E5A019] transition-colors">Privacy Policy</Link>
             <Link href="/terms" className="hover:text-[#E5A019] transition-colors">Terms & Conditions</Link>
           </div>
