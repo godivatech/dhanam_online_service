@@ -1,6 +1,6 @@
 import { ReactNode, useState, useEffect } from "react";
 import { Link, useLocation } from "wouter";
-import { Menu, X, ChevronDown, Scale, Building2, Heart, Landmark, Users, FileCheck, Copy, Globe } from "lucide-react";
+import { Menu, X, ChevronDown, Building2, Heart, Landmark, Users, FileCheck, Copy, Globe } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { WhatsAppIcon } from "../icons/WhatsAppIcon";
 
@@ -65,13 +65,13 @@ function LanguageSelector() {
     <div className="relative font-sans">
       <button
         onClick={() => setDropdownOpen(!dropdownOpen)}
-        className="flex items-center gap-1.5 px-3 py-2 rounded-lg text-sm font-bold text-foreground hover:bg-slate-100 dark:hover:bg-white/10 transition-colors"
+        className="flex items-center gap-1.5 px-3 py-1.5 rounded text-xs font-semibold text-[#334155] hover:text-[#102F56] hover:bg-[#F1F5F9] border border-[#DCE3EA] transition-colors"
         aria-label="Select Language"
         data-testid="button-language-selector"
       >
-        <Globe className="w-4 h-4 text-accent" />
+        <Globe className="w-3.5 h-3.5 text-[#E5A019]" />
         <span>{currentLang === "en" ? "English" : "தமிழ்"}</span>
-        <ChevronDown className="w-3.5 h-3.5 opacity-60" />
+        <ChevronDown className="w-3 h-3 opacity-60" />
       </button>
 
       <AnimatePresence>
@@ -79,25 +79,25 @@ function LanguageSelector() {
           <>
             <div className="fixed inset-0 z-40" onClick={() => setDropdownOpen(false)} />
             <motion.div
-              initial={{ opacity: 0, y: 10, scale: 0.95 }}
+              initial={{ opacity: 0, y: 8, scale: 0.96 }}
               animate={{ opacity: 1, y: 0, scale: 1 }}
-              exit={{ opacity: 0, y: 10, scale: 0.95 }}
+              exit={{ opacity: 0, y: 8, scale: 0.96 }}
               transition={{ duration: 0.15 }}
-              className="absolute right-0 mt-1.5 w-32 bg-background border border-border shadow-xl rounded-lg overflow-hidden z-50"
+              className="absolute right-0 mt-1.5 w-32 bg-white border border-[#DCE3EA] shadow-lg rounded overflow-hidden z-50"
             >
               <div className="py-1">
                 <button
                   onClick={() => changeLanguage("en")}
-                  className={`w-full text-left px-4 py-2 text-sm font-semibold transition-colors ${
-                    currentLang === "en" ? "text-accent bg-accent/5" : "text-foreground hover:bg-muted"
+                  className={`w-full text-left px-4 py-2 text-xs font-semibold transition-colors ${
+                    currentLang === "en" ? "text-[#123E73] bg-[#F1F5F9] font-bold" : "text-[#334155] hover:bg-[#F1F5F9]"
                   }`}
                 >
                   English
                 </button>
                 <button
                   onClick={() => changeLanguage("ta")}
-                  className={`w-full text-left px-4 py-2 text-sm font-semibold transition-colors ${
-                    currentLang === "ta" ? "text-accent bg-accent/5" : "text-foreground hover:bg-muted"
+                  className={`w-full text-left px-4 py-2 text-xs font-semibold transition-colors ${
+                    currentLang === "ta" ? "text-[#123E73] bg-[#F1F5F9] font-bold" : "text-[#334155] hover:bg-[#F1F5F9]"
                   }`}
                 >
                   தமிழ்
@@ -122,53 +122,62 @@ export function Header() {
   }, [location]);
 
   return (
-    <header className="sticky top-0 z-50 w-full bg-white/90 dark:bg-[#0A2540]/90 backdrop-blur-md border-b border-accent/20 transition-all duration-300">
-      <div className="container mx-auto px-4 h-24 flex items-center justify-between">
-        <Link href="/" className="group flex flex-col justify-center" data-testid="link-home-logo">
-          <div className="flex items-baseline gap-2">
-            <span className="font-serif text-3xl md:text-4xl font-bold text-accent tracking-tight">A.B.</span>
-            <span className="font-serif text-2xl md:text-3xl font-bold text-primary dark:text-white tracking-tight">Dhanam</span>
+    <header className="sticky top-0 z-50 w-full bg-[#FAFBFC]/95 backdrop-blur-md border-b border-[#DCE3EA] shadow-[0_1px_3px_rgba(16,47,86,0.04)] transition-all duration-300">
+      <div className="container mx-auto px-4 lg:px-8 h-20 md:h-24 flex items-center justify-between">
+        {/* Original Navy & Gold Logo */}
+        <Link href="/" className="group flex items-center gap-3" data-testid="link-home-logo">
+          <div className="w-10 h-10 md:w-11 md:h-11 rounded-lg bg-[#102F56] border border-[#E5A019]/40 flex items-center justify-center shadow-xs shrink-0 group-hover:border-[#E5A019] transition-colors">
+            <span className="font-serif text-lg font-bold text-[#E5A019]">AB</span>
           </div>
-          <span className="text-[0.65rem] uppercase tracking-[0.2em] text-primary/70 dark:text-white/70 font-semibold mt-0.5">Online Services</span>
+          <div className="flex flex-col justify-center">
+            <div className="flex items-baseline gap-1.5">
+              <span className="font-serif text-2xl md:text-3xl font-extrabold text-[#E5A019] tracking-tight">A.B.</span>
+              <span className="font-serif text-2xl md:text-3xl font-bold text-[#102F56] tracking-tight">Dhanam</span>
+            </div>
+            <span className="text-[0.62rem] md:text-[0.65rem] uppercase tracking-[0.22em] text-[#334155] font-semibold">
+              AB DHANAM GROUP
+            </span>
+          </div>
         </Link>
 
+        {/* Desktop Navigation */}
         <nav className="hidden lg:flex items-center gap-8">
-          <Link href="/" className="text-sm font-semibold tracking-wide text-foreground relative py-2 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-accent after:transition-all hover:after:w-full transition-colors">Home</Link>
-          <Link href="/about" className="text-sm font-semibold tracking-wide text-foreground relative py-2 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-accent after:transition-all hover:after:w-full transition-colors">About Us</Link>
+          <Link href="/" className="text-sm font-medium tracking-wide text-[#334155] hover:text-[#102F56] relative py-2 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-[#E5A019] after:transition-all hover:after:w-full transition-colors">Home</Link>
+          <Link href="/about" className="text-sm font-medium tracking-wide text-[#334155] hover:text-[#102F56] relative py-2 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-[#E5A019] after:transition-all hover:after:w-full transition-colors">About Us</Link>
           
           <div 
             className="relative"
             onMouseEnter={() => setShowServices(true)}
             onMouseLeave={() => setShowServices(false)}
           >
-            <button className="flex items-center gap-1 text-sm font-semibold tracking-wide text-foreground relative py-2 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-accent after:transition-all hover:after:w-full transition-colors" data-testid="button-services-menu">
-              Services <ChevronDown className={`w-4 h-4 transition-transform ${showServices ? 'rotate-180' : ''}`} />
+            <button className="flex items-center gap-1 text-sm font-medium tracking-wide text-[#334155] hover:text-[#102F56] relative py-2 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-[#E5A019] after:transition-all hover:after:w-full transition-colors" data-testid="button-services-menu">
+              Services <ChevronDown className={`w-4 h-4 text-[#102F56] transition-transform ${showServices ? 'rotate-180' : ''}`} />
             </button>
             <AnimatePresence>
               {showServices && (
                 <motion.div 
-                  initial={{ opacity: 0, y: 10, scale: 0.95 }}
+                  initial={{ opacity: 0, y: 8, scale: 0.98 }}
                   animate={{ opacity: 1, y: 0, scale: 1 }}
-                  exit={{ opacity: 0, y: 10, scale: 0.95 }}
+                  exit={{ opacity: 0, y: 8, scale: 0.98 }}
                   transition={{ duration: 0.2, ease: "easeOut" }}
-                  className="absolute top-full left-1/2 -translate-x-1/2 w-[600px] bg-background border-t-4 border-accent shadow-2xl rounded-b-lg overflow-hidden mt-0"
+                  className="absolute top-full left-1/2 -translate-x-1/2 w-[600px] bg-white border-t-4 border-[#E5A019] border-x border-b border-[#DCE3EA] shadow-xl rounded-b-lg overflow-hidden mt-0 z-50"
                 >
                   <div className="p-6 grid grid-cols-2 gap-4">
                     {SERVICES.map((s, i) => {
                       const Icon = s.icon;
                       return (
-                        <Link key={i} href={s.href} className="group p-3 rounded-lg hover:bg-muted transition-colors flex items-start gap-3">
-                          <Icon className="w-5 h-5 text-accent mt-1 group-hover:scale-110 transition-transform shrink-0" />
+                        <Link key={i} href={s.href} className="group p-3 rounded-lg hover:bg-[#F1F5F9] transition-colors flex items-start gap-3 border border-transparent hover:border-[#DCE3EA]">
+                          <Icon className="w-5 h-5 text-[#E5A019] mt-1 shrink-0" />
                           <div>
-                            <span className="block text-sm font-bold text-foreground group-hover:text-accent transition-colors">{s.title}</span>
-                            <span className="block text-xs text-muted-foreground mt-1">{s.desc}</span>
+                            <span className="block text-sm font-bold text-[#102F56] group-hover:text-[#123E73] transition-colors">{s.title}</span>
+                            <span className="block text-xs text-[#334155]/80 mt-0.5">{s.desc}</span>
                           </div>
                         </Link>
                       );
                     })}
                   </div>
-                  <div className="bg-muted p-4 text-center border-t border-border">
-                    <Link href="/services" className="text-sm font-bold text-accent hover:text-accent/80 transition-colors">
+                  <div className="bg-[#F1F5F9] p-3.5 text-center border-t border-[#DCE3EA]">
+                    <Link href="/services" className="text-xs font-bold uppercase tracking-wider text-[#123E73] hover:text-[#092747] transition-colors inline-flex items-center gap-1.5">
                       View All Services &rarr;
                     </Link>
                   </div>
@@ -177,16 +186,26 @@ export function Header() {
             </AnimatePresence>
           </div>
 
-          <Link href="/projects" className="text-sm font-semibold tracking-wide text-foreground relative py-2 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-accent after:transition-all hover:after:w-full transition-colors">Projects</Link>
-          <Link href="/contact" className="text-sm font-semibold tracking-wide text-foreground relative py-2 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-accent after:transition-all hover:after:w-full transition-colors">Contact</Link>
+          <Link href="/projects" className="text-sm font-medium tracking-wide text-[#334155] hover:text-[#102F56] relative py-2 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-[#E5A019] after:transition-all hover:after:w-full transition-colors">Projects</Link>
+          <Link href="/contact" className="text-sm font-medium tracking-wide text-[#334155] hover:text-[#102F56] relative py-2 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-[#E5A019] after:transition-all hover:after:w-full transition-colors">Contact</Link>
           <LanguageSelector />
         </nav>
         
-        <div className="flex items-center gap-4">
-          <Link href="/book-consultation" className="hidden md:inline-flex bg-accent text-[#0A2540] px-6 py-3 rounded-none text-sm font-bold tracking-wide hover:bg-accent/90 hover:-translate-y-1 hover:shadow-2xl transition-all duration-300" data-testid="link-book-consultation-header">
+        {/* Header Action & Mobile Menu Toggle */}
+        <div className="flex items-center gap-3">
+          <Link 
+            href="/book-consultation" 
+            className="hidden sm:inline-flex bg-[#123E73] text-white px-5 py-2.5 rounded text-xs md:text-sm font-semibold tracking-wide hover:bg-[#092747] shadow-sm transition-all duration-200"
+            data-testid="link-book-consultation-header"
+          >
             Book Consultation
           </Link>
-          <button className="lg:hidden p-2 text-foreground" onClick={() => setIsOpen(!isOpen)} data-testid="button-mobile-menu">
+          <button 
+            className="lg:hidden p-2 text-[#102F56] hover:bg-[#F1F5F9] rounded transition-colors" 
+            onClick={() => setIsOpen(!isOpen)} 
+            data-testid="button-mobile-menu"
+            aria-label="Toggle mobile menu"
+          >
             {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
         </div>
@@ -200,48 +219,58 @@ export function Header() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
-              className="fixed inset-0 bg-black/60 z-[60] lg:hidden"
+              className="fixed inset-0 bg-[#092747]/60 backdrop-blur-xs z-[60] lg:hidden"
               onClick={() => setIsOpen(false)}
             />
             <motion.div 
               initial={{ x: "100%" }}
               animate={{ x: 0 }}
               exit={{ x: "100%" }}
-              transition={{ type: "spring", damping: 25, stiffness: 200 }}
-              className="fixed top-0 right-0 h-[100dvh] w-[300px] max-w-[80vw] bg-background shadow-2xl z-[70] lg:hidden flex flex-col"
+              transition={{ type: "spring", damping: 25, stiffness: 220 }}
+              className="fixed top-0 right-0 h-[100dvh] w-[300px] max-w-[85vw] bg-[#FAFBFC] shadow-2xl z-[70] lg:hidden flex flex-col border-l border-[#DCE3EA]"
             >
-              <div className="flex justify-between items-center p-6 border-b border-border">
-                <span className="font-serif font-bold text-xl text-accent">Menu</span>
-                <button onClick={() => setIsOpen(false)} className="p-2" data-testid="button-close-mobile-menu">
-                  <X className="w-5 h-5 text-foreground" />
+              <div className="flex justify-between items-center p-6 border-b border-[#DCE3EA] bg-white">
+                <div className="flex items-center gap-2">
+                  <span className="font-serif font-bold text-lg text-[#E5A019]">A.B.</span>
+                  <span className="font-serif font-bold text-lg text-[#102F56]">Dhanam</span>
+                </div>
+                <button 
+                  onClick={() => setIsOpen(false)} 
+                  className="p-1.5 text-[#334155] hover:text-[#102F56] rounded hover:bg-[#F1F5F9]" 
+                  data-testid="button-close-mobile-menu"
+                >
+                  <X className="w-5 h-5" />
                 </button>
               </div>
               
-              <div className="flex-1 overflow-y-auto p-6 flex flex-col gap-6">
-                <Link href="/" className="text-lg font-serif font-bold text-foreground border-b border-border pb-2">Home</Link>
-                <Link href="/about" className="text-lg font-serif font-bold text-foreground border-b border-border pb-2">About Us</Link>
+              <div className="flex-1 overflow-y-auto p-6 flex flex-col gap-4">
+                <Link href="/" className="text-base font-semibold text-[#102F56] py-2 border-b border-[#DCE3EA]/60">Home</Link>
+                <Link href="/about" className="text-base font-semibold text-[#102F56] py-2 border-b border-[#DCE3EA]/60">About Us</Link>
                 
-                <div className="pb-2 border-b border-border">
-                  <span className="text-lg font-serif font-bold text-accent mb-4 block">Services</span>
-                  <div className="flex flex-col gap-3 pl-4 border-l-2 border-muted">
-                    <Link href="/services" className="text-sm font-bold text-foreground">All Services</Link>
+                <div className="py-2 border-b border-[#DCE3EA]/60">
+                  <span className="text-base font-semibold text-[#102F56] mb-3 block">Services</span>
+                  <div className="flex flex-col gap-2.5 pl-3 border-l-2 border-[#E5A019]/40">
+                    <Link href="/services" className="text-xs font-bold text-[#123E73] uppercase tracking-wider">All Services</Link>
                     {SERVICES.map((s, i) => (
-                      <Link key={i} href={s.href} className="text-sm text-muted-foreground hover:text-accent">{s.title}</Link>
+                      <Link key={i} href={s.href} className="text-sm text-[#334155] hover:text-[#102F56] py-0.5">{s.title}</Link>
                     ))}
                   </div>
                 </div>
                 
-                <Link href="/projects" className="text-lg font-serif font-bold text-foreground border-b border-border pb-2">Projects</Link>
-                <Link href="/contact" className="text-lg font-serif font-bold text-foreground border-b border-border pb-2">Contact</Link>
+                <Link href="/projects" className="text-base font-semibold text-[#102F56] py-2 border-b border-[#DCE3EA]/60">Projects</Link>
+                <Link href="/contact" className="text-base font-semibold text-[#102F56] py-2 border-b border-[#DCE3EA]/60">Contact</Link>
                 
-                <div className="flex justify-between items-center py-2 border-b border-border pb-4">
-                  <span className="text-sm font-bold text-muted-foreground uppercase tracking-wider">Language / மொழி</span>
+                <div className="flex justify-between items-center py-3 border-b border-[#DCE3EA]/60">
+                  <span className="text-xs font-semibold text-[#334155] uppercase tracking-wider">Language</span>
                   <LanguageSelector />
                 </div>
               </div>
               
-              <div className="p-6 border-t border-border">
-                <Link href="/book-consultation" className="block w-full text-center bg-accent text-[#0A2540] px-4 py-4 font-bold tracking-wide hover:bg-accent/90 transition-colors">
+              <div className="p-6 border-t border-[#DCE3EA] bg-white">
+                <Link 
+                  href="/book-consultation" 
+                  className="block w-full text-center bg-[#123E73] text-white py-3.5 rounded font-bold text-sm tracking-wide hover:bg-[#092747] transition-colors shadow-sm"
+                >
                   Book Consultation
                 </Link>
               </div>
@@ -255,83 +284,95 @@ export function Header() {
 
 export function Footer() {
   return (
-    <footer className="bg-[#060f1a] text-white pt-20 pb-10 border-t-2 border-accent relative overflow-hidden">
-      <div className="absolute top-0 right-0 w-96 h-96 bg-accent/5 rounded-full blur-[100px] pointer-events-none" />
-      <div className="container mx-auto px-4 relative z-10">
+    <footer className="bg-[#102F56] text-white pt-20 pb-12 border-t-2 border-[#E5A019] relative overflow-hidden">
+      <div className="absolute top-0 right-0 w-96 h-96 bg-[#E5A019]/5 rounded-full blur-[100px] pointer-events-none" />
+      <div className="container mx-auto px-6 lg:px-12 relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-16 mb-16">
+          {/* Brand Col */}
           <div>
-            <Link href="/" className="inline-block mb-6 group">
-              <div className="flex items-baseline gap-2">
-                <span className="font-serif text-4xl font-bold text-accent tracking-tight">A.B.</span>
-                <span className="font-serif text-3xl font-bold text-white tracking-tight">Dhanam</span>
+            <Link href="/" className="inline-flex items-center gap-3 mb-6 group">
+              <div className="w-11 h-11 rounded-lg bg-white/10 border border-[#E5A019]/50 flex items-center justify-center shadow-xs shrink-0 group-hover:border-[#E5A019] transition-colors">
+                <span className="font-serif text-lg font-bold text-[#E5A019]">AB</span>
               </div>
-              <span className="text-[0.65rem] uppercase tracking-[0.2em] text-white/60 font-semibold mt-1 block">Online Services</span>
+              <div className="flex flex-col justify-center">
+                <div className="flex items-baseline gap-1.5">
+                  <span className="font-serif text-3xl font-extrabold text-[#E5A019] tracking-tight">A.B.</span>
+                  <span className="font-serif text-3xl font-bold text-white tracking-tight">Dhanam</span>
+                </div>
+                <span className="text-[0.65rem] uppercase tracking-[0.22em] text-[#DCE3EA]/80 font-semibold mt-0.5">
+                  AB DHANAM GROUP
+                </span>
+              </div>
             </Link>
-            <p className="text-sm text-white/70 leading-relaxed mb-6">
-              Tamil Nadu's most trusted name in registration and documentation consultancy. 
+            <p className="text-sm text-[#DCE3EA]/85 leading-relaxed mb-6">
+              Tamil Nadu's premier registration and legal documentation consultancy. Fast, dependable, and precision-driven advisory.
             </p>
-            <p className="text-accent/80 font-serif italic text-lg">Fast • Reliable • Professional</p>
+            <p className="text-[#E5A019] font-serif italic text-base">Fast • Reliable • Professional</p>
           </div>
           
+          {/* Company Links */}
           <div>
-            <h4 className="font-bold text-sm mb-6 uppercase tracking-[0.2em] text-white/50 border-b border-white/10 pb-4">Company</h4>
-            <ul className="space-y-4 text-sm text-white/80">
-              <li><Link href="/about" className="hover:text-accent transition-colors flex items-center gap-2 group"><span className="w-1.5 h-1.5 rounded-full bg-accent/30 group-hover:bg-accent transition-colors"></span> About Us</Link></li>
-              <li><Link href="/why-choose-us" className="hover:text-accent transition-colors flex items-center gap-2 group"><span className="w-1.5 h-1.5 rounded-full bg-accent/30 group-hover:bg-accent transition-colors"></span> Why Choose Us</Link></li>
-              <li><Link href="/projects" className="hover:text-accent transition-colors flex items-center gap-2 group"><span className="w-1.5 h-1.5 rounded-full bg-accent/30 group-hover:bg-accent transition-colors"></span> Projects</Link></li>
-              <li><Link href="/testimonials" className="hover:text-accent transition-colors flex items-center gap-2 group"><span className="w-1.5 h-1.5 rounded-full bg-accent/30 group-hover:bg-accent transition-colors"></span> Testimonials</Link></li>
-              <li><Link href="/blog" className="hover:text-accent transition-colors flex items-center gap-2 group"><span className="w-1.5 h-1.5 rounded-full bg-accent/30 group-hover:bg-accent transition-colors"></span> Blog</Link></li>
+            <h4 className="font-bold text-xs mb-6 uppercase tracking-[0.22em] text-[#DCE3EA]/70 border-b border-[#DCE3EA]/15 pb-3">Company</h4>
+            <ul className="space-y-3.5 text-sm text-[#DCE3EA]/85">
+              <li><Link href="/about" className="hover:text-[#E5A019] transition-colors flex items-center gap-2 group"><span className="w-1.5 h-1.5 rounded-full bg-[#E5A019]/40 group-hover:bg-[#E5A019] transition-colors"></span> About Us</Link></li>
+              <li><Link href="/why-choose-us" className="hover:text-[#E5A019] transition-colors flex items-center gap-2 group"><span className="w-1.5 h-1.5 rounded-full bg-[#E5A019]/40 group-hover:bg-[#E5A019] transition-colors"></span> Why Choose Us</Link></li>
+              <li><Link href="/projects" className="hover:text-[#E5A019] transition-colors flex items-center gap-2 group"><span className="w-1.5 h-1.5 rounded-full bg-[#E5A019]/40 group-hover:bg-[#E5A019] transition-colors"></span> Landmark Projects</Link></li>
+              <li><Link href="/testimonials" className="hover:text-[#E5A019] transition-colors flex items-center gap-2 group"><span className="w-1.5 h-1.5 rounded-full bg-[#E5A019]/40 group-hover:bg-[#E5A019] transition-colors"></span> Client Reviews</Link></li>
+              <li><Link href="/blog" className="hover:text-[#E5A019] transition-colors flex items-center gap-2 group"><span className="w-1.5 h-1.5 rounded-full bg-[#E5A019]/40 group-hover:bg-[#E5A019] transition-colors"></span> Legal Blog</Link></li>
             </ul>
           </div>
           
+          {/* Key Services */}
           <div>
-            <h4 className="font-bold text-sm mb-6 uppercase tracking-[0.2em] text-white/50 border-b border-white/10 pb-4">Services</h4>
-            <ul className="space-y-4 text-sm text-white/80">
-              <li><Link href="/services/property-registration" className="hover:text-accent transition-colors block truncate">Property Registration</Link></li>
-              <li><Link href="/services/marriage-registration" className="hover:text-accent transition-colors block truncate">Marriage Registration</Link></li>
-              <li><Link href="/services/trust-registration" className="hover:text-accent transition-colors block truncate">Trust Registration</Link></li>
-              <li><Link href="/services/society-registration" className="hover:text-accent transition-colors block truncate">Society Registration</Link></li>
-              <li><Link href="/services" className="text-accent font-semibold mt-4 inline-block hover:text-white transition-colors">View All Services &rarr;</Link></li>
+            <h4 className="font-bold text-xs mb-6 uppercase tracking-[0.22em] text-[#DCE3EA]/70 border-b border-[#DCE3EA]/15 pb-3">Key Services</h4>
+            <ul className="space-y-3.5 text-sm text-[#DCE3EA]/85">
+              <li><Link href="/services/property-registration" className="hover:text-[#E5A019] transition-colors block truncate">Property Registration</Link></li>
+              <li><Link href="/services/marriage-registration" className="hover:text-[#E5A019] transition-colors block truncate">Marriage Registration</Link></li>
+              <li><Link href="/services/trust-registration" className="hover:text-[#E5A019] transition-colors block truncate">Trust Registration</Link></li>
+              <li><Link href="/services/society-registration" className="hover:text-[#E5A019] transition-colors block truncate">Society Registration</Link></li>
+              <li><Link href="/services" className="text-[#E5A019] font-semibold mt-4 inline-block hover:underline">View All Services &rarr;</Link></li>
             </ul>
           </div>
           
+          {/* Contact Info */}
           <div>
-            <h4 className="font-bold text-sm mb-6 uppercase tracking-[0.2em] text-white/50 border-b border-white/10 pb-4">Contact Info</h4>
-            <div className="space-y-5 text-sm text-white/80">
-              <p className="flex flex-col gap-1">
-                <strong className="text-white">Address</strong>
+            <h4 className="font-bold text-xs mb-6 uppercase tracking-[0.22em] text-[#DCE3EA]/70 border-b border-[#DCE3EA]/15 pb-3">Contact Info</h4>
+            <div className="space-y-4 text-sm text-[#DCE3EA]/85">
+              <p className="flex flex-col gap-0.5">
+                <strong className="text-white text-xs uppercase tracking-wider">Office Address</strong>
                 <span className="leading-relaxed">123, Anna Salai,<br />Madurai, Tamil Nadu 625001</span>
               </p>
-              <p className="flex flex-col gap-1">
-                <strong className="text-white">Phone</strong>
+              <p className="flex flex-col gap-0.5">
+                <strong className="text-white text-xs uppercase tracking-wider">Phone</strong>
                 <span>+91 98765 43210</span>
               </p>
-              <p className="flex flex-col gap-1">
-                <strong className="text-white">Email</strong>
+              <p className="flex flex-col gap-0.5">
+                <strong className="text-white text-xs uppercase tracking-wider">Email</strong>
                 <span>contact@abdhanam.com</span>
               </p>
             </div>
           </div>
         </div>
         
-        <div className="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-6 text-xs text-white/50 tracking-wide uppercase">
-          <div className="space-y-2 text-center md:text-left">
-            <p>© {new Date().getFullYear()} A.B. Dhanam Online Services. All rights reserved.</p>
-            <p className="lowercase first-letter:uppercase">
+        {/* Footer Sub-bar */}
+        <div className="pt-8 border-t border-[#DCE3EA]/15 flex flex-col md:flex-row justify-between items-center gap-6 text-xs text-[#DCE3EA]/70 tracking-wide">
+          <div className="space-y-1.5 text-center md:text-left">
+            <p>© {new Date().getFullYear()} AB DHANAM GROUP (A.B. Dhanam Online Services). All rights reserved.</p>
+            <p>
               Designed and developed by{" "}
               <a
                 href="https://godivatech.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hover:text-accent transition-colors font-bold uppercase"
+                className="text-[#E5A019] hover:text-white transition-colors font-semibold"
               >
                 godivatech
               </a>
             </p>
           </div>
           <div className="flex gap-8">
-            <Link href="/privacy-policy" className="hover:text-accent transition-colors">Privacy Policy</Link>
-            <Link href="/terms" className="hover:text-accent transition-colors">Terms & Conditions</Link>
+            <Link href="/privacy-policy" className="hover:text-[#E5A019] transition-colors">Privacy Policy</Link>
+            <Link href="/terms" className="hover:text-[#E5A019] transition-colors">Terms & Conditions</Link>
           </div>
         </div>
       </div>
@@ -349,11 +390,11 @@ export function WhatsAppButton() {
       aria-label="Chat on WhatsApp"
       data-testid="link-whatsapp"
     >
-      <div className="absolute inset-0 bg-[#25D366] rounded-full animate-ping opacity-70" />
+      <div className="absolute inset-0 bg-[#25D366] rounded-full animate-ping opacity-60" />
       <div className="relative bg-[#25D366] p-4 text-white rounded-full shadow-2xl hover:scale-110 transition-transform flex items-center justify-center border-2 border-white/20">
-        <WhatsAppIcon className="w-8 h-8" size={32} />
+        <WhatsAppIcon className="w-7 h-7" size={28} />
       </div>
-      <span className="absolute right-full mr-4 top-1/2 -translate-y-1/2 bg-black text-white px-3 py-1.5 rounded text-xs font-bold uppercase tracking-wider opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none shadow-xl">
+      <span className="absolute right-full mr-4 top-1/2 -translate-y-1/2 bg-[#102F56] text-white px-3 py-1.5 rounded text-xs font-semibold tracking-wider opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none shadow-xl border border-[#DCE3EA]/20">
         Chat with us
       </span>
     </a>
@@ -369,15 +410,15 @@ export function ScrollProgress() {
       const windowHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
       const scroll = windowHeight > 0 ? totalScroll / windowHeight : 0;
       setProgress(scroll);
-    }
+    };
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   return (
-    <div className="fixed top-0 left-0 w-full h-[2px] z-[100] bg-transparent pointer-events-none">
+    <div className="fixed top-0 left-0 w-full h-[3px] z-[100] bg-transparent pointer-events-none">
       <div 
-        className="h-full bg-accent shadow-[0_0_10px_rgba(212,175,55,0.8)]" 
+        className="h-full bg-[#E5A019] shadow-[0_0_8px_rgba(229,160,25,0.7)]" 
         style={{ width: `${progress * 100}%`, transition: 'width 0.1s ease-out' }}
       />
     </div>
@@ -386,7 +427,7 @@ export function ScrollProgress() {
 
 export function Layout({ children }: { children: ReactNode }) {
   return (
-    <div className="flex min-h-[100dvh] flex-col font-sans bg-background text-foreground selection:bg-accent selection:text-black">
+    <div className="flex min-h-[100dvh] flex-col font-sans bg-[#FAFBFC] text-[#334155] selection:bg-[#E5A019]/30 selection:text-[#102F56]">
       <ScrollProgress />
       <Header />
       <main className="flex-1 flex flex-col">{children}</main>

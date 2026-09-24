@@ -6,135 +6,144 @@
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
-  --color-background: hsl(var(--background));
-  --color-foreground: hsl(var(--foreground));
-  --color-border: hsl(var(--border));
-  --color-input: hsl(var(--input));
-  --color-ring: hsl(var(--ring));
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
 
-  --color-card: hsl(var(--card));
-  --color-card-foreground: hsl(var(--card-foreground));
-  --color-card-border: hsl(var(--card-border));
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-card-border: var(--card-border);
 
-  --color-popover: hsl(var(--popover));
-  --color-popover-foreground: hsl(var(--popover-foreground));
-  --color-popover-border: hsl(var(--popover-border));
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover-border: var(--popover-border);
 
-  --color-primary: hsl(var(--primary));
-  --color-primary-foreground: hsl(var(--primary-foreground));
-  --color-primary-border: var(--primary-border);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
 
-  --color-secondary: hsl(var(--secondary));
-  --color-secondary-foreground: hsl(var(--secondary-foreground));
-  --color-secondary-border: var(--secondary-border);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
 
-  --color-muted: hsl(var(--muted));
-  --color-muted-foreground: hsl(var(--muted-foreground));
-  --color-muted-border: var(--muted-border);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
 
-  --color-accent: hsl(var(--accent));
-  --color-accent-foreground: hsl(var(--accent-foreground));
-  --color-accent-border: var(--accent-border);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
 
-  --color-destructive: hsl(var(--destructive));
-  --color-destructive-foreground: hsl(var(--destructive-foreground));
-  --color-destructive-border: var(--destructive-border);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+
+  /* AB DHANAM GROUP Exact Brand Tokens */
+  --color-navy: #102F56;
+  --color-navy-dark: #092747;
+  --color-navy-btn: #123E73;
+  --color-gold: #E5A019;
+  --color-bg-main: #FAFBFC;
+  --color-bg-alt: #F1F5F9;
+  --color-text-main: #334155;
+  --color-border-subtle: #DCE3EA;
 
   --font-sans: 'Poppins', sans-serif;
-  --font-serif: 'Poppins', sans-serif;
+  --font-serif: 'Playfair Display', Georgia, serif;
   --font-mono: Menlo, monospace;
 
-  --radius-sm: calc(var(--radius) - 4px);
-  --radius-md: calc(var(--radius) - 2px);
-  --radius-lg: var(--radius);
-  --radius-xl: calc(var(--radius) + 4px);
+  --radius-sm: 0.25rem;
+  --radius-md: 0.375rem;
+  --radius-lg: 0.5rem;
+  --radius-xl: 0.75rem;
 }
 
 :root {
-  --button-outline: rgba(0,0,0, .10);
-  --badge-outline: rgba(0,0,0, .05);
-  --opaque-button-border-intensity: -8;
-  --elevate-1: rgba(0,0,0, .03);
-  --elevate-2: rgba(0,0,0, .08);
+  --background: #FAFBFC;
+  --foreground: #334155;
+  --border: #DCE3EA;
+  --input: #DCE3EA;
+  --ring: #123E73;
 
-  --background: 210 33% 98%;
-  --foreground: 221 39% 11%;
-  --border: 214 32% 91%;
-  --card: 0 0% 100%;
-  --card-foreground: 221 39% 11%;
-  --card-border: 214 32% 91%;
-  --popover: 0 0% 100%;
-  --popover-foreground: 221 39% 11%;
-  --popover-border: 214 32% 91%;
-  
-  --primary: 224 64% 8%; /* Deep midnight obsidian #0b0f1d */
-  --primary-foreground: 210 33% 98%;
-  --secondary: 243 75% 59%; /* Refined Indigo #635bff */
-  --secondary-foreground: 210 33% 98%;
-  
-  --muted: 210 40% 96%;
-  --muted-foreground: 215 16% 47%;
-  
-  --accent: 243 100% 68%; /* Vibrant Stripe Indigo #635bff */
-  --accent-foreground: 0 0% 100%;
-  
-  --destructive: 0 84% 60%;
-  --destructive-foreground: 210 40% 98%;
-  
-  --input: 214 32% 91%;
-  --ring: 243 100% 68%;
-  
+  --card: #FFFFFF;
+  --card-foreground: #334155;
+  --card-border: #DCE3EA;
+
+  --popover: #FFFFFF;
+  --popover-foreground: #334155;
+  --popover-border: #DCE3EA;
+
+  --primary: #123E73;
+  --primary-foreground: #FFFFFF;
+
+  --secondary: #F1F5F9;
+  --secondary-foreground: #102F56;
+
+  --muted: #F1F5F9;
+  --muted-foreground: #64748B;
+
+  --accent: #E5A019;
+  --accent-foreground: #FFFFFF;
+
+  --destructive: #EF4444;
+  --destructive-foreground: #FFFFFF;
+
   --radius: 0.5rem;
 }
 
 .dark {
-  --button-outline: rgba(255,255,255, .10);
-  --badge-outline: rgba(255,255,255, .05);
-  --opaque-button-border-intensity: 9;
-  --elevate-1: rgba(255,255,255, .04);
-  --elevate-2: rgba(255,255,255, .09);
+  --background: #092747;
+  --foreground: #FAFBFC;
+  --border: #1B4573;
+  --card: #102F56;
+  --card-foreground: #FAFBFC;
+  --card-border: #1B4573;
+  --popover: #102F56;
+  --popover-foreground: #FAFBFC;
+  --popover-border: #1B4573;
 
-  --background: 224 64% 8%;
-  --foreground: 210 33% 98%;
-  --border: 215 28% 25%;
-  --card: 221 39% 11%;
-  --card-foreground: 210 33% 98%;
-  --card-border: 215 28% 25%;
-  --popover: 221 39% 11%;
-  --popover-foreground: 210 33% 98%;
-  --popover-border: 215 28% 25%;
-  
-  --primary: 243 100% 68%;
-  --primary-foreground: 224 64% 8%;
-  --secondary: 224 64% 15%;
-  --secondary-foreground: 210 33% 98%;
-  
-  --muted: 215 28% 25%;
-  --muted-foreground: 215 20% 65%;
-  
-  --accent: 243 100% 68%;
-  --accent-foreground: 224 64% 8%;
-  
-  --destructive: 0 62% 30%;
-  --destructive-foreground: 210 40% 98%;
-  
-  --input: 215 28% 25%;
-  --ring: 243 100% 68%;
+  --primary: #123E73;
+  --primary-foreground: #FFFFFF;
+  --secondary: #102F56;
+  --secondary-foreground: #FAFBFC;
+
+  --muted: #102F56;
+  --muted-foreground: #94A3B8;
+
+  --accent: #E5A019;
+  --accent-foreground: #102F56;
+
+  --destructive: #DC2626;
+  --destructive-foreground: #FAFBFC;
+
+  --input: #1B4573;
+  --ring: #E5A019;
 }
 
 @layer base {
   * {
-    @apply border-border;
+    border-color: #DCE3EA;
   }
   body {
-    @apply font-sans antialiased bg-background text-foreground;
+    background-color: #FAFBFC;
+    color: #334155;
+    font-family: 'Poppins', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    line-height: 1.65;
   }
   h1, h2, h3, h4, h5, h6 {
-    @apply font-sans;
+    color: #102F56;
+    letter-spacing: -0.015em;
+  }
+  /* Inverted text on dark navy sections */
+  .bg-\[\#102F56\] h1, .bg-\[\#102F56\] h2, .bg-\[\#102F56\] h3, .bg-\[\#102F56\] h4,
+  .bg-\[\#0A2540\] h1, .bg-\[\#0A2540\] h2, .bg-\[\#0A2540\] h3, .bg-\[\#0A2540\] h4,
+  footer h1, footer h2, footer h3, footer h4,
+  .dark h1, .dark h2, .dark h3, .dark h4 {
+    color: #FFFFFF;
   }
 }
 
-/* Google Translate API Custom Styling Override */
+/* ─────────────────────────────────────────────────────────────
+   Google Translate API Clean Integration
+   ───────────────────────────────────────────────────────────── */
 body {
   top: 0px !important;
 }
@@ -162,95 +171,171 @@ div.skiptranslate {
   display: none !important;
 }
 
-/* Color Palette Override to Premium Indigo/Midnight Standard */
-.bg-\[\#0A2540\], .bg-\[\#0a2540\],
-.from-\[\#0A2540\], .from-\[\#0a2540\] {
-  background-color: #0b0f1d !important;
+/* ─────────────────────────────────────────────────────────────
+   AB DHANAM GROUP BRAND COLOR PALETTE SPECIFICATION
+   - Major Headings & Footer: #102F56
+   - Primary Buttons: #123E73
+   - Button Hover: #092747
+   - Accents (used sparingly): #E5A019
+   - Main Background: #FAFBFC
+   - Alternate Sections: #F1F5F9
+   - Body Text: #334155
+   - Subtle Borders: #DCE3EA
+   ───────────────────────────────────────────────────────────── */
+
+/* Primary Brand Buttons */
+.btn-primary,
+button[type="submit"]:not(.btn-ghost):not(.btn-secondary):not([data-testid="button-close-mobile-menu"]):not([data-testid="button-language-selector"]),
+a[data-testid*="book-consultation"],
+a[data-testid*="consultation-cta"],
+button[data-testid*="contact-submit"],
+button[data-testid*="button-step2-next"],
+button[data-testid*="button-step3-submit"],
+a[data-testid="button-cta-about-bottom"],
+a[data-testid="button-cta-why-choose-us"],
+a[data-testid="button-cta-testimonials"],
+a[data-testid="assistant-cta-button"],
+a[data-testid="button-thankyou-home"],
+a[data-testid="button-back-home"] {
+  background-color: #123E73 !important;
+  color: #FFFFFF !important;
+  border-color: #123E73 !important;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1) !important;
 }
-.text-\[\#0A2540\], .text-\[\#0a2540\] {
-  color: #0b0f1d !important;
+
+.btn-primary:hover,
+button[type="submit"]:not(.btn-ghost):not(.btn-secondary):not([data-testid="button-close-mobile-menu"]):not([data-testid="button-language-selector"]):hover,
+a[data-testid*="book-consultation"]:hover,
+a[data-testid*="consultation-cta"]:hover,
+button[data-testid*="contact-submit"]:hover,
+button[data-testid*="button-step2-next"]:hover,
+button[data-testid*="button-step3-submit"]:hover,
+a[data-testid="button-cta-about-bottom"]:hover,
+a[data-testid="button-cta-why-choose-us"]:hover,
+a[data-testid="button-cta-testimonials"]:hover,
+a[data-testid="assistant-cta-button"]:hover,
+a[data-testid="button-thankyou-home"]:hover,
+a[data-testid="button-back-home"]:hover {
+  background-color: #092747 !important;
+  border-color: #092747 !important;
+  color: #FFFFFF !important;
 }
-.border-\[\#0A2540\], .border-\[\#0a2540\],
+
+/* Secondary outline / neutral buttons */
+a[data-testid*="button-explore-services"],
+a[data-testid*="button-call-now"],
+button[data-testid*="button-step2-back"],
+button[data-testid*="button-step3-back"] {
+  border-color: #DCE3EA !important;
+  color: #334155 !important;
+  transition: all 0.2s ease !important;
+}
+a[data-testid*="button-explore-services"]:hover,
+button[data-testid*="button-step2-back"]:hover,
+button[data-testid*="button-step3-back"]:hover {
+  border-color: #123E73 !important;
+  color: #102F56 !important;
+  background-color: #F1F5F9 !important;
+}
+
+/* ── Navy Mapping (#102F56 for major headings, dark cards & footer) ── */
+.bg-\[\#0A2540\], .bg-\[\#0a2540\], .bg-\[\#102F56\],
+.from-\[\#0A2540\], .from-\[\#0a2540\], .from-\[\#102F56\] {
+  background-color: #102F56 !important;
+}
+.text-\[\#0A2540\], .text-\[\#0a2540\], .text-\[\#102F56\] {
+  color: #102F56 !important;
+}
+.border-\[\#0A2540\], .border-\[\#0a2540\], .border-\[\#102F56\],
 .border-l-\[\#0A2540\], .border-l-\[\#0a2540\],
 .border-r-\[\#0A2540\], .border-r-\[\#0a2540\],
 .border-t-\[\#0A2540\], .border-t-\[\#0a2540\],
 .border-b-\[\#0A2540\], .border-b-\[\#0a2540\] {
-  border-color: #0b0f1d !important;
-}
-.fill-\[\#0A2540\], .fill-\[\#0a2540\] {
-  fill: #0b0f1d !important;
-}
-.stroke-\[\#0A2540\], .stroke-\[\#0a2540\] {
-  stroke: #0b0f1d !important;
+  border-color: #102F56 !important;
 }
 
-.bg-\[\#0F4C81\], .bg-\[\#0f4c81\] {
-  background-color: #1e293b !important;
+/* ── Primary Button Blue Mapping (#123E73 and #092747 hover) ── */
+.bg-\[\#0F4C81\], .bg-\[\#0f4c81\], .bg-\[\#123E73\] {
+  background-color: #123E73 !important;
 }
-.text-\[\#0F4C81\], .text-\[\#0f4c81\] {
-  color: #1e293b !important;
+.text-\[\#0F4C81\], .text-\[\#0f4c81\], .text-\[\#123E73\] {
+  color: #123E73 !important;
 }
-.border-\[\#0F4C81\], .border-\[\#0f4c81\] {
-  border-color: #1e293b !important;
+.border-\[\#0F4C81\], .border-\[\#0f4c81\], .border-\[\#123E73\] {
+  border-color: #123E73 !important;
 }
-.hover\:bg-\[\#0F4C81\]:hover, .hover\:bg-\[\#0f4c81\]:hover {
-  background-color: #334155 !important;
+.hover\:bg-\[\#0F4C81\]:hover, .hover\:bg-\[\#0f4c81\]:hover,
+.hover\:bg-\[\#12355a\]:hover, .hover\:bg-\[\#092747\]:hover {
+  background-color: #092747 !important;
 }
 
-.bg-\[\#D4AF37\], .bg-\[\#d4af37\] {
-  background-color: #635bff !important;
+/* ── Gold Accent Mapping (#E5A019 used sparingly for accents) ── */
+.text-\[\#D4AF37\], .text-\[\#d4af37\], .text-\[\#E5A019\] {
+  color: #E5A019 !important;
 }
-.text-\[\#D4AF37\], .text-\[\#d4af37\] {
-  color: #635bff !important;
-}
-.border-\[\#D4AF37\], .border-\[\#d4af37\],
+.border-\[\#D4AF37\], .border-\[\#d4af37\], .border-\[\#E5A019\],
 .border-l-\[\#D4AF37\], .border-l-\[\#d4af37\],
 .border-r-\[\#D4AF37\], .border-r-\[\#d4af37\],
 .border-t-\[\#D4AF37\], .border-t-\[\#d4af37\],
 .border-b-\[\#D4AF37\], .border-b-\[\#d4af37\] {
-  border-color: #635bff !important;
+  border-color: #E5A019 !important;
 }
-.fill-\[\#D4AF37\], .fill-\[\d4af37\],
-.fill-\[d4af37\] {
-  fill: #f59e0b !important; /* rating stars stay gold */
+.fill-\[\#D4AF37\], .fill-\[\#d4af37\], .fill-\[\#E5A019\] {
+  fill: #E5A019 !important;
 }
-.stroke-\[\#D4AF37\], .stroke-\[\#d4af37\],
-.stroke-\[d4af37\] {
-  stroke: #635bff !important;
+.stroke-\[\#D4AF37\], .stroke-\[\#d4af37\], .stroke-\[\#E5A019\] {
+  stroke: #E5A019 !important;
 }
 
-.bg-\[\#D4AF37\]\/10, .bg-\[\#d4af37\]\/10, .bg-\[\#D4AF37\]\/5, .bg-\[\#d4af37\]\/5 {
-  background-color: rgba(99, 91, 255, 0.1) !important;
+.hover\:text-\[\#D4AF37\]:hover, .hover\:text-\[\#d4af37\]:hover, .hover\:text-\[\#E5A019\]:hover {
+  color: #E5A019 !important;
 }
-.border-\[\#D4AF37\]\/30, .border-\[\#d4af37\]\/30, .border-\[\#D4AF37\]\/20, .border-\[\#d4af37\]\/20 {
-  border-color: rgba(99, 91, 255, 0.2) !important;
-}
-
-.from-\[\#0A2540\], .from-\[\#0a2540\] {
-  --tw-gradient-from: #0b0f1d !important;
-  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(11, 15, 29, 0)) !important;
-}
-.to-\[\#0F4C81\], .to-\[\#0f4c81\] {
-  --tw-gradient-to: #1e293b !important;
+.hover\:border-\[\#D4AF37\]:hover, .hover\:border-\[\#d4af37\]:hover, .hover\:border-\[\#E5A019\]:hover {
+  border-color: #E5A019 !important;
 }
 
-.hover\:bg-\[\#c9a630\]:hover, .hover\:bg-\[\#C9A630\]:hover,
-.active\:bg-\[\#c9a630\]:active, .active\:bg-\[\#C9A630\]:active {
-  background-color: #4f46e5 !important;
+/* Small Gold Accents (badges, pills, delicate indicators) */
+.bg-\[\#D4AF37\]\/10, .bg-\[\#d4af37\]\/10, .bg-\[\#E5A019\]\/10 {
+  background-color: rgba(229, 160, 25, 0.1) !important;
 }
-.hover\:text-\[\#D4AF37\]:hover, .hover\:text-\[\#d4af37\]:hover {
-  color: #635bff !important;
+.bg-\[\#D4AF37\]\/5, .bg-\[\#d4af37\]\/5, .bg-\[\#E5A019\]\/5 {
+  background-color: rgba(229, 160, 25, 0.05) !important;
 }
-.hover\:bg-\[\#D4AF37\]:hover, .hover\:bg-\[\#d4af37\]:hover {
-  background-color: #4f46e5 !important;
+.bg-\[\#D4AF37\]\/20, .bg-\[\#d4af37\]\/20, .bg-\[\#E5A019\]\/20 {
+  background-color: rgba(229, 160, 25, 0.2) !important;
 }
-.hover\:border-\[\#D4AF37\]:hover, .hover\:border-\[\#d4af37\]:hover {
-  border-color: #635bff !important;
+.border-\[\#D4AF37\]\/20, .border-\[\#d4af37\]\/20, .border-\[\#E5A019\]\/20 {
+  border-color: rgba(229, 160, 25, 0.2) !important;
+}
+.border-\[\#D4AF37\]\/30, .border-\[\#d4af37\]\/30, .border-\[\#E5A019\]\/30 {
+  border-color: rgba(229, 160, 25, 0.3) !important;
 }
 
-.focus\:ring-\[\#D4AF37\]:focus, .focus\:ring-\[\#d4af37\]:focus {
-  --tw-ring-color: #635bff !important;
+/* ── Prevent Large Gold Backgrounds: Map full section bg to Deep Navy #102F56 ── */
+section.bg-\[\#D4AF37\], section.bg-\[\#d4af37\] {
+  background-color: #102F56 !important;
+  color: #FFFFFF !important;
 }
-.focus\:border-\[\#D4AF37\]:focus, .focus\:border-\[\#d4af37\]:focus {
-  border-color: #635bff !important;
+section.bg-\[\#D4AF37\] h2, section.bg-\[\#d4af37\] h2 {
+  color: #FFFFFF !important;
+}
+section.bg-\[\#D4AF37\] p, section.bg-\[\#d4af37\] p {
+  color: rgba(255, 255, 255, 0.85) !important;
+}
+
+/* Subtle line accents */
+div.bg-\[\#D4AF37\], div.bg-\[\#d4af37\] {
+  background-color: #E5A019 !important;
+}
+
+/* Subtle borders */
+.border-border, .border-slate-100, .border-slate-200 {
+  border-color: #DCE3EA !important;
+}
+
+/* Smooth Focus states */
+input:focus, textarea:focus, select:focus {
+  outline: none !important;
+  border-color: #123E73 !important;
+  box-shadow: 0 0 0 2px rgba(18, 62, 115, 0.15) !important;
 }

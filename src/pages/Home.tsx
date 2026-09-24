@@ -108,9 +108,7 @@ export default function Home() {
   return (
     <Layout>
       {/* ── HERO ─────────────────────────────────────────────────────────── */}
-      {/* ── HERO ─────────────────────────────────────────────────────────── */}
-      {/* ── HERO ─────────────────────────────────────────────────────────── */}
-      <section className="relative min-h-[85vh] lg:min-h-screen flex items-center overflow-hidden bg-slate-900">
+      <section className="relative min-h-[85vh] lg:min-h-screen flex items-center overflow-hidden bg-[#102F56]">
         {/* Background Image Slider with Crossfade */}
         <div className="absolute inset-0 z-0">
           <AnimatePresence mode="wait">
@@ -125,7 +123,7 @@ export default function Home() {
             />
           </AnimatePresence>
           {/* Subtle vignette gradient for a premium polish */}
-          <div className="absolute inset-0 bg-gradient-to-r from-black/20 via-transparent to-black/10 z-10 pointer-events-none" />
+          <div className="absolute inset-0 bg-gradient-to-r from-[#102F56]/60 via-[#102F56]/20 to-transparent z-10 pointer-events-none" />
         </div>
 
         <div className="container mx-auto px-6 lg:px-12 relative z-20 py-20 lg:py-32 flex items-center justify-start">
@@ -134,37 +132,40 @@ export default function Home() {
             initial={{ opacity: 0, x: -30 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
-            className="w-full max-w-xl bg-white/95 backdrop-blur-md p-8 md:p-12 rounded-2xl shadow-[0_20px_50px_rgba(0,0,0,0.18)] border border-slate-100/50"
+            className="w-full max-w-xl bg-[#FAFBFC]/95 backdrop-blur-md p-8 md:p-12 rounded-xl shadow-[0_20px_50px_rgba(16,47,86,0.15)] border border-[#DCE3EA]"
           >
             <motion.div variants={stagger} initial="hidden" animate="show">
               {/* Tagline */}
-              <motion.p variants={fadeUp} className="text-xs uppercase tracking-[0.25em] text-[#D4AF37] font-semibold mb-5 font-sans">
-                A.B. Dhanam Online Services
-              </motion.p>
+              <motion.div variants={fadeUp} className="flex items-center gap-2 mb-4">
+                <span className="w-6 h-0.5 bg-[#E5A019]" />
+                <span className="text-xs uppercase tracking-[0.25em] text-[#E5A019] font-bold">
+                  AB DHANAM GROUP
+                </span>
+              </motion.div>
 
               {/* Main Headline */}
-              <motion.h1 variants={fadeUp} className="text-3xl md:text-5xl font-extrabold leading-[1.2] mb-6 tracking-tight font-sans text-[#0A2540]">
-                Professional <br />
-                <span className="text-[#D4AF37]">Registration Services</span>
+              <motion.h1 variants={fadeUp} className="text-3xl md:text-5xl font-extrabold leading-[1.2] mb-6 tracking-tight text-[#102F56]">
+                Premier Legal & <br />
+                <span className="text-[#E5A019]">Registration Advisory</span>
               </motion.h1>
 
               {/* Supporting Subheadline */}
-              <motion.p variants={fadeUp} className="text-slate-600 text-sm md:text-base leading-relaxed mb-8 font-sans">
-                Fast, secure, and error-free legal documentation and registry services for property, marriage, and trusts in Tamil Nadu.
+              <motion.p variants={fadeUp} className="text-[#334155] text-sm md:text-base leading-relaxed mb-8">
+                Fast, secure, and error-free legal documentation and registry services for property, marriage, trusts, and societies across Tamil Nadu.
               </motion.p>
 
               {/* Call to Actions */}
-              <motion.div variants={fadeUp} className="flex flex-col sm:flex-row gap-4 font-sans">
+              <motion.div variants={fadeUp} className="flex flex-col sm:flex-row gap-4">
                 <Link
                   href="/book-consultation"
-                  className="inline-flex items-center justify-center bg-[#0A2540] text-white px-7 py-3.5 font-bold text-xs uppercase tracking-wider hover:bg-[#12355a] transition-all rounded-lg shadow-md hover:-translate-y-0.5"
+                  className="inline-flex items-center justify-center bg-[#123E73] text-white px-7 py-3.5 font-bold text-xs uppercase tracking-wider hover:bg-[#092747] transition-all rounded shadow-sm hover:-translate-y-0.5 gap-2"
                   data-testid="button-book-consultation-hero"
                 >
-                  Book Free Consultation <ArrowRight className="ml-2 w-4 h-4" />
+                  Book Free Consultation <ArrowRight className="w-4 h-4" />
                 </Link>
                 <Link
                   href="/services"
-                  className="inline-flex items-center justify-center border border-slate-300 text-slate-700 hover:border-[#D4AF37] hover:text-[#D4AF37] transition-all hover:bg-slate-50 px-7 py-3.5 font-bold text-xs uppercase tracking-wider rounded-lg"
+                  className="inline-flex items-center justify-center border border-[#DCE3EA] text-[#334155] hover:border-[#123E73] hover:text-[#102F56] transition-all hover:bg-[#F1F5F9] px-7 py-3.5 font-bold text-xs uppercase tracking-wider rounded"
                   data-testid="button-explore-services-hero"
                 >
                   Explore Services
@@ -177,9 +178,9 @@ export default function Home() {
         {/* Floating Slide Indicator & Caption */}
         <div className="absolute bottom-8 right-8 z-30 flex flex-col items-end gap-3 pointer-events-auto">
           {/* Caption */}
-          <div className="text-[10px] font-semibold text-white tracking-widest uppercase flex items-center gap-2 bg-black/45 backdrop-blur-md px-3 py-1.5 rounded-md shadow-lg border border-white/5">
-            <span>{currentSlide === 0 ? "Property & Deeds Office" : "Marriage & Trust Signing"}</span>
-            <span className="w-1.5 h-1.5 rounded-full bg-[#D4AF37]" />
+          <div className="text-[10px] font-semibold text-white tracking-widest uppercase flex items-center gap-2 bg-[#102F56]/85 backdrop-blur-md px-3.5 py-1.5 rounded shadow-lg border border-white/10">
+            <span>{currentSlide === 0 ? "Property & Deeds Registry" : "Marriage & Trust Documentation"}</span>
+            <span className="w-1.5 h-1.5 rounded-full bg-[#E5A019]" />
             <span>Tamil Nadu</span>
           </div>
           {/* Indicators */}
@@ -188,8 +189,8 @@ export default function Home() {
               <button
                 key={index}
                 onClick={() => setCurrentSlide(index)}
-                className={`w-8 h-1 transition-all duration-300 rounded-full ${
-                  index === currentSlide ? "bg-[#D4AF37] w-12" : "bg-white/40 hover:bg-white/60"
+                className={`h-1.5 transition-all duration-300 rounded-full ${
+                  index === currentSlide ? "bg-[#E5A019] w-10" : "bg-white/40 hover:bg-white/70 w-6"
                 }`}
                 aria-label={`Go to slide ${index + 1}`}
               />
@@ -198,46 +199,46 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── STATS ──────────────────────────────────────────────────────────── */}
-      <section className="py-20 bg-background relative z-10 border-t border-slate-100">
+      {/* ── STATS (Main Background #FAFBFC) ─────────────────────────────────── */}
+      <section className="py-20 bg-[#FAFBFC] relative z-10 border-b border-[#DCE3EA]">
         <div className="container mx-auto px-6 lg:px-12">
           <motion.div
             variants={stagger}
             initial="hidden"
             whileInView="show"
             viewport={{ once: true }}
-            className="grid grid-cols-2 lg:grid-cols-4 gap-0 border border-border divide-x divide-y lg:divide-y-0 divide-border"
+            className="grid grid-cols-2 lg:grid-cols-4 gap-0 border border-[#DCE3EA] divide-x divide-y lg:divide-y-0 divide-[#DCE3EA] bg-white rounded-lg shadow-xs overflow-hidden"
           >
             {STATS.map((s) => (
-              <motion.div key={s.label} variants={fadeUp} className="p-10 text-center">
-                <div className="font-sans text-4xl md:text-5xl font-extrabold text-[#0A2540] mb-2">
+              <motion.div key={s.label} variants={fadeUp} className="p-8 md:p-10 text-center">
+                <div className="text-4xl md:text-5xl font-extrabold text-[#102F56] mb-2 tracking-tight">
                   <AnimatedCounter target={s.value} suffix={s.suffix} />
                 </div>
-                <div className="text-xs uppercase tracking-[0.2em] text-muted-foreground font-medium">{s.label}</div>
+                <div className="text-xs uppercase tracking-[0.2em] text-[#334155] font-semibold">{s.label}</div>
               </motion.div>
             ))}
           </motion.div>
         </div>
       </section>
 
-      {/* ── ABOUT PREVIEW ─────────────────────────────────────────────────── */}
-      <section className="py-28 bg-background">
+      {/* ── ABOUT PREVIEW (Alternating Section #F1F5F9) ────────────────────── */}
+      <section className="py-28 bg-[#F1F5F9]">
         <div className="container mx-auto px-6 lg:px-12">
-          <div className="grid lg:grid-cols-2 gap-20 items-center">
+          <div className="grid lg:grid-cols-2 gap-16 lg:gap-20 items-center">
             <motion.div initial={{ opacity: 0, x: -40 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.7 }}>
-              <p className="text-xs uppercase tracking-[0.35em] text-[#D4AF37] font-semibold mb-4">Our Story</p>
-              <div className="w-12 h-0.5 bg-[#D4AF37] mb-8" />
-              <h2 className="font-serif text-4xl md:text-5xl font-bold text-primary leading-tight mb-8">
+              <p className="text-xs uppercase tracking-[0.35em] text-[#E5A019] font-bold mb-3">Our Legacy</p>
+              <div className="w-12 h-0.5 bg-[#E5A019] mb-6" />
+              <h2 className="font-serif text-3xl md:text-5xl font-bold text-[#102F56] leading-tight mb-6">
                 Built on a Decade of Unwavering Client Trust
               </h2>
-              <p className="text-muted-foreground leading-relaxed mb-6 text-lg">
-                A.B. Dhanam Online Services was founded with a single purpose: to make Tamil Nadu's complex registration landscape navigable for every citizen. Managing Director A.B. Alagiri Rajan has personally guided over 5,000 clients through property, marriage, trust, and society registrations.
+              <p className="text-[#334155] leading-relaxed mb-6 text-base md:text-lg">
+                A.B. Dhanam Online Services was founded with a single mission: to make Tamil Nadu's complex registration landscape navigable and accessible for every citizen. Managing Director A.B. Alagiri Rajan has personally guided over 5,000 clients through property, marriage, trust, and society registrations.
               </p>
-              <p className="text-muted-foreground leading-relaxed mb-10">
-                Our approach is unhurried, precise, and always client-first. We don't process paperwork — we protect your interests, every document, every time.
+              <p className="text-[#334155]/80 leading-relaxed mb-8">
+                Our approach is meticulous, legally grounded, and client-first. We don't just process documents — we protect your rights and future.
               </p>
-              <Link href="/about" className="inline-flex items-center text-[#D4AF37] font-bold text-sm uppercase tracking-wider hover:gap-3 transition-all gap-2" data-testid="link-read-our-story">
-                Read Our Story <ChevronRight className="w-4 h-4" />
+              <Link href="/about" className="inline-flex items-center text-[#123E73] hover:text-[#092747] font-bold text-sm uppercase tracking-wider gap-2 group transition-all" data-testid="link-read-our-story">
+                Read Our Story <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform text-[#E5A019]" />
               </Link>
             </motion.div>
 
@@ -246,18 +247,18 @@ export default function Home() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.7 }}
-              className="space-y-6"
+              className="space-y-5"
             >
               {[
-                { label: "Founding Year", value: "2015", desc: "Established in Madurai with a vision to simplify legal documentation for Tamil Nadu families and businesses." },
-                { label: "Areas of Expertise", value: "7+", desc: "Specialised services spanning property, marriage, trust, society, and legal documentation consultancy." },
-                { label: "Projects Completed", value: "10+", desc: "Landmark residential layouts and commercial projects registered with zero disputes." },
+                { label: "Founding Year", value: "2015", desc: "Established in Madurai with a vision to simplify legal documentation for Tamil Nadu families and enterprises." },
+                { label: "Practice Areas", value: "7+", desc: "Specialised services spanning property registration, marriage deeds, trust structuring, and society certifications." },
+                { label: "Major Registrations", value: "10+", desc: "Landmark residential layouts and commercial real estate titles registered with zero disputes." },
               ].map((item) => (
-                <div key={item.label} className="flex gap-6 p-6 border-l-4 border-[#D4AF37] bg-muted/30">
-                  <div className="font-serif text-3xl font-bold text-primary w-16 shrink-0">{item.value}</div>
+                <div key={item.label} className="flex gap-6 p-6 border border-[#DCE3EA] border-l-4 border-l-[#E5A019] bg-white rounded shadow-xs">
+                  <div className="font-serif text-3xl font-bold text-[#102F56] w-16 shrink-0">{item.value}</div>
                   <div>
-                    <div className="text-xs uppercase tracking-[0.2em] text-[#D4AF37] font-semibold mb-1">{item.label}</div>
-                    <p className="text-sm text-muted-foreground leading-relaxed">{item.desc}</p>
+                    <div className="text-xs uppercase tracking-[0.2em] text-[#E5A019] font-bold mb-1">{item.label}</div>
+                    <p className="text-sm text-[#334155] leading-relaxed">{item.desc}</p>
                   </div>
                 </div>
               ))}
@@ -266,18 +267,18 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── SERVICES ─────────────────────────────────────────────────────── */}
-      <section className="py-28 bg-[#0A2540] text-white">
+      {/* ── SERVICES (Deep Navy #102F56 Section) ────────────────────────────── */}
+      <section className="py-28 bg-[#102F56] text-white">
         <div className="container mx-auto px-6 lg:px-12">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-center mb-20"
+            className="text-center mb-16"
           >
-            <p className="text-xs uppercase tracking-[0.35em] text-[#D4AF37] font-semibold mb-4">What We Do</p>
-            <div className="w-12 h-0.5 bg-[#D4AF37] mx-auto mb-8" />
-            <h2 className="font-serif text-4xl md:text-5xl font-bold">Comprehensive Registration Services</h2>
+            <p className="text-xs uppercase tracking-[0.35em] text-[#E5A019] font-bold mb-3">What We Do</p>
+            <div className="w-12 h-0.5 bg-[#E5A019] mx-auto mb-6" />
+            <h2 className="font-serif text-3xl md:text-5xl font-bold text-white">Comprehensive Registration Services</h2>
           </motion.div>
 
           <motion.div
@@ -285,7 +286,7 @@ export default function Home() {
             initial="hidden"
             whileInView="show"
             viewport={{ once: true }}
-            className="grid md:grid-cols-2 lg:grid-cols-3 gap-px bg-white/10"
+            className="grid md:grid-cols-2 lg:grid-cols-3 gap-px bg-white/10 rounded-lg overflow-hidden border border-white/10"
           >
             {SERVICES.map((s, idx) => {
               const isLast = idx === SERVICES.length - 1;
@@ -297,7 +298,7 @@ export default function Home() {
                 >
                   <Link
                     href={s.href}
-                    className={`group flex flex-col h-full p-10 bg-[#0A2540] border-l-4 border-[#D4AF37]/0 hover:border-[#D4AF37] hover:bg-[#0F4C81]/30 transition-all duration-300 ${
+                    className={`group flex flex-col h-full p-8 md:p-10 bg-[#102F56] hover:bg-[#123E73]/50 border-l-4 border-l-transparent hover:border-l-[#E5A019] transition-all duration-300 ${
                       isLast ? "md:flex-row md:items-center md:justify-between md:gap-10" : ""
                     }`}
                     data-testid={`card-service-${s.title.toLowerCase().replace(/\s+/g, "-")}`}
@@ -305,23 +306,23 @@ export default function Home() {
                     {isLast ? (
                       <>
                         <div className="flex items-start gap-6 md:max-w-3xl">
-                          <s.icon className="w-10 h-10 mt-1 text-[#D4AF37] shrink-0" />
+                          <s.icon className="w-9 h-9 mt-1 text-[#E5A019] shrink-0" />
                           <div>
-                            <h3 className="font-serif text-xl font-bold mb-3">{s.title}</h3>
-                            <p className="text-white/60 text-sm leading-relaxed">{s.desc}</p>
+                            <h3 className="font-serif text-xl font-bold mb-2 text-white">{s.title}</h3>
+                            <p className="text-[#DCE3EA]/80 text-sm leading-relaxed">{s.desc}</p>
                           </div>
                         </div>
-                        <span className="text-[#D4AF37] text-xs font-bold uppercase tracking-wider flex items-center gap-2 group-hover:gap-3 transition-all shrink-0 mt-6 md:mt-0">
-                          Learn More <ArrowRight className="w-3 h-3" />
+                        <span className="text-[#E5A019] text-xs font-bold uppercase tracking-wider flex items-center gap-2 group-hover:gap-3 transition-all shrink-0 mt-6 md:mt-0">
+                          Learn More <ArrowRight className="w-3.5 h-3.5" />
                         </span>
                       </>
                     ) : (
                       <>
-                        <s.icon className="w-9 h-9 text-[#D4AF37] mb-6" />
-                        <h3 className="font-serif text-xl font-bold mb-3">{s.title}</h3>
-                        <p className="text-white/60 text-sm leading-relaxed mb-6 flex-1">{s.desc}</p>
-                        <span className="text-[#D4AF37] text-xs font-bold uppercase tracking-wider flex items-center gap-2 group-hover:gap-3 transition-all">
-                          Learn More <ArrowRight className="w-3 h-3" />
+                        <s.icon className="w-8 h-8 text-[#E5A019] mb-5" />
+                        <h3 className="font-serif text-xl font-bold mb-2 text-white">{s.title}</h3>
+                        <p className="text-[#DCE3EA]/80 text-sm leading-relaxed mb-6 flex-1">{s.desc}</p>
+                        <span className="text-[#E5A019] text-xs font-bold uppercase tracking-wider flex items-center gap-2 group-hover:gap-3 transition-all">
+                          Learn More <ArrowRight className="w-3.5 h-3.5" />
                         </span>
                       </>
                     )}
@@ -339,20 +340,17 @@ export default function Home() {
           >
             <Link
               href="/services"
-              className="inline-flex items-center border border-[#D4AF37] text-[#D4AF37] px-8 py-4 text-sm font-bold uppercase tracking-wider hover:bg-[#D4AF37] hover:text-[#0A2540] transition-all"
+              className="inline-flex items-center border border-[#E5A019] text-[#E5A019] hover:bg-[#E5A019] hover:text-[#102F56] px-8 py-3.5 text-xs font-bold uppercase tracking-wider rounded transition-all gap-2"
               data-testid="button-view-all-services"
             >
-              View All Services <ArrowRight className="ml-2 w-4 h-4" />
+              View All Services <ArrowRight className="w-4 h-4" />
             </Link>
           </motion.div>
         </div>
       </section>
 
-      {/* ── REGISTRY ASSISTANT (HIDDEN BY CUSTOMER REQUEST - UNCOMMENT THE LINE BELOW TO ENABLE IT) ── */}
-      {/* <RegistryAssistant /> */}
-
-      {/* ── PROCESS TIMELINE ─────────────────────────────────────────────── */}
-      <section className="py-28 bg-background relative overflow-hidden">
+      {/* ── PROCESS TIMELINE (Main Background #FAFBFC) ────────────────────── */}
+      <section className="py-28 bg-[#FAFBFC] relative overflow-hidden border-b border-[#DCE3EA]">
         <div className="container mx-auto px-6 lg:px-12">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -360,19 +358,19 @@ export default function Home() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <p className="text-xs uppercase tracking-[0.35em] text-[#D4AF37] font-semibold mb-4">How It Works</p>
-            <div className="w-12 h-0.5 bg-[#D4AF37] mx-auto mb-8" />
-            <h2 className="font-serif text-4xl md:text-5xl font-bold text-foreground">Our Four-Step Process</h2>
+            <p className="text-xs uppercase tracking-[0.35em] text-[#E5A019] font-bold mb-3">How It Works</p>
+            <div className="w-12 h-0.5 bg-[#E5A019] mx-auto mb-6" />
+            <h2 className="font-serif text-3xl md:text-5xl font-bold text-[#102F56]">Our Four-Step Process</h2>
           </motion.div>
 
           <div className="max-w-4xl mx-auto">
             {/* Horizontal Interactive Steps Progress Bar */}
             <div className="relative mb-20 px-4 md:px-10">
               {/* Background horizontal line */}
-              <div className="absolute top-1/2 left-0 right-0 h-0.5 bg-border -translate-y-1/2" />
+              <div className="absolute top-1/2 left-0 right-0 h-0.5 bg-[#DCE3EA] -translate-y-1/2" />
               {/* Active filled horizontal line */}
               <div
-                className="absolute top-1/2 left-0 h-0.5 bg-[#D4AF37] -translate-y-1/2 transition-all duration-500 ease-out"
+                className="absolute top-1/2 left-0 h-0.5 bg-[#123E73] -translate-y-1/2 transition-all duration-500 ease-out"
                 style={{
                   width: `${(activeStep / (PROCESS.length - 1)) * 100}%`,
                 }}
@@ -393,17 +391,17 @@ export default function Home() {
                       <div
                         className={`w-12 h-12 md:w-16 md:h-16 rounded-full flex items-center justify-center border-2 transition-all duration-300 ${
                           isSelected
-                            ? "bg-[#D4AF37] border-[#D4AF37] text-white scale-110 shadow-[0_0_20px_rgba(212,175,55,0.4)]"
+                            ? "bg-[#123E73] border-[#123E73] text-white scale-110 shadow-md"
                             : isActive
-                            ? "bg-card border-[#D4AF37] text-[#D4AF37] shadow-[0_0_15px_rgba(212,175,55,0.15)]"
-                            : "bg-card border-border text-muted-foreground hover:border-muted-foreground/60"
+                            ? "bg-white border-[#123E73] text-[#123E73] shadow-xs"
+                            : "bg-white border-[#DCE3EA] text-[#64748B] hover:border-[#123E73]/50"
                         }`}
                       >
                         <StepIcon className="w-5 h-5 md:w-6 md:h-6" />
                       </div>
                       <span
                         className={`absolute mt-14 md:mt-18 text-[10px] md:text-xs font-bold tracking-wider uppercase transition-colors duration-300 whitespace-nowrap ${
-                          isSelected ? "text-[#D4AF37]" : "text-muted-foreground group-hover:text-foreground"
+                          isSelected ? "text-[#123E73]" : "text-[#64748B] group-hover:text-[#334155]"
                         }`}
                       >
                         {p.title.split(" ")[0]}
@@ -415,7 +413,7 @@ export default function Home() {
             </div>
 
             {/* Step Content Card with Cross-fade transition */}
-            <div className="mt-24">
+            <div className="mt-20">
               <AnimatePresence mode="wait">
                 <motion.div
                   key={activeStep}
@@ -423,32 +421,30 @@ export default function Home() {
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: -15 }}
                   transition={{ duration: 0.35, ease: "easeInOut" }}
-                  className="grid md:grid-cols-12 gap-8 items-center bg-card border border-border/60 p-8 md:p-12 rounded-3xl shadow-xl min-h-[320px]"
+                  className="grid md:grid-cols-12 gap-8 items-center bg-white border border-[#DCE3EA] p-8 md:p-12 rounded-xl shadow-xs min-h-[300px]"
                 >
                   {/* Left Column: text content */}
-                  <div className="md:col-span-7 space-y-6">
+                  <div className="md:col-span-7 space-y-4">
                     <div className="flex items-center gap-4">
-                      <span className="px-3 py-1 rounded-full bg-[#D4AF37]/10 text-[#D4AF37] text-[10px] font-bold tracking-widest uppercase">
+                      <span className="px-3 py-1 rounded bg-[#E5A019]/10 text-[#E5A019] text-[10px] font-bold tracking-widest uppercase border border-[#E5A019]/30">
                         Step 0{activeStep + 1}
                       </span>
                     </div>
-                    <h3 className="font-serif text-3xl font-bold text-foreground">
+                    <h3 className="font-serif text-2xl md:text-3xl font-bold text-[#102F56]">
                       {PROCESS[activeStep].title}
                     </h3>
-                    <p className="text-muted-foreground text-sm md:text-base leading-relaxed">
+                    <p className="text-[#334155] text-sm md:text-base leading-relaxed">
                       {PROCESS[activeStep].desc}
                     </p>
                   </div>
 
-                  {/* Right Column: pulsing graphical elements */}
+                  {/* Right Column: graphical badge */}
                   <div className="md:col-span-5 flex justify-center">
-                    <div className="relative w-44 h-44 md:w-52 md:h-52 rounded-full border border-[#D4AF37]/20 bg-[#D4AF37]/5 flex items-center justify-center group">
-                      {/* Pulsing rings */}
-                      <div className="absolute inset-0 rounded-full border-2 border-[#D4AF37]/25 scale-100 group-hover:scale-110 transition-transform duration-1000 animate-ping opacity-25" />
-                      <div className="w-24 h-24 rounded-full bg-[#D4AF37]/10 flex items-center justify-center">
+                    <div className="relative w-40 h-40 md:w-48 md:h-48 rounded-full border border-[#DCE3EA] bg-[#F1F5F9] flex items-center justify-center">
+                      <div className="w-24 h-24 rounded-full bg-white border border-[#DCE3EA] shadow-xs flex items-center justify-center">
                         {(() => {
                           const CurrentIcon = PROCESS[activeStep].icon;
-                          return <CurrentIcon className="w-10 h-10 text-[#D4AF37]" />;
+                          return <CurrentIcon className="w-10 h-10 text-[#123E73]" />;
                         })()}
                       </div>
                     </div>
@@ -460,8 +456,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── PROJECTS PREVIEW ─────────────────────────────────────────────── */}
-      <section className="py-28 bg-muted/40">
+      {/* ── PROJECTS PREVIEW (Alternating Section #F1F5F9) ──────────────────── */}
+      <section className="py-28 bg-[#F1F5F9]">
         <div className="container mx-auto px-6 lg:px-12">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -470,12 +466,12 @@ export default function Home() {
             className="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-16"
           >
             <div>
-              <p className="text-xs uppercase tracking-[0.35em] text-[#D4AF37] font-semibold mb-4">Our Portfolio</p>
-              <div className="w-12 h-0.5 bg-[#D4AF37] mb-8" />
-              <h2 className="font-serif text-4xl md:text-5xl font-bold text-primary">Landmark Projects Across Tamil Nadu</h2>
+              <p className="text-xs uppercase tracking-[0.35em] text-[#E5A019] font-bold mb-3">Our Portfolio</p>
+              <div className="w-12 h-0.5 bg-[#E5A019] mb-6" />
+              <h2 className="font-serif text-3xl md:text-5xl font-bold text-[#102F56]">Landmark Projects Across Tamil Nadu</h2>
             </div>
-            <Link href="/projects" className="shrink-0 text-sm font-bold text-[#D4AF37] uppercase tracking-wider flex items-center gap-2 hover:gap-3 transition-all" data-testid="link-view-all-projects">
-              See All Projects <ChevronRight className="w-4 h-4" />
+            <Link href="/projects" className="shrink-0 text-xs font-bold text-[#123E73] hover:text-[#092747] uppercase tracking-wider flex items-center gap-2 group transition-all" data-testid="link-view-all-projects">
+              See All Projects <ChevronRight className="w-4 h-4 text-[#E5A019] group-hover:translate-x-1 transition-transform" />
             </Link>
           </motion.div>
 
@@ -488,12 +484,12 @@ export default function Home() {
           >
             {PROJECTS.map((p) => (
               <motion.div key={p.name} variants={fadeUp}>
-                <Link href="/projects" className="group block p-8 bg-white border border-border hover:border-[#D4AF37] hover:shadow-2xl transition-all duration-300 hover:-translate-y-1" data-testid={`card-project-${p.num}`}>
-                  <div className="font-serif text-5xl font-bold text-[#D4AF37]/20 group-hover:text-[#D4AF37]/40 transition-colors mb-4">{p.num}</div>
-                  <h3 className="font-serif text-lg font-bold text-primary mb-2 leading-snug">{p.name}</h3>
-                  <p className="text-xs uppercase tracking-wider text-muted-foreground mb-6">{p.type}</p>
-                  <span className="text-xs font-bold text-[#D4AF37] uppercase tracking-wider flex items-center gap-1 group-hover:gap-2 transition-all">
-                    View Details <ArrowRight className="w-3 h-3" />
+                <Link href="/projects" className="group block p-8 bg-white border border-[#DCE3EA] hover:border-[#123E73] hover:shadow-md transition-all duration-300 rounded" data-testid={`card-project-${p.num}`}>
+                  <div className="font-serif text-4xl font-bold text-[#123E73]/20 group-hover:text-[#E5A019] transition-colors mb-3">{p.num}</div>
+                  <h3 className="font-serif text-lg font-bold text-[#102F56] mb-2 leading-snug">{p.name}</h3>
+                  <p className="text-xs uppercase tracking-wider text-[#334155]/70 mb-5">{p.type}</p>
+                  <span className="text-xs font-bold text-[#123E73] group-hover:text-[#092747] uppercase tracking-wider flex items-center gap-1.5 transition-colors">
+                    View Details <ArrowRight className="w-3 h-3 text-[#E5A019]" />
                   </span>
                 </Link>
               </motion.div>
@@ -502,8 +498,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── TESTIMONIALS PREVIEW ─────────────────────────────────────────── */}
-      <section className="py-28 bg-[#0A2540] text-white">
+      {/* ── TESTIMONIALS PREVIEW (Deep Navy #102F56 Section) ───────────────── */}
+      <section className="py-28 bg-[#102F56] text-white">
         <div className="container mx-auto px-6 lg:px-12">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -511,9 +507,9 @@ export default function Home() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <p className="text-xs uppercase tracking-[0.35em] text-[#D4AF37] font-semibold mb-4">What Clients Say</p>
-            <div className="w-12 h-0.5 bg-[#D4AF37] mx-auto mb-8" />
-            <h2 className="font-serif text-4xl md:text-5xl font-bold">Trusted by Thousands Across Tamil Nadu</h2>
+            <p className="text-xs uppercase tracking-[0.35em] text-[#E5A019] font-bold mb-3">Client Trust</p>
+            <div className="w-12 h-0.5 bg-[#E5A019] mx-auto mb-6" />
+            <h2 className="font-serif text-3xl md:text-5xl font-bold text-white">Trusted by Thousands Across Tamil Nadu</h2>
           </motion.div>
 
           <motion.div
@@ -524,66 +520,67 @@ export default function Home() {
             className="grid md:grid-cols-3 gap-8 mb-12"
           >
             {TESTIMONIALS.map((t) => (
-              <motion.div key={t.name} variants={fadeUp} className="p-8 border border-white/10 bg-white/5 hover:bg-white/10 transition-colors">
-                <div className="flex gap-1 mb-6">
+              <motion.div key={t.name} variants={fadeUp} className="p-8 border border-white/10 bg-white/5 rounded hover:bg-white/10 transition-colors">
+                <div className="flex gap-1 mb-5">
                   {Array.from({ length: t.stars }).map((_, i) => (
-                    <Star key={i} className="w-4 h-4 fill-[#D4AF37] text-[#D4AF37]" />
+                    <Star key={i} className="w-4 h-4 fill-[#E5A019] text-[#E5A019]" />
                   ))}
                 </div>
-                <p className="text-white/80 leading-relaxed mb-8 text-sm italic">"{t.content}"</p>
-                <div className="border-t border-white/10 pt-6">
-                  <div className="font-serif font-bold text-lg">{t.name}</div>
-                  <div className="text-[#D4AF37] text-xs font-medium uppercase tracking-wider mt-1">{t.role}</div>
+                <p className="text-[#DCE3EA] leading-relaxed mb-6 text-sm italic">"{t.content}"</p>
+                <div className="border-t border-white/10 pt-4">
+                  <div className="font-serif font-bold text-base text-white">{t.name}</div>
+                  <div className="text-[#E5A019] text-xs font-semibold uppercase tracking-wider mt-0.5">{t.role}</div>
                 </div>
               </motion.div>
             ))}
           </motion.div>
 
           <div className="text-center">
-            <Link href="/testimonials" className="text-sm font-bold text-[#D4AF37] uppercase tracking-wider flex items-center gap-2 justify-center hover:gap-3 transition-all" data-testid="link-all-testimonials">
+            <Link href="/testimonials" className="text-xs font-bold text-[#E5A019] hover:text-white uppercase tracking-wider inline-flex items-center gap-2 transition-colors" data-testid="link-all-testimonials">
               Read All Reviews <ChevronRight className="w-4 h-4" />
             </Link>
           </div>
         </div>
       </section>
 
-      {/* ── CTA ──────────────────────────────────────────────────────────── */}
-      <section className="py-28 bg-[#D4AF37]">
-        <div className="container mx-auto px-6 lg:px-12 text-center">
+      {/* ── CTA SECTION (Clean, Trustworthy Deep Navy #102F56 Background) ───── */}
+      <section className="py-24 bg-[#102F56] text-white border-t border-[#E5A019]/30 relative overflow-hidden">
+        <div className="container mx-auto px-6 lg:px-12 text-center relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            <p className="text-xs uppercase tracking-[0.35em] text-[#0A2540]/60 font-semibold mb-6">Get Started Today</p>
-            <h2 className="font-serif text-4xl md:text-6xl font-bold text-[#0A2540] mb-6 leading-tight">
+            <p className="text-xs uppercase tracking-[0.35em] text-[#E5A019] font-bold mb-4">Get Started Today</p>
+            <div className="w-12 h-0.5 bg-[#E5A019] mx-auto mb-6" />
+            <h2 className="font-serif text-3xl md:text-5xl font-bold text-white mb-6 leading-tight">
               Ready to Begin Your<br />Registration Journey?
             </h2>
-            <p className="text-[#0A2540]/70 text-lg mb-10 max-w-xl mx-auto">
-              Book a free consultation today. Our experts will guide you through every step with complete transparency and zero stress.
+            <p className="text-[#DCE3EA]/90 text-base md:text-lg mb-10 max-w-xl mx-auto leading-relaxed">
+              Book a free consultation today. Our consultants guide you through each documentation step with complete transparency and compliance.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 href="/book-consultation"
-                className="inline-flex items-center justify-center bg-[#0A2540] text-white px-10 py-4 font-bold text-sm uppercase tracking-wider hover:bg-[#0F4C81] transition-all shadow-xl hover:shadow-2xl"
+                className="inline-flex items-center justify-center bg-[#123E73] text-white px-8 py-3.5 font-bold text-xs uppercase tracking-wider hover:bg-[#092747] transition-all rounded shadow-md border border-[#E5A019]/40 hover:border-[#E5A019] gap-2"
                 data-testid="button-book-consultation-cta"
               >
-                Book Free Consultation <ArrowRight className="ml-2 w-4 h-4" />
+                Book Free Consultation <ArrowRight className="w-4 h-4" />
               </Link>
               <a
                 href="tel:+919876543210"
-                className="inline-flex items-center justify-center border-2 border-[#0A2540] text-[#0A2540] px-10 py-4 font-bold text-sm uppercase tracking-wider hover:bg-[#0A2540] hover:text-white transition-all"
+                className="inline-flex items-center justify-center border border-white/40 text-white px-8 py-3.5 font-bold text-xs uppercase tracking-wider hover:bg-white hover:text-[#102F56] transition-all rounded gap-2"
                 data-testid="button-call-now-cta"
               >
-                <Phone className="mr-2 w-4 h-4" /> Call Now
+                <Phone className="w-4 h-4 text-[#E5A019]" /> Call Now
               </a>
             </div>
           </motion.div>
         </div>
       </section>
 
-      {/* ── WHY CHOOSE US PREVIEW ─────────────────────────────────────────── */}
-      <section className="py-24 bg-background">
+      {/* ── WHY CHOOSE US PREVIEW (Main Background #FAFBFC) ────────────────── */}
+      <section className="py-24 bg-[#FAFBFC] border-t border-[#DCE3EA]">
         <div className="container mx-auto px-6 lg:px-12">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -591,9 +588,9 @@ export default function Home() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <p className="text-xs uppercase tracking-[0.35em] text-[#D4AF37] font-semibold mb-4">Why A.B. Dhanam</p>
-            <div className="w-12 h-0.5 bg-[#D4AF37] mx-auto mb-8" />
-            <h2 className="font-serif text-4xl md:text-5xl font-bold text-primary">The Standard of Excellence</h2>
+            <p className="text-xs uppercase tracking-[0.35em] text-[#E5A019] font-bold mb-3">Why A.B. Dhanam</p>
+            <div className="w-12 h-0.5 bg-[#E5A019] mx-auto mb-6" />
+            <h2 className="font-serif text-3xl md:text-5xl font-bold text-[#102F56]">The Standard of Excellence</h2>
           </motion.div>
           <motion.div
             variants={stagger}
@@ -607,16 +604,16 @@ export default function Home() {
               { icon: Users, title: "Dedicated Client Manager", desc: "Every client is assigned a dedicated manager who remains your single point of contact throughout the entire process." },
               { icon: Building2, title: "Deep Tamil Nadu Expertise", desc: "We know every Sub-Registrar office across Tamil Nadu — their procedures, timelines, and requirements." },
             ].map((item) => (
-              <motion.div key={item.title} variants={fadeUp} className="p-8 border border-border border-l-4 border-l-[#D4AF37] hover:shadow-xl transition-all duration-300">
-                <item.icon className="w-8 h-8 text-[#D4AF37] mb-5" />
-                <h3 className="font-serif text-xl font-bold text-primary mb-3">{item.title}</h3>
-                <p className="text-muted-foreground text-sm leading-relaxed">{item.desc}</p>
+              <motion.div key={item.title} variants={fadeUp} className="p-8 border border-[#DCE3EA] border-l-4 border-l-[#E5A019] bg-white rounded shadow-xs hover:shadow-md transition-all duration-300">
+                <item.icon className="w-7 h-7 text-[#123E73] mb-4" />
+                <h3 className="font-serif text-lg font-bold text-[#102F56] mb-2">{item.title}</h3>
+                <p className="text-[#334155] text-sm leading-relaxed">{item.desc}</p>
               </motion.div>
             ))}
           </motion.div>
           <div className="text-center mt-12">
-            <Link href="/why-choose-us" className="inline-flex items-center text-[#D4AF37] font-bold text-sm uppercase tracking-wider hover:gap-3 transition-all gap-2" data-testid="link-why-choose-us">
-              Discover All Reasons <ChevronRight className="w-4 h-4" />
+            <Link href="/why-choose-us" className="inline-flex items-center text-[#123E73] hover:text-[#092747] font-bold text-xs uppercase tracking-wider gap-2 group transition-all" data-testid="link-why-choose-us">
+              Discover All Reasons <ChevronRight className="w-4 h-4 text-[#E5A019] group-hover:translate-x-1 transition-transform" />
             </Link>
           </div>
         </div>
