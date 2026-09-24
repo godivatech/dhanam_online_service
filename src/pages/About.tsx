@@ -70,7 +70,19 @@ export default function About() {
         <div className="container mx-auto px-6 lg:px-12">
           <div className="grid lg:grid-cols-2 gap-20 items-start">
             <motion.div initial={{ opacity: 0, x: -40 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.7 }}>
-              <p className="text-xs uppercase tracking-[0.35em] text-[#E5A019] font-semibold mb-4">Company Overview</p>
+              <div className="flex items-center gap-3.5 mb-6">
+                <div className="w-12 h-12 rounded-lg bg-white p-1 shadow-xs border border-[#DCE3EA] flex items-center justify-center shrink-0">
+                  <img
+                    src="/images/Logo.png"
+                    alt="AB DHANAM GROUP Logo"
+                    className="w-full h-full object-contain"
+                  />
+                </div>
+                <div>
+                  <p className="text-xs uppercase tracking-[0.35em] text-[#E5A019] font-bold">Company Overview</p>
+                  <span className="text-[0.68rem] text-[#334155]/70 font-semibold tracking-wider">AB DHANAM GROUP</span>
+                </div>
+              </div>
               <div className="w-12 h-0.5 bg-[#E5A019] mb-8" />
               <h2 className="font-serif text-4xl font-bold text-[#102F56] mb-8">A Firm Built on Clarity, Speed, and Trust</h2>
               <p className="text-[#334155] leading-relaxed mb-6 text-lg">

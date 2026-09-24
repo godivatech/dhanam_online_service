@@ -123,19 +123,20 @@ export function Header() {
 
   return (
     <header className="sticky top-0 z-50 w-full bg-[#FAFBFC]/95 backdrop-blur-md border-b border-[#DCE3EA] shadow-[0_1px_3px_rgba(16,47,86,0.04)] transition-all duration-300">
-      <div className="container mx-auto px-4 lg:px-8 h-20 md:h-24 flex items-center justify-between">
-        {/* Original Navy & Gold Logo */}
-        <Link href="/" className="group flex items-center gap-3" data-testid="link-home-logo">
-          <div className="w-10 h-10 md:w-11 md:h-11 rounded-lg bg-[#102F56] border border-[#E5A019]/40 flex items-center justify-center shadow-xs shrink-0 group-hover:border-[#E5A019] transition-colors">
-            <span className="font-serif text-lg font-bold text-[#E5A019]">AB</span>
-          </div>
-          <div className="flex flex-col justify-center">
-            <div className="flex items-baseline gap-1.5">
-              <span className="font-serif text-2xl md:text-3xl font-extrabold text-[#E5A019] tracking-tight">A.B.</span>
-              <span className="font-serif text-2xl md:text-3xl font-bold text-[#102F56] tracking-tight">Dhanam</span>
-            </div>
-            <span className="text-[0.62rem] md:text-[0.65rem] uppercase tracking-[0.22em] text-[#334155] font-semibold">
+      <div className="container mx-auto px-4 lg:px-8 h-24 md:h-28 flex items-center justify-between">
+        {/* Supplied Official Navy & Gold Logo */}
+        <Link href="/" className="group flex items-center gap-4 py-1" data-testid="link-home-logo">
+          <img
+            src="/images/Logo.png"
+            alt="AB DHANAM GROUP Logo"
+            className="w-20 h-20 md:w-24 md:h-24 object-contain shrink-0 group-hover:scale-105 transition-transform duration-200"
+          />
+          <div className="hidden sm:flex flex-col justify-center">
+            <span className="font-extrabold text-2xl md:text-3xl text-[#102F56] tracking-tight leading-none">
               AB DHANAM GROUP
+            </span>
+            <span className="text-[0.68rem] md:text-xs uppercase tracking-[0.22em] text-[#334155] font-semibold mt-1.5">
+              Legal & Registration Services
             </span>
           </div>
         </Link>
@@ -229,10 +230,21 @@ export function Header() {
               transition={{ type: "spring", damping: 25, stiffness: 220 }}
               className="fixed top-0 right-0 h-[100dvh] w-[300px] max-w-[85vw] bg-[#FAFBFC] shadow-2xl z-[70] lg:hidden flex flex-col border-l border-[#DCE3EA]"
             >
-              <div className="flex justify-between items-center p-6 border-b border-[#DCE3EA] bg-white">
-                <div className="flex items-center gap-2">
-                  <span className="font-serif font-bold text-lg text-[#E5A019]">A.B.</span>
-                  <span className="font-serif font-bold text-lg text-[#102F56]">Dhanam</span>
+              <div className="flex justify-between items-center p-5 border-b border-[#DCE3EA] bg-white">
+                <div className="flex items-center gap-3">
+                  <img
+                    src="/images/Logo.png"
+                    alt="AB DHANAM GROUP Logo"
+                    className="w-16 h-16 object-contain shrink-0"
+                  />
+                  <div className="flex flex-col">
+                    <span className="font-extrabold text-lg text-[#102F56] leading-tight">
+                      AB DHANAM GROUP
+                    </span>
+                    <span className="text-[0.68rem] uppercase tracking-[0.2em] text-[#E5A019] font-bold">
+                      Online Services
+                    </span>
+                  </div>
                 </div>
                 <button 
                   onClick={() => setIsOpen(false)} 
@@ -290,17 +302,20 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-16 mb-16">
           {/* Brand Col */}
           <div>
-            <Link href="/" className="inline-flex items-center gap-3 mb-6 group">
-              <div className="w-11 h-11 rounded-lg bg-white/10 border border-[#E5A019]/50 flex items-center justify-center shadow-xs shrink-0 group-hover:border-[#E5A019] transition-colors">
-                <span className="font-serif text-lg font-bold text-[#E5A019]">AB</span>
+            <Link href="/" className="inline-flex items-center gap-4 mb-6 group">
+              <div className="w-20 h-20 md:w-24 md:h-24 rounded-2xl bg-white p-2 shadow-md flex items-center justify-center shrink-0 border border-[#E5A019]/40 group-hover:border-[#E5A019] transition-all">
+                <img
+                  src="/images/Logo.png"
+                  alt="AB DHANAM GROUP Logo"
+                  className="w-full h-full object-contain"
+                />
               </div>
               <div className="flex flex-col justify-center">
-                <div className="flex items-baseline gap-1.5">
-                  <span className="font-serif text-3xl font-extrabold text-[#E5A019] tracking-tight">A.B.</span>
-                  <span className="font-serif text-3xl font-bold text-white tracking-tight">Dhanam</span>
-                </div>
-                <span className="text-[0.65rem] uppercase tracking-[0.22em] text-[#DCE3EA]/80 font-semibold mt-0.5">
+                <span className="font-extrabold text-2xl md:text-3xl text-white tracking-tight leading-tight">
                   AB DHANAM GROUP
+                </span>
+                <span className="text-xs uppercase tracking-[0.22em] text-[#E5A019] font-bold mt-1">
+                  A.B. Dhanam Online Services
                 </span>
               </div>
             </Link>

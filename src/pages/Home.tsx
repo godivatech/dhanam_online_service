@@ -135,12 +135,26 @@ export default function Home() {
             className="w-full max-w-xl bg-[#FAFBFC]/95 backdrop-blur-md p-8 md:p-12 rounded-xl shadow-[0_20px_50px_rgba(16,47,86,0.15)] border border-[#DCE3EA]"
           >
             <motion.div variants={stagger} initial="hidden" animate="show">
-              {/* Tagline */}
-              <motion.div variants={fadeUp} className="flex items-center gap-2 mb-4">
-                <span className="w-6 h-0.5 bg-[#E5A019]" />
-                <span className="text-xs uppercase tracking-[0.25em] text-[#E5A019] font-bold">
-                  AB DHANAM GROUP
-                </span>
+              {/* Tagline & Official Logo Badge */}
+              <motion.div variants={fadeUp} className="flex items-center gap-4 mb-6">
+                <div className="w-16 h-16 md:w-18 md:h-18 rounded-xl bg-white p-1.5 shadow-sm border border-[#DCE3EA] flex items-center justify-center shrink-0">
+                  <img
+                    src="/images/Logo.png"
+                    alt="AB DHANAM GROUP"
+                    className="w-full h-full object-contain"
+                  />
+                </div>
+                <div>
+                  <div className="flex items-center gap-2">
+                    <span className="w-4 h-0.5 bg-[#E5A019]" />
+                    <span className="text-xs uppercase tracking-[0.22em] text-[#E5A019] font-bold">
+                      AB DHANAM GROUP
+                    </span>
+                  </div>
+                  <span className="text-[0.68rem] text-[#334155]/70 font-medium tracking-wide">
+                    Government Approved Consultancy
+                  </span>
+                </div>
               </motion.div>
 
               {/* Main Headline */}
