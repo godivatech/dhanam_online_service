@@ -580,8 +580,8 @@ export default function Home() {
       </section>
       */}
 
-      {/* ── TESTIMONIALS SECTION (Video Testimonials + Written Reviews) ─── */}
-      <VideoTestimonials writtenTestimonials={TESTIMONIALS} />
+      {/* ── VIDEO TESTIMONIALS SECTION ───────────────────────────────────── */}
+      <VideoTestimonials />
 
       {/* ── CTA SECTION (Neat, Clean & Simple) ─────────────────────────────── */}
       <section className="py-20 bg-[#102F56] text-white border-t border-[#E5A019]/30 relative overflow-hidden">
