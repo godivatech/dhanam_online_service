@@ -7,6 +7,7 @@ import {
   Copy, Scale, CheckCircle, ChevronRight, Phone, Star
 } from "lucide-react";
 import RegistryAssistant from "@/components/RegistryAssistant";
+import VideoTestimonials from "@/components/VideoTestimonials";
 
 const SERVICES = [
   { icon: Building2, title: "Property Registration", desc: "Sale deeds, partition deeds, mortgage documentation, and power of attorney with complete legal scrutiny.", href: "/services/property-registration", image: "/images/services/Property Registration.png" },
@@ -579,92 +580,8 @@ export default function Home() {
       </section>
       */}
 
-      {/* ── TESTIMONIALS (Deep Navy #102F56 Section with Auto Scroll) ─────── */}
-      <section className="py-24 md:py-28 bg-[#102F56] text-white relative overflow-hidden">
-        {/* Subtle grid background */}
-        <div 
-          className="absolute inset-0 opacity-[0.03] pointer-events-none"
-          style={{ backgroundImage: "linear-gradient(rgba(255,255,255,1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,1) 1px, transparent 1px)", backgroundSize: "60px 60px" }}
-        />
-
-        <div className="container mx-auto px-6 lg:px-12 relative z-10">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center max-w-3xl mx-auto mb-14"
-          >
-            <p className="text-xs uppercase tracking-[0.35em] text-[#E5A019] font-bold mb-3">Client Trust & Experiences</p>
-            <div className="w-12 h-0.5 bg-[#E5A019] mx-auto mb-5" />
-            <h2 className="font-serif text-3xl md:text-5xl font-bold text-white mb-4">
-              Trusted by Thousands Across Tamil Nadu
-            </h2>
-            <p className="text-[#DCE3EA]/85 text-sm md:text-base leading-relaxed">
-              Read authentic feedback from homebuyers, developers, and organizations who rely on our prompt legal guidance. Hover any card to pause.
-            </p>
-          </motion.div>
-        </div>
-
-        {/* Infinite Auto-Scroll Carousel / Marquee Track */}
-        <div className="relative w-full overflow-hidden py-4">
-          {/* Subtle edge fade masks */}
-          <div className="absolute left-0 top-0 bottom-0 w-16 md:w-32 bg-gradient-to-r from-[#102F56] to-transparent z-10 pointer-events-none" />
-          <div className="absolute right-0 top-0 bottom-0 w-16 md:w-32 bg-gradient-to-l from-[#102F56] to-transparent z-10 pointer-events-none" />
-
-          {/* Marquee flex track */}
-          <div className="animate-testimonials-track flex gap-6 px-4">
-            {[...TESTIMONIALS, ...TESTIMONIALS].map((t, idx) => (
-              <div
-                key={`${t.name}-${idx}`}
-                className="w-[320px] sm:w-[380px] md:w-[420px] flex-shrink-0 p-7 rounded-2xl bg-white/5 border border-white/10 hover:border-[#E5A019]/60 hover:bg-white/[0.09] transition-all duration-300 flex flex-col justify-between shadow-xl"
-              >
-                <div>
-                  <div className="flex items-center justify-between gap-2 mb-4">
-                    <div className="flex gap-1">
-                      {Array.from({ length: t.stars }).map((_, i) => (
-                        <Star key={i} className="w-4 h-4 fill-[#E5A019] text-[#E5A019]" />
-                      ))}
-                    </div>
-                    <span className="text-[11px] font-bold uppercase tracking-wider text-[#E5A019] bg-[#E5A019]/10 border border-[#E5A019]/30 px-3 py-1 rounded-full">
-                      {t.service}
-                    </span>
-                  </div>
-
-                  <p className="text-[#DCE3EA] text-sm md:text-base leading-relaxed mb-6 italic">
-                    "{t.content}"
-                  </p>
-                </div>
-
-                <div className="border-t border-white/10 pt-4 flex items-center gap-3.5">
-                  <div className="w-11 h-11 rounded-full bg-gradient-to-br from-[#123E73] to-[#092747] border border-[#E5A019]/50 flex items-center justify-center font-bold text-white text-sm shrink-0 shadow-sm">
-                    {t.avatar}
-                  </div>
-                  <div>
-                    <div className="font-serif font-bold text-base text-white">{t.name}</div>
-                    <div className="text-[#E5A019] text-xs font-semibold uppercase tracking-wider mt-0.5">{t.role}</div>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        {/* Client Rating Summary Bar */}
-        <div className="container mx-auto px-6 lg:px-12 mt-12 text-center">
-          <div className="inline-flex flex-wrap items-center justify-center gap-3 px-6 py-3 rounded-full bg-white/5 border border-white/10 text-xs sm:text-sm text-[#DCE3EA]">
-            <div className="flex gap-1">
-              {Array.from({ length: 5 }).map((_, i) => (
-                <Star key={i} className="w-4 h-4 fill-[#E5A019] text-[#E5A019]" />
-              ))}
-            </div>
-            <span className="font-bold text-white">4.9 / 5.0 Rating</span>
-            <span className="text-white/40">•</span>
-            <span>Over 5,000+ satisfied clients across Tamil Nadu</span>
-            <span className="text-white/40">•</span>
-            <span className="text-[#E5A019] font-medium">100% Verified Reviews</span>
-          </div>
-        </div>
-      </section>
+      {/* ── TESTIMONIALS SECTION (Video Testimonials + Written Reviews) ─── */}
+      <VideoTestimonials writtenTestimonials={TESTIMONIALS} />
 
       {/* ── CTA SECTION (Neat, Clean & Simple) ─────────────────────────────── */}
       <section className="py-20 bg-[#102F56] text-white border-t border-[#E5A019]/30 relative overflow-hidden">
