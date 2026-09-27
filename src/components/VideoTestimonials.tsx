@@ -8,6 +8,20 @@ export const TESTIMONIAL_VIDEOS = [
 ];
 
 export default function VideoTestimonials() {
+  const handlePlay = (e: React.SyntheticEvent<HTMLVideoElement>) => {
+    const currentVideo = e.currentTarget;
+    currentVideo.muted = false;
+    currentVideo.volume = 1.0;
+
+    // Pause any other playing video so sounds don't overlap
+    const allVideos = document.querySelectorAll<HTMLVideoElement>("video[data-testid^='video-testimonial-']");
+    allVideos.forEach((v) => {
+      if (v !== currentVideo && !v.paused) {
+        v.pause();
+      }
+    });
+  };
+
   return (
     <section className="py-20 md:py-24 bg-[#102F56] text-white relative overflow-hidden">
       {/* Subtle grid background */}
@@ -54,6 +68,12 @@ export default function VideoTestimonials() {
                 controls
                 playsInline
                 preload="metadata"
+                muted={false}
+                onLoadedMetadata={(e) => {
+                  e.currentTarget.muted = false;
+                  e.currentTarget.volume = 1.0;
+                }}
+                onPlay={handlePlay}
                 className="w-full h-full object-cover"
                 data-testid={`video-testimonial-${item.id}`}
               />
