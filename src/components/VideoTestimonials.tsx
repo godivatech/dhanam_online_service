@@ -43,7 +43,7 @@ export default function VideoTestimonials() {
           transition={{ duration: 0.5 }}
           className="text-center max-w-3xl mx-auto mb-12"
         >
-          <p className="text-xs uppercase tracking-[0.35em] text-[#E5A019] font-bold mb-3">
+          <p className="text-sm font-bold uppercase tracking-[0.25em] text-[#E5A019] mb-3">
             Client Testimonials
           </p>
           <div className="w-12 h-0.5 bg-[#E5A019] mx-auto mb-4" />

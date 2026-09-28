@@ -60,18 +60,18 @@ export default function Contact() {
           style={{ backgroundImage: "linear-gradient(rgba(255,255,255,1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,1) 1px, transparent 1px)", backgroundSize: "60px 60px" }}
         />
         <div className="container mx-auto px-6 lg:px-12 relative z-10">
-          <div className="flex items-center gap-2 text-xs text-white/40 mb-10 uppercase tracking-wider">
+          <div className="flex items-center gap-2 text-sm font-medium text-white/60 mb-10 uppercase tracking-wider">
             <Link href="/" className="hover:text-[#E5A019] transition-colors">Home</Link>
-            <ChevronRight className="w-3 h-3" />
+            <ChevronRight className="w-4 h-4 text-white/40" />
             <span className="text-[#E5A019]">Contact</span>
           </div>
           <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }}>
-            <p className="text-xs uppercase tracking-[0.35em] text-[#E5A019] font-semibold mb-4">Reach Us</p>
+            <p className="text-sm uppercase tracking-[0.3em] text-[#E5A019] font-bold mb-4">Reach Us</p>
             <div className="w-12 h-0.5 bg-[#E5A019] mb-8" />
             <h1 className="font-serif text-5xl md:text-7xl font-bold leading-tight mb-6">
               Let's Start Your<br /><span className="text-[#E5A019] italic">Conversation</span>
             </h1>
-            <p className="text-white/70 text-xl max-w-2xl">Reach us by phone, WhatsApp, email, or visit us in Madurai. We respond to every enquiry within one business hour.</p>
+            <p className="text-white/80 text-xl md:text-2xl max-w-2xl leading-relaxed">Reach us by phone, WhatsApp, email, or visit us in Madurai. We respond to every enquiry within one business hour.</p>
           </motion.div>
         </div>
       </section>
@@ -82,16 +82,16 @@ export default function Contact() {
             {/* Form */}
             <div className="lg:col-span-3">
               <motion.div initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
-                <p className="text-xs uppercase tracking-[0.35em] text-[#E5A019] font-semibold mb-4">Send a Message</p>
+                <p className="text-sm uppercase tracking-[0.3em] text-[#E5A019] font-bold mb-4">Send a Message</p>
                 <div className="w-12 h-0.5 bg-[#E5A019] mb-8" />
-                <h2 className="font-serif text-3xl font-bold text-[#102F56] mb-8">How Can We Help?</h2>
+                <h2 className="font-serif text-3xl md:text-4xl font-bold text-[#102F56] mb-8">How Can We Help?</h2>
 
                 {submitted ? (
-                  <div className="border border-[#DCE3EA] border-l-4 border-l-[#E5A019] bg-[#F1F5F9] p-10 text-center">
+                  <div className="border border-[#DCE3EA] border-l-4 border-l-[#E5A019] bg-[#F1F5F9] p-10 text-center rounded-lg">
                     <CheckCircle className="w-12 h-12 text-[#E5A019] mx-auto mb-4" />
                     <h3 className="font-serif text-2xl font-bold text-[#102F56] mb-3">Message Received</h3>
-                    <p className="text-[#334155] leading-relaxed mb-6">Thank you for reaching out. Our team will contact you within one business hour to discuss your requirements.</p>
-                    <button onClick={() => { setSubmitted(false); form.reset(); }} className="text-sm font-bold text-[#123E73] hover:text-[#092747] uppercase tracking-wider" data-testid="button-send-another">
+                    <p className="text-[#334155] text-base md:text-lg leading-relaxed mb-6">Thank you for reaching out. Our team will contact you within one business hour to discuss your requirements.</p>
+                    <button onClick={() => { setSubmitted(false); form.reset(); }} className="text-sm md:text-base font-bold text-[#123E73] hover:text-[#092747] uppercase tracking-wider" data-testid="button-send-another">
                       Send Another Message
                     </button>
                   </div>
@@ -101,32 +101,32 @@ export default function Contact() {
                       <div className="grid md:grid-cols-2 gap-6">
                         <FormField control={form.control} name="name" render={({ field }) => (
                           <FormItem>
-                            <FormLabel className="text-xs uppercase tracking-wider font-semibold text-[#102F56]">Full Name *</FormLabel>
-                            <FormControl><Input {...field} placeholder="Your full name" className="border-[#DCE3EA] focus:border-[#123E73] rounded-none h-12 bg-white" data-testid="input-contact-name" /></FormControl>
+                            <FormLabel className="text-sm uppercase tracking-wider font-bold text-[#102F56]">Full Name *</FormLabel>
+                            <FormControl><Input {...field} placeholder="Your full name" className="border-[#DCE3EA] focus:border-[#123E73] rounded-md h-13 text-base bg-white" data-testid="input-contact-name" /></FormControl>
                             <FormMessage />
                           </FormItem>
                         )} />
                         <FormField control={form.control} name="phone" render={({ field }) => (
                           <FormItem>
-                            <FormLabel className="text-xs uppercase tracking-wider font-semibold text-[#102F56]">Phone Number *</FormLabel>
-                            <FormControl><Input {...field} placeholder="+91 98765 43210" className="border-[#DCE3EA] focus:border-[#123E73] rounded-none h-12 bg-white" data-testid="input-contact-phone" /></FormControl>
+                            <FormLabel className="text-sm uppercase tracking-wider font-bold text-[#102F56]">Phone Number *</FormLabel>
+                            <FormControl><Input {...field} placeholder="+91 98765 43210" className="border-[#DCE3EA] focus:border-[#123E73] rounded-md h-13 text-base bg-white" data-testid="input-contact-phone" /></FormControl>
                             <FormMessage />
                           </FormItem>
                         )} />
                       </div>
                       <FormField control={form.control} name="email" render={({ field }) => (
                         <FormItem>
-                          <FormLabel className="text-xs uppercase tracking-wider font-semibold text-[#102F56]">Email Address *</FormLabel>
-                          <FormControl><Input {...field} placeholder="your@email.com" className="border-[#DCE3EA] focus:border-[#123E73] rounded-none h-12 bg-white" data-testid="input-contact-email" /></FormControl>
+                          <FormLabel className="text-sm uppercase tracking-wider font-bold text-[#102F56]">Email Address *</FormLabel>
+                          <FormControl><Input {...field} placeholder="your@email.com" className="border-[#DCE3EA] focus:border-[#123E73] rounded-md h-13 text-base bg-white" data-testid="input-contact-email" /></FormControl>
                           <FormMessage />
                         </FormItem>
                       )} />
                       <FormField control={form.control} name="service" render={({ field }) => (
                         <FormItem>
-                          <FormLabel className="text-xs uppercase tracking-wider font-semibold text-[#102F56]">Service Required *</FormLabel>
+                          <FormLabel className="text-sm uppercase tracking-wider font-bold text-[#102F56]">Service Required *</FormLabel>
                           <Select onValueChange={field.onChange} defaultValue={field.value}>
                             <FormControl>
-                              <SelectTrigger className="border-[#DCE3EA] rounded-none h-12 bg-white" data-testid="select-contact-service">
+                              <SelectTrigger className="border-[#DCE3EA] rounded-md h-13 text-base bg-white" data-testid="select-contact-service">
                                 <SelectValue placeholder="Select a service" />
                               </SelectTrigger>
                             </FormControl>
@@ -139,12 +139,12 @@ export default function Contact() {
                       )} />
                       <FormField control={form.control} name="message" render={({ field }) => (
                         <FormItem>
-                          <FormLabel className="text-xs uppercase tracking-wider font-semibold text-[#102F56]">Your Message *</FormLabel>
-                          <FormControl><Textarea {...field} placeholder="Briefly describe your requirements..." rows={5} className="border-[#DCE3EA] focus:border-[#123E73] rounded-none resize-none bg-white" data-testid="textarea-contact-message" /></FormControl>
+                          <FormLabel className="text-sm uppercase tracking-wider font-bold text-[#102F56]">Your Message *</FormLabel>
+                          <FormControl><Textarea {...field} placeholder="Briefly describe your requirements..." rows={5} className="border-[#DCE3EA] focus:border-[#123E73] rounded-md resize-none text-base bg-white" data-testid="textarea-contact-message" /></FormControl>
                           <FormMessage />
                         </FormItem>
                       )} />
-                      <button type="submit" className="w-full bg-[#123E73] hover:bg-[#092747] text-white py-4 font-bold text-sm uppercase tracking-wider transition-all shadow-md flex items-center justify-center gap-2" data-testid="button-contact-submit">
+                      <button type="submit" className="w-full bg-[#123E73] hover:bg-[#092747] text-white py-4 font-bold text-sm md:text-base uppercase tracking-wider transition-all shadow-md flex items-center justify-center gap-2 rounded-md" data-testid="button-contact-submit">
                         Send Message <ArrowRight className="w-4 h-4" />
                       </button>
                     </form>
@@ -162,32 +162,32 @@ export default function Contact() {
                   { icon: Mail, label: "Email", value: "contact@abdhanam.com", href: "mailto:contact@abdhanam.com" },
                   { icon: MapPin, label: "Office Address", value: "123, Anna Salai, Madurai, Tamil Nadu 625001", href: "#map" },
                 ].map((item) => (
-                  <a key={item.label} href={item.href} className="flex gap-5 p-6 border border-[#DCE3EA] hover:border-[#123E73] bg-white transition-colors group" data-testid={`link-contact-${item.label.toLowerCase()}`}>
-                    <div className="w-12 h-12 bg-[#E5A019]/10 flex items-center justify-center shrink-0 group-hover:bg-[#123E73] transition-colors">
+                  <a key={item.label} href={item.href} className="flex gap-5 p-6 border border-[#DCE3EA] hover:border-[#123E73] bg-white transition-colors group rounded-lg" data-testid={`link-contact-${item.label.toLowerCase()}`}>
+                    <div className="w-12 h-12 bg-[#E5A019]/10 flex items-center justify-center shrink-0 group-hover:bg-[#123E73] transition-colors rounded-md">
                       <item.icon className="w-5 h-5 text-[#E5A019] group-hover:text-white transition-colors" />
                     </div>
                     <div>
-                      <div className="text-xs uppercase tracking-[0.2em] text-[#E5A019] font-semibold mb-1">{item.label}</div>
-                      <div className="text-[#102F56] font-medium leading-snug">{item.value}</div>
+                      <div className="text-xs uppercase tracking-[0.2em] text-[#E5A019] font-bold mb-1">{item.label}</div>
+                      <div className="text-[#102F56] text-base md:text-lg font-semibold leading-snug">{item.value}</div>
                     </div>
                   </a>
                 ))}
 
                 {/* WhatsApp */}
-                <a href="https://wa.me/919876543210" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-3 bg-[#25D366] text-white py-4 font-bold text-sm uppercase tracking-wider hover:bg-[#1ebd5a] transition-all" data-testid="button-whatsapp-contact">
+                <a href="https://wa.me/919876543210" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-3 bg-[#25D366] text-white py-4 font-bold text-sm md:text-base uppercase tracking-wider hover:bg-[#1ebd5a] transition-all rounded-md shadow-sm" data-testid="button-whatsapp-contact">
                   <WhatsAppIcon className="w-5 h-5" size={20} /> Chat on WhatsApp
                 </a>
 
                 {/* Hours */}
-                <div className="border border-[#DCE3EA] bg-white p-6">
+                <div className="border border-[#DCE3EA] bg-white p-6 rounded-lg">
                   <div className="flex items-center gap-3 mb-5">
                     <Clock className="w-5 h-5 text-[#E5A019]" />
-                    <span className="text-xs uppercase tracking-[0.2em] text-[#E5A019] font-semibold">Business Hours</span>
+                    <span className="text-xs uppercase tracking-[0.2em] text-[#E5A019] font-bold">Business Hours</span>
                   </div>
                   {HOURS.map((h) => (
-                    <div key={h.day} className="flex justify-between items-center py-2.5 border-b border-[#DCE3EA] last:border-0">
-                      <span className="text-sm text-[#334155]">{h.day}</span>
-                      <span className={`text-sm font-medium ${h.time === "Closed" ? "text-destructive" : "text-[#102F56]"}`}>{h.time}</span>
+                    <div key={h.day} className="flex justify-between items-center py-3 border-b border-[#DCE3EA] last:border-0">
+                      <span className="text-base text-[#334155] font-medium">{h.day}</span>
+                      <span className={`text-base font-bold ${h.time === "Closed" ? "text-destructive" : "text-[#102F56]"}`}>{h.time}</span>
                     </div>
                   ))}
                 </div>

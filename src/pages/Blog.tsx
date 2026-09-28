@@ -37,18 +37,18 @@ export default function Blog() {
           style={{ backgroundImage: "linear-gradient(rgba(255,255,255,1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,1) 1px, transparent 1px)", backgroundSize: "60px 60px" }}
         />
         <div className="container mx-auto px-6 lg:px-12 relative z-10">
-          <div className="flex items-center gap-2 text-xs text-white/50 mb-10 uppercase tracking-wider">
+          <div className="flex items-center gap-2 text-sm font-medium text-white/60 mb-10 uppercase tracking-wider">
             <Link href="/" className="hover:text-[#E5A019] transition-colors">Home</Link>
-            <ChevronRight className="w-3 h-3" />
+            <ChevronRight className="w-4 h-4 text-white/40" />
             <span className="text-[#E5A019]">Blog & Resources</span>
           </div>
           <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }}>
-            <p className="text-xs uppercase tracking-[0.35em] text-[#E5A019] font-semibold mb-4">Knowledge Centre</p>
+            <p className="text-sm uppercase tracking-[0.3em] text-[#E5A019] font-bold mb-4">Knowledge Centre</p>
             <div className="w-12 h-0.5 bg-[#E5A019] mb-8" />
             <h1 className="font-serif text-5xl md:text-7xl font-bold leading-tight mb-6">
               Legal Insights &<br /><span className="text-[#E5A019] italic">Resources</span>
             </h1>
-            <p className="text-white/80 text-xl max-w-2xl leading-relaxed">Expert guides and updates on property, marriage, trust, and society registration in Tamil Nadu.</p>
+            <p className="text-white/80 text-xl md:text-2xl max-w-2xl leading-relaxed">Expert guides and updates on property, marriage, trust, and society registration in Tamil Nadu.</p>
           </motion.div>
         </div>
       </section>
@@ -58,19 +58,19 @@ export default function Blog() {
           {/* Featured */}
           {featured && (
             <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="mb-16">
-              <p className="text-xs uppercase tracking-[0.35em] text-[#E5A019] font-semibold mb-8">Featured Article</p>
-              <Link href={`/blog/${featured.slug}`} data-testid="link-featured-post" className="group grid lg:grid-cols-2 gap-0 border border-[#DCE3EA] bg-white hover:border-[#123E73] hover:shadow-2xl transition-all duration-300 overflow-hidden">
+              <p className="text-sm uppercase tracking-[0.3em] text-[#E5A019] font-bold mb-6">Featured Article</p>
+              <Link href={`/blog/${featured.slug}`} data-testid="link-featured-post" className="group grid lg:grid-cols-2 gap-0 border border-[#DCE3EA] bg-white hover:border-[#123E73] hover:shadow-2xl transition-all duration-300 overflow-hidden rounded-xl">
                 <div className="h-64 lg:h-auto bg-[#102F56] flex items-end p-10 border-b lg:border-b-0 lg:border-r border-[#DCE3EA]/20">
-                  <span className="text-xs uppercase tracking-wider text-[#E5A019] font-semibold bg-[#102F56] border border-[#E5A019]/40 px-3 py-1">{featured.category}</span>
+                  <span className="text-xs uppercase tracking-wider text-[#E5A019] font-bold bg-[#102F56] border border-[#E5A019]/40 px-3.5 py-1.5 rounded">{featured.category}</span>
                 </div>
                 <div className="p-10 lg:p-12">
-                  <h2 className="font-serif text-3xl font-bold text-[#102F56] mb-4 group-hover:text-[#123E73] transition-colors">{featured.title}</h2>
-                  <p className="text-[#334155] leading-relaxed mb-6">{featured.excerpt}</p>
-                  <div className="flex items-center gap-6 text-xs text-[#334155]/70 mb-8">
-                    <span className="flex items-center gap-1.5"><Calendar className="w-3 h-3 text-[#E5A019]" />{featured.date}</span>
-                    <span className="flex items-center gap-1.5"><Clock className="w-3 h-3 text-[#E5A019]" />{featured.readTime}</span>
+                  <h2 className="font-serif text-3xl md:text-4xl font-bold text-[#102F56] mb-4 group-hover:text-[#123E73] transition-colors leading-tight">{featured.title}</h2>
+                  <p className="text-[#334155] text-base md:text-lg leading-relaxed mb-6">{featured.excerpt}</p>
+                  <div className="flex items-center gap-6 text-sm font-medium text-[#334155]/80 mb-8">
+                    <span className="flex items-center gap-2"><Calendar className="w-4 h-4 text-[#E5A019]" />{featured.date}</span>
+                    <span className="flex items-center gap-2"><Clock className="w-4 h-4 text-[#E5A019]" />{featured.readTime}</span>
                   </div>
-                  <span className="inline-flex items-center text-[#123E73] font-bold text-sm uppercase tracking-wider gap-2 group-hover:gap-3 transition-all">
+                  <span className="inline-flex items-center text-[#123E73] font-bold text-sm md:text-base uppercase tracking-wider gap-2 group-hover:gap-3 transition-all">
                     Read Article <ArrowRight className="w-4 h-4 text-[#E5A019]" />
                   </span>
                 </div>
@@ -84,7 +84,7 @@ export default function Blog() {
               <button
                 key={cat}
                 onClick={() => setActive(cat)}
-                className={`px-5 py-2.5 text-xs font-bold uppercase tracking-wider transition-all ${active === cat ? "bg-[#123E73] text-white shadow-sm" : "border border-[#DCE3EA] bg-white text-[#334155] hover:border-[#123E73] hover:text-[#123E73]"}`}
+                className={`px-6 py-2.5 text-sm font-bold uppercase tracking-wider transition-all rounded-md ${active === cat ? "bg-[#123E73] text-white shadow-sm" : "border border-[#DCE3EA] bg-white text-[#334155] hover:border-[#123E73] hover:text-[#123E73]"}`}
                 data-testid={`filter-${cat.toLowerCase().replace(/\s+/g, "-")}`}
               >
                 {cat}
@@ -96,19 +96,19 @@ export default function Blog() {
           <motion.div variants={stagger} initial="hidden" whileInView="show" viewport={{ once: true }} className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {filtered.map((post) => (
               <motion.div key={post.slug} variants={fadeUp}>
-                <Link href={`/blog/${post.slug}`} className="group flex flex-col h-full border border-[#DCE3EA] hover:border-[#123E73] hover:shadow-xl transition-all duration-300 hover:-translate-y-1 overflow-hidden bg-white" data-testid={`card-post-${post.slug}`}>
+                <Link href={`/blog/${post.slug}`} className="group flex flex-col h-full border border-[#DCE3EA] hover:border-[#123E73] hover:shadow-xl transition-all duration-300 hover:-translate-y-1 overflow-hidden bg-white rounded-xl" data-testid={`card-post-${post.slug}`}>
                   <div className="h-44 bg-[#102F56] flex items-end p-6 border-b border-[#DCE3EA]/20">
-                    <span className="text-xs uppercase tracking-wider text-[#E5A019] font-semibold">{post.category}</span>
+                    <span className="text-xs uppercase tracking-wider text-[#E5A019] font-bold bg-[#102F56]/80 px-3 py-1 rounded border border-[#E5A019]/30">{post.category}</span>
                   </div>
                   <div className="p-8 flex flex-col flex-1">
-                    <h3 className="font-serif text-xl font-bold text-[#102F56] mb-3 leading-snug group-hover:text-[#123E73] transition-colors">{post.title}</h3>
-                    <p className="text-sm text-[#334155] leading-relaxed mb-6 flex-1">{post.excerpt}</p>
-                    <div className="flex items-center justify-between">
-                      <div className="flex items-center gap-4 text-xs text-[#334155]/70">
-                        <span className="flex items-center gap-1"><Clock className="w-3 h-3 text-[#E5A019]" />{post.readTime}</span>
+                    <h3 className="font-serif text-xl md:text-2xl font-bold text-[#102F56] mb-3 leading-snug group-hover:text-[#123E73] transition-colors">{post.title}</h3>
+                    <p className="text-base text-[#334155] leading-relaxed mb-6 flex-1">{post.excerpt}</p>
+                    <div className="flex items-center justify-between pt-4 border-t border-[#DCE3EA]/60">
+                      <div className="flex items-center gap-4 text-sm font-medium text-[#334155]/80">
+                        <span className="flex items-center gap-1.5"><Clock className="w-4 h-4 text-[#E5A019]" />{post.readTime}</span>
                       </div>
-                      <span className="text-xs font-bold text-[#123E73] uppercase tracking-wider flex items-center gap-1 group-hover:gap-2 transition-all">
-                        Read <ArrowRight className="w-3 h-3 text-[#E5A019]" />
+                      <span className="text-sm font-bold text-[#123E73] uppercase tracking-wider flex items-center gap-1.5 group-hover:gap-2.5 transition-all">
+                        Read <ArrowRight className="w-4 h-4 text-[#E5A019]" />
                       </span>
                     </div>
                   </div>

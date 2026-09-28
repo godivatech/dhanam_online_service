@@ -31,14 +31,14 @@ function FAQItem({ q, a }: { q: string; a: string }) {
   const [open, setOpen] = useState(false);
   return (
     <div className="border-b border-[#DCE3EA] last:border-0">
-      <button className="w-full flex items-center justify-between py-5 text-left gap-6 group" onClick={() => setOpen(!open)}>
-        <span className="font-serif text-lg font-semibold text-[#102F56] group-hover:text-[#123E73] transition-colors">{q}</span>
+      <button className="w-full flex items-center justify-between py-6 text-left gap-6 group" onClick={() => setOpen(!open)}>
+        <span className="font-serif text-lg md:text-xl font-bold text-[#102F56] group-hover:text-[#123E73] transition-colors">{q}</span>
         <ChevronDown className={`w-5 h-5 text-[#E5A019] shrink-0 transition-transform ${open ? "rotate-180" : ""}`} />
       </button>
       <AnimatePresence>
         {open && (
           <motion.div initial={{ height: 0, opacity: 0 }} animate={{ height: "auto", opacity: 1 }} exit={{ height: 0, opacity: 0 }} transition={{ duration: 0.3 }} className="overflow-hidden">
-            <p className="pb-5 text-[#334155] leading-relaxed border-l-4 border-[#E5A019] pl-5 ml-1">{a}</p>
+            <p className="pb-6 text-base md:text-lg text-[#334155] leading-relaxed border-l-4 border-[#E5A019] pl-5 ml-1">{a}</p>
           </motion.div>
         )}
       </AnimatePresence>
@@ -52,19 +52,19 @@ export default function CertifiedCopy() {
       <section className="relative bg-[#102F56] text-white py-24 md:py-32 overflow-hidden">
         <div className="absolute inset-0 opacity-[0.06]" style={{ backgroundImage: "linear-gradient(rgba(255,255,255,1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,1) 1px, transparent 1px)", backgroundSize: "60px 60px" }} />
         <div className="container mx-auto px-6 lg:px-12 relative z-10">
-          <div className="flex items-center gap-2 text-xs text-white/50 mb-10 uppercase tracking-wider flex-wrap">
+          <div className="flex items-center gap-2 text-sm font-medium text-white/60 mb-10 uppercase tracking-wider flex-wrap">
             <Link href="/" className="hover:text-[#E5A019] transition-colors">Home</Link>
-            <ChevronRight className="w-3 h-3" />
+            <ChevronRight className="w-4 h-4 text-white/40" />
             <Link href="/services" className="hover:text-[#E5A019] transition-colors">Services</Link>
-            <ChevronRight className="w-3 h-3" />
+            <ChevronRight className="w-4 h-4 text-white/40" />
             <span className="text-[#E5A019]">Certified Copy</span>
           </div>
           <div className="grid lg:grid-cols-12 gap-12 items-center">
             <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} className="lg:col-span-7">
-              <p className="text-xs uppercase tracking-[0.35em] text-[#E5A019] font-semibold mb-4">Our Services</p>
+              <p className="text-sm uppercase tracking-[0.3em] text-[#E5A019] font-bold mb-4">Our Services</p>
               <div className="w-12 h-0.5 bg-[#E5A019] mb-8" />
               <h1 className="font-serif text-4xl sm:text-5xl md:text-6xl font-bold leading-tight mb-6">Certified<br /><span className="text-[#E5A019] italic">Copy Services</span></h1>
-              <p className="text-white/80 text-lg md:text-xl max-w-2xl leading-relaxed">Certified copies of any registered document from Tamil Nadu Sub-Registrar offices — accurate, legally valid, and quickly obtained.</p>
+              <p className="text-white/80 text-xl md:text-2xl max-w-2xl leading-relaxed">Certified copies of any registered document from Tamil Nadu Sub-Registrar offices — accurate, legally valid, and quickly obtained.</p>
             </motion.div>
             <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.6 }} className="lg:col-span-5">
               <div className="relative rounded-2xl overflow-hidden border border-white/15 shadow-2xl">
@@ -83,15 +83,15 @@ export default function CertifiedCopy() {
       <section className="py-24 bg-[#FAFBFC]">
         <div className="container mx-auto px-6 lg:px-12">
           <div className="mb-12">
-            <p className="text-xs uppercase tracking-[0.35em] text-[#E5A019] font-semibold mb-4">When You Need It</p>
+            <p className="text-sm uppercase tracking-[0.3em] text-[#E5A019] font-bold mb-4">When You Need It</p>
             <div className="w-12 h-0.5 bg-[#E5A019] mb-8" />
-            <h2 className="font-serif text-4xl font-bold text-[#102F56]">Common Uses of Certified Copies</h2>
+            <h2 className="font-serif text-4xl md:text-5xl font-bold text-[#102F56]">Common Uses of Certified Copies</h2>
           </div>
           <div className="grid md:grid-cols-2 gap-6 mb-16">
             {USES.map((u) => (
               <div key={u.title} className="p-8 bg-white border border-[#DCE3EA] border-l-4 border-l-[#E5A019] hover:shadow-xl transition-all">
                 <h3 className="font-serif text-xl font-bold text-[#102F56] mb-3">{u.title}</h3>
-                <p className="text-[#334155] leading-relaxed">{u.desc}</p>
+                <p className="text-[#334155] text-base leading-relaxed">{u.desc}</p>
               </div>
             ))}
           </div>
@@ -102,27 +102,27 @@ export default function CertifiedCopy() {
         <div className="container mx-auto px-6 lg:px-12">
           <div className="grid lg:grid-cols-2 gap-16">
             <motion.div initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
-              <p className="text-xs uppercase tracking-[0.35em] text-[#E5A019] font-semibold mb-4">What We Need</p>
+              <p className="text-sm uppercase tracking-[0.3em] text-[#E5A019] font-bold mb-4">What We Need</p>
               <div className="w-12 h-0.5 bg-[#E5A019] mb-8" />
-              <h2 className="font-serif text-3xl font-bold mb-8">Information Required</h2>
-              <ul className="space-y-3">
+              <h2 className="font-serif text-3xl md:text-4xl font-bold mb-8">Information Required</h2>
+              <ul className="space-y-4">
                 {DOCS.map((d) => (
-                  <li key={d} className="flex items-start gap-3 text-white/80">
-                    <CheckCircle className="w-5 h-5 text-[#E5A019] shrink-0 mt-0.5" />
+                  <li key={d} className="flex items-start gap-3.5 text-base md:text-lg text-white/90 font-medium">
+                    <CheckCircle className="w-5 h-5 text-[#E5A019] shrink-0 mt-1" />
                     <span>{d}</span>
                   </li>
                 ))}
               </ul>
-              <p className="mt-6 text-sm text-white/60 italic">If registration number is unknown, we can conduct a manual index search. Please contact us with the details you have.</p>
+              <p className="mt-8 text-sm md:text-base text-white/70 italic">If registration number is unknown, we can conduct a manual index search. Please contact us with the details you have.</p>
             </motion.div>
             <motion.div initial={{ opacity: 0, x: 30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
-              <p className="text-xs uppercase tracking-[0.35em] text-[#E5A019] font-semibold mb-4">Documents We Retrieve</p>
+              <p className="text-sm uppercase tracking-[0.3em] text-[#E5A019] font-bold mb-4">Documents We Retrieve</p>
               <div className="w-12 h-0.5 bg-[#E5A019] mb-8" />
-              <h2 className="font-serif text-3xl font-bold mb-8">Any Registered Document</h2>
-              <div className="space-y-3">
+              <h2 className="font-serif text-3xl md:text-4xl font-bold mb-8">Any Registered Document</h2>
+              <div className="space-y-4">
                 {["Sale Deed Certified Copy", "Settlement / Gift Deed Copy", "Partition Deed Copy", "Marriage Certificate Copy", "Trust Deed Certified Copy", "Power of Attorney Copy", "Lease Deed Copy", "Any Registered Agreement"].map((item) => (
-                  <div key={item} className="flex items-center gap-3 text-white/80">
-                    <div className="w-1.5 h-1.5 rounded-full bg-[#E5A019]" />
+                  <div key={item} className="flex items-center gap-3.5 text-base md:text-lg text-white/90 font-medium">
+                    <div className="w-2 h-2 rounded-full bg-[#E5A019]" />
                     <span>{item}</span>
                   </div>
                 ))}
@@ -135,11 +135,11 @@ export default function CertifiedCopy() {
       <section className="py-24 bg-[#F1F5F9]">
         <div className="container mx-auto px-6 lg:px-12 max-w-3xl">
           <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="mb-12">
-            <p className="text-xs uppercase tracking-[0.35em] text-[#E5A019] font-semibold mb-4">Questions</p>
+            <p className="text-sm uppercase tracking-[0.3em] text-[#E5A019] font-bold mb-4">Questions</p>
             <div className="w-12 h-0.5 bg-[#E5A019] mb-8" />
-            <h2 className="font-serif text-4xl font-bold text-[#102F56]">Frequently Asked Questions</h2>
+            <h2 className="font-serif text-4xl md:text-5xl font-bold text-[#102F56]">Frequently Asked Questions</h2>
           </motion.div>
-          <div className="bg-white border border-[#DCE3EA] p-8 divide-y-0">
+          <div className="bg-white border border-[#DCE3EA] p-8 divide-y-0 rounded-lg">
             {FAQS.map((f) => <FAQItem key={f.q} q={f.q} a={f.a} />)}
           </div>
         </div>
@@ -148,9 +148,9 @@ export default function CertifiedCopy() {
       <section className="py-24 bg-[#102F56] text-white border-t border-[#DCE3EA]/20">
         <div className="container mx-auto px-6 lg:px-12 text-center">
           <div className="w-12 h-0.5 bg-[#E5A019] mx-auto mb-6" />
-          <h2 className="font-serif text-4xl font-bold text-white mb-6">Need a Certified Copy?</h2>
-          <p className="text-white/80 text-lg mb-10 max-w-xl mx-auto">Contact us with your document details and we will retrieve your certified copy from the relevant Sub-Registrar office.</p>
-          <Link href="/book-consultation" className="inline-flex items-center bg-[#123E73] hover:bg-[#092747] text-white px-10 py-4 font-bold text-sm uppercase tracking-wider border border-[#E5A019]/40 shadow-xl transition-all" data-testid="button-cta-cc">
+          <h2 className="font-serif text-4xl md:text-5xl font-bold text-white mb-6">Need a Certified Copy?</h2>
+          <p className="text-[#DCE3EA]/85 text-lg md:text-xl mb-10 max-w-xl mx-auto leading-relaxed">Contact us with your document details and we will retrieve your certified copy from the relevant Sub-Registrar office.</p>
+          <Link href="/book-consultation" className="inline-flex items-center bg-[#123E73] hover:bg-[#092747] text-white px-10 py-4 font-bold text-sm md:text-base uppercase tracking-wider border border-[#E5A019]/40 shadow-xl transition-all" data-testid="button-cta-cc">
             Request Certified Copy <ArrowRight className="ml-2 w-4 h-4" />
           </Link>
         </div>

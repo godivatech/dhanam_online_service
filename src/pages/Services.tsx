@@ -64,18 +64,18 @@ export default function Services() {
           style={{ backgroundImage: "linear-gradient(rgba(255,255,255,1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,1) 1px, transparent 1px)", backgroundSize: "60px 60px" }}
         />
         <div className="container mx-auto px-6 lg:px-12 relative z-10">
-          <div className="flex items-center gap-2 text-xs text-white/40 mb-10 uppercase tracking-wider">
+          <div className="flex items-center gap-2 text-sm font-medium text-white/60 mb-10 uppercase tracking-wider">
             <Link href="/" className="hover:text-[#E5A019] transition-colors">Home</Link>
-            <ChevronRight className="w-3 h-3" />
+            <ChevronRight className="w-4 h-4 text-white/40" />
             <span className="text-[#E5A019]">Services</span>
           </div>
           <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }}>
-            <p className="text-xs uppercase tracking-[0.35em] text-[#E5A019] font-semibold mb-4">What We Do</p>
+            <p className="text-sm uppercase tracking-[0.3em] text-[#E5A019] font-bold mb-4">What We Do</p>
             <div className="w-12 h-0.5 bg-[#E5A019] mb-8" />
             <h1 className="font-serif text-5xl md:text-7xl font-bold leading-tight mb-6">
               Complete Registration<br /><span className="text-[#E5A019] italic">& Documentation</span>
             </h1>
-            <p className="text-white/70 text-xl max-w-2xl">
+            <p className="text-white/80 text-xl md:text-2xl max-w-2xl leading-relaxed">
               Seven specialised service areas covering every legal registration and documentation need in Tamil Nadu — all under one trusted roof.
             </p>
           </motion.div>
@@ -100,7 +100,7 @@ export default function Services() {
                     <div className="absolute inset-0 bg-gradient-to-t from-[#102F56]/85 via-transparent to-black/20" />
                     <div className="absolute top-4 left-4 flex items-center gap-2 bg-[#102F56]/90 backdrop-blur-md px-3.5 py-1.5 rounded-full border border-white/15">
                       <s.icon className="w-4 h-4 text-[#E5A019]" />
-                      <span className="font-bold text-xs uppercase tracking-widest text-[#E5A019]">{s.num}</span>
+                      <span className="font-bold text-sm uppercase tracking-widest text-[#E5A019]">{s.num}</span>
                     </div>
                   </div>
 
@@ -108,13 +108,13 @@ export default function Services() {
                   <div className="p-8 lg:p-10 lg:col-span-5 flex flex-col justify-between border-t lg:border-t-0 lg:border-l border-[#DCE3EA]">
                     <div>
                       <div className="flex items-center gap-2 mb-2">
-                        <span className="text-xs uppercase tracking-[0.25em] text-[#E5A019] font-bold">Service Area</span>
+                        <span className="text-sm uppercase tracking-[0.25em] text-[#E5A019] font-bold">Service Area</span>
                       </div>
                       <h2 className="font-serif text-2xl lg:text-3xl font-bold text-[#102F56] mb-4 group-hover:text-[#123E73] transition-colors">{s.title}</h2>
-                      <p className="text-[#334155] text-sm md:text-base leading-relaxed mb-6">{s.desc}</p>
+                      <p className="text-[#334155] text-base md:text-lg leading-relaxed mb-6">{s.desc}</p>
                     </div>
                     <div>
-                      <Link href={s.href} className="inline-flex items-center bg-[#123E73] hover:bg-[#092747] text-white px-6 py-3 rounded font-bold text-xs md:text-sm uppercase tracking-wider transition-all shadow-sm hover:gap-3 gap-2" data-testid={`button-service-${s.num}`}>
+                      <Link href={s.href} className="inline-flex items-center bg-[#123E73] hover:bg-[#092747] text-white px-7 py-3.5 rounded font-bold text-sm md:text-base uppercase tracking-wider transition-all shadow-sm hover:gap-3 gap-2" data-testid={`button-service-${s.num}`}>
                         View Full Details <ArrowRight className="w-4 h-4" />
                       </Link>
                     </div>
@@ -122,13 +122,13 @@ export default function Services() {
 
                   {/* Includes / Key Deliverables */}
                   <div className="p-8 lg:p-10 lg:col-span-3 border-t lg:border-t-0 lg:border-l border-[#DCE3EA] bg-[#F1F5F9]/60 flex flex-col justify-center">
-                    <p className="text-xs uppercase tracking-[0.2em] text-[#102F56] font-bold mb-4 flex items-center gap-2">
-                      <span className="w-2 h-2 rounded-full bg-[#E5A019]" /> Key Deliverables
+                    <p className="text-sm uppercase tracking-[0.2em] text-[#102F56] font-bold mb-4 flex items-center gap-2">
+                      <span className="w-2.5 h-2.5 rounded-full bg-[#E5A019]" /> Key Deliverables
                     </p>
-                    <ul className="space-y-2.5">
+                    <ul className="space-y-3">
                       {s.items.map((item) => (
-                        <li key={item} className="flex items-start gap-2.5 text-xs md:text-sm text-[#334155]">
-                          <div className="w-1.5 h-1.5 rounded-full bg-[#E5A019] shrink-0 mt-1.5" />
+                        <li key={item} className="flex items-start gap-3 text-sm md:text-base text-[#334155] font-medium">
+                          <div className="w-2 h-2 rounded-full bg-[#E5A019] shrink-0 mt-2" />
                           <span>{item}</span>
                         </li>
                       ))}
@@ -146,10 +146,10 @@ export default function Services() {
         <div className="container mx-auto px-6 lg:px-12 text-center">
           <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
             <h2 className="font-serif text-4xl md:text-5xl font-bold text-white mb-6">Not Sure Which Service You Need?</h2>
-            <p className="text-[#DCE3EA]/80 text-lg mb-10 max-w-xl mx-auto">
+            <p className="text-[#DCE3EA]/85 text-lg md:text-xl mb-10 max-w-xl mx-auto leading-relaxed">
               Book a free consultation. Our experts will assess your situation and guide you to the right solution in minutes.
             </p>
-            <Link href="/book-consultation" className="inline-flex items-center bg-[#123E73] hover:bg-[#092747] text-white px-10 py-4 font-bold text-sm uppercase tracking-wider transition-all shadow-xl border border-[#E5A019]/40" data-testid="button-cta-services">
+            <Link href="/book-consultation" className="inline-flex items-center bg-[#123E73] hover:bg-[#092747] text-white px-10 py-4 font-bold text-sm md:text-base uppercase tracking-wider transition-all shadow-xl border border-[#E5A019]/40" data-testid="button-cta-services">
               Book Free Consultation <ArrowRight className="ml-2 w-4 h-4" />
             </Link>
           </motion.div>

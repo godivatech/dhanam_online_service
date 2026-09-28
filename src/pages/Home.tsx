@@ -209,24 +209,24 @@ export default function Home() {
                 <div>
                   <div className="flex items-center gap-2">
                     <span className="w-4 h-0.5 bg-[#E5A019]" />
-                    <span className="text-xs uppercase tracking-[0.22em] text-[#E5A019] font-bold">
+                    <span className="text-sm uppercase tracking-[0.2em] text-[#E5A019] font-bold">
                       AB DHANAM GROUP
                     </span>
                   </div>
-                  <span className="text-[0.68rem] text-[#334155]/70 font-medium tracking-wide">
+                  <span className="text-xs text-[#334155]/85 font-semibold tracking-wide">
                     Government Approved Consultancy
                   </span>
                 </div>
               </motion.div>
 
               {/* Main Headline */}
-              <motion.h1 variants={fadeUp} className="text-3xl md:text-5xl font-extrabold leading-[1.2] mb-6 tracking-tight text-[#102F56]">
+              <motion.h1 variants={fadeUp} className="text-4xl sm:text-5xl md:text-6xl font-extrabold leading-[1.18] mb-6 tracking-tight text-[#102F56]">
                 Premier Legal & <br />
                 <span className="text-[#E5A019]">Registration Advisory</span>
               </motion.h1>
 
               {/* Supporting Subheadline */}
-              <motion.p variants={fadeUp} className="text-[#334155] text-sm md:text-base leading-relaxed mb-8">
+              <motion.p variants={fadeUp} className="text-[#334155] text-base md:text-lg leading-relaxed mb-8 font-normal">
                 Fast, secure, and error-free legal documentation and registry services for property, marriage, trusts, and societies across Tamil Nadu.
               </motion.p>
 
@@ -234,14 +234,14 @@ export default function Home() {
               <motion.div variants={fadeUp} className="flex flex-col sm:flex-row gap-4">
                 <Link
                   href="/book-consultation"
-                  className="inline-flex items-center justify-center bg-[#123E73] text-white px-7 py-3.5 font-bold text-xs uppercase tracking-wider hover:bg-[#092747] transition-all rounded shadow-sm hover:-translate-y-0.5 gap-2"
+                  className="inline-flex items-center justify-center bg-[#123E73] text-white px-8 py-4 font-bold text-sm md:text-base uppercase tracking-wider hover:bg-[#092747] transition-all rounded shadow-md hover:-translate-y-0.5 gap-2"
                   data-testid="button-book-consultation-hero"
                 >
                   Book Free Consultation <ArrowRight className="w-4 h-4" />
                 </Link>
                 <Link
                   href="/services"
-                  className="inline-flex items-center justify-center border border-[#DCE3EA] text-[#334155] hover:border-[#123E73] hover:text-[#102F56] transition-all hover:bg-[#F1F5F9] px-7 py-3.5 font-bold text-xs uppercase tracking-wider rounded"
+                  className="inline-flex items-center justify-center border border-[#DCE3EA] text-[#334155] hover:border-[#123E73] hover:text-[#102F56] transition-all hover:bg-[#F1F5F9] px-8 py-4 font-bold text-sm md:text-base uppercase tracking-wider rounded"
                   data-testid="button-explore-services-hero"
                 >
                   Explore Services
@@ -254,19 +254,19 @@ export default function Home() {
         {/* Floating Slide Indicator & Caption */}
         <div className="absolute bottom-8 right-8 z-30 flex flex-col items-end gap-3 pointer-events-auto">
           {/* Caption */}
-          <div className="text-[10px] font-semibold text-white tracking-widest uppercase flex items-center gap-2 bg-[#102F56]/85 backdrop-blur-md px-3.5 py-1.5 rounded shadow-lg border border-white/10">
+          <div className="text-xs md:text-sm font-semibold text-white tracking-wider uppercase flex items-center gap-2 bg-[#102F56]/90 backdrop-blur-md px-4 py-2 rounded shadow-lg border border-white/15">
             <span>{currentSlide === 0 ? "Property & Deeds Registry" : "Marriage & Trust Documentation"}</span>
-            <span className="w-1.5 h-1.5 rounded-full bg-[#E5A019]" />
+            <span className="w-2 h-2 rounded-full bg-[#E5A019]" />
             <span>Tamil Nadu</span>
           </div>
           {/* Indicators */}
-          <div className="flex gap-1.5">
+          <div className="flex gap-2">
             {slides.map((_, index) => (
               <button
                 key={index}
                 onClick={() => setCurrentSlide(index)}
-                className={`h-1.5 transition-all duration-300 rounded-full ${
-                  index === currentSlide ? "bg-[#E5A019] w-10" : "bg-white/40 hover:bg-white/70 w-6"
+                className={`h-2 transition-all duration-300 rounded-full ${
+                  index === currentSlide ? "bg-[#E5A019] w-12" : "bg-white/40 hover:bg-white/70 w-7"
                 }`}
                 aria-label={`Go to slide ${index + 1}`}
               />
@@ -287,10 +287,10 @@ export default function Home() {
           >
             {STATS.map((s) => (
               <motion.div key={s.label} variants={fadeUp} className="p-8 md:p-10 text-center">
-                <div className="text-4xl md:text-5xl font-extrabold text-[#102F56] mb-2 tracking-tight">
+                <div className="text-4xl md:text-6xl font-extrabold text-[#102F56] mb-2 tracking-tight">
                   <AnimatedCounter target={s.value} suffix={s.suffix} />
                 </div>
-                <div className="text-xs uppercase tracking-[0.2em] text-[#334155] font-semibold">{s.label}</div>
+                <div className="text-sm md:text-base uppercase tracking-[0.16em] text-[#102F56] font-bold">{s.label}</div>
               </motion.div>
             ))}
           </motion.div>
@@ -302,18 +302,18 @@ export default function Home() {
         <div className="container mx-auto px-6 lg:px-12">
           <div className="grid lg:grid-cols-2 gap-16 lg:gap-20 items-center">
             <motion.div initial={{ opacity: 0, x: -40 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.7 }}>
-              <p className="text-xs uppercase tracking-[0.35em] text-[#E5A019] font-bold mb-3">Our Legacy</p>
+              <p className="text-sm font-bold uppercase tracking-[0.25em] text-[#E5A019] mb-3">Our Legacy</p>
               <div className="w-12 h-0.5 bg-[#E5A019] mb-6" />
               <h2 className="font-serif text-3xl md:text-5xl font-bold text-[#102F56] leading-tight mb-6">
                 Built on a Decade of Unwavering Client Trust
               </h2>
-              <p className="text-[#334155] leading-relaxed mb-6 text-base md:text-lg">
+              <p className="text-[#334155] leading-relaxed mb-6 text-lg md:text-xl font-normal">
                 A.B. Dhanam Online Services was founded with a single mission: to make Tamil Nadu's complex registration landscape navigable and accessible for every citizen. Managing Director A.B. Alagiri Rajan has personally guided over 5,000 clients through property, marriage, trust, and society registrations.
               </p>
-              <p className="text-[#334155]/80 leading-relaxed mb-8">
+              <p className="text-[#334155] leading-relaxed mb-8 text-base md:text-lg">
                 Our approach is meticulous, legally grounded, and client-first. We don't just process documents — we protect your rights and future.
               </p>
-              <Link href="/about" className="inline-flex items-center text-[#123E73] hover:text-[#092747] font-bold text-sm uppercase tracking-wider gap-2 group transition-all" data-testid="link-read-our-story">
+              <Link href="/about" className="inline-flex items-center text-[#123E73] hover:text-[#092747] font-bold text-base uppercase tracking-wider gap-2 group transition-all" data-testid="link-read-our-story">
                 Read Our Story <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform text-[#E5A019]" />
               </Link>
             </motion.div>
@@ -330,11 +330,11 @@ export default function Home() {
                 { label: "Practice Areas", value: "7+", desc: "Specialised services spanning property registration, marriage deeds, trust structuring, and society certifications." },
                 { label: "Major Registrations", value: "10+", desc: "Landmark residential layouts and commercial real estate titles registered with zero disputes." },
               ].map((item) => (
-                <div key={item.label} className="flex gap-6 p-6 border border-[#DCE3EA] border-l-4 border-l-[#E5A019] bg-white rounded shadow-xs">
-                  <div className="font-serif text-3xl font-bold text-[#102F56] w-16 shrink-0">{item.value}</div>
+                <div key={item.label} className="flex gap-6 p-7 border border-[#DCE3EA] border-l-4 border-l-[#E5A019] bg-white rounded shadow-xs">
+                  <div className="font-serif text-3xl md:text-4xl font-bold text-[#102F56] w-20 shrink-0">{item.value}</div>
                   <div>
-                    <div className="text-xs uppercase tracking-[0.2em] text-[#E5A019] font-bold mb-1">{item.label}</div>
-                    <p className="text-sm text-[#334155] leading-relaxed">{item.desc}</p>
+                    <div className="text-sm uppercase tracking-[0.18em] text-[#E5A019] font-bold mb-1.5">{item.label}</div>
+                    <p className="text-base text-[#334155] leading-relaxed">{item.desc}</p>
                   </div>
                 </div>
               ))}
@@ -352,7 +352,7 @@ export default function Home() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <p className="text-xs uppercase tracking-[0.35em] text-[#E5A019] font-bold mb-3">What We Do</p>
+            <p className="text-sm font-bold uppercase tracking-[0.25em] text-[#E5A019] mb-3">What We Do</p>
             <div className="w-12 h-0.5 bg-[#E5A019] mx-auto mb-6" />
             <h2 className="font-serif text-3xl md:text-5xl font-bold text-white">Comprehensive Registration Services</h2>
           </motion.div>
@@ -395,11 +395,11 @@ export default function Home() {
                     {/* Card Content */}
                     <div className={`p-6 md:p-8 flex flex-col justify-between flex-1 ${isLast ? "md:justify-center" : ""}`}>
                       <div>
-                        <h3 className="font-serif text-xl font-bold mb-2 text-white group-hover:text-[#E5A019] transition-colors">{s.title}</h3>
-                        <p className="text-[#DCE3EA]/80 text-sm leading-relaxed mb-6">{s.desc}</p>
+                        <h3 className="font-serif text-xl md:text-2xl font-bold mb-3 text-white group-hover:text-[#E5A019] transition-colors">{s.title}</h3>
+                        <p className="text-[#DCE3EA]/90 text-base leading-relaxed mb-6">{s.desc}</p>
                       </div>
-                      <span className="text-[#E5A019] text-xs font-bold uppercase tracking-wider flex items-center gap-2 group-hover:gap-3 transition-all">
-                        Learn More <ArrowRight className="w-3.5 h-3.5" />
+                      <span className="text-[#E5A019] text-sm font-bold uppercase tracking-wider flex items-center gap-2 group-hover:gap-3 transition-all">
+                        Learn More <ArrowRight className="w-4 h-4" />
                       </span>
                     </div>
                   </Link>
@@ -416,7 +416,7 @@ export default function Home() {
           >
             <Link
               href="/services"
-              className="inline-flex items-center border border-[#E5A019] text-[#E5A019] hover:bg-[#E5A019] hover:text-[#102F56] px-8 py-3.5 text-xs font-bold uppercase tracking-wider rounded transition-all gap-2"
+              className="inline-flex items-center border border-[#E5A019] text-[#E5A019] hover:bg-[#E5A019] hover:text-[#102F56] px-9 py-4 text-sm md:text-base font-bold uppercase tracking-wider rounded transition-all gap-2"
               data-testid="button-view-all-services"
             >
               View All Services <ArrowRight className="w-4 h-4" />
@@ -434,7 +434,7 @@ export default function Home() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <p className="text-xs uppercase tracking-[0.35em] text-[#E5A019] font-bold mb-3">How It Works</p>
+            <p className="text-sm font-bold uppercase tracking-[0.25em] text-[#E5A019] mb-3">How It Works</p>
             <div className="w-12 h-0.5 bg-[#E5A019] mx-auto mb-6" />
             <h2 className="font-serif text-3xl md:text-5xl font-bold text-[#102F56]">Our Four-Step Process</h2>
           </motion.div>
@@ -476,7 +476,7 @@ export default function Home() {
                         <StepIcon className="w-5 h-5 md:w-6 md:h-6" />
                       </div>
                       <span
-                        className={`absolute mt-14 md:mt-18 text-[10px] md:text-xs font-bold tracking-wider uppercase transition-colors duration-300 whitespace-nowrap ${
+                        className={`absolute mt-14 md:mt-18 text-xs md:text-sm font-bold tracking-wider uppercase transition-colors duration-300 whitespace-nowrap ${
                           isSelected ? "text-[#123E73]" : "text-[#64748B] group-hover:text-[#334155]"
                         }`}
                       >
@@ -502,14 +502,14 @@ export default function Home() {
                   {/* Left Column: text content */}
                   <div className="md:col-span-7 space-y-4">
                     <div className="flex items-center gap-4">
-                      <span className="px-3 py-1 rounded bg-[#E5A019]/10 text-[#E5A019] text-[10px] font-bold tracking-widest uppercase border border-[#E5A019]/30">
+                      <span className="px-3.5 py-1 rounded bg-[#E5A019]/10 text-[#E5A019] text-xs font-bold tracking-widest uppercase border border-[#E5A019]/30">
                         Step 0{activeStep + 1}
                       </span>
                     </div>
-                    <h3 className="font-serif text-2xl md:text-3xl font-bold text-[#102F56]">
+                    <h3 className="font-serif text-2xl md:text-4xl font-bold text-[#102F56]">
                       {PROCESS[activeStep].title}
                     </h3>
-                    <p className="text-[#334155] text-sm md:text-base leading-relaxed">
+                    <p className="text-[#334155] text-base md:text-lg leading-relaxed">
                       {PROCESS[activeStep].desc}
                     </p>
                   </div>
@@ -592,7 +592,7 @@ export default function Home() {
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
           >
-            <span className="inline-block text-[11px] uppercase tracking-[0.25em] text-[#E5A019] font-bold bg-[#E5A019]/10 border border-[#E5A019]/25 px-3 py-1 rounded-full mb-6">
+            <span className="inline-block text-xs md:text-sm uppercase tracking-[0.2em] text-[#E5A019] font-bold bg-[#E5A019]/10 border border-[#E5A019]/25 px-4 py-1.5 rounded-full mb-6">
               Get Started Today
             </span>
 
@@ -600,25 +600,25 @@ export default function Home() {
               Ready to Begin Your Registration?
             </h2>
 
-            <p className="text-[#DCE3EA]/80 text-sm md:text-base mb-8 max-w-lg mx-auto">
+            <p className="text-[#DCE3EA]/90 text-base md:text-lg mb-8 max-w-xl mx-auto leading-relaxed">
               Book a free consultation with our documentation experts. Fast, transparent, and completely hassle-free.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-3.5 justify-center items-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Link
                 href="/book-consultation"
-                className="w-full sm:w-auto inline-flex items-center justify-center bg-[#123E73] text-white px-8 py-3.5 font-bold text-xs uppercase tracking-wider hover:bg-[#092747] transition-all rounded shadow-md border border-[#E5A019]/40 hover:border-[#E5A019] gap-2"
+                className="w-full sm:w-auto inline-flex items-center justify-center bg-[#123E73] text-white px-8 py-4 font-bold text-sm md:text-base uppercase tracking-wider hover:bg-[#092747] transition-all rounded shadow-md border border-[#E5A019]/40 hover:border-[#E5A019] gap-2"
                 data-testid="button-book-consultation-cta"
               >
                 Book Free Consultation <ArrowRight className="w-4 h-4" />
               </Link>
               <a
                 href="tel:+919876543210"
-                className="w-full sm:w-auto inline-flex items-center justify-center border border-white/40 bg-white/5 text-white px-8 py-3.5 font-bold text-xs uppercase tracking-wider hover:bg-white hover:text-[#102F56] transition-all rounded gap-2"
+                className="w-full sm:w-auto inline-flex items-center justify-center border border-white/40 bg-white/5 text-white px-8 py-4 font-bold text-sm md:text-base uppercase tracking-wider hover:bg-white hover:text-[#102F56] transition-all rounded gap-2"
                 data-testid="button-call-now-cta"
               >
                 <Phone className="w-4 h-4 text-[#E5A019]" />
-                <span className="text-white hover:text-[#102F56] font-bold">+91 98765 43210</span>
+                <span className="text-white hover:text-[#102F56] text-base md:text-lg font-bold">+91 98765 43210</span>
               </a>
             </div>
           </motion.div>
@@ -634,7 +634,7 @@ export default function Home() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <p className="text-xs uppercase tracking-[0.35em] text-[#E5A019] font-bold mb-3">Why A.B. Dhanam</p>
+            <p className="text-sm font-bold uppercase tracking-[0.25em] text-[#E5A019] mb-3">Why A.B. Dhanam</p>
             <div className="w-12 h-0.5 bg-[#E5A019] mx-auto mb-6" />
             <h2 className="font-serif text-3xl md:text-5xl font-bold text-[#102F56]">The Standard of Excellence</h2>
           </motion.div>
@@ -651,14 +651,14 @@ export default function Home() {
               { icon: Building2, title: "Deep Tamil Nadu Expertise", desc: "We know every Sub-Registrar office across Tamil Nadu — their procedures, timelines, and requirements." },
             ].map((item) => (
               <motion.div key={item.title} variants={fadeUp} className="p-8 border border-[#DCE3EA] border-l-4 border-l-[#E5A019] bg-white rounded shadow-xs hover:shadow-md transition-all duration-300">
-                <item.icon className="w-7 h-7 text-[#123E73] mb-4" />
-                <h3 className="font-serif text-lg font-bold text-[#102F56] mb-2">{item.title}</h3>
-                <p className="text-[#334155] text-sm leading-relaxed">{item.desc}</p>
+                <item.icon className="w-8 h-8 text-[#123E73] mb-4" />
+                <h3 className="font-serif text-xl md:text-2xl font-bold text-[#102F56] mb-3">{item.title}</h3>
+                <p className="text-[#334155] text-base leading-relaxed">{item.desc}</p>
               </motion.div>
             ))}
           </motion.div>
           <div className="text-center mt-12">
-            <Link href="/why-choose-us" className="inline-flex items-center text-[#123E73] hover:text-[#092747] font-bold text-xs uppercase tracking-wider gap-2 group transition-all" data-testid="link-why-choose-us">
+            <Link href="/why-choose-us" className="inline-flex items-center text-[#123E73] hover:text-[#092747] font-bold text-sm md:text-base uppercase tracking-wider gap-2.5 group transition-all" data-testid="link-why-choose-us">
               Discover All Reasons <ChevronRight className="w-4 h-4 text-[#E5A019] group-hover:translate-x-1 transition-transform" />
             </Link>
           </div>

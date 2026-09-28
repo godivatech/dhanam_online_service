@@ -51,14 +51,14 @@ function FAQ({ q, a }: { q: string; a: string }) {
   const [open, setOpen] = useState(false);
   return (
     <div className="border-b border-border last:border-0">
-      <button className="w-full flex items-center justify-between py-5 text-left gap-6 group" onClick={() => setOpen(!open)} data-testid={`faq-${q.slice(0, 15).replace(/\s+/g, "-").toLowerCase()}`}>
-        <span className="font-serif text-lg font-semibold text-[#102F56] group-hover:text-[#123E73] transition-colors">{q}</span>
+      <button className="w-full flex items-center justify-between py-6 text-left gap-6 group" onClick={() => setOpen(!open)} data-testid={`faq-${q.slice(0, 15).replace(/\s+/g, "-").toLowerCase()}`}>
+        <span className="font-serif text-lg md:text-xl font-bold text-[#102F56] group-hover:text-[#123E73] transition-colors">{q}</span>
         <ChevronDown className={`w-5 h-5 text-[#E5A019] shrink-0 transition-transform ${open ? "rotate-180" : ""}`} />
       </button>
       <AnimatePresence>
         {open && (
           <motion.div initial={{ height: 0, opacity: 0 }} animate={{ height: "auto", opacity: 1 }} exit={{ height: 0, opacity: 0 }} transition={{ duration: 0.3 }} className="overflow-hidden">
-            <p className="pb-5 text-[#334155] leading-relaxed border-l-4 border-[#E5A019] pl-5 ml-1">{a}</p>
+            <p className="pb-6 text-base md:text-lg text-[#334155] leading-relaxed border-l-4 border-[#E5A019] pl-5 ml-1">{a}</p>
           </motion.div>
         )}
       </AnimatePresence>
@@ -72,19 +72,19 @@ export default function PropertyRegistration() {
       <section className="relative bg-[#102F56] text-white py-24 md:py-32 overflow-hidden">
         <div className="absolute inset-0 opacity-[0.06]" style={{ backgroundImage: "linear-gradient(rgba(255,255,255,1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,1) 1px, transparent 1px)", backgroundSize: "60px 60px" }} />
         <div className="container mx-auto px-6 lg:px-12 relative z-10">
-          <div className="flex items-center gap-2 text-xs text-white/40 mb-10 uppercase tracking-wider flex-wrap">
+          <div className="flex items-center gap-2 text-sm font-medium text-white/60 mb-10 uppercase tracking-wider flex-wrap">
             <Link href="/" className="hover:text-[#E5A019] transition-colors">Home</Link>
-            <ChevronRight className="w-3 h-3" />
+            <ChevronRight className="w-4 h-4 text-white/40" />
             <Link href="/services" className="hover:text-[#E5A019] transition-colors">Services</Link>
-            <ChevronRight className="w-3 h-3" />
+            <ChevronRight className="w-4 h-4 text-white/40" />
             <span className="text-[#E5A019]">Property Registration</span>
           </div>
           <div className="grid lg:grid-cols-12 gap-12 items-center">
             <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} className="lg:col-span-7">
-              <p className="text-xs uppercase tracking-[0.35em] text-[#E5A019] font-semibold mb-4">Our Services</p>
+              <p className="text-sm uppercase tracking-[0.3em] text-[#E5A019] font-bold mb-4">Our Services</p>
               <div className="w-12 h-0.5 bg-[#E5A019] mb-8" />
               <h1 className="font-serif text-4xl sm:text-5xl md:text-6xl font-bold leading-tight mb-6">Property<br /><span className="text-[#E5A019] italic">Registration</span></h1>
-              <p className="text-white/70 text-lg md:text-xl max-w-2xl leading-relaxed">Complete property registration services across Tamil Nadu — sale deeds, partition deeds, mortgage documentation, and more, handled with precision and speed.</p>
+              <p className="text-white/80 text-xl md:text-2xl max-w-2xl leading-relaxed">Complete property registration services across Tamil Nadu — sale deeds, partition deeds, mortgage documentation, and more, handled with precision and speed.</p>
             </motion.div>
             <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.6 }} className="lg:col-span-5">
               <div className="relative rounded-2xl overflow-hidden border border-white/15 shadow-2xl">
@@ -104,15 +104,15 @@ export default function PropertyRegistration() {
       <section className="py-24 bg-[#FAFBFC]">
         <div className="container mx-auto px-6 lg:px-12">
           <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="mb-16">
-            <p className="text-xs uppercase tracking-[0.35em] text-[#E5A019] font-semibold mb-4">Registration Types</p>
+            <p className="text-sm uppercase tracking-[0.3em] text-[#E5A019] font-bold mb-4">Registration Types</p>
             <div className="w-12 h-0.5 bg-[#E5A019] mb-8" />
-            <h2 className="font-serif text-4xl font-bold text-[#102F56]">Property Registration Services</h2>
+            <h2 className="font-serif text-4xl md:text-5xl font-bold text-[#102F56]">Property Registration Services</h2>
           </motion.div>
           <motion.div variants={stagger} initial="hidden" whileInView="show" viewport={{ once: true }} className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {TYPES.map((t) => (
               <motion.div key={t.title} variants={fadeUp} className="p-7 bg-white border border-[#DCE3EA] border-l-4 border-l-[#E5A019] hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
-                <h3 className="font-serif text-lg font-bold text-[#102F56] mb-3">{t.title}</h3>
-                <p className="text-sm text-[#334155] leading-relaxed">{t.desc}</p>
+                <h3 className="font-serif text-xl font-bold text-[#102F56] mb-3">{t.title}</h3>
+                <p className="text-base text-[#334155] leading-relaxed">{t.desc}</p>
               </motion.div>
             ))}
           </motion.div>
@@ -124,30 +124,30 @@ export default function PropertyRegistration() {
         <div className="container mx-auto px-6 lg:px-12">
           <div className="grid lg:grid-cols-2 gap-16">
             <motion.div initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
-              <p className="text-xs uppercase tracking-[0.35em] text-[#E5A019] font-semibold mb-4">Documentation</p>
+              <p className="text-sm uppercase tracking-[0.3em] text-[#E5A019] font-bold mb-4">Documentation</p>
               <div className="w-12 h-0.5 bg-[#E5A019] mb-8" />
-              <h2 className="font-serif text-3xl font-bold mb-8">Required Documents</h2>
-              <ul className="space-y-3">
+              <h2 className="font-serif text-3xl md:text-4xl font-bold mb-8">Required Documents</h2>
+              <ul className="space-y-4">
                 {DOCS.map((d) => (
-                  <li key={d} className="flex items-start gap-3 text-white/80">
-                    <CheckCircle className="w-5 h-5 text-[#E5A019] shrink-0 mt-0.5" />
+                  <li key={d} className="flex items-start gap-3.5 text-base md:text-lg text-white/90 font-medium">
+                    <CheckCircle className="w-5 h-5 text-[#E5A019] shrink-0 mt-1" />
                     <span>{d}</span>
                   </li>
                 ))}
               </ul>
-              <p className="mt-6 text-sm text-white/60 italic">Additional documents may be required based on your specific situation. We provide a complete checklist during your free consultation.</p>
+              <p className="mt-8 text-sm md:text-base text-white/70 italic">Additional documents may be required based on your specific situation. We provide a complete checklist during your free consultation.</p>
             </motion.div>
             <motion.div initial={{ opacity: 0, x: 30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
-              <p className="text-xs uppercase tracking-[0.35em] text-[#E5A019] font-semibold mb-4">Our Process</p>
+              <p className="text-sm uppercase tracking-[0.3em] text-[#E5A019] font-bold mb-4">Our Process</p>
               <div className="w-12 h-0.5 bg-[#E5A019] mb-8" />
-              <h2 className="font-serif text-3xl font-bold mb-8">How We Handle Your Registration</h2>
+              <h2 className="font-serif text-3xl md:text-4xl font-bold mb-8">How We Handle Your Registration</h2>
               <div className="space-y-6">
                 {STEPS.map((s) => (
                   <div key={s.num} className="flex gap-5">
-                    <div className="w-8 h-8 rounded-full bg-[#E5A019] text-[#102F56] text-xs font-bold flex items-center justify-center shrink-0">{s.num}</div>
+                    <div className="w-9 h-9 rounded-full bg-[#E5A019] text-[#102F56] text-sm font-extrabold flex items-center justify-center shrink-0">{s.num}</div>
                     <div>
-                      <h3 className="font-serif font-bold mb-1">{s.title}</h3>
-                      <p className="text-white/70 text-sm leading-relaxed">{s.desc}</p>
+                      <h3 className="font-serif text-lg md:text-xl font-bold mb-1.5">{s.title}</h3>
+                      <p className="text-white/80 text-base leading-relaxed">{s.desc}</p>
                     </div>
                   </div>
                 ))}
@@ -161,19 +161,19 @@ export default function PropertyRegistration() {
       <section className="py-20 bg-[#F1F5F9]">
         <div className="container mx-auto px-6 lg:px-12 text-center">
           <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
-            <p className="text-xs uppercase tracking-[0.35em] text-[#E5A019] font-semibold mb-4">Timeline</p>
+            <p className="text-sm uppercase tracking-[0.3em] text-[#E5A019] font-bold mb-4">Timeline</p>
             <div className="w-12 h-0.5 bg-[#E5A019] mx-auto mb-8" />
-            <h2 className="font-serif text-4xl font-bold text-[#102F56] mb-12">Typical Processing Timeline</h2>
+            <h2 className="font-serif text-4xl md:text-5xl font-bold text-[#102F56] mb-12">Typical Processing Timeline</h2>
             <div className="grid md:grid-cols-3 gap-6 max-w-3xl mx-auto">
               {[
                 { icon: FileText, label: "Simple Sale Deed", time: "3–5 Working Days" },
                 { icon: Clock, label: "Complex Multi-party Transaction", time: "7–10 Working Days" },
                 { icon: FileText, label: "Partition / Settlement Deed", time: "5–8 Working Days" },
               ].map((item) => (
-                <div key={item.label} className="p-8 border border-[#DCE3EA] bg-white">
+                <div key={item.label} className="p-8 border border-[#DCE3EA] bg-white rounded-lg">
                   <item.icon className="w-8 h-8 text-[#E5A019] mx-auto mb-4" />
-                  <div className="font-serif text-2xl font-bold text-[#102F56] mb-2">{item.time}</div>
-                  <div className="text-sm text-[#334155]">{item.label}</div>
+                  <div className="font-serif text-2xl md:text-3xl font-bold text-[#102F56] mb-2">{item.time}</div>
+                  <div className="text-base font-medium text-[#334155]">{item.label}</div>
                 </div>
               ))}
             </div>
@@ -185,9 +185,9 @@ export default function PropertyRegistration() {
       <section className="py-24 bg-[#FAFBFC]">
         <div className="container mx-auto px-6 lg:px-12 max-w-3xl">
           <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="mb-12">
-            <p className="text-xs uppercase tracking-[0.35em] text-[#E5A019] font-semibold mb-4">Common Questions</p>
+            <p className="text-sm uppercase tracking-[0.3em] text-[#E5A019] font-bold mb-4">Common Questions</p>
             <div className="w-12 h-0.5 bg-[#E5A019] mb-8" />
-            <h2 className="font-serif text-4xl font-bold text-[#102F56]">Frequently Asked Questions</h2>
+            <h2 className="font-serif text-4xl md:text-5xl font-bold text-[#102F56]">Frequently Asked Questions</h2>
           </motion.div>
           <div className="border border-[#DCE3EA] divide-y-0 mb-12">
             {FAQS.map((f) => <FAQ key={f.q} q={f.q} a={f.a} />)}
@@ -197,9 +197,9 @@ export default function PropertyRegistration() {
 
       <section className="py-24 bg-[#102F56] text-white border-t border-[#DCE3EA]/20">
         <div className="container mx-auto px-6 lg:px-12 text-center">
-          <h2 className="font-serif text-4xl font-bold text-white mb-6">Ready to Register Your Property?</h2>
-          <p className="text-[#DCE3EA]/80 text-lg mb-10 max-w-xl mx-auto">Book a free consultation. We'll review your documents and guide you through every step.</p>
-          <Link href="/book-consultation" className="inline-flex items-center bg-[#123E73] hover:bg-[#092747] text-white px-10 py-4 font-bold text-sm uppercase tracking-wider transition-all shadow-xl border border-[#E5A019]/40" data-testid="button-cta-property">
+          <h2 className="font-serif text-4xl md:text-5xl font-bold text-white mb-6">Ready to Register Your Property?</h2>
+          <p className="text-[#DCE3EA]/85 text-lg md:text-xl mb-10 max-w-xl mx-auto leading-relaxed">Book a free consultation. We'll review your documents and guide you through every step.</p>
+          <Link href="/book-consultation" className="inline-flex items-center bg-[#123E73] hover:bg-[#092747] text-white px-10 py-4 font-bold text-sm md:text-base uppercase tracking-wider transition-all shadow-xl border border-[#E5A019]/40" data-testid="button-cta-property">
             Book Free Consultation <ArrowRight className="ml-2 w-4 h-4" />
           </Link>
         </div>

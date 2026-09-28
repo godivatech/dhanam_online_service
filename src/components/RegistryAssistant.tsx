@@ -174,13 +174,13 @@ export default function RegistryAssistant() {
               <button
                 key={service.id}
                 onClick={() => selectService(service.id)}
-                className={`flex items-center gap-2.5 px-6 py-3 text-xs font-bold uppercase tracking-wider transition-all duration-300 border ${
+                className={`flex items-center gap-2.5 px-6 py-3.5 text-sm font-bold uppercase tracking-wider transition-all duration-300 border ${
                   isActive 
                     ? "bg-[#123E73] text-white border-[#123E73] shadow-md" 
                     : "bg-white text-[#334155] border-[#DCE3EA] hover:bg-[#F1F5F9] hover:text-[#102F56]"
                 }`}
               >
-                <Icon className={`w-4 h-4 ${isActive ? "text-[#E5A019]" : "text-[#334155]"}`} />
+                <Icon className={`w-4.5 h-4.5 ${isActive ? "text-[#E5A019]" : "text-[#334155]"}`} />
                 {service.title}
               </button>
             );
@@ -192,8 +192,8 @@ export default function RegistryAssistant() {
           {/* Top Bar with Dynamic Progress Tracker */}
           <div className="bg-[#102F56] text-white px-8 py-5 flex flex-col md:flex-row justify-between items-start md:items-center gap-4 border-b border-[#E5A019]/30">
             <div>
-              <span className="text-[10px] uppercase tracking-widest text-[#E5A019] font-bold">Currently Inspecting</span>
-              <h3 className="text-lg font-bold flex items-center gap-2 mt-0.5 text-white">
+              <span className="text-xs uppercase tracking-widest text-[#E5A019] font-bold">Currently Inspecting</span>
+              <h3 className="text-xl font-bold flex items-center gap-2 mt-0.5 text-white">
                 <currentService.icon className="w-5 h-5 text-[#E5A019]" />
                 {currentService.title} Guide
               </h3>
@@ -201,11 +201,11 @@ export default function RegistryAssistant() {
             
             {/* Checklist progress tracker */}
             <div className="w-full md:w-64">
-              <div className="flex justify-between text-[10px] font-bold uppercase tracking-wider mb-1">
+              <div className="flex justify-between text-xs font-bold uppercase tracking-wider mb-1.5">
                 <span className="text-[#E5A019]">Document Readiness</span>
                 <span className="text-white/90">{progressPercent}% Ready ({checkedCount}/{serviceDocs.length})</span>
               </div>
-              <div className="w-full h-1.5 bg-white/10 overflow-hidden">
+              <div className="w-full h-2 bg-white/10 overflow-hidden rounded-full">
                 <motion.div 
                   initial={{ width: 0 }}
                   animate={{ width: `${progressPercent}%` }}
@@ -220,11 +220,11 @@ export default function RegistryAssistant() {
             {/* 1. INTERACTIVE CHECKLIST */}
             <div className="p-8 flex flex-col justify-between">
               <div>
-                <div className="flex items-center gap-2 mb-6 text-sm font-bold text-[#102F56] uppercase tracking-wider">
-                  <FileText className="w-4.5 h-4.5 text-[#E5A019]" />
+                <div className="flex items-center gap-2 mb-6 text-base font-bold text-[#102F56] uppercase tracking-wider">
+                  <FileText className="w-5 h-5 text-[#E5A019]" />
                   <span>1. Required Documents</span>
                 </div>
-                <p className="text-xs text-[#334155] mb-6 leading-relaxed">
+                <p className="text-sm text-[#334155] mb-6 leading-relaxed">
                   Mark off the documents you have ready. We will verify original authenticity checks during registration.
                 </p>
                 <div className="space-y-3.5">
@@ -233,7 +233,7 @@ export default function RegistryAssistant() {
                     return (
                       <label 
                         key={doc} 
-                        className={`flex items-start gap-3 p-3 border transition-colors cursor-pointer select-none ${
+                        className={`flex items-start gap-3 p-3.5 border transition-colors cursor-pointer select-none rounded ${
                           isChecked 
                             ? "bg-[#F1F5F9] border-[#123E73]/40 text-[#102F56]" 
                             : "border-[#DCE3EA] hover:bg-[#F1F5F9]/50 text-[#334155]"
@@ -243,9 +243,9 @@ export default function RegistryAssistant() {
                           type="checkbox"
                           checked={isChecked}
                           onChange={() => handleCheckboxChange(doc)}
-                          className="mt-0.5 h-4 w-4 rounded border-[#DCE3EA] text-[#123E73] focus:ring-[#123E73] cursor-pointer"
+                          className="mt-0.5 h-4.5 w-4.5 rounded border-[#DCE3EA] text-[#123E73] focus:ring-[#123E73] cursor-pointer"
                         />
-                        <span className="text-xs leading-normal">{doc}</span>
+                        <span className="text-sm md:text-base leading-snug font-medium">{doc}</span>
                       </label>
                     );
                   })}
@@ -256,21 +256,21 @@ export default function RegistryAssistant() {
                 <motion.div 
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
-                  className="mt-6 p-3 bg-[#E5A019]/10 border border-[#E5A019]/40 flex items-center gap-2"
+                  className="mt-6 p-3.5 bg-[#E5A019]/10 border border-[#E5A019]/40 flex items-center gap-2 rounded"
                 >
                   <ShieldCheck className="w-5 h-5 text-[#E5A019] shrink-0" />
-                  <span className="text-[10px] uppercase tracking-wider text-[#102F56] font-bold">All Documents Checklist Checked!</span>
+                  <span className="text-xs uppercase tracking-wider text-[#102F56] font-bold">All Documents Checklist Checked!</span>
                 </motion.div>
               )}
             </div>
 
             {/* 2. REGISTRATION TIMELINE */}
             <div className="p-8 bg-[#F1F5F9]/40">
-              <div className="flex items-center gap-2 mb-6 text-sm font-bold text-[#102F56] uppercase tracking-wider">
-                <HelpCircle className="w-4.5 h-4.5 text-[#E5A019]" />
+              <div className="flex items-center gap-2 mb-6 text-base font-bold text-[#102F56] uppercase tracking-wider">
+                <HelpCircle className="w-5 h-5 text-[#E5A019]" />
                 <span>2. Step-by-Step Registry Flow</span>
               </div>
-              <p className="text-xs text-[#334155] mb-6 leading-relaxed">
+              <p className="text-sm text-[#334155] mb-6 leading-relaxed">
                 Our team handles the heavy lifting, keeping you informed at every key milestone.
               </p>
               
@@ -278,12 +278,12 @@ export default function RegistryAssistant() {
                 {currentService.timeline.map((item) => (
                   <div key={item.step} className="relative">
                     {/* Circle Indicator */}
-                    <div className="absolute -left-[35px] top-0.5 w-[19px] h-[19px] rounded-full bg-white border-2 border-[#123E73] flex items-center justify-center font-sans text-[9px] font-bold text-[#123E73] shadow-sm">
+                    <div className="absolute -left-[35px] top-0.5 w-[22px] h-[22px] rounded-full bg-white border-2 border-[#123E73] flex items-center justify-center font-sans text-[10px] font-bold text-[#123E73] shadow-sm">
                       {item.step}
                     </div>
                     
-                    <h4 className="text-xs font-bold text-[#102F56] mb-1">{item.label}</h4>
-                    <p className="text-xs text-[#334155] leading-relaxed">{item.desc}</p>
+                    <h4 className="text-sm font-bold text-[#102F56] mb-1">{item.label}</h4>
+                    <p className="text-sm text-[#334155] leading-relaxed">{item.desc}</p>
                   </div>
                 ))}
               </div>
@@ -292,34 +292,34 @@ export default function RegistryAssistant() {
             {/* 3. TN FEE GUIDELINES & DRAFTING */}
             <div className="p-8 flex flex-col justify-between">
               <div>
-                <div className="flex items-center gap-2 mb-6 text-sm font-bold text-[#102F56] uppercase tracking-wider">
-                  <GovernmentIcon className="w-4.5 h-4.5 text-[#E5A019]" />
+                <div className="flex items-center gap-2 mb-6 text-base font-bold text-[#102F56] uppercase tracking-wider">
+                  <GovernmentIcon className="w-5 h-5 text-[#E5A019]" />
                   <span>3. Stamp Duty & Fees</span>
                 </div>
-                <p className="text-xs text-[#334155] mb-6 leading-relaxed">
+                <p className="text-sm text-[#334155] mb-6 leading-relaxed">
                   Calculated according to current Tamil Nadu Registration Department rules.
                 </p>
 
                 <div className="space-y-5">
-                  <div className="p-4 bg-[#F1F5F9] border border-[#DCE3EA]">
-                    <span className="text-[9px] uppercase tracking-wider text-[#334155]/80 font-bold">Government Rates</span>
-                    <p className="text-xs font-bold text-[#102F56] mt-1 leading-normal">{currentService.fees.government}</p>
+                  <div className="p-4 bg-[#F1F5F9] border border-[#DCE3EA] rounded">
+                    <span className="text-xs uppercase tracking-wider text-[#334155]/85 font-bold">Government Rates</span>
+                    <p className="text-sm md:text-base font-bold text-[#102F56] mt-1 leading-normal">{currentService.fees.government}</p>
                   </div>
 
-                  <div className="p-4 bg-[#F1F5F9] border border-[#DCE3EA]">
-                    <span className="text-[9px] uppercase tracking-wider text-[#334155]/80 font-bold">Drafting Charges</span>
-                    <p className="text-xs font-bold text-[#102F56] mt-1 leading-normal">{currentService.fees.drafting}</p>
+                  <div className="p-4 bg-[#F1F5F9] border border-[#DCE3EA] rounded">
+                    <span className="text-xs uppercase tracking-wider text-[#334155]/85 font-bold">Drafting Charges</span>
+                    <p className="text-sm md:text-base font-bold text-[#102F56] mt-1 leading-normal">{currentService.fees.drafting}</p>
                   </div>
                 </div>
               </div>
 
               <div className="mt-8 pt-6 border-t border-[#DCE3EA]">
-                <p className="text-[10px] text-[#334155]/70 leading-normal mb-5 italic">
+                <p className="text-xs text-[#334155]/80 leading-normal mb-5 italic">
                   * Note: {currentService.fees.note}
                 </p>
                 <Link
                   href={`/book-consultation?service=${currentService.id}`}
-                  className="w-full inline-flex items-center justify-center bg-[#123E73] hover:bg-[#092747] text-white py-3.5 px-4 font-bold text-xs uppercase tracking-wider transition-all shadow-md gap-2"
+                  className="w-full inline-flex items-center justify-center bg-[#123E73] hover:bg-[#092747] text-white py-4 px-4 font-bold text-sm md:text-base uppercase tracking-wider transition-all shadow-md gap-2 rounded"
                   data-testid="assistant-cta-button"
                 >
                   Consult on {currentService.title} <ArrowRight className="w-4 h-4" />

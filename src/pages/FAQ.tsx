@@ -54,7 +54,7 @@ function AccordionItem({ q, a }: { q: string; a: string }) {
         onClick={() => setOpen(!open)}
         data-testid={`faq-toggle-${q.slice(0, 20).replace(/\s+/g, "-").toLowerCase()}`}
       >
-        <span className="font-serif text-lg font-semibold text-[#102F56] group-hover:text-[#123E73] transition-colors pr-4">{q}</span>
+        <span className="font-serif text-lg md:text-xl font-bold text-[#102F56] group-hover:text-[#123E73] transition-colors pr-4">{q}</span>
         <ChevronDown className={`w-5 h-5 text-[#E5A019] shrink-0 transition-transform duration-300 ${open ? "rotate-180" : ""}`} />
       </button>
       <AnimatePresence>
@@ -66,7 +66,7 @@ function AccordionItem({ q, a }: { q: string; a: string }) {
             transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] as [number, number, number, number] }}
             className="overflow-hidden"
           >
-            <p className="pb-6 text-[#334155] leading-relaxed border-l-4 border-[#E5A019] pl-6 ml-1">{a}</p>
+            <p className="pb-6 text-base md:text-lg text-[#334155] leading-relaxed border-l-4 border-[#E5A019] pl-6 ml-1">{a}</p>
           </motion.div>
         )}
       </AnimatePresence>
@@ -91,18 +91,18 @@ export default function FAQ() {
           style={{ backgroundImage: "linear-gradient(rgba(255,255,255,1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,1) 1px, transparent 1px)", backgroundSize: "60px 60px" }}
         />
         <div className="container mx-auto px-6 lg:px-12 relative z-10">
-          <div className="flex items-center gap-2 text-xs text-white/50 mb-10 uppercase tracking-wider">
+          <div className="flex items-center gap-2 text-sm font-medium text-white/60 mb-10 uppercase tracking-wider">
             <Link href="/" className="hover:text-[#E5A019] transition-colors">Home</Link>
-            <ChevronRight className="w-3 h-3" />
+            <ChevronRight className="w-4 h-4 text-white/40" />
             <span className="text-[#E5A019]">FAQ</span>
           </div>
           <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }}>
-            <p className="text-xs uppercase tracking-[0.35em] text-[#E5A019] font-semibold mb-4">Frequently Asked</p>
+            <p className="text-sm uppercase tracking-[0.3em] text-[#E5A019] font-bold mb-4">Frequently Asked</p>
             <div className="w-12 h-0.5 bg-[#E5A019] mb-8" />
             <h1 className="font-serif text-5xl md:text-7xl font-bold leading-tight mb-6">
               Questions &<br /><span className="text-[#E5A019] italic">Answers</span>
             </h1>
-            <p className="text-white/80 text-xl max-w-2xl leading-relaxed">Everything you need to know about registration and documentation services in Tamil Nadu.</p>
+            <p className="text-white/80 text-xl md:text-2xl max-w-2xl leading-relaxed">Everything you need to know about registration and documentation services in Tamil Nadu.</p>
           </motion.div>
         </div>
       </section>
@@ -117,7 +117,7 @@ export default function FAQ() {
               placeholder="Search all questions..."
               value={search}
               onChange={(e) => setSearch(e.target.value)}
-              className="w-full border border-[#DCE3EA] pl-14 pr-6 py-5 text-base focus:outline-none focus:border-[#123E73] transition-colors bg-white text-[#334155]"
+              className="w-full border border-[#DCE3EA] pl-14 pr-6 py-5 text-base md:text-lg focus:outline-none focus:border-[#123E73] transition-colors bg-white text-[#334155] rounded-lg shadow-xs"
               data-testid="input-faq-search"
             />
           </div>
@@ -128,7 +128,7 @@ export default function FAQ() {
                 <button
                   key={cat}
                   onClick={() => setActiveCategory(cat)}
-                  className={`px-5 py-2.5 text-xs font-bold uppercase tracking-wider transition-all ${activeCategory === cat ? "bg-[#123E73] text-white shadow-sm" : "border border-[#DCE3EA] bg-white text-[#334155] hover:border-[#123E73] hover:text-[#123E73]"}`}
+                  className={`px-6 py-3 text-sm font-bold uppercase tracking-wider transition-all rounded-md ${activeCategory === cat ? "bg-[#123E73] text-white shadow-sm" : "border border-[#DCE3EA] bg-white text-[#334155] hover:border-[#123E73] hover:text-[#123E73]"}`}
                   data-testid={`faq-cat-${cat.toLowerCase().replace(/\s+/g, "-")}`}
                 >
                   {cat}
@@ -137,9 +137,9 @@ export default function FAQ() {
             </div>
           )}
 
-          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="max-w-4xl mx-auto bg-white border border-[#DCE3EA] p-8 divide-y-0">
+          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="max-w-4xl mx-auto bg-white border border-[#DCE3EA] p-8 md:p-10 divide-y-0 rounded-xl shadow-xs">
             {search.trim() && filtered.length === 0 && (
-              <p className="text-center text-[#334155] py-16">No results found for "{search}". Try different keywords or <Link href="/contact" className="text-[#123E73] hover:underline font-medium">contact us directly</Link>.</p>
+              <p className="text-center text-[#334155] text-base md:text-lg py-16">No results found for "{search}". Try different keywords or <Link href="/contact" className="text-[#123E73] hover:underline font-semibold">contact us directly</Link>.</p>
             )}
             {filtered.map((faq, i) => (
               <AccordionItem key={i} q={faq.q} a={faq.a} />
@@ -147,8 +147,8 @@ export default function FAQ() {
           </motion.div>
 
           <div className="text-center mt-16">
-            <p className="text-[#334155] mb-6">Still have questions? We are happy to help.</p>
-            <Link href="/book-consultation" className="inline-flex items-center bg-[#123E73] hover:bg-[#092747] text-white px-10 py-4 font-bold text-sm uppercase tracking-wider border border-[#E5A019]/40 shadow-xl transition-all" data-testid="button-cta-faq">
+            <p className="text-base md:text-lg text-[#334155] font-medium mb-6">Still have questions? We are happy to help.</p>
+            <Link href="/book-consultation" className="inline-flex items-center bg-[#123E73] hover:bg-[#092747] text-white px-10 py-4 font-bold text-sm md:text-base uppercase tracking-wider border border-[#E5A019]/40 shadow-xl transition-all" data-testid="button-cta-faq">
               Book Free Consultation <ArrowRight className="ml-2 w-4 h-4" />
             </Link>
           </div>

@@ -20,16 +20,16 @@ export default function Terms() {
       <section className="relative bg-[#102F56] text-white py-28 overflow-hidden">
         <div className="absolute inset-0 opacity-[0.06]" style={{ backgroundImage: "linear-gradient(rgba(255,255,255,1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,1) 1px, transparent 1px)", backgroundSize: "60px 60px" }} />
         <div className="container mx-auto px-6 lg:px-12 relative z-10">
-          <div className="flex items-center gap-2 text-xs text-white/40 mb-10 uppercase tracking-wider">
+          <div className="flex items-center gap-2 text-sm font-medium text-white/70 mb-10 uppercase tracking-wider">
             <Link href="/" className="hover:text-[#E5A019] transition-colors">Home</Link>
-            <ChevronRight className="w-3 h-3" />
+            <ChevronRight className="w-3.5 h-3.5" />
             <span className="text-[#E5A019]">Terms & Conditions</span>
           </div>
           <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }}>
-            <p className="text-xs uppercase tracking-[0.35em] text-[#E5A019] font-semibold mb-4">Legal</p>
+            <p className="text-sm uppercase tracking-[0.35em] text-[#E5A019] font-bold mb-4">Legal</p>
             <div className="w-12 h-0.5 bg-[#E5A019] mb-8" />
             <h1 className="font-serif text-5xl md:text-6xl font-bold mb-4">Terms & Conditions</h1>
-            <p className="text-white/70 text-sm">Last updated: January 2024</p>
+            <p className="text-white/80 text-base md:text-lg">Last updated: January 2024</p>
           </motion.div>
         </div>
       </section>
@@ -40,8 +40,8 @@ export default function Terms() {
             <div className="space-y-10">
               {SECTIONS.map((s, i) => (
                 <div key={s.title} className="border-l-4 border-[#E5A019] pl-8">
-                  <h2 className="font-serif text-2xl font-bold text-[#102F56] mb-4">{i + 1}. {s.title}</h2>
-                  <p className="text-[#334155] leading-relaxed">{s.content}</p>
+                  <h2 className="font-serif text-2xl md:text-3xl font-bold text-[#102F56] mb-4">{i + 1}. {s.title}</h2>
+                  <p className="text-base md:text-lg text-[#334155] leading-relaxed">{s.content}</p>
                 </div>
               ))}
             </div>

@@ -54,6 +54,18 @@
   --radius-md: 0.375rem;
   --radius-lg: 0.5rem;
   --radius-xl: 0.75rem;
+
+  /* ── Centralized Typography Scale (Enhanced Legibility System) ── */
+  --text-2xs: 0.75rem;    /* ~12.5px */
+  --text-xs: 0.875rem;    /* ~14.5px - tags, badges, kickers */
+  --text-sm: 0.96875rem;  /* ~16px - metadata, secondary body */
+  --text-base: 1.0625rem; /* ~17.5px - standard body, inputs, links */
+  --text-lg: 1.2rem;      /* ~20px - subheadings, lead intro text */
+  --text-xl: 1.375rem;    /* ~23px - card titles, highlights */
+  --text-2xl: 1.6875rem;  /* ~28px - section h3 */
+  --text-3xl: 2.1875rem;  /* ~36px - section h2 */
+  --text-4xl: 2.75rem;    /* ~45px - major section headlines */
+  --text-5xl: 3.5rem;     /* ~58px - hero h1 */
 }
 
 :root {
@@ -123,18 +135,29 @@
     border-color: #DCE3EA;
   }
   html {
+    font-size: 16.5px;
     font-family: var(--font-sans);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
   }
+  @media (min-width: 768px) {
+    html {
+      font-size: 17px;
+    }
+  }
   body {
     background-color: #FAFBFC;
     color: #334155;
     font-family: var(--font-sans);
+    font-size: var(--text-base);
     font-weight: 400;
-    line-height: 1.65;
+    line-height: 1.7;
     letter-spacing: 0.01em;
+  }
+  p {
+    font-size: var(--text-base);
+    line-height: 1.7;
   }
   h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-sans);
@@ -149,6 +172,7 @@
   }
   button, input, select, textarea {
     font-family: var(--font-sans);
+    font-size: var(--text-base);
   }
   .font-serif {
     font-family: var(--font-sans) !important;
@@ -400,4 +424,49 @@ input:focus, textarea:focus, select:focus {
 .animate-testimonials-track:hover {
   animation-play-state: paused;
 }
+
+/* ─────────────────────────────────────────────────────────────
+   CENTRALIZED TYPOGRAPHY SYSTEM
+   Ensures consistent, legible font sizing throughout the app
+   ───────────────────────────────────────────────────────────── */
+.kicker-label {
+  font-size: var(--text-xs) !important;
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.22em !important;
+  color: #E5A019 !important;
+}
+
+.body-lead {
+  font-size: var(--text-lg) !important;
+  line-height: 1.75 !important;
+  color: #334155;
+}
+
+.body-regular {
+  font-size: var(--text-base) !important;
+  line-height: 1.7 !important;
+  color: #334155;
+}
+
+.body-muted {
+  font-size: var(--text-sm) !important;
+  line-height: 1.65 !important;
+  color: #475569;
+}
+
+.btn-typography {
+  font-size: var(--text-sm) !important;
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.08em !important;
+}
+
+.badge-tag {
+  font-size: var(--text-xs) !important;
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.1em !important;
+}
+
 

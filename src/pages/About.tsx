@@ -47,18 +47,18 @@ export default function About() {
           }}
         />
         <div className="container mx-auto px-6 lg:px-12 relative z-10">
-          <div className="flex items-center gap-2 text-xs text-white/40 mb-10 uppercase tracking-wider">
+          <div className="flex items-center gap-2 text-sm font-medium text-white/60 mb-10 uppercase tracking-wider">
             <Link href="/" className="hover:text-[#E5A019] transition-colors">Home</Link>
-            <ChevronRight className="w-3 h-3" />
+            <ChevronRight className="w-4 h-4 text-white/40" />
             <span className="text-[#E5A019]">About Us</span>
           </div>
           <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }}>
-            <p className="text-xs uppercase tracking-[0.35em] text-[#E5A019] font-semibold mb-4">Our Story</p>
+            <p className="text-sm uppercase tracking-[0.3em] text-[#E5A019] font-bold mb-4">Our Story</p>
             <div className="w-12 h-0.5 bg-[#E5A019] mb-8" />
             <h1 className="font-serif text-5xl md:text-7xl font-bold leading-tight mb-6">
               Tamil Nadu's Most<br /><span className="text-[#E5A019] italic">Trusted</span> Consultancy
             </h1>
-            <p className="text-white/70 text-xl max-w-2xl">
+            <p className="text-white/80 text-xl md:text-2xl max-w-2xl leading-relaxed">
               Nine years of excellence, 5,000+ satisfied clients, and an uncompromising commitment to precision in every document we touch.
             </p>
           </motion.div>
@@ -79,22 +79,22 @@ export default function About() {
                   />
                 </div>
                 <div>
-                  <p className="text-xs uppercase tracking-[0.35em] text-[#E5A019] font-bold">Company Overview</p>
-                  <span className="text-[0.68rem] text-[#334155]/70 font-semibold tracking-wider">AB DHANAM GROUP</span>
+                  <p className="text-sm uppercase tracking-[0.3em] text-[#E5A019] font-bold">Company Overview</p>
+                  <span className="text-xs text-[#334155]/80 font-bold tracking-wider">AB DHANAM GROUP</span>
                 </div>
               </div>
               <div className="w-12 h-0.5 bg-[#E5A019] mb-8" />
-              <h2 className="font-serif text-4xl font-bold text-[#102F56] mb-8">A Firm Built on Clarity, Speed, and Trust</h2>
-              <p className="text-[#334155] leading-relaxed mb-6 text-lg">
+              <h2 className="font-serif text-4xl md:text-5xl font-bold text-[#102F56] mb-8">A Firm Built on Clarity, Speed, and Trust</h2>
+              <p className="text-[#334155] leading-relaxed mb-6 text-lg md:text-xl font-normal">
                 A.B. Dhanam Online Services is Tamil Nadu's premier registration and documentation consultancy. We exist because navigating India's legal documentation system should not be a source of stress, confusion, or financial uncertainty for ordinary citizens.
               </p>
-              <p className="text-[#334155] leading-relaxed mb-6">
+              <p className="text-[#334155] leading-relaxed mb-6 text-base md:text-lg">
                 From the moment a client walks in — or calls — until their final certified document is in hand, we handle everything. Our promise is simple: zero errors, complete transparency, and the fastest legally possible turnaround.
               </p>
-              <p className="text-[#334155] leading-relaxed mb-10">
+              <p className="text-[#334155] leading-relaxed mb-10 text-base md:text-lg">
                 We serve individuals buying their first home, developers registering entire layouts, families registering marriages, educators forming trusts, and communities establishing societies. Each case receives the same meticulous attention regardless of scale.
               </p>
-              <Link href="/book-consultation" className="inline-flex items-center bg-[#123E73] hover:bg-[#092747] text-white px-8 py-4 font-bold text-sm uppercase tracking-wider transition-all" data-testid="button-book-from-about">
+              <Link href="/book-consultation" className="inline-flex items-center bg-[#123E73] hover:bg-[#092747] text-white px-9 py-4 font-bold text-sm md:text-base uppercase tracking-wider transition-all" data-testid="button-book-from-about">
                 Book Consultation <ArrowRight className="ml-2 w-4 h-4" />
               </Link>
             </motion.div>
@@ -103,17 +103,17 @@ export default function About() {
               <div className="grid grid-cols-2 gap-px bg-[#DCE3EA]">
                 {ACHIEVEMENTS.map((a) => (
                   <div key={a.label} className="bg-[#FAFBFC] p-10 text-center">
-                    <div className="font-serif text-4xl font-bold text-[#102F56] mb-2">{a.value}</div>
-                    <div className="text-xs uppercase tracking-[0.2em] text-[#334155]/80">{a.label}</div>
+                    <div className="font-serif text-4xl md:text-5xl font-bold text-[#102F56] mb-2">{a.value}</div>
+                    <div className="text-sm uppercase tracking-[0.2em] text-[#334155]/85 font-bold">{a.label}</div>
                   </div>
                 ))}
               </div>
               <div className="mt-8 p-8 border-l-4 border-[#E5A019] bg-[#F1F5F9] border border-[#DCE3EA]">
-                <p className="text-[#334155] text-sm italic leading-relaxed">
+                <p className="text-[#334155] text-base md:text-lg italic leading-relaxed">
                   "Our clients trust us with the most important documents of their lives — their homes, their marriages, their legacies. That trust is something we protect with every resource we have."
                 </p>
-                <div className="mt-4 font-serif font-bold text-[#102F56]">A.B. Alagiri Rajan</div>
-                <div className="text-xs text-[#E5A019] uppercase tracking-wider font-medium mt-1">Managing Director</div>
+                <div className="mt-4 font-serif text-lg font-bold text-[#102F56]">A.B. Alagiri Rajan</div>
+                <div className="text-sm text-[#E5A019] uppercase tracking-wider font-semibold mt-1">Managing Director</div>
               </div>
             </motion.div>
           </div>
@@ -134,31 +134,31 @@ export default function About() {
                 <div className="w-64 h-64 bg-[#123E73] flex items-center justify-center border-4 border-[#E5A019]">
                   <div className="text-center">
                     <div className="font-serif text-7xl font-bold text-[#E5A019]">AR</div>
-                    <div className="text-white/70 text-xs uppercase tracking-wider mt-2">Managing Director</div>
+                    <div className="text-white/80 text-sm uppercase tracking-wider mt-2 font-semibold">Managing Director</div>
                   </div>
                 </div>
                 <div className="absolute -bottom-4 -right-4 bg-[#E5A019] px-6 py-3">
-                  <div className="font-serif text-2xl font-bold text-[#102F56]">9+</div>
-                  <div className="text-xs text-[#102F56]/80 uppercase tracking-wide">Years</div>
+                  <div className="font-serif text-3xl font-bold text-[#102F56]">9+</div>
+                  <div className="text-xs text-[#102F56] font-bold uppercase tracking-wide">Years</div>
                 </div>
               </div>
             </div>
             <div>
-              <p className="text-xs uppercase tracking-[0.35em] text-[#E5A019] font-semibold mb-4">Founder Profile</p>
+              <p className="text-sm uppercase tracking-[0.3em] text-[#E5A019] font-bold mb-4">Founder Profile</p>
               <div className="w-12 h-0.5 bg-[#E5A019] mb-8" />
-              <h2 className="font-serif text-4xl font-bold mb-6">A.B. Alagiri Rajan</h2>
-              <p className="text-white/80 leading-relaxed mb-6 text-lg">
+              <h2 className="font-serif text-4xl md:text-5xl font-bold mb-6">A.B. Alagiri Rajan</h2>
+              <p className="text-white/85 leading-relaxed mb-6 text-lg md:text-xl">
                 Managing Director of A.B. Dhanam Online Services, Mr. Alagiri Rajan is a veteran legal documentation consultant with over nine years of hands-on experience in Tamil Nadu's registration and documentation ecosystem.
               </p>
-              <p className="text-white/70 leading-relaxed mb-6">
+              <p className="text-white/80 leading-relaxed mb-6 text-base md:text-lg">
                 Having personally guided more than 5,000 clients through complex property registrations, trust formations, society registrations, and marriage registrations, he brings a depth of practical knowledge that no textbook can replicate.
               </p>
-              <p className="text-white/70 leading-relaxed mb-10">
+              <p className="text-white/80 leading-relaxed mb-10 text-base md:text-lg">
                 His philosophy is simple: every client deserves the same level of precision, transparency, and dedication — whether they are registering a modest residential property or a multi-crore commercial layout. Under his leadership, A.B. Dhanam has maintained a zero-error record on all submitted documentation.
               </p>
               <div className="flex flex-wrap gap-4">
                 {["Property Registration Expert", "Trust Law Specialist", "Documentation Consultant", "Tamil Nadu Sub-Registrar Liaison"].map((tag) => (
-                  <span key={tag} className="text-xs border border-white/20 text-white/70 px-4 py-2 uppercase tracking-wider">{tag}</span>
+                  <span key={tag} className="text-sm font-medium border border-white/25 text-white/90 px-4 py-2 uppercase tracking-wider">{tag}</span>
                 ))}
               </div>
             </div>
@@ -175,7 +175,7 @@ export default function About() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <p className="text-xs uppercase tracking-[0.35em] text-[#E5A019] font-semibold mb-4">Purpose & Direction</p>
+            <p className="text-sm uppercase tracking-[0.3em] text-[#E5A019] font-bold mb-4">Purpose & Direction</p>
             <div className="w-12 h-0.5 bg-[#E5A019] mx-auto mb-8" />
             <h2 className="font-serif text-4xl md:text-5xl font-bold text-[#102F56]">Our Mission & Vision</h2>
           </motion.div>
@@ -183,14 +183,14 @@ export default function About() {
             <motion.div variants={fadeUp} className="p-10 bg-[#102F56] text-white border-l-4 border-[#E5A019]">
               <Target className="w-10 h-10 text-[#E5A019] mb-6" />
               <h3 className="font-serif text-3xl font-bold mb-6">Our Mission</h3>
-              <p className="text-white/80 leading-relaxed text-lg">
+              <p className="text-white/90 leading-relaxed text-lg md:text-xl">
                 To eliminate confusion, delay, and error from Tamil Nadu's legal documentation process — delivering every client the certainty and peace of mind they deserve, one precisely prepared document at a time.
               </p>
             </motion.div>
             <motion.div variants={fadeUp} className="p-10 bg-white border border-[#DCE3EA] border-l-4 border-l-[#E5A019]">
               <Eye className="w-10 h-10 text-[#E5A019] mb-6" />
               <h3 className="font-serif text-3xl font-bold text-[#102F56] mb-6">Our Vision</h3>
-              <p className="text-[#334155] leading-relaxed text-lg">
+              <p className="text-[#334155] leading-relaxed text-lg md:text-xl">
                 To become the benchmark of excellence for legal documentation services across all of Tamil Nadu — the firm that every citizen instinctively trusts with their most important documents.
               </p>
             </motion.div>
@@ -202,7 +202,7 @@ export default function About() {
       <section className="py-28 bg-[#FAFBFC]">
         <div className="container mx-auto px-6 lg:px-12">
           <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-16">
-            <p className="text-xs uppercase tracking-[0.35em] text-[#E5A019] font-semibold mb-4">What We Stand For</p>
+            <p className="text-sm uppercase tracking-[0.3em] text-[#E5A019] font-bold mb-4">What We Stand For</p>
             <div className="w-12 h-0.5 bg-[#E5A019] mx-auto mb-8" />
             <h2 className="font-serif text-4xl md:text-5xl font-bold text-[#102F56]">Our Core Values</h2>
           </motion.div>
@@ -211,7 +211,7 @@ export default function About() {
               <motion.div key={v.title} variants={fadeUp} className="p-8 bg-white border border-[#DCE3EA] border-l-4 border-l-[#E5A019] hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
                 <v.icon className="w-8 h-8 text-[#E5A019] mb-5" />
                 <h3 className="font-serif text-xl font-bold text-[#102F56] mb-3">{v.title}</h3>
-                <p className="text-[#334155] text-sm leading-relaxed">{v.desc}</p>
+                <p className="text-[#334155] text-base leading-relaxed">{v.desc}</p>
               </motion.div>
             ))}
           </motion.div>
@@ -222,7 +222,7 @@ export default function About() {
       <section className="py-28 bg-[#102F56] text-white">
         <div className="container mx-auto px-6 lg:px-12">
           <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-16">
-            <p className="text-xs uppercase tracking-[0.35em] text-[#E5A019] font-semibold mb-4">Our Journey</p>
+            <p className="text-sm uppercase tracking-[0.3em] text-[#E5A019] font-bold mb-4">Our Journey</p>
             <div className="w-12 h-0.5 bg-[#E5A019] mx-auto mb-8" />
             <h2 className="font-serif text-4xl md:text-5xl font-bold text-white">A Decade of Milestones</h2>
           </motion.div>
@@ -237,15 +237,15 @@ export default function About() {
                 className="flex gap-8 mb-12 last:mb-0"
               >
                 <div className="flex flex-col items-center">
-                  <div className="w-12 h-12 rounded-full bg-[#E5A019] text-[#102F56] flex items-center justify-center font-bold text-xs font-serif shrink-0 shadow-md">
+                  <div className="w-12 h-12 rounded-full bg-[#E5A019] text-[#102F56] flex items-center justify-center font-bold text-sm font-serif shrink-0 shadow-md">
                     {t.year.slice(2)}
                   </div>
                   {i < TIMELINE.length - 1 && <div className="w-px flex-1 bg-[#E5A019]/30 mt-3" />}
                 </div>
                 <div className="pb-12 last:pb-0">
-                  <div className="text-[#E5A019] text-xs uppercase tracking-[0.2em] font-semibold mb-1">{t.year}</div>
-                  <h3 className="font-serif text-2xl font-bold mb-3">{t.title}</h3>
-                  <p className="text-white/70 leading-relaxed">{t.desc}</p>
+                  <div className="text-[#E5A019] text-sm uppercase tracking-[0.2em] font-bold mb-1.5">{t.year}</div>
+                  <h3 className="font-serif text-2xl md:text-3xl font-bold mb-3">{t.title}</h3>
+                  <p className="text-white/80 text-base md:text-lg leading-relaxed">{t.desc}</p>
                 </div>
               </motion.div>
             ))}
@@ -258,10 +258,10 @@ export default function About() {
         <div className="container mx-auto px-6 lg:px-12 text-center">
           <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
             <h2 className="font-serif text-4xl md:text-5xl font-bold text-white mb-6">Ready to Work With Us?</h2>
-            <p className="text-[#DCE3EA]/80 text-lg mb-10 max-w-xl mx-auto">
+            <p className="text-[#DCE3EA]/85 text-lg md:text-xl mb-10 max-w-xl mx-auto leading-relaxed">
               Join over 5,000 satisfied clients who have trusted A.B. Dhanam with their most important legal documents.
             </p>
-            <Link href="/book-consultation" className="inline-flex items-center bg-[#123E73] hover:bg-[#092747] text-white px-10 py-4 font-bold text-sm uppercase tracking-wider transition-all shadow-xl border border-[#E5A019]/40" data-testid="button-cta-about-bottom">
+            <Link href="/book-consultation" className="inline-flex items-center bg-[#123E73] hover:bg-[#092747] text-white px-10 py-4 font-bold text-sm md:text-base uppercase tracking-wider transition-all shadow-xl border border-[#E5A019]/40" data-testid="button-cta-about-bottom">
               Book a Free Consultation <ArrowRight className="ml-2 w-4 h-4" />
             </Link>
           </motion.div>

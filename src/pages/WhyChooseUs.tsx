@@ -63,18 +63,18 @@ export default function WhyChooseUs() {
           style={{ backgroundImage: "linear-gradient(rgba(255,255,255,1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,1) 1px, transparent 1px)", backgroundSize: "60px 60px" }}
         />
         <div className="container mx-auto px-6 lg:px-12 relative z-10">
-          <div className="flex items-center gap-2 text-xs text-white/40 mb-10 uppercase tracking-wider">
+          <div className="flex items-center gap-2 text-sm font-medium text-white/60 mb-10 uppercase tracking-wider">
             <Link href="/" className="hover:text-[#E5A019] transition-colors">Home</Link>
-            <ChevronRight className="w-3 h-3" />
+            <ChevronRight className="w-4 h-4 text-white/40" />
             <span className="text-[#E5A019]">Why Choose Us</span>
           </div>
           <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }}>
-            <p className="text-xs uppercase tracking-[0.35em] text-[#E5A019] font-semibold mb-4">The A.B. Dhanam Difference</p>
+            <p className="text-sm uppercase tracking-[0.3em] text-[#E5A019] font-bold mb-4">The A.B. Dhanam Difference</p>
             <div className="w-12 h-0.5 bg-[#E5A019] mb-8" />
             <h1 className="font-serif text-5xl md:text-7xl font-bold leading-tight mb-6">
               Seven Reasons to<br /><span className="text-[#E5A019] italic">Trust A.B. Dhanam</span>
             </h1>
-            <p className="text-white/70 text-xl max-w-2xl">
+            <p className="text-white/80 text-xl md:text-2xl max-w-2xl leading-relaxed">
               In legal documentation, the difference between ordinary and extraordinary is everything. Here is what sets us apart.
             </p>
           </motion.div>
@@ -105,7 +105,7 @@ export default function WhyChooseUs() {
                 </div>
                 {/* Right: Description */}
                 <div className={`p-12 lg:p-16 border-l border-[#DCE3EA] ${i % 2 === 1 ? "lg:order-1 border-r lg:border-r-0" : ""}`}>
-                  <p className="text-[#334155] leading-relaxed text-lg">{r.desc}</p>
+                  <p className="text-[#334155] leading-relaxed text-lg md:text-xl font-normal">{r.desc}</p>
                 </div>
               </motion.div>
             ))}
@@ -117,10 +117,10 @@ export default function WhyChooseUs() {
         <div className="container mx-auto px-6 lg:px-12 text-center">
           <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
             <h2 className="font-serif text-4xl md:text-5xl font-bold text-white mb-6">Experience the A.B. Dhanam Standard</h2>
-            <p className="text-[#DCE3EA]/80 text-lg mb-10 max-w-xl mx-auto">
+            <p className="text-[#DCE3EA]/85 text-lg md:text-xl mb-10 max-w-xl mx-auto leading-relaxed">
               Book a free consultation and discover why over 5,000 clients in Tamil Nadu trust us with their most important documents.
             </p>
-            <Link href="/book-consultation" className="inline-flex items-center bg-[#123E73] hover:bg-[#092747] text-white px-10 py-4 font-bold text-sm uppercase tracking-wider transition-all shadow-xl border border-[#E5A019]/40" data-testid="button-cta-why-choose-us">
+            <Link href="/book-consultation" className="inline-flex items-center bg-[#123E73] hover:bg-[#092747] text-white px-10 py-4 font-bold text-sm md:text-base uppercase tracking-wider transition-all shadow-xl border border-[#E5A019]/40" data-testid="button-cta-why-choose-us">
               Book Free Consultation <ArrowRight className="ml-2 w-4 h-4" />
             </Link>
           </motion.div>
