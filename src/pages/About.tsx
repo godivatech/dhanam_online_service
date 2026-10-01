@@ -73,7 +73,7 @@ export default function About() {
               <div className="flex items-center gap-3.5 mb-6">
                 <div className="w-12 h-12 rounded-lg bg-white p-1 shadow-xs border border-[#DCE3EA] flex items-center justify-center shrink-0">
                   <img
-                    src="/images/Logo.png"
+                    src="/images/Logo-2.png"
                     alt="AB DHANAM GROUP Logo"
                     className="w-full h-full object-contain"
                   />

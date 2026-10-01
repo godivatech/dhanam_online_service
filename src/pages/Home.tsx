@@ -201,7 +201,7 @@ export default function Home() {
               <motion.div variants={fadeUp} className="flex items-center gap-4 mb-6">
                 <div className="w-16 h-16 md:w-18 md:h-18 rounded-xl bg-white p-1.5 shadow-sm border border-[#DCE3EA] flex items-center justify-center shrink-0">
                   <img
-                    src="/images/Logo.png"
+                    src="/images/Logo-2.png"
                     alt="AB DHANAM GROUP"
                     className="w-full h-full object-contain"
                   />

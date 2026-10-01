@@ -127,7 +127,7 @@ export function Header() {
         {/* Official Logo Only */}
         <Link href="/" className="group flex items-center py-1" data-testid="link-home-logo" aria-label="AB DHANAM GROUP">
           <img
-            src="/images/Logo.png"
+            src="/images/Logo-2.png"
             alt="AB DHANAM GROUP"
             className="w-28 h-28 md:w-36 md:h-36 object-contain group-hover:scale-105 transition-transform duration-200"
           />
@@ -224,7 +224,7 @@ export function Header() {
               <div className="flex justify-between items-center p-5 border-b border-[#DCE3EA] bg-white">
                 <Link href="/" onClick={() => setIsOpen(false)} aria-label="AB DHANAM GROUP">
                   <img
-                    src="/images/Logo.png"
+                    src="/images/Logo-2.png"
                     alt="AB DHANAM GROUP"
                     className="w-20 h-20 object-contain"
                   />
@@ -287,7 +287,7 @@ export function Footer() {
             <Link href="/" className="inline-block mb-6 group" data-testid="link-footer-logo" aria-label="AB DHANAM GROUP">
               <div className="w-32 h-32 md:w-40 md:h-40 rounded-2xl bg-white p-3 shadow-md flex items-center justify-center border border-[#E5A019]/40 group-hover:border-[#E5A019] transition-all">
                 <img
-                  src="/images/Logo.png"
+                  src="/images/Logo-2.png"
                   alt="AB DHANAM GROUP"
                   className="w-full h-full object-contain"
                 />
