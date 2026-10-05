@@ -177,101 +177,116 @@ export default function Home() {
             <motion.div
               key={currentSlide}
               initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
+              animate={{ opacity: 0.28 }}
               exit={{ opacity: 0 }}
               transition={{ duration: 1.0, ease: "easeInOut" }}
               className="absolute inset-0 bg-cover bg-center"
               style={{ backgroundImage: `url('${slides[currentSlide]}')` }}
             />
           </AnimatePresence>
-          {/* Subtle vignette gradient for a premium polish */}
-          <div className="absolute inset-0 bg-gradient-to-r from-[#102F56]/60 via-[#102F56]/20 to-transparent z-10 pointer-events-none" />
+          {/* Deep navy vignette overlay for high contrast and focus */}
+          <div className="absolute inset-0 bg-gradient-to-r from-[#102F56]/90 via-[#102F56]/65 to-[#102F56]/75 z-10 pointer-events-none" />
         </div>
 
-        <div className="container mx-auto px-6 lg:px-12 relative z-20 py-20 lg:py-32 flex items-center justify-start">
-          {/* Elegant Floating Light Card */}
-          <motion.div
-            initial={{ opacity: 0, x: -30 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8 }}
-            className="w-full max-w-xl bg-[#FAFBFC]/95 backdrop-blur-md p-8 md:p-12 rounded-xl shadow-[0_20px_50px_rgba(16,47,86,0.15)] border border-[#DCE3EA]"
-          >
-            <motion.div variants={stagger} initial="hidden" animate="show">
-              {/* Tagline & Official Logo Badge */}
-              <motion.div variants={fadeUp} className="flex items-center gap-4 mb-6">
-                <div className="w-16 h-16 md:w-18 md:h-18 rounded-xl bg-white p-1.5 shadow-sm border border-[#DCE3EA] flex items-center justify-center shrink-0">
-                  <img
-                    src="/images/Logo-2.png"
-                    alt="AB DHANAM GROUP"
-                    className="w-full h-full object-contain"
-                  />
-                </div>
-                <div>
-                  <div className="flex items-center gap-2">
-                    <span className="w-4 h-0.5 bg-[#E5A019]" />
-                    <span className="text-sm uppercase tracking-[0.2em] text-[#E5A019] font-bold">
-                      AB DHANAM GROUP
+        <div className="container mx-auto px-6 lg:px-12 relative z-20 pt-16 pb-12 lg:pt-20 lg:pb-0 min-h-[85vh] lg:min-h-screen flex flex-col lg:flex-row items-center lg:items-end justify-between gap-10 lg:gap-12">
+          {/* Left: Elegant Floating Light Card */}
+          <div className="w-full lg:max-w-xl py-6 lg:py-16 my-auto shrink-0">
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+              className="w-full bg-[#FAFBFC]/95 backdrop-blur-md p-8 md:p-12 rounded-xl shadow-[0_20px_50px_rgba(16,47,86,0.15)] border border-[#DCE3EA]"
+            >
+              <motion.div variants={stagger} initial="hidden" animate="show">
+                {/* Tagline & Official Logo Badge */}
+                <motion.div variants={fadeUp} className="flex items-center gap-4 mb-6">
+                  <div className="w-16 h-16 md:w-18 md:h-18 rounded-xl bg-white p-1.5 shadow-sm border border-[#DCE3EA] flex items-center justify-center shrink-0">
+                    <img
+                      src="/images/Logo-2.png"
+                      alt="AB DHANAM GROUP"
+                      className="w-full h-full object-contain"
+                    />
+                  </div>
+                  <div>
+                    <div className="flex items-center gap-2">
+                      <span className="w-4 h-0.5 bg-[#E5A019]" />
+                      <span className="text-sm uppercase tracking-[0.2em] text-[#E5A019] font-bold">
+                        AB DHANAM GROUP
+                      </span>
+                    </div>
+                    <span className="text-xs text-[#334155]/85 font-semibold tracking-wide">
+                      Government Approved Consultancy
                     </span>
                   </div>
-                  <span className="text-xs text-[#334155]/85 font-semibold tracking-wide">
-                    Government Approved Consultancy
-                  </span>
-                </div>
-              </motion.div>
+                </motion.div>
 
-              {/* Main Headline */}
-              <motion.h1 variants={fadeUp} className="text-4xl sm:text-5xl md:text-6xl font-extrabold leading-[1.18] mb-6 tracking-tight text-[#102F56]">
-                Premier Legal & <br />
-                <span className="text-[#E5A019]">Registration Advisory</span>
-              </motion.h1>
+                {/* Main Headline */}
+                <motion.h1 variants={fadeUp} className="text-4xl sm:text-5xl md:text-6xl font-extrabold leading-[1.18] mb-6 tracking-tight text-[#102F56]">
+                  Premier Legal & <br />
+                  <span className="text-[#E5A019]">Registration Advisory</span>
+                </motion.h1>
 
-              {/* Supporting Subheadline */}
-              <motion.p variants={fadeUp} className="text-[#334155] text-base md:text-lg leading-relaxed mb-8 font-normal">
-                Fast, secure, and error-free legal documentation and registry services for property, marriage, trusts, and societies across Tamil Nadu.
-              </motion.p>
+                {/* Supporting Subheadline */}
+                <motion.p variants={fadeUp} className="text-[#334155] text-base md:text-lg leading-relaxed mb-8 font-normal">
+                  Fast, secure, and error-free legal documentation and registry services for property, marriage, trusts, and societies across Tamil Nadu.
+                </motion.p>
 
-              {/* Call to Actions */}
-              <motion.div variants={fadeUp} className="flex flex-col sm:flex-row gap-4">
-                <Link
-                  href="/book-consultation"
-                  className="inline-flex items-center justify-center bg-[#123E73] text-white px-8 py-4 font-bold text-sm md:text-base uppercase tracking-wider hover:bg-[#092747] transition-all rounded shadow-md hover:-translate-y-0.5 gap-2"
-                  data-testid="button-book-consultation-hero"
-                >
-                  Book Free Consultation <ArrowRight className="w-4 h-4" />
-                </Link>
-                <Link
-                  href="/services"
-                  className="inline-flex items-center justify-center border border-[#DCE3EA] text-[#334155] hover:border-[#123E73] hover:text-[#102F56] transition-all hover:bg-[#F1F5F9] px-8 py-4 font-bold text-sm md:text-base uppercase tracking-wider rounded"
-                  data-testid="button-explore-services-hero"
-                >
-                  Explore Services
-                </Link>
+                {/* Call to Actions */}
+                <motion.div variants={fadeUp} className="flex flex-col sm:flex-row gap-4">
+                  <Link
+                    href="/book-consultation"
+                    className="inline-flex items-center justify-center bg-[#123E73] text-white px-8 py-4 font-bold text-sm md:text-base uppercase tracking-wider hover:bg-[#092747] transition-all rounded shadow-md hover:-translate-y-0.5 gap-2"
+                    data-testid="button-book-consultation-hero"
+                  >
+                    Book Free Consultation <ArrowRight className="w-4 h-4" />
+                  </Link>
+                  <Link
+                    href="/services"
+                    className="inline-flex items-center justify-center border border-[#DCE3EA] text-[#334155] hover:border-[#123E73] hover:text-[#102F56] transition-all hover:bg-[#F1F5F9] px-8 py-4 font-bold text-sm md:text-base uppercase tracking-wider rounded"
+                    data-testid="button-explore-services-hero"
+                  >
+                    Explore Services
+                  </Link>
+                </motion.div>
               </motion.div>
             </motion.div>
+          </div>
+
+          {/* Right: A.B. Alagiri Rajan Standing Image with Static Name Tag */}
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.9, delay: 0.2 }}
+            className="w-full lg:w-auto flex-1 flex flex-col items-center lg:items-end justify-end self-end relative z-20 pb-4 lg:pb-0"
+          >
+            <div className="relative flex flex-col items-center">
+              <img
+                src="/images/A.B%20Alagiri%20Rajan.png"
+                alt="A.B. Alagiri Rajan - Managing Director"
+                className="h-[400px] sm:h-[480px] md:h-[540px] lg:h-[620px] xl:h-[700px] w-auto object-contain object-bottom drop-shadow-[0_25px_35px_rgba(0,0,0,0.65)]"
+              />
+              {/* Static Name Badge Tag below his image */}
+              <div className="-mt-4 md:-mt-5 relative z-30 inline-flex items-center gap-2.5 bg-[#102F56]/95 backdrop-blur-md px-4 py-2.5 md:px-5 md:py-2.5 rounded shadow-xl border border-white/20 text-white font-bold text-xs md:text-sm uppercase tracking-wider">
+                <span>A.B. ALAGIRI RAJAN</span>
+                <span className="w-2 h-2 rounded-full bg-[#E5A019]" />
+                <span>MANAGING DIRECTOR</span>
+              </div>
+            </div>
           </motion.div>
         </div>
 
-        {/* Floating Slide Indicator & Caption */}
-        <div className="absolute bottom-8 right-8 z-30 flex flex-col items-end gap-3 pointer-events-auto">
-          {/* Caption */}
-          <div className="text-xs md:text-sm font-semibold text-white tracking-wider uppercase flex items-center gap-2 bg-[#102F56]/90 backdrop-blur-md px-4 py-2 rounded shadow-lg border border-white/15">
-            <span>{currentSlide === 0 ? "Property & Deeds Registry" : "Marriage & Trust Documentation"}</span>
-            <span className="w-2 h-2 rounded-full bg-[#E5A019]" />
-            <span>Tamil Nadu</span>
-          </div>
-          {/* Indicators */}
-          <div className="flex gap-2">
-            {slides.map((_, index) => (
-              <button
-                key={index}
-                onClick={() => setCurrentSlide(index)}
-                className={`h-2 transition-all duration-300 rounded-full ${
-                  index === currentSlide ? "bg-[#E5A019] w-12" : "bg-white/40 hover:bg-white/70 w-7"
-                }`}
-                aria-label={`Go to slide ${index + 1}`}
-              />
-            ))}
-          </div>
+        {/* Floating Slide Indicators (Positioned bottom-left for clean balance) */}
+        <div className="absolute bottom-6 left-6 lg:left-12 z-30 flex items-center gap-2 pointer-events-auto">
+          {slides.map((_, index) => (
+            <button
+              key={index}
+              onClick={() => setCurrentSlide(index)}
+              className={`h-2 transition-all duration-300 rounded-full ${
+                index === currentSlide ? "bg-[#E5A019] w-12" : "bg-white/40 hover:bg-white/70 w-7"
+              }`}
+              aria-label={`Go to slide ${index + 1}`}
+            />
+          ))}
         </div>
       </section>
 
