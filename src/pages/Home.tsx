@@ -177,15 +177,15 @@ export default function Home() {
             <motion.div
               key={currentSlide}
               initial={{ opacity: 0 }}
-              animate={{ opacity: 0.28 }}
+              animate={{ opacity: 0.55 }}
               exit={{ opacity: 0 }}
               transition={{ duration: 1.0, ease: "easeInOut" }}
               className="absolute inset-0 bg-cover bg-center"
               style={{ backgroundImage: `url('${slides[currentSlide]}')` }}
             />
           </AnimatePresence>
-          {/* Deep navy vignette overlay for high contrast and focus */}
-          <div className="absolute inset-0 bg-gradient-to-r from-[#102F56]/90 via-[#102F56]/65 to-[#102F56]/75 z-10 pointer-events-none" />
+          {/* Balanced navy overlay for optimal image clarity and text contrast */}
+          <div className="absolute inset-0 bg-gradient-to-r from-[#102F56]/75 via-[#102F56]/40 to-[#102F56]/50 z-10 pointer-events-none" />
         </div>
 
         <div className="container mx-auto px-6 lg:px-12 relative z-20 pt-16 pb-12 lg:pt-20 lg:pb-0 min-h-[85vh] lg:min-h-screen flex flex-col lg:flex-row items-center lg:items-end justify-between gap-10 lg:gap-12">
@@ -291,8 +291,8 @@ export default function Home() {
       </section>
 
       {/* ── STATS (Main Background #FAFBFC) ─────────────────────────────────── */}
-      <section className="py-20 bg-[#FAFBFC] relative z-10 border-b border-[#DCE3EA]">
-        <div className="container mx-auto px-6 lg:px-12">
+      <section className="py-12 sm:py-16 md:py-20 bg-[#FAFBFC] relative z-10 border-b border-[#DCE3EA]">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-12">
           <motion.div
             variants={stagger}
             initial="hidden"
@@ -301,11 +301,13 @@ export default function Home() {
             className="grid grid-cols-2 lg:grid-cols-4 gap-0 border border-[#DCE3EA] divide-x divide-y lg:divide-y-0 divide-[#DCE3EA] bg-white rounded-lg shadow-xs overflow-hidden"
           >
             {STATS.map((s) => (
-              <motion.div key={s.label} variants={fadeUp} className="p-8 md:p-10 text-center">
-                <div className="text-4xl md:text-6xl font-extrabold text-[#102F56] mb-2 tracking-tight">
+              <motion.div key={s.label} variants={fadeUp} className="p-4 sm:p-6 md:p-8 lg:p-10 text-center flex flex-col justify-center items-center">
+                <div className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-extrabold text-[#102F56] mb-1 sm:mb-2 tracking-tight">
                   <AnimatedCounter target={s.value} suffix={s.suffix} />
                 </div>
-                <div className="text-sm md:text-base uppercase tracking-[0.16em] text-[#102F56] font-bold">{s.label}</div>
+                <div className="text-[11px] sm:text-xs md:text-sm lg:text-base uppercase tracking-wider sm:tracking-[0.16em] text-[#102F56] font-bold leading-tight">
+                  {s.label}
+                </div>
               </motion.div>
             ))}
           </motion.div>
