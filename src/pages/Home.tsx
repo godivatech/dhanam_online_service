@@ -170,7 +170,7 @@ export default function Home() {
   return (
     <Layout>
       {/* ── HERO ─────────────────────────────────────────────────────────── */}
-      <section className="relative min-h-[78vh] lg:min-h-[88vh] flex items-center overflow-hidden bg-[#102F56]">
+      <section className="relative min-h-[68vh] lg:min-h-[76vh] flex items-center overflow-hidden bg-[#102F56]">
         {/* Background Image Slider with Crossfade */}
         <div className="absolute inset-0 z-0">
           <AnimatePresence mode="wait">
@@ -188,18 +188,18 @@ export default function Home() {
           <div className="absolute inset-0 bg-gradient-to-r from-[#102F56]/75 via-[#102F56]/40 to-[#102F56]/50 z-10 pointer-events-none" />
         </div>
 
-        <div className="container mx-auto px-6 lg:px-12 relative z-20 pt-16 pb-12 lg:pt-16 lg:pb-0 min-h-[78vh] lg:min-h-[88vh] flex flex-col lg:flex-row items-center lg:items-end justify-between gap-10 lg:gap-12">
+        <div className="container mx-auto px-6 lg:px-12 relative z-20 pt-10 pb-8 lg:pt-10 lg:pb-0 min-h-[68vh] lg:min-h-[76vh] flex flex-col lg:flex-row items-center lg:items-end justify-between gap-8 lg:gap-10">
           {/* Left: Elegant Floating Light Card */}
-            <div className="w-full lg:max-w-xl py-6 lg:py-12 my-auto shrink-0">
+            <div className="w-full lg:max-w-xl py-4 lg:py-8 my-auto shrink-0">
             <motion.div
               initial={{ opacity: 0, x: -30 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
-              className="w-full bg-[#FAFBFC]/95 backdrop-blur-md p-8 md:p-12 rounded-xl shadow-[0_20px_50px_rgba(16,47,86,0.15)] border border-[#DCE3EA]"
+              className="w-full bg-[#FAFBFC]/95 backdrop-blur-md p-6 md:p-9 rounded-xl shadow-[0_20px_50px_rgba(16,47,86,0.15)] border border-[#DCE3EA]"
             >
               <motion.div variants={stagger} initial="hidden" animate="show">
                 {/* Tagline & Official Logo Badge */}
-                <motion.div variants={fadeUp} className="flex items-center gap-4 mb-6">
+                <motion.div variants={fadeUp} className="flex items-center gap-4 mb-4">
                   <div className="w-16 h-16 md:w-18 md:h-18 rounded-xl bg-white p-1.5 shadow-sm border border-[#DCE3EA] flex items-center justify-center shrink-0">
                     <img
                       src="/images/Logo-2.png"
@@ -221,13 +221,13 @@ export default function Home() {
                 </motion.div>
 
                 {/* Main Headline */}
-                <motion.h1 variants={fadeUp} className="text-4xl sm:text-5xl md:text-6xl font-extrabold leading-[1.18] mb-6 tracking-tight text-[#102F56]">
+                <motion.h1 variants={fadeUp} className="text-4xl sm:text-5xl md:text-6xl font-extrabold leading-[1.18] mb-4 tracking-tight text-[#102F56]">
                   Premier Legal & <br />
                   <span className="text-[#E5A019]">Registration Advisory</span>
                 </motion.h1>
 
                 {/* Supporting Subheadline */}
-                <motion.p variants={fadeUp} className="text-[#334155] text-base md:text-lg leading-relaxed mb-8 font-normal">
+                <motion.p variants={fadeUp} className="text-[#334155] text-base md:text-lg leading-relaxed mb-6 font-normal">
                   Fast, secure, and error-free legal documentation and registry services for property, marriage, trusts, and societies across Tamil Nadu.
                 </motion.p>
 
@@ -263,7 +263,7 @@ export default function Home() {
               <img
                 src="/images/A.B%20Alagiri%20Rajan.png"
                 alt="A.B. Alagiri Rajan - Managing Director"
-                className="h-[360px] sm:h-[430px] md:h-[490px] lg:h-[540px] xl:h-[600px] w-auto object-contain object-bottom drop-shadow-[0_25px_35px_rgba(0,0,0,0.65)]"
+                className="h-[300px] sm:h-[360px] md:h-[400px] lg:h-[460px] xl:h-[500px] w-auto object-contain object-bottom drop-shadow-[0_25px_35px_rgba(0,0,0,0.65)]"
               />
               {/* Static Name Badge Tag below his image */}
               <div className="-mt-4 md:-mt-5 relative z-30 inline-flex items-center gap-2.5 bg-[#102F56]/95 backdrop-blur-md px-4 py-2.5 md:px-5 md:py-2.5 rounded shadow-xl border border-white/20 text-white font-bold text-xs md:text-sm uppercase tracking-wider">
