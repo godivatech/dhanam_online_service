@@ -263,7 +263,7 @@ export default function Home() {
               <img
                 src="/images/A.B%20Alagiri%20Rajan.png"
                 alt="A.B. Alagiri Rajan - Managing Director"
-                className="h-[300px] sm:h-[360px] md:h-[400px] lg:h-[460px] xl:h-[500px] w-auto object-contain object-bottom drop-shadow-[0_25px_35px_rgba(0,0,0,0.65)]"
+                className="h-[380px] sm:h-[480px] md:h-[580px] lg:h-[680px] xl:h-[780px] w-auto object-contain object-bottom drop-shadow-[0_25px_35px_rgba(0,0,0,0.65)]"
               />
               {/* Static Name Badge Tag below his image */}
               <div className="-mt-4 md:-mt-5 relative z-30 inline-flex items-center gap-2.5 bg-[#102F56]/95 backdrop-blur-md px-4 py-2.5 md:px-5 md:py-2.5 rounded shadow-xl border border-white/20 text-white font-bold text-xs md:text-sm uppercase tracking-wider">
