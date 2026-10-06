@@ -170,7 +170,7 @@ export default function Home() {
   return (
     <Layout>
       {/* ── HERO ─────────────────────────────────────────────────────────── */}
-      <section className="relative min-h-[85vh] lg:min-h-screen flex items-center overflow-hidden bg-[#102F56]">
+      <section className="relative min-h-[78vh] lg:min-h-[88vh] flex items-center overflow-hidden bg-[#102F56]">
         {/* Background Image Slider with Crossfade */}
         <div className="absolute inset-0 z-0">
           <AnimatePresence mode="wait">
@@ -188,9 +188,9 @@ export default function Home() {
           <div className="absolute inset-0 bg-gradient-to-r from-[#102F56]/75 via-[#102F56]/40 to-[#102F56]/50 z-10 pointer-events-none" />
         </div>
 
-        <div className="container mx-auto px-6 lg:px-12 relative z-20 pt-16 pb-12 lg:pt-20 lg:pb-0 min-h-[85vh] lg:min-h-screen flex flex-col lg:flex-row items-center lg:items-end justify-between gap-10 lg:gap-12">
+        <div className="container mx-auto px-6 lg:px-12 relative z-20 pt-16 pb-12 lg:pt-16 lg:pb-0 min-h-[78vh] lg:min-h-[88vh] flex flex-col lg:flex-row items-center lg:items-end justify-between gap-10 lg:gap-12">
           {/* Left: Elegant Floating Light Card */}
-          <div className="w-full lg:max-w-xl py-6 lg:py-16 my-auto shrink-0">
+            <div className="w-full lg:max-w-xl py-6 lg:py-12 my-auto shrink-0">
             <motion.div
               initial={{ opacity: 0, x: -30 }}
               animate={{ opacity: 1, x: 0 }}
@@ -263,7 +263,7 @@ export default function Home() {
               <img
                 src="/images/A.B%20Alagiri%20Rajan.png"
                 alt="A.B. Alagiri Rajan - Managing Director"
-                className="h-[400px] sm:h-[480px] md:h-[540px] lg:h-[620px] xl:h-[700px] w-auto object-contain object-bottom drop-shadow-[0_25px_35px_rgba(0,0,0,0.65)]"
+                className="h-[360px] sm:h-[430px] md:h-[490px] lg:h-[540px] xl:h-[600px] w-auto object-contain object-bottom drop-shadow-[0_25px_35px_rgba(0,0,0,0.65)]"
               />
               {/* Static Name Badge Tag below his image */}
               <div className="-mt-4 md:-mt-5 relative z-30 inline-flex items-center gap-2.5 bg-[#102F56]/95 backdrop-blur-md px-4 py-2.5 md:px-5 md:py-2.5 rounded shadow-xl border border-white/20 text-white font-bold text-xs md:text-sm uppercase tracking-wider">
