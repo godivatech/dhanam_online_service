@@ -19,7 +19,7 @@ export default defineConfig({
   },
   server: {
     port: 3001,
-    strictPort: true,
+    strictPort: false,
     host: "0.0.0.0",
   },
 });

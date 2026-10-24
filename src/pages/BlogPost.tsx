@@ -74,6 +74,112 @@ Form 15 EC is issued when transactions are found on the property during the requ
 
 ECs can be applied for at the Sub-Registrar office where the property is registered, or online through the TNREGINET portal for recently digitised records. You need to specify the survey number, extent, and time period. A.B. Dhanam handles EC applications on clients' behalf as part of every property registration service.`,
   },
+  "special-marriage-act-registration": {
+    title: "Special Marriage Act Registration in Tamil Nadu: A Step-by-Step Guide",
+    category: "Marriage Registration",
+    date: "2 February 2024",
+    readTime: "9 min read",
+    content: `The Special Marriage Act, 1954 provides a secular framework allowing individuals of different religions, castes, or nationalities to solemnise and register their marriage legally in Tamil Nadu.
+
+**Notice of Intended Marriage**
+
+Both parties must submit a formal notice of intended marriage (Form II) to the Marriage Officer in the district where at least one party has resided for at least 30 days prior to the application.
+
+**The Mandatory 30-Day Notice Period**
+
+Once submitted, the notice is published on the notice board of the Marriage Officer's office for 30 consecutive days. During this window, anyone with a legal objection (such as an existing marriage or lack of age capacity) may submit an objection.
+
+**Witness Requirements**
+
+On the day of solemnisation, bride and groom must appear in person alongside three adult witnesses with valid government photo identification and residential proofs.
+
+**Documentation Checklist**
+
+Documents required include birth proof (Passport or 10th Certificate), residence proof (Aadhaar or Voter ID), four individual passport-size photos each, and signed declarations of marital status. A.B. Dhanam ensures all filings are error-free to prevent delays.`,
+  },
+  "charitable-trust-registration-benefits": {
+    title: "Registering a Charitable Trust in Tamil Nadu: Benefits, Process & Requirements",
+    category: "Trust Registration",
+    date: "5 December 2023",
+    readTime: "11 min read",
+    content: `Registering a public charitable trust under the Indian Trusts Act, 1882 in Tamil Nadu unlocks critical statutory exemptions, tax reliefs, and public credibility for philanthropic missions.
+
+**Essential Elements of a Valid Trust Deed**
+
+The Trust Deed must clearly articulate the author (settlor), the trustees, the beneficiaries (general public), and the defined charitable objectives — such as education, medical relief, poverty relief, or environmental advancement.
+
+**Statutory Stamp Duty & Registration**
+
+The deed must be executed on judicial stamp paper of the appropriate denomination and registered in the jurisdiction of the Sub-Registrar office where the trust's registered office is situated.
+
+**Tax Exemptions: Section 12A and 80G**
+
+Following Sub-Registrar registration, the trust can apply for 12A exemption (exempting the trust's surplus income applied to charitable objects) and 80G certification (providing 50% tax deductions to donors), which makes the organization attractive to CSR funds.`,
+  },
+  "society-registration-vs-trust": {
+    title: "Society Registration vs Trust Registration: Which Is Right for Your Organisation?",
+    category: "Society Registration",
+    date: "20 November 2023",
+    readTime: "8 min read",
+    content: `Choosing between a registered Society and a charitable Trust is one of the foundational decisions facing non-profit founders and welfare associations in Tamil Nadu.
+
+**Governance Model Comparison**
+
+A Society is democratically governed by its general body members who elect a managing committee periodically under the Tamil Nadu Societies Registration Act, 1975 (minimum 7 members). In contrast, a Trust is managed by appointed trustees under the Trust Deed without mandatory public elections.
+
+**Membership & Flexibility**
+
+Societies are best suited for resident welfare associations, cultural clubs, trade groups, and sporting academies where ongoing member participation is central. Trusts are ideal for family-funded foundations, schools, and hospitals where founders desire continuous long-term stability without electoral friction.`,
+  },
+  "stamp-duty-registration-charges-2024": {
+    title: "Stamp Duty and Registration Charges in Tamil Nadu: Complete 2024 Breakdown",
+    category: "Legal Updates",
+    date: "8 November 2023",
+    readTime: "10 min read",
+    content: `Navigating property acquisition in Tamil Nadu requires an exact understanding of statutory stamp duty and registration fee calculations.
+
+**Standard Rate Structure**
+
+For sale deeds of immovable property, stamp duty is 7% calculated against the higher of the property's official Guideline Value or market consideration value. Registration fees are an additional 4%, bringing the baseline statutory government fee to 11%.
+
+**Concessions and Exemptions**
+
+Certain relief provisions exist, including stamp duty concessions for women buyers in specific categories, as well as distinct lower fee slabs for settlement deeds executed strictly between immediate family members (parents, spouses, children).
+
+**Avoiding Deficiency Penalties**
+
+Under-declaring guideline value or misclassifying survey boundaries can trigger document impoundment under Section 47A of the Indian Stamp Act, leading to heavy interest penalties. A.B. Dhanam conducts pre-calculation scrutiny to ensure exact compliance.`,
+  },
+  "sale-deed-vs-agreement-to-sell": {
+    title: "Sale Deed vs Agreement to Sell: Understanding the Critical Difference",
+    category: "Property Registration",
+    date: "25 October 2023",
+    readTime: "6 min read",
+    content: `One of the most dangerous misconceptions in real estate is treating an 'Agreement to Sell' as an actual transfer of title.
+
+**Legal Distinctions**
+
+An Agreement to Sell is merely an executory contract outlining future terms of conveyance upon fulfillment of conditions (e.g., loan clearance or final payment). It confers no proprietary title or ownership rights in the immovable property.
+
+**The Power of the Registered Sale Deed**
+
+Only a duly registered Sale Deed, executed before the Sub-Registrar and stamped under the Indian Registration Act, 1908, legally transfers title, ownership, and risk from seller to buyer. Until this registration happens, the seller remains the legal owner in the eyes of the law.`,
+  },
+  "certified-copy-when-do-you-need": {
+    title: "Certified Copies of Registered Documents: When You Need Them and How to Get Them",
+    category: "Documentation Tips",
+    date: "10 October 2023",
+    readTime: "5 min read",
+    content: `When original property title deeds, settlement deeds, or marriage records are misplaced, damaged, or pledged with a mortgage lender, a Certified Copy serves as the official legal equivalent.
+
+**Legal Evidentiary Value**
+
+Under Section 65 of the Indian Evidence Act, a certified copy issued by the Sub-Registrar's office constitutes secondary evidence legally admissible before civil courts, revenue offices, and banks.
+
+**How Retrieval Works**
+
+Applications require document registration number, year of execution, executing party names, and the relevant Sub-Registrar jurisdiction. A.B. Dhanam manages both physical record searches and TNREGINET computerized extractions for documents dating back multiple decades.`,
+  },
 };
 
 export default function BlogPost() {

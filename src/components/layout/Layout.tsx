@@ -123,19 +123,48 @@ export function Header() {
 
   return (
     <header className="sticky top-0 z-50 w-full bg-[#FAFBFC]/95 backdrop-blur-md border-b border-[#DCE3EA] shadow-[0_1px_3px_rgba(16,47,86,0.04)] transition-all duration-300">
-      <div className="container mx-auto px-4 lg:px-8 h-32 md:h-36 flex items-center justify-between">
-        {/* Official Logo Only */}
-        <Link href="/" className="group flex items-center py-1" data-testid="link-home-logo" aria-label="AB DHANAM GROUP">
+      {/* ── GROUP AFFILIATION TOP BAR ── */}
+      <div className="bg-[#102F56] text-white text-xs py-2 px-4 border-b border-[#E5A019]/30">
+        <div className="container mx-auto flex items-center justify-between">
+          <div className="flex items-center gap-2">
+            <Link href="/" className="hover:text-[#E5A019] transition-colors flex items-center gap-1 font-bold">
+              <span>&larr; AB DHANAM GROUP Portal (Est. 1955)</span>
+            </Link>
+            <span className="text-white/30 hidden sm:inline">|</span>
+            <span className="text-[#DCE3EA] hidden sm:inline">Legal & Registration Division</span>
+          </div>
+          <div className="flex items-center gap-4">
+            <Link
+              href="/radio-and-lightings"
+              className="text-[#E5A019] hover:underline font-bold flex items-center gap-1 text-xs"
+            >
+              <span>Sound & Stage Lights Division &rarr;</span>
+            </Link>
+          </div>
+        </div>
+      </div>
+
+      <div className="container mx-auto px-4 lg:px-8 h-28 md:h-32 flex items-center justify-between">
+        {/* Official Logo with Division Subtitle */}
+        <Link href="/legal" className="group flex items-center gap-3 py-1" data-testid="link-home-logo" aria-label="A.B. Dhanam Online Services">
           <img
             src="/images/Logo-2.png"
             alt="AB DHANAM GROUP"
-            className="w-28 h-28 md:w-36 md:h-36 object-contain group-hover:scale-105 transition-transform duration-200"
+            className="w-20 h-20 md:w-24 md:h-24 object-contain group-hover:scale-105 transition-transform duration-200"
           />
+          <div>
+            <span className="font-serif text-lg md:text-xl font-black text-[#102F56] leading-tight block">
+              A.B. DHANAM
+            </span>
+            <span className="text-[11px] md:text-xs font-bold text-[#E5A019] uppercase tracking-wider block">
+              Online Legal Services
+            </span>
+          </div>
         </Link>
 
         {/* Desktop Navigation */}
-        <nav className="hidden lg:flex items-center gap-8">
-          <Link href="/" className="text-base font-semibold tracking-wide text-[#334155] hover:text-[#102F56] relative py-2 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-[#E5A019] after:transition-all hover:after:w-full transition-colors">Home</Link>
+        <nav className="hidden lg:flex items-center gap-7">
+          <Link href="/legal" className="text-base font-semibold tracking-wide text-[#334155] hover:text-[#102F56] relative py-2 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-[#E5A019] after:transition-all hover:after:w-full transition-colors">Home</Link>
           <Link href="/about" className="text-base font-semibold tracking-wide text-[#334155] hover:text-[#102F56] relative py-2 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-[#E5A019] after:transition-all hover:after:w-full transition-colors">About Us</Link>
           
           <div 
@@ -179,6 +208,7 @@ export function Header() {
             </AnimatePresence>
           </div>
 
+          <Link href="/projects" className="text-base font-semibold tracking-wide text-[#334155] hover:text-[#102F56] relative py-2 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-[#E5A019] after:transition-all hover:after:w-full transition-colors">Projects</Link>
           <Link href="/contact" className="text-base font-semibold tracking-wide text-[#334155] hover:text-[#102F56] relative py-2 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-[#E5A019] after:transition-all hover:after:w-full transition-colors">Contact</Link>
           <LanguageSelector />
         </nav>
@@ -187,7 +217,7 @@ export function Header() {
         <div className="flex items-center gap-3">
           <Link 
             href="/book-consultation" 
-            className="hidden sm:inline-flex bg-[#123E73] text-white px-6 py-3 rounded text-sm md:text-base font-bold tracking-wide hover:bg-[#092747] shadow-sm transition-all duration-200"
+            className="hidden sm:inline-flex bg-[#123E73] text-white px-5 py-2.5 rounded text-sm md:text-base font-bold tracking-wide hover:bg-[#092747] shadow-sm transition-all duration-200"
             data-testid="link-book-consultation-header"
           >
             Book Consultation
@@ -239,7 +269,8 @@ export function Header() {
               </div>
               
               <div className="flex-1 overflow-y-auto p-6 flex flex-col gap-4">
-                <Link href="/" className="text-lg font-bold text-[#102F56] py-2 border-b border-[#DCE3EA]/60">Home</Link>
+                <Link href="/" className="text-sm font-bold text-[#E5A019] uppercase tracking-wider py-1 border-b border-[#DCE3EA]/60">&larr; AB DHANAM GROUP Portal</Link>
+                <Link href="/legal" className="text-lg font-bold text-[#102F56] py-2 border-b border-[#DCE3EA]/60">Legal Home</Link>
                 <Link href="/about" className="text-lg font-bold text-[#102F56] py-2 border-b border-[#DCE3EA]/60">About Us</Link>
                 
                 <div className="py-2 border-b border-[#DCE3EA]/60">
@@ -251,7 +282,9 @@ export function Header() {
                     ))}
                   </div>
                 </div>
-                
+
+                <Link href="/projects" className="text-lg font-bold text-[#102F56] py-2 border-b border-[#DCE3EA]/60">Projects</Link>
+                <Link href="/radio-and-lightings" className="text-base font-bold text-[#D97706] py-2 border-b border-[#DCE3EA]/60">Radio & Lightings Division &rarr;</Link>
                 <Link href="/contact" className="text-lg font-bold text-[#102F56] py-2 border-b border-[#DCE3EA]/60">Contact</Link>
                 
                 <div className="flex justify-between items-center py-3 border-b border-[#DCE3EA]/60">
@@ -293,19 +326,24 @@ export function Footer() {
                 />
               </div>
             </Link>
-            <p className="text-base md:text-lg text-[#DCE3EA] leading-relaxed mb-6 font-normal">
-              Tamil Nadu's premier registration and legal documentation consultancy. Fast, dependable, and precision-driven advisory.
+            <p className="text-base md:text-lg text-[#DCE3EA] leading-relaxed mb-4 font-normal">
+              A flagship enterprise of <strong>AB DHANAM GROUP</strong> (Est. 1955). Fast, dependable, and precision-driven registration and legal advisory.
             </p>
+            <Link href="/" className="text-[#E5A019] hover:underline font-bold text-sm block mb-4">
+              &larr; Visit AB DHANAM GROUP Master Portal
+            </Link>
             <p className="text-[#E5A019] font-serif italic text-lg md:text-xl font-medium">Fast • Reliable • Professional</p>
           </div>
           
           {/* Company Links */}
           <div>
-            <h4 className="font-bold text-base md:text-lg mb-6 uppercase tracking-[0.16em] text-white border-b border-[#DCE3EA]/25 pb-3.5">Company</h4>
-            <ul className="space-y-4 text-base md:text-lg text-[#DCE3EA] font-medium">
+            <h4 className="font-bold text-base md:text-lg mb-6 uppercase tracking-[0.16em] text-white border-b border-[#DCE3EA]/25 pb-3.5">Company & Group</h4>
+            <ul className="space-y-3.5 text-base md:text-lg text-[#DCE3EA] font-medium">
+              <li><Link href="/" className="hover:text-[#E5A019] text-[#E5A019] font-bold transition-colors flex items-center gap-2 group"><span className="w-2 h-2 rounded-full bg-[#E5A019] transition-colors"></span> AB DHANAM GROUP Hub</Link></li>
+              <li><Link href="/radio-and-lightings" className="hover:text-[#E5A019] text-amber-200 transition-colors flex items-center gap-2 group"><span className="w-2 h-2 rounded-full bg-amber-400 transition-colors"></span> Radio & Lightings (Est. 1955)</Link></li>
               <li><Link href="/about" className="hover:text-[#E5A019] transition-colors flex items-center gap-2 group"><span className="w-2 h-2 rounded-full bg-[#E5A019]/40 group-hover:bg-[#E5A019] transition-colors"></span> About Us</Link></li>
               <li><Link href="/why-choose-us" className="hover:text-[#E5A019] transition-colors flex items-center gap-2 group"><span className="w-2 h-2 rounded-full bg-[#E5A019]/40 group-hover:bg-[#E5A019] transition-colors"></span> Why Choose Us</Link></li>
-              {/* <li><Link href="/projects" className="hover:text-[#E5A019] transition-colors flex items-center gap-2 group"><span className="w-2 h-2 rounded-full bg-[#E5A019]/40 group-hover:bg-[#E5A019] transition-colors"></span> Landmark Projects</Link></li> */}
+              <li><Link href="/projects" className="hover:text-[#E5A019] transition-colors flex items-center gap-2 group"><span className="w-2 h-2 rounded-full bg-[#E5A019]/40 group-hover:bg-[#E5A019] transition-colors"></span> Landmark Projects</Link></li>
               <li><Link href="/faq" className="hover:text-[#E5A019] transition-colors flex items-center gap-2 group"><span className="w-2 h-2 rounded-full bg-[#E5A019]/40 group-hover:bg-[#E5A019] transition-colors"></span> FAQs & Answers</Link></li>
               <li><Link href="/blog" className="hover:text-[#E5A019] transition-colors flex items-center gap-2 group"><span className="w-2 h-2 rounded-full bg-[#E5A019]/40 group-hover:bg-[#E5A019] transition-colors"></span> Legal Blog</Link></li>
             </ul>

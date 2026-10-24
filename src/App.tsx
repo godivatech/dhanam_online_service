@@ -4,6 +4,8 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 
+import GroupPortal from "./pages/GroupPortal";
+import SoundAndLightings from "./pages/SoundAndLightings";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Services from "./pages/Services";
@@ -31,7 +33,18 @@ const queryClient = new QueryClient();
 function Router() {
   return (
     <Switch>
-      <Route path="/" component={Home} />
+      {/* ── MASTER GROUP LANDING PAGE (Root Domain Portal) ── */}
+      <Route path="/" component={GroupPortal} />
+
+      {/* ── ENTERPRISE 1: A.B. DHANAM ONLINE SERVICES (Legal Division) ── */}
+      <Route path="/legal" component={Home} />
+      <Route path="/online-services" component={Home} />
+
+      {/* ── ENTERPRISE 2: A.B. DHANAM RADIO & LIGHTINGS (Single-Page Site) ── */}
+      <Route path="/radio-and-lightings" component={SoundAndLightings} />
+      <Route path="/sound-and-lightings" component={SoundAndLightings} />
+
+      {/* ── LEGAL DIVISION SUBPAGES & ESSENTIAL ROUTES ── */}
       <Route path="/about" component={About} />
       <Route path="/services" component={Services} />
       

@@ -442,6 +442,13 @@ export default function Home() {
         </div>
       </section>
 
+      {/* ── INTERACTIVE REGISTRY ASSISTANT & CHECKLIST ─────────────────────── */}
+      <section className="py-24 bg-[#FAFBFC] border-b border-[#DCE3EA]">
+        <div className="container mx-auto px-6 lg:px-12">
+          <RegistryAssistant />
+        </div>
+      </section>
+
       {/* ── PROCESS TIMELINE (Main Background #FAFBFC) ────────────────────── */}
       <section className="py-28 bg-[#FAFBFC] relative overflow-hidden border-b border-[#DCE3EA]">
         <div className="container mx-auto px-6 lg:px-12">
