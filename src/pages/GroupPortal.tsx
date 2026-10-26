@@ -47,13 +47,15 @@ export default function GroupPortal() {
 
       {/* ── MAIN HEADER / BRAND BAR ── */}
       <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-[#DCE3EA] shadow-xs">
-        <div className="container mx-auto px-6 lg:px-12 py-3.5 flex items-center justify-between">
-          <Link href="/" className="flex items-center py-1 group" aria-label="AB DHANAM GROUP">
-            <img
-              src="/images/Logo-2.png"
-              alt="AB DHANAM GROUP"
-              className="h-16 sm:h-20 md:h-24 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
-            />
+        <div className="container mx-auto px-6 lg:px-12 py-2 flex items-center justify-between">
+          <Link href="/" className="flex items-center group py-0.5" aria-label="AB DHANAM GROUP">
+            <div className="h-12 sm:h-14 w-28 sm:w-32 flex items-center justify-start overflow-hidden">
+              <img
+                src="/images/Logo-2.png"
+                alt="AB DHANAM GROUP"
+                className="h-full w-full object-contain scale-[1.7] group-hover:scale-[1.8] transition-transform duration-300 origin-left"
+              />
+            </div>
           </Link>
 
           {/* Quick Division Direct Switcher Buttons */}
@@ -229,11 +231,11 @@ export default function GroupPortal() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
             {/* Column 1: Brand */}
             <div>
-              <div className="mb-6">
+              <div className="mb-6 h-16 sm:h-20 w-36 sm:w-44 flex items-center justify-start overflow-hidden">
                 <img
                   src="/images/Logo-2.png"
                   alt="AB DHANAM GROUP"
-                  className="h-20 sm:h-24 md:h-28 w-auto object-contain"
+                  className="h-full w-full object-contain scale-[1.7] origin-left"
                 />
               </div>
               <p className="text-xs sm:text-sm text-[#DCE3EA] leading-relaxed mb-3">
