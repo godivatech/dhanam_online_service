@@ -49,13 +49,11 @@ export default function GroupPortal() {
       <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-[#DCE3EA] shadow-xs">
         <div className="container mx-auto px-6 lg:px-12 py-2 flex items-center justify-between">
           <Link href="/" className="flex items-center group py-0.5" aria-label="AB DHANAM GROUP">
-            <div className="h-12 sm:h-14 w-28 sm:w-32 flex items-center justify-start overflow-hidden">
-              <img
-                src="/images/Logo-2.png"
-                alt="AB DHANAM GROUP"
-                className="h-full w-full object-contain scale-[1.7] group-hover:scale-[1.8] transition-transform duration-300 origin-left"
-              />
-            </div>
+            <img
+              src="/images/Logo-2.png"
+              alt="AB DHANAM GROUP"
+              className="w-20 h-20 md:w-24 md:h-24 object-contain group-hover:scale-105 transition-transform duration-200"
+            />
           </Link>
 
           {/* Quick Division Direct Switcher Buttons */}
@@ -231,13 +229,15 @@ export default function GroupPortal() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
             {/* Column 1: Brand */}
             <div>
-              <div className="mb-6 h-16 sm:h-20 w-36 sm:w-44 flex items-center justify-start overflow-hidden">
-                <img
-                  src="/images/Logo-2.png"
-                  alt="AB DHANAM GROUP"
-                  className="h-full w-full object-contain scale-[1.7] origin-left"
-                />
-              </div>
+              <Link href="/" className="inline-block mb-6 group" aria-label="AB DHANAM GROUP">
+                <div className="w-32 h-32 md:w-40 md:h-40 rounded-2xl bg-white p-3 shadow-md flex items-center justify-center border border-[#E5A019]/40 group-hover:border-[#E5A019] transition-all">
+                  <img
+                    src="/images/Logo-2.png"
+                    alt="AB DHANAM GROUP"
+                    className="w-full h-full object-contain"
+                  />
+                </div>
+              </Link>
               <p className="text-xs sm:text-sm text-[#DCE3EA] leading-relaxed mb-3">
                 Seven decades of distinction in Tamil Nadu. Preserving legacy through legal certainty and acoustic illumination mastery.
               </p>
