@@ -15,7 +15,6 @@ import {
   Mail,
   MapPin,
   CheckCircle2,
-  ChevronDown,
   ChevronLeft,
   ChevronRight,
   ArrowRight,
@@ -128,24 +127,6 @@ const HISTORIC_MILESTONES = [
   }
 ];
 
-const FAQS = [
-  {
-    q: "How early should we book sound and lighting services?",
-    a: "For weddings and major festival seasons (especially auspicious Muhurtham dates and Chithirai festival months), we advise booking 3 to 6 weeks in advance to reserve our prime line-array systems and generator vans. However, we also cater to urgent requirements when inventory allows."
-  },
-  {
-    q: "Do you provide generator backup along with sound and lighting?",
-    a: "Yes! A.B. Dhanam operates its own fleet of silent, CPCB-compliant mobile diesel generators (15 kVA to 250+ kVA). We can power your sound, lighting, stage LED walls, and complete venue with zero reliance on local power grid fluctuations."
-  },
-  {
-    q: "Do you take up events outside Madurai district?",
-    a: "Yes. While our headquarters is located in Madurai, our logistics vans travel across all southern and central Tamil Nadu districts including Dindigul, Theni, Virudhunagar, Sivagangai, Ramanathapuram, Tirunelveli, and Trichy."
-  },
-  {
-    q: "Can you manage indoor acoustics without feedback noise?",
-    a: "Our sound technicians use 32-channel digital consoles with real-time spectrum analyzers and acoustic feedback suppressors. We tune each microphone to the room acoustics during pre-event sound checks, guaranteeing pristine vocal clarity with zero squealing feedback."
-  }
-];
 
 interface GalleryItem {
   id: string;
@@ -209,7 +190,6 @@ const GALLERY_ITEMS: GalleryItem[] = [
 export default function SoundAndLightings() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [selectedService, setSelectedService] = useState<string>("sound");
-  const [faqOpen, setFaqOpen] = useState<number | null>(null);
 
   // Gallery Section State
   const [activeLightboxImage, setActiveLightboxImage] = useState<GalleryItem | null>(null);
@@ -318,9 +298,6 @@ Please share your availability and package quote. Thank you!`;
             </a>
             <a href="#booking" className="hover:text-[#D97706] transition-colors">
               Instant Quote
-            </a>
-            <a href="#faqs" className="hover:text-[#D97706] transition-colors">
-              FAQs
             </a>
           </nav>
 
@@ -945,55 +922,6 @@ Please share your availability and package quote. Thank you!`;
         </div>
       </section>
 
-      {/* ── FREQUENTLY ASKED QUESTIONS (Clean Light #FAFBFC) ── */}
-      <section id="faqs" className="py-24 bg-[#FAFBFC] border-t border-[#DCE3EA]">
-        <div className="container mx-auto px-6 lg:px-12 max-w-4xl">
-          <div className="text-center mb-16">
-            <span className="text-sm font-bold uppercase tracking-[0.25em] text-[#D97706] mb-3 block">
-              Clear Answers
-            </span>
-            <h2 className="font-serif text-3xl sm:text-4xl font-bold text-[#102F56]">
-              Event Planning FAQs
-            </h2>
-          </div>
-
-          <div className="space-y-4">
-            {FAQS.map((faq, idx) => {
-              const isOpen = faqOpen === idx;
-              return (
-                <div
-                  key={idx}
-                  className="bg-white rounded-xl border border-[#DCE3EA] overflow-hidden shadow-xs"
-                >
-                  <button
-                    onClick={() => setFaqOpen(isOpen ? null : idx)}
-                    className="w-full p-6 text-left flex items-center justify-between gap-4 font-bold text-[#102F56] text-base md:text-lg hover:text-[#D97706] transition-colors"
-                  >
-                    <span>{faq.q}</span>
-                    <ChevronDown
-                      className={`w-5 h-5 text-[#D97706] shrink-0 transition-transform ${isOpen ? "rotate-180" : ""
-                        }`}
-                    />
-                  </button>
-                  <AnimatePresence>
-                    {isOpen && (
-                      <motion.div
-                        initial={{ height: 0, opacity: 0 }}
-                        animate={{ height: "auto", opacity: 1 }}
-                        exit={{ height: 0, opacity: 0 }}
-                        transition={{ duration: 0.25 }}
-                        className="px-6 pb-6 text-sm text-[#334155] leading-relaxed border-t border-[#DCE3EA]/60 pt-4"
-                      >
-                        {faq.a}
-                      </motion.div>
-                    )}
-                  </AnimatePresence>
-                </div>
-              );
-            })}
-          </div>
-        </div>
-      </section>
 
       {/* ── SOUND & LIGHTINGS DEDICATED FOOTER ── */}
       <footer className="bg-[#092747] text-[#DCE3EA] pt-16 pb-12 border-t-4 border-[#D97706]">
