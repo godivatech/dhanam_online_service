@@ -48,14 +48,12 @@ export default function GroupPortal() {
       {/* ── MAIN HEADER / BRAND BAR ── */}
       <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-[#DCE3EA] shadow-xs">
         <div className="container mx-auto px-6 lg:px-12 py-3.5 flex items-center justify-between">
-          <Link href="/" className="flex items-center py-0.5 group" aria-label="AB DHANAM GROUP">
-            <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-xl bg-white p-1 border border-[#DCE3EA] group-hover:border-[#E5A019] shadow-xs transition-all flex items-center justify-center shrink-0 overflow-hidden">
-              <img
-                src="/images/Logo-trimmed.png"
-                alt="AB DHANAM GROUP Logo"
-                className="w-full h-full object-contain scale-110 group-hover:scale-120 transition-transform duration-300"
-              />
-            </div>
+          <Link href="/" className="flex items-center py-1 group" aria-label="AB DHANAM GROUP">
+            <img
+              src="/images/Logo-2.png"
+              alt="AB DHANAM GROUP"
+              className="h-16 sm:h-20 md:h-24 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
+            />
           </Link>
 
           {/* Quick Division Direct Switcher Buttons */}
@@ -231,14 +229,12 @@ export default function GroupPortal() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
             {/* Column 1: Brand */}
             <div>
-              <div className="mb-5">
-                <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-2xl bg-white p-1.5 border border-[#E5A019]/40 flex items-center justify-center shadow-lg overflow-hidden">
-                  <img
-                    src="/images/Logo-trimmed.png"
-                    alt="AB DHANAM GROUP"
-                    className="w-full h-full object-contain scale-110"
-                  />
-                </div>
+              <div className="mb-6">
+                <img
+                  src="/images/Logo-2.png"
+                  alt="AB DHANAM GROUP"
+                  className="h-20 sm:h-24 md:h-28 w-auto object-contain"
+                />
               </div>
               <p className="text-xs sm:text-sm text-[#DCE3EA] leading-relaxed mb-3">
                 Seven decades of distinction in Tamil Nadu. Preserving legacy through legal certainty and acoustic illumination mastery.
