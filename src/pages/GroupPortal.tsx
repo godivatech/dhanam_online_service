@@ -5,8 +5,6 @@ import {
   Building2,
   Volume2,
   ArrowRight,
-  Phone,
-  Mail,
   Menu,
   X
 } from "lucide-react";
@@ -16,35 +14,6 @@ export default function GroupPortal() {
 
   return (
     <div className="min-h-screen bg-[#FAFBFC] text-[#334155] font-sans selection:bg-[#E5A019]/30 selection:text-[#102F56] flex flex-col justify-between">
-      {/* ── TOP UTILITY NOTIFICATION BAR ── */}
-      <div className="bg-[#092747] text-white text-xs py-2 px-4 border-b border-[#E5A019]/30">
-        <div className="container mx-auto flex flex-col sm:flex-row items-center justify-between gap-2 text-center sm:text-left">
-          <div className="flex items-center gap-2">
-            <span className="w-2 h-2 rounded-full bg-[#E5A019] animate-pulse" />
-            <span className="font-medium text-[#DCE3EA]">
-              Official Master Portal: <strong className="text-white">AB DHANAM GROUP</strong> • Madurai Heritage Since 1955
-            </span>
-          </div>
-          <div className="flex items-center gap-4 text-[#DCE3EA]">
-            <a
-              href="tel:+919876543210"
-              className="hover:text-[#E5A019] transition-colors flex items-center gap-1"
-            >
-              <Phone className="w-3.5 h-3.5 text-[#E5A019]" />
-              <span>+91 98765 43210</span>
-            </a>
-            <span className="opacity-40">|</span>
-            <a
-              href="mailto:contact@abdhanam.com"
-              className="hover:text-[#E5A019] transition-colors hidden md:flex items-center gap-1"
-            >
-              <Mail className="w-3.5 h-3.5 text-[#E5A019]" />
-              <span>contact@abdhanam.com</span>
-            </a>
-          </div>
-        </div>
-      </div>
-
       {/* ── MAIN HEADER / BRAND BAR ── */}
       <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-[#DCE3EA] shadow-xs">
         <div className="container mx-auto px-6 lg:px-12 py-2 flex items-center justify-between">
@@ -52,7 +21,7 @@ export default function GroupPortal() {
             <img
               src="/images/Logo-2.png"
               alt="AB DHANAM GROUP"
-              className="w-20 h-20 md:w-24 md:h-24 object-contain group-hover:scale-105 transition-transform duration-200"
+              className="w-28 h-28 sm:w-32 sm:h-32 md:w-36 md:h-36 object-contain group-hover:scale-105 transition-transform duration-200"
             />
           </Link>
 
@@ -136,11 +105,7 @@ export default function GroupPortal() {
               <span>AB DHANAM GROUP • ESTD. 1955</span>
             </div>
 
-            <p className="text-sm sm:text-base text-[#DCE3EA] leading-relaxed mb-4 max-w-3xl">
-              Serving Tamil Nadu since 1955 — bridging Madurai&apos;s pioneer sound, stage &amp; lighting engineering with premier government-approved legal consultancy.
-            </p>
-
-            <div className="flex flex-col sm:flex-row sm:items-baseline justify-between gap-2 pt-3 border-t border-white/10">
+            <div className="flex flex-col sm:flex-row sm:items-baseline justify-between gap-2">
               <h1 className="font-serif text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight text-white">
                 Choose Your Destination
               </h1>
