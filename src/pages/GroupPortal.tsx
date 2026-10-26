@@ -5,7 +5,6 @@ import {
   Building2,
   Volume2,
   ArrowRight,
-  CheckCircle2,
   Phone,
   Mail,
   Menu,
@@ -49,21 +48,13 @@ export default function GroupPortal() {
       {/* ── MAIN HEADER / BRAND BAR ── */}
       <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-[#DCE3EA] shadow-xs">
         <div className="container mx-auto px-6 lg:px-12 py-3.5 flex items-center justify-between">
-          <Link href="/" className="flex items-center gap-3.5 group">
-            <div className="w-12 h-12 rounded-xl bg-white p-1 border border-[#DCE3EA] group-hover:border-[#E5A019] shadow-xs transition-all flex items-center justify-center shrink-0">
+          <Link href="/" className="flex items-center py-0.5 group" aria-label="AB DHANAM GROUP">
+            <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-2xl bg-white p-2 border border-[#DCE3EA] group-hover:border-[#E5A019] shadow-xs transition-all flex items-center justify-center shrink-0">
               <img
                 src="/images/Logo-2.png"
                 alt="AB DHANAM GROUP Logo"
-                className="w-full h-full object-contain"
+                className="w-full h-full object-contain group-hover:scale-105 transition-transform"
               />
-            </div>
-            <div>
-              <span className="font-serif text-lg md:text-xl font-bold tracking-tight text-[#102F56] block leading-tight group-hover:text-[#123E73] transition-colors">
-                AB DHANAM GROUP
-              </span>
-              <span className="text-[11px] font-bold uppercase tracking-[0.16em] text-[#E5A019] block">
-                Madurai • Tamil Nadu • Estd. 1955
-              </span>
             </div>
           </Link>
 
@@ -171,58 +162,25 @@ export default function GroupPortal() {
               className="bg-white rounded-2xl sm:rounded-3xl overflow-hidden shadow-2xl flex flex-col justify-between hover:-translate-y-1 transition-all duration-300"
             >
               {/* Dark Navy Top Header Block */}
-              <div className="bg-[#0B2545] p-6 sm:p-8 text-white">
-                <span className="inline-block px-3 py-1 rounded-full bg-white/10 border border-white/20 text-white text-[11px] font-bold uppercase tracking-wider mb-4">
-                  LEGAL & DOCUMENTATION
+              <div className="bg-[#0B2545] p-5 sm:p-6 text-white">
+                <span className="inline-block px-3 py-0.5 rounded-full bg-white/10 border border-white/20 text-white text-[11px] font-bold uppercase tracking-wider mb-2">
+                  LEGAL & REGISTRATION
                 </span>
-                <p className="text-[#E5A019] text-xs font-bold uppercase tracking-wider mb-1.5">
-                  EXPANDED & DIGITALIZED 2015
-                </p>
-                <h2 className="text-2xl sm:text-3xl font-bold text-white tracking-tight">
+                <h2 className="text-xl sm:text-2xl font-bold text-white tracking-tight">
                   A.B. Dhanam Online Services
                 </h2>
               </div>
 
               {/* White Content Body */}
-              <div className="p-6 sm:p-8 flex flex-col justify-between flex-1 space-y-6">
-                <div>
-                  <p className="text-sm font-bold text-[#102F56] leading-snug mb-3">
-                    Government Approved Registration Consultancy in Madurai & Tamil Nadu
-                  </p>
-                  <p className="text-xs sm:text-sm text-[#475569] leading-relaxed">
-                    Comprehensive legal documentation, property sale deeds, trust formation, society registrations, marriage certificates, and Sub-Registrar liaison with 100% error-free precision.
-                  </p>
-                </div>
-
-                {/* Key Capabilities Box */}
-                <div className="bg-[#F1F5F9] border border-[#DCE3EA] rounded-xl sm:rounded-2xl p-5 space-y-3">
-                  <div className="text-[11px] font-bold uppercase tracking-wider text-slate-500">
-                    KEY CAPABILITIES:
-                  </div>
-                  <div className="space-y-2.5">
-                    <div className="flex items-start gap-2.5 text-xs sm:text-sm text-[#334155]">
-                      <CheckCircle2 className="w-4 h-4 text-[#D97706] mt-0.5 shrink-0" />
-                      <span>Property Registration & Title Verification</span>
-                    </div>
-                    <div className="flex items-start gap-2.5 text-xs sm:text-sm text-[#334155]">
-                      <CheckCircle2 className="w-4 h-4 text-[#D97706] mt-0.5 shrink-0" />
-                      <span>Marriage, Trust & Society Registration</span>
-                    </div>
-                    <div className="flex items-start gap-2.5 text-xs sm:text-sm text-[#334155]">
-                      <CheckCircle2 className="w-4 h-4 text-[#D97706] mt-0.5 shrink-0" />
-                      <span>Encumbrance Certificate & Certified Copies</span>
-                    </div>
-                    <div className="flex items-start gap-2.5 text-xs sm:text-sm text-[#334155]">
-                      <CheckCircle2 className="w-4 h-4 text-[#D97706] mt-0.5 shrink-0" />
-                      <span>5,000+ Satisfied Clients Across Tamil Nadu</span>
-                    </div>
-                  </div>
-                </div>
+              <div className="p-5 sm:p-6 flex flex-col justify-between flex-1 gap-5">
+                <p className="text-xs sm:text-sm text-[#475569] leading-relaxed">
+                  Government-approved registration consultancy, property legal documentation, trust formation, society registrations, and Sub-Registrar liaison across Tamil Nadu.
+                </p>
 
                 {/* CTA Button */}
                 <Link
                   href="/legal"
-                  className="w-full py-4 rounded-xl bg-[#0B2545] hover:bg-[#07192F] text-white font-bold text-xs sm:text-sm uppercase tracking-wider transition-all shadow-md flex items-center justify-center gap-2 group"
+                  className="w-full py-3.5 rounded-xl bg-[#0B2545] hover:bg-[#07192F] text-white font-bold text-xs sm:text-sm uppercase tracking-wider transition-all shadow-md flex items-center justify-center gap-2 group"
                 >
                   <span>EXPLORE LEGAL WEBSITE</span>
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
@@ -238,58 +196,25 @@ export default function GroupPortal() {
               className="bg-white rounded-2xl sm:rounded-3xl overflow-hidden shadow-2xl flex flex-col justify-between hover:-translate-y-1 transition-all duration-300"
             >
               {/* Dark Navy Top Header Block */}
-              <div className="bg-[#0B2545] p-6 sm:p-8 text-white">
-                <span className="inline-block px-3 py-1 rounded-full bg-white/10 border border-white/20 text-white text-[11px] font-bold uppercase tracking-wider mb-4">
+              <div className="bg-[#0B2545] p-5 sm:p-6 text-white">
+                <span className="inline-block px-3 py-0.5 rounded-full bg-white/10 border border-white/20 text-white text-[11px] font-bold uppercase tracking-wider mb-2">
                   SOUND, LIGHTS & EVENTS
                 </span>
-                <p className="text-[#E5A019] text-xs font-bold uppercase tracking-wider mb-1.5">
-                  FOUNDED IN 1955 BY M. ALAGIRISAMY
-                </p>
-                <h2 className="text-2xl sm:text-3xl font-bold text-white tracking-tight">
+                <h2 className="text-xl sm:text-2xl font-bold text-white tracking-tight">
                   A.B Dhanam Radio & Lightings
                 </h2>
               </div>
 
               {/* White Content Body */}
-              <div className="p-6 sm:p-8 flex flex-col justify-between flex-1 space-y-6">
-                <div>
-                  <p className="text-sm font-bold text-[#102F56] leading-snug mb-3">
-                    Madurai's First & Pioneer Sound & Lighting Service Company
-                  </p>
-                  <p className="text-xs sm:text-sm text-[#475569] leading-relaxed">
-                    Legendary acoustic systems, concert-grade sound services, grand stage and festival illuminations, high-capacity silent generators, and DJ event management. Proudly serving iconic Tamil Nadu events since 1955.
-                  </p>
-                </div>
-
-                {/* Key Capabilities Box */}
-                <div className="bg-[#F1F5F9] border border-[#DCE3EA] rounded-xl sm:rounded-2xl p-5 space-y-3">
-                  <div className="text-[11px] font-bold uppercase tracking-wider text-slate-500">
-                    KEY CAPABILITIES:
-                  </div>
-                  <div className="space-y-2.5">
-                    <div className="flex items-start gap-2.5 text-xs sm:text-sm text-[#334155]">
-                      <CheckCircle2 className="w-4 h-4 text-[#D97706] mt-0.5 shrink-0" />
-                      <span>Madurai's 1st Radio & Lighting Service Company</span>
-                    </div>
-                    <div className="flex items-start gap-2.5 text-xs sm:text-sm text-[#334155]">
-                      <CheckCircle2 className="w-4 h-4 text-[#D97706] mt-0.5 shrink-0" />
-                      <span>Pasumpon Muthuramalingam Thevar 1st Anniversary Audio & Lighting</span>
-                    </div>
-                    <div className="flex items-start gap-2.5 text-xs sm:text-sm text-[#334155]">
-                      <CheckCircle2 className="w-4 h-4 text-[#D97706] mt-0.5 shrink-0" />
-                      <span>Concert Line Arrays, DJ & Stage Illumination</span>
-                    </div>
-                    <div className="flex items-start gap-2.5 text-xs sm:text-sm text-[#334155]">
-                      <CheckCircle2 className="w-4 h-4 text-[#D97706] mt-0.5 shrink-0" />
-                      <span>Mobile Silent Generators (15 kVA – 250 kVA)</span>
-                    </div>
-                  </div>
-                </div>
+              <div className="p-5 sm:p-6 flex flex-col justify-between flex-1 gap-5">
+                <p className="text-xs sm:text-sm text-[#475569] leading-relaxed">
+                  Madurai&apos;s pioneer concert line arrays, stage and festival illumination, silent generator fleets, and grand event production since 1955.
+                </p>
 
                 {/* CTA Button */}
                 <Link
                   href="/radio-and-lightings"
-                  className="w-full py-4 rounded-xl bg-[#D97706] hover:bg-[#b45309] text-white font-bold text-xs sm:text-sm uppercase tracking-wider transition-all shadow-md flex items-center justify-center gap-2 group"
+                  className="w-full py-3.5 rounded-xl bg-[#D97706] hover:bg-[#b45309] text-white font-bold text-xs sm:text-sm uppercase tracking-wider transition-all shadow-md flex items-center justify-center gap-2 group"
                 >
                   <span>EXPLORE SOUND & LIGHTINGS</span>
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
@@ -306,21 +231,13 @@ export default function GroupPortal() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
             {/* Column 1: Brand */}
             <div>
-              <div className="flex items-center gap-3 mb-4">
-                <div className="w-14 h-14 rounded-xl bg-white p-1 border border-[#E5A019]/40 flex items-center justify-center shrink-0">
+              <div className="mb-5">
+                <div className="w-20 h-20 sm:w-24 sm:h-24 rounded-2xl bg-white p-2 border border-[#E5A019]/40 flex items-center justify-center shadow-lg">
                   <img
                     src="/images/Logo-2.png"
                     alt="AB DHANAM GROUP"
                     className="w-full h-full object-contain"
                   />
-                </div>
-                <div>
-                  <h3 className="font-serif text-base font-bold text-white leading-tight">
-                    AB DHANAM GROUP
-                  </h3>
-                  <p className="text-xs text-[#E5A019] font-bold uppercase tracking-widest">
-                    Est. 1955 • Madurai
-                  </p>
                 </div>
               </div>
               <p className="text-xs sm:text-sm text-[#DCE3EA] leading-relaxed mb-3">
