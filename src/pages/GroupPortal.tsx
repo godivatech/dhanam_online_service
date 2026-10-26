@@ -141,17 +141,24 @@ export default function GroupPortal() {
         <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[600px] h-[400px] bg-[#E5A019]/10 rounded-full blur-[140px] pointer-events-none" />
 
         <div className="container mx-auto px-6 lg:px-12 relative z-10">
-          {/* Clean, Minimal Gateway Heading */}
-          <div className="text-center max-w-xl mx-auto mb-8 md:mb-10">
-            <span className="inline-block px-3 py-1 rounded-full bg-white/10 border border-[#E5A019]/40 text-[#E5A019] text-[11px] font-bold uppercase tracking-[0.2em] mb-3">
-              ESTD. 1955 • MADURAI
-            </span>
-            <h1 className="font-serif text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight text-white mb-2">
-              Select Your Destination
-            </h1>
-            <p className="text-[#DCE3EA] text-xs sm:text-sm">
-              Official Group Portal • Choose an enterprise to enter the dedicated website
+          {/* ── HERO OVERVIEW & DESTINATION SELECTOR (LEFT-ALIGNED) ── */}
+          <div className="max-w-5xl mx-auto mb-8 md:mb-10 text-left">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 border border-[#E5A019]/40 text-[#E5A019] text-[11px] font-bold uppercase tracking-[0.2em] mb-3">
+              <span>AB DHANAM GROUP • ESTD. 1955</span>
+            </div>
+
+            <p className="text-sm sm:text-base text-[#DCE3EA] leading-relaxed mb-4 max-w-3xl">
+              Serving Tamil Nadu since 1955 — bridging Madurai&apos;s pioneer sound, stage &amp; lighting engineering with premier government-approved legal consultancy.
             </p>
+
+            <div className="flex flex-col sm:flex-row sm:items-baseline justify-between gap-2 pt-3 border-t border-white/10">
+              <h1 className="font-serif text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight text-white">
+                Choose Your Destination
+              </h1>
+              <p className="text-xs sm:text-sm text-[#E5A019] font-medium">
+                Select an enterprise below to visit the official website &rarr;
+              </p>
+            </div>
           </div>
 
           {/* ── THE TWO DESTINATION BOXES (MATCHING REFERENCE SCREENSHOT) ── */}
