@@ -363,7 +363,7 @@ export default function GroupPortal() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.1 }}
-              className="font-serif text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight leading-[1.12] mb-6"
+              className="font-serif text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight leading-[1.15] mb-5"
             >
               One Heritage. Two Pillars.<br />
               <span className="text-[#E5A019] italic font-serif">Enduring Excellence.</span>
@@ -374,7 +374,7 @@ export default function GroupPortal() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="text-[#DCE3EA] text-base sm:text-lg md:text-xl font-normal leading-relaxed mb-8 max-w-2xl"
+              className="text-[#DCE3EA] text-sm sm:text-base md:text-lg font-normal leading-relaxed mb-8 max-w-2xl"
             >
               Serving Tamil Nadu since 1955 — bridging Madurai's pioneer sound, stage & lighting engineering with premier government-approved legal consultancy.
             </motion.p>
@@ -456,26 +456,26 @@ export default function GroupPortal() {
         <div className="container mx-auto px-6 lg:px-12">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center divide-x divide-[#DCE3EA]/60">
             <div className="p-2">
-              <div className="text-3xl md:text-5xl font-black text-[#102F56] mb-1">1955</div>
-              <div className="text-xs md:text-sm font-bold uppercase tracking-wider text-[#64748B]">
+              <div className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-[#102F56] mb-1">1955</div>
+              <div className="text-xs font-bold uppercase tracking-wider text-[#64748B]">
                 Year Established
               </div>
             </div>
             <div className="p-2">
-              <div className="text-3xl md:text-5xl font-black text-[#102F56] mb-1">70+</div>
-              <div className="text-xs md:text-sm font-bold uppercase tracking-wider text-[#64748B]">
+              <div className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-[#102F56] mb-1">70+</div>
+              <div className="text-xs font-bold uppercase tracking-wider text-[#64748B]">
                 Years Madurai Legacy
               </div>
             </div>
             <div className="p-2">
-              <div className="text-3xl md:text-5xl font-black text-[#102F56] mb-1">5,000+</div>
-              <div className="text-xs md:text-sm font-bold uppercase tracking-wider text-[#64748B]">
+              <div className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-[#102F56] mb-1">5,000+</div>
+              <div className="text-xs font-bold uppercase tracking-wider text-[#64748B]">
                 Legal Clients Served
               </div>
             </div>
             <div className="p-2">
-              <div className="text-3xl md:text-5xl font-black text-[#102F56] mb-1">1st</div>
-              <div className="text-xs md:text-sm font-bold uppercase tracking-wider text-[#64748B]">
+              <div className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-[#102F56] mb-1">1st</div>
+              <div className="text-xs font-bold uppercase tracking-wider text-[#64748B]">
                 Radio & Lights Pioneer
               </div>
             </div>
@@ -484,17 +484,17 @@ export default function GroupPortal() {
       </section>
 
       {/* ── OUR TWO ENTERPRISES (GATEWAY SHOWCASE) ── */}
-      <section id="enterprises" className="py-24 md:py-32 bg-[#FAFBFC]">
+      <section id="enterprises" className="py-20 md:py-28 bg-[#FAFBFC]">
         <div className="container mx-auto px-6 lg:px-12">
-          <div className="text-center max-w-3xl mx-auto mb-16 md:mb-20">
-            <p className="text-sm font-bold uppercase tracking-[0.25em] text-[#E5A019] mb-3">
+          <div className="text-center max-w-3xl mx-auto mb-14 md:mb-16">
+            <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#E5A019] mb-2.5">
               The Flagship Divisions
             </p>
-            <div className="w-12 h-0.5 bg-[#E5A019] mx-auto mb-6" />
-            <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl font-bold text-[#102F56]">
+            <div className="w-10 h-0.5 bg-[#E5A019] mx-auto mb-5" />
+            <h2 className="font-serif text-2xl sm:text-3xl md:text-4xl font-bold text-[#102F56] tracking-tight">
               Choose Your Destination
             </h2>
-            <p className="text-[#334155] text-base md:text-lg leading-relaxed mt-4">
+            <p className="text-[#64748B] text-sm sm:text-base leading-relaxed mt-3">
               Two distinct institutions united by an uncompromising ethos of reliability, integrity, and punctuality across Tamil Nadu.
             </p>
           </div>
@@ -600,10 +600,10 @@ export default function GroupPortal() {
                 <span className="w-1.5 h-1.5 rounded-full bg-[#E5A019] animate-pulse" />
                 Seven Decades of Distinction • 1955 – 2025+
               </div>
-              <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl font-bold text-white tracking-tight">
+              <h2 className="font-serif text-2xl sm:text-3xl md:text-4xl font-bold text-white tracking-tight">
                 70 Years of Service to Tamil Nadu
               </h2>
-              <p className="text-[#DCE3EA] text-base md:text-lg leading-relaxed mt-3 max-w-2xl">
+              <p className="text-[#DCE3EA] text-sm sm:text-base leading-relaxed mt-2.5 max-w-2xl">
                 From pioneering audio broadcasting in post-independence Madurai to modern digitalized legal advisory, explore how our multi-generational legacy took shape.
               </p>
             </div>
@@ -718,13 +718,13 @@ export default function GroupPortal() {
                     className="relative bg-gradient-to-br from-[#102F56] via-[#0D2849] to-[#081F38] border border-white/15 rounded-3xl p-6 sm:p-8 md:p-12 shadow-2xl overflow-hidden"
                   >
                     {/* Big architectural watermark year */}
-                    <div className="absolute right-4 md:right-8 -bottom-6 font-serif font-extrabold text-[5rem] sm:text-[8rem] md:text-[11rem] leading-none text-white/[0.04] select-none pointer-events-none">
+                    <div className="absolute right-4 md:right-8 -bottom-4 font-serif font-extrabold text-5xl sm:text-6xl md:text-7xl leading-none text-white/[0.04] select-none pointer-events-none">
                       {current.watermark}
                     </div>
 
                     <div className="relative z-10 grid lg:grid-cols-12 gap-8 lg:gap-12 items-center">
                       {/* Left: Narrative & Credentials (8 cols) */}
-                      <div className="lg:col-span-8 space-y-6">
+                      <div className="lg:col-span-8 space-y-5">
                         {/* Meta badge strip */}
                         <div className="flex flex-wrap items-center gap-2.5">
                           <span className="px-3 py-1 rounded-full bg-[#E5A019] text-[#092747] text-xs font-bold uppercase tracking-wider">
@@ -740,12 +740,12 @@ export default function GroupPortal() {
                         </div>
 
                         {/* Title */}
-                        <h3 className="font-serif text-2xl sm:text-3xl md:text-4xl font-bold text-white leading-tight">
+                        <h3 className="font-serif text-xl sm:text-2xl md:text-3xl font-bold text-white leading-tight">
                           {current.title}
                         </h3>
 
                         {/* Story Paragraph */}
-                        <p className="text-[#DCE3EA] text-base md:text-lg leading-relaxed">
+                        <p className="text-[#DCE3EA] text-sm sm:text-base leading-relaxed">
                           {current.desc}
                         </p>
 
@@ -865,12 +865,12 @@ export default function GroupPortal() {
       {/* ── LEADERSHIP SPOTLIGHT ── */}
       <section id="leadership" className="py-24 md:py-32 bg-[#F1F5F9]">
         <div className="container mx-auto px-6 lg:px-12">
-          <div className="text-center max-w-3xl mx-auto mb-16">
-            <p className="text-sm font-bold uppercase tracking-[0.25em] text-[#E5A019] mb-3">
+          <div className="text-center max-w-3xl mx-auto mb-14 md:mb-16">
+            <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#E5A019] mb-2.5">
               Visionary Leadership
             </p>
-            <div className="w-12 h-0.5 bg-[#E5A019] mx-auto mb-6" />
-            <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl font-bold text-[#102F56]">
+            <div className="w-10 h-0.5 bg-[#E5A019] mx-auto mb-5" />
+            <h2 className="font-serif text-2xl sm:text-3xl md:text-4xl font-bold text-[#102F56] tracking-tight">
               Guided by Heritage, Driven by Purpose
             </h2>
           </div>

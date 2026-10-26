@@ -55,11 +55,11 @@ export default function Projects() {
           </div>
           <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }}>
             <p className="text-xs uppercase tracking-[0.35em] text-[#E5A019] font-semibold mb-4">Our Portfolio</p>
-            <div className="w-12 h-0.5 bg-[#E5A019] mb-8" />
-            <h1 className="font-serif text-5xl md:text-7xl font-bold leading-tight mb-6">
+            <div className="w-10 h-0.5 bg-[#E5A019] mb-6" />
+            <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl font-bold leading-tight mb-5">
               Landmark Projects<br /><span className="text-[#E5A019] italic">Across Tamil Nadu</span>
             </h1>
-            <p className="text-white/70 text-xl max-w-2xl">
+            <p className="text-white/70 text-base sm:text-lg max-w-2xl leading-relaxed">
               Ten major residential and commercial projects — each representing the gold standard of legal documentation precision.
             </p>
           </motion.div>

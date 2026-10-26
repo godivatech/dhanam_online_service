@@ -55,10 +55,10 @@ export default function About() {
           <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }}>
             <p className="text-sm uppercase tracking-[0.3em] text-[#E5A019] font-bold mb-4">Our Story</p>
             <div className="w-12 h-0.5 bg-[#E5A019] mb-8" />
-            <h1 className="font-serif text-5xl md:text-7xl font-bold leading-tight mb-6">
+            <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl font-bold leading-tight mb-5">
               Tamil Nadu's Most<br /><span className="text-[#E5A019] italic">Trusted</span> Consultancy
             </h1>
-            <p className="text-white/80 text-xl md:text-2xl max-w-2xl leading-relaxed">
+            <p className="text-white/80 text-base sm:text-lg max-w-2xl leading-relaxed">
               Nine years of excellence, 5,000+ satisfied clients, and an uncompromising commitment to precision in every document we touch.
             </p>
           </motion.div>

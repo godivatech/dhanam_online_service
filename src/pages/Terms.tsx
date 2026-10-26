@@ -27,9 +27,9 @@ export default function Terms() {
           </div>
           <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }}>
             <p className="text-sm uppercase tracking-[0.35em] text-[#E5A019] font-bold mb-4">Legal</p>
-            <div className="w-12 h-0.5 bg-[#E5A019] mb-8" />
-            <h1 className="font-serif text-5xl md:text-6xl font-bold mb-4">Terms & Conditions</h1>
-            <p className="text-white/80 text-base md:text-lg">Last updated: January 2024</p>
+            <div className="w-10 h-0.5 bg-[#E5A019] mb-6" />
+            <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl font-bold mb-3">Terms & Conditions</h1>
+            <p className="text-white/80 text-sm sm:text-base">Last updated: January 2024</p>
           </motion.div>
         </div>
       </section>

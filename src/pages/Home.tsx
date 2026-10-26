@@ -221,13 +221,13 @@ export default function Home() {
                 </motion.div>
 
                 {/* Main Headline */}
-                <motion.h1 variants={fadeUp} className="text-4xl sm:text-5xl md:text-6xl font-extrabold leading-[1.18] mb-4 tracking-tight text-[#102F56]">
+                <motion.h1 variants={fadeUp} className="text-3xl sm:text-4xl lg:text-5xl font-extrabold leading-[1.15] mb-4 tracking-tight text-[#102F56]">
                   Premier Legal & <br />
                   <span className="text-[#E5A019]">Registration Advisory</span>
                 </motion.h1>
 
                 {/* Supporting Subheadline */}
-                <motion.p variants={fadeUp} className="text-[#334155] text-base md:text-lg leading-relaxed mb-6 font-normal">
+                <motion.p variants={fadeUp} className="text-[#64748B] text-sm sm:text-base md:text-lg leading-relaxed mb-6 font-normal">
                   Fast, secure, and error-free legal documentation and registry services for property, marriage, trusts, and societies across Tamil Nadu.
                 </motion.p>
 
@@ -302,7 +302,7 @@ export default function Home() {
           >
             {STATS.map((s) => (
               <motion.div key={s.label} variants={fadeUp} className="p-4 sm:p-6 md:p-8 lg:p-10 text-center flex flex-col justify-center items-center">
-                <div className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-extrabold text-[#102F56] mb-1 sm:mb-2 tracking-tight">
+                <div className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-[#102F56] mb-1 sm:mb-2 tracking-tight">
                   <AnimatedCounter target={s.value} suffix={s.suffix} />
                 </div>
                 <div className="text-[11px] sm:text-xs md:text-sm lg:text-base uppercase tracking-wider sm:tracking-[0.16em] text-[#102F56] font-bold leading-tight">
@@ -321,10 +321,10 @@ export default function Home() {
             <motion.div initial={{ opacity: 0, x: -40 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.7 }}>
               <p className="text-sm font-bold uppercase tracking-[0.25em] text-[#E5A019] mb-3">Our Legacy</p>
               <div className="w-12 h-0.5 bg-[#E5A019] mb-6" />
-              <h2 className="font-serif text-3xl md:text-5xl font-bold text-[#102F56] leading-tight mb-6">
+              <h2 className="font-serif text-2xl sm:text-3xl md:text-4xl font-bold text-[#102F56] leading-tight mb-5">
                 Built on a Decade of Unwavering Client Trust
               </h2>
-              <p className="text-[#334155] leading-relaxed mb-6 text-lg md:text-xl font-normal">
+              <p className="text-[#334155] leading-relaxed mb-5 text-sm sm:text-base md:text-lg font-normal">
                 A.B. Dhanam Online Services was founded with a single mission: to make Tamil Nadu's complex registration landscape navigable and accessible for every citizen. Managing Director A.B. Alagiri Rajan has personally guided over 5,000 clients through property, marriage, trust, and society registrations.
               </p>
               <p className="text-[#334155] leading-relaxed mb-8 text-base md:text-lg">
@@ -369,9 +369,9 @@ export default function Home() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <p className="text-sm font-bold uppercase tracking-[0.25em] text-[#E5A019] mb-3">What We Do</p>
-            <div className="w-12 h-0.5 bg-[#E5A019] mx-auto mb-6" />
-            <h2 className="font-serif text-3xl md:text-5xl font-bold text-white">Comprehensive Registration Services</h2>
+            <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#E5A019] mb-2.5">What We Do</p>
+            <div className="w-10 h-0.5 bg-[#E5A019] mx-auto mb-5" />
+            <h2 className="font-serif text-2xl sm:text-3xl md:text-4xl font-bold text-white tracking-tight">Comprehensive Registration Services</h2>
           </motion.div>
 
           <motion.div

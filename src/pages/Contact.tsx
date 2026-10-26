@@ -67,11 +67,11 @@ export default function Contact() {
           </div>
           <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }}>
             <p className="text-sm uppercase tracking-[0.3em] text-[#E5A019] font-bold mb-4">Reach Us</p>
-            <div className="w-12 h-0.5 bg-[#E5A019] mb-8" />
-            <h1 className="font-serif text-5xl md:text-7xl font-bold leading-tight mb-6">
+            <div className="w-10 h-0.5 bg-[#E5A019] mb-6" />
+            <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl font-bold leading-tight mb-5">
               Let's Start Your<br /><span className="text-[#E5A019] italic">Conversation</span>
             </h1>
-            <p className="text-white/80 text-xl md:text-2xl max-w-2xl leading-relaxed">Reach us by phone, WhatsApp, email, or visit us in Madurai. We respond to every enquiry within one business hour.</p>
+            <p className="text-white/80 text-base sm:text-lg max-w-2xl leading-relaxed">Reach us by phone, WhatsApp, email, or visit us in Madurai. We respond to every enquiry within one business hour.</p>
           </motion.div>
         </div>
       </section>

@@ -369,7 +369,7 @@ Please share your availability and package quote. Thank you!`;
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.1 }}
-              className="font-serif text-4xl sm:text-6xl md:text-7xl font-black tracking-tight leading-[1.12] mb-6 text-white"
+              className="font-serif text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight leading-[1.15] mb-5 text-white"
             >
               Powering Celebrations.<br />
               <span className="text-[#E5A019] italic font-serif">
@@ -381,7 +381,7 @@ Please share your availability and package quote. Thank you!`;
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="text-[#DCE3EA] text-base sm:text-lg md:text-xl leading-relaxed mb-8 font-normal max-w-2xl"
+              className="text-[#DCE3EA] text-sm sm:text-base md:text-lg leading-relaxed mb-8 font-normal max-w-2xl"
             >
               Founded in 1955 by <strong>M. Alagirisamy</strong>. Legendary for powering the historic <strong>Pasumpon Muthuramalingam Thevar 1st Anniversary</strong> sound and lighting. Today providing concert-grade line arrays, computerized stage illumination, silent generators, and DJ event management across Tamil Nadu.
             </motion.p>
@@ -419,26 +419,26 @@ Please share your availability and package quote. Thank you!`;
         <div className="container mx-auto px-6 lg:px-12">
           <div className="bg-white border border-[#DCE3EA] rounded-2xl shadow-xs divide-y lg:divide-y-0 lg:divide-x divide-[#DCE3EA] grid grid-cols-2 lg:grid-cols-4 overflow-hidden">
             <div className="p-6 md:p-8 text-center flex flex-col justify-center items-center">
-              <div className="text-3xl md:text-5xl font-black text-[#102F56] mb-1 font-serif">1955</div>
-              <div className="text-xs md:text-sm font-bold uppercase tracking-wider text-[#64748B]">
+              <div className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-[#102F56] mb-1 font-serif">1955</div>
+              <div className="text-xs font-bold uppercase tracking-wider text-[#64748B]">
                 Founding Year
               </div>
             </div>
             <div className="p-6 md:p-8 text-center flex flex-col justify-center items-center">
-              <div className="text-3xl md:text-5xl font-black text-[#D97706] mb-1 font-serif">1st in Madurai</div>
-              <div className="text-xs md:text-sm font-bold uppercase tracking-wider text-[#64748B]">
+              <div className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-[#D97706] mb-1 font-serif">1st in Madurai</div>
+              <div className="text-xs font-bold uppercase tracking-wider text-[#64748B]">
                 Radio & Lighting Pioneer
               </div>
             </div>
             <div className="p-6 md:p-8 text-center flex flex-col justify-center items-center">
-              <div className="text-3xl md:text-5xl font-black text-[#102F56] mb-1 font-serif">10,000+</div>
-              <div className="text-xs md:text-sm font-bold uppercase tracking-wider text-[#64748B]">
+              <div className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-[#102F56] mb-1 font-serif">10,000+</div>
+              <div className="text-xs font-bold uppercase tracking-wider text-[#64748B]">
                 Events Powered
               </div>
             </div>
             <div className="p-6 md:p-8 text-center flex flex-col justify-center items-center">
-              <div className="text-3xl md:text-5xl font-black text-[#D97706] mb-1 font-serif">15–250 kVA</div>
-              <div className="text-xs md:text-sm font-bold uppercase tracking-wider text-[#64748B]">
+              <div className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-[#D97706] mb-1 font-serif">15–250 kVA</div>
+              <div className="text-xs font-bold uppercase tracking-wider text-[#64748B]">
                 Silent Generator Fleets
               </div>
             </div>
@@ -455,14 +455,14 @@ Please share your availability and package quote. Thank you!`;
                 <span className="inline-block px-3.5 py-1.5 rounded-full bg-[#FEF3C7] text-[#92400E] text-xs font-black uppercase tracking-widest mb-4 border border-[#FDE68A]">
                   Historic Milestone • Landmark of Tamil Nadu History
                 </span>
-                <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl font-bold text-[#102F56] mb-6 leading-tight">
+                <h2 className="font-serif text-2xl sm:text-3xl md:text-4xl font-bold text-[#102F56] mb-5 leading-tight">
                   Pasumpon Muthuramalingam Thevar <br />
                   <span className="text-[#D97706]">1st Anniversary Acoustics & Lights</span>
                 </h2>
-                <p className="text-[#334155] text-base md:text-lg leading-relaxed mb-6 font-normal">
+                <p className="text-[#334155] text-sm sm:text-base leading-relaxed mb-4 font-normal">
                   In the formative years of modern Tamil Nadu, when tens of thousands congregated to honor the revered leader <strong>Pasumpon Muthuramalingam Thevar</strong> on his 1st Anniversary, sound reinforcement and festival illumination were entrusted to <strong>M. Alagirisamy and A.B. Dhanam Radio & Lightings</strong>.
                 </p>
-                <p className="text-[#334155] text-base md:text-lg leading-relaxed mb-6 font-normal">
+                <p className="text-[#334155] text-sm sm:text-base leading-relaxed mb-5 font-normal">
                   Through cutting-edge horn arrays, high-power audio distribution, and grand floodlights across the solemn grounds, our team ensured every voice reached the massive multitude clearly — establishing a benchmark of technical reliability that has stood unbroken for over 70 years.
                 </p>
 
@@ -527,10 +527,10 @@ Please share your availability and package quote. Thank you!`;
               Concert & Event Solutions
             </span>
             <div className="w-12 h-0.5 bg-[#D97706] mx-auto mb-6" />
-            <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl font-bold text-[#102F56]">
+            <h2 className="font-serif text-2xl sm:text-3xl md:text-4xl font-bold text-[#102F56] tracking-tight">
               End-to-End Technical Production
             </h2>
-            <p className="text-[#334155] text-base md:text-lg leading-relaxed mt-4">
+            <p className="text-[#64748B] text-sm sm:text-base leading-relaxed mt-3">
               From intimate acoustic wedding receptions to grand temple Kumbabishekam and political rallies for 50,000 people.
             </p>
           </div>
@@ -591,10 +591,10 @@ Please share your availability and package quote. Thank you!`;
               World-Class Tech Stack
             </span>
             <div className="w-12 h-0.5 bg-[#D97706] mx-auto mb-6" />
-            <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl font-bold text-[#102F56]">
+            <h2 className="font-serif text-2xl sm:text-3xl md:text-4xl font-bold text-[#102F56] tracking-tight">
               Inventory & Hardware Specifications
             </h2>
-            <p className="text-[#334155] text-base md:text-lg leading-relaxed mt-4">
+            <p className="text-[#64748B] text-sm sm:text-base leading-relaxed mt-3">
               We never compromise on audio clarity, electrical stability, or visual power.
             </p>
           </div>
@@ -655,7 +655,7 @@ Please share your availability and package quote. Thank you!`;
               <span className="text-xs uppercase tracking-[0.25em] text-[#D97706] font-black mb-2 block">
                 Direct Booking Desk
               </span>
-              <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl font-bold text-[#102F56]">
+              <h2 className="font-serif text-2xl sm:text-3xl md:text-4xl font-bold text-[#102F56] tracking-tight">
                 Get an Instant Event Package Quote
               </h2>
               <p className="text-[#64748B] text-sm md:text-base mt-3 max-w-2xl mx-auto">

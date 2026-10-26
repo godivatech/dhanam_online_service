@@ -217,8 +217,8 @@ export default function BlogPost() {
           </div>
           <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }}>
             <span className="text-xs uppercase tracking-[0.3em] text-[#E5A019] font-bold bg-[#102F56] border border-[#E5A019]/40 px-3.5 py-1.5 rounded">{post.category}</span>
-            <div className="w-12 h-0.5 bg-[#E5A019] my-6" />
-            <h1 className="font-serif text-4xl sm:text-5xl md:text-6xl font-bold leading-tight mb-8">{post.title}</h1>
+            <div className="w-10 h-0.5 bg-[#E5A019] my-5" />
+            <h1 className="font-serif text-2xl sm:text-3xl md:text-4xl font-bold leading-tight mb-6">{post.title}</h1>
             <div className="flex items-center gap-6 text-sm font-medium text-white/80">
               <span className="flex items-center gap-2"><Calendar className="w-4 h-4 text-[#E5A019]" />{post.date}</span>
               <span className="flex items-center gap-2"><Clock className="w-4 h-4 text-[#E5A019]" />{post.readTime}</span>

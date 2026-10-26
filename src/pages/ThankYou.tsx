@@ -17,8 +17,8 @@ export default function ThankYou() {
             <CheckCircle className="w-10 h-10 text-[#E5A019]" />
           </div>
           <p className="text-sm uppercase tracking-[0.35em] text-[#E5A019] font-bold mb-4">Submission Received</p>
-          <h1 className="font-serif text-5xl md:text-6xl font-bold text-[#102F56] mb-6">Thank You!</h1>
-          <p className="text-[#334155] text-xl md:text-2xl leading-relaxed mb-10">
+          <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl font-bold text-[#102F56] mb-5">Thank You!</h1>
+          <p className="text-[#334155] text-base sm:text-lg leading-relaxed mb-8">
             Your enquiry has been received. A member of our team will contact you within one business hour to discuss your requirements and schedule your consultation.
           </p>
           <div className="border border-[#DCE3EA] border-l-4 border-l-[#E5A019] bg-[#F1F5F9] p-8 text-left mb-10">

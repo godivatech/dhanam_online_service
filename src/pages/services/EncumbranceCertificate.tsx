@@ -72,9 +72,9 @@ export default function EncumbranceCertificate() {
           <div className="grid lg:grid-cols-12 gap-12 items-center">
             <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} className="lg:col-span-7">
               <p className="text-sm uppercase tracking-[0.3em] text-[#E5A019] font-bold mb-4">Our Services</p>
-              <div className="w-12 h-0.5 bg-[#E5A019] mb-8" />
-              <h1 className="font-serif text-4xl sm:text-5xl md:text-6xl font-bold leading-tight mb-6">Encumbrance<br /><span className="text-[#E5A019] italic">Certificate</span></h1>
-              <p className="text-white/80 text-xl md:text-2xl max-w-2xl leading-relaxed">Obtain encumbrance certificates for any property and any time period — fast, accurate, and essential for every property transaction.</p>
+              <div className="w-10 h-0.5 bg-[#E5A019] mb-6" />
+              <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl font-bold leading-tight mb-5">Encumbrance<br /><span className="text-[#E5A019] italic">Certificate</span></h1>
+              <p className="text-white/80 text-base sm:text-lg max-w-2xl leading-relaxed">Obtain encumbrance certificates for any property and any time period — fast, accurate, and essential for every property transaction.</p>
             </motion.div>
             <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.6 }} className="lg:col-span-5">
               <div className="relative rounded-2xl overflow-hidden border border-white/15 shadow-2xl">

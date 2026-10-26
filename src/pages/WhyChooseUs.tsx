@@ -70,11 +70,11 @@ export default function WhyChooseUs() {
           </div>
           <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }}>
             <p className="text-sm uppercase tracking-[0.3em] text-[#E5A019] font-bold mb-4">The A.B. Dhanam Difference</p>
-            <div className="w-12 h-0.5 bg-[#E5A019] mb-8" />
-            <h1 className="font-serif text-5xl md:text-7xl font-bold leading-tight mb-6">
+            <div className="w-10 h-0.5 bg-[#E5A019] mb-6" />
+            <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl font-bold leading-tight mb-5">
               Seven Reasons to<br /><span className="text-[#E5A019] italic">Trust A.B. Dhanam</span>
             </h1>
-            <p className="text-white/80 text-xl md:text-2xl max-w-2xl leading-relaxed">
+            <p className="text-white/80 text-base sm:text-lg max-w-2xl leading-relaxed">
               In legal documentation, the difference between ordinary and extraordinary is everything. Here is what sets us apart.
             </p>
           </motion.div>

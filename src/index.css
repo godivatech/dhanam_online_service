@@ -55,17 +55,18 @@
   --radius-lg: 0.5rem;
   --radius-xl: 0.75rem;
 
-  /* ── Centralized Typography Scale (Enhanced Legibility System) ── */
-  --text-2xs: 0.75rem;    /* ~12.5px */
-  --text-xs: 0.875rem;    /* ~14.5px - tags, badges, kickers */
-  --text-sm: 0.96875rem;  /* ~16px - metadata, secondary body */
-  --text-base: 1.0625rem; /* ~17.5px - standard body, inputs, links */
-  --text-lg: 1.2rem;      /* ~20px - subheadings, lead intro text */
-  --text-xl: 1.375rem;    /* ~23px - card titles, highlights */
-  --text-2xl: 1.6875rem;  /* ~28px - section h3 */
-  --text-3xl: 2.1875rem;  /* ~36px - section h2 */
-  --text-4xl: 2.75rem;    /* ~45px - major section headlines */
-  --text-5xl: 3.5rem;     /* ~58px - hero h1 */
+  /* ── Centralized Typography Architecture (Modern Balanced Scale) ── */
+  --text-2xs: 0.6875rem; /* 11px - microcopy, fine print */
+  --text-xs: 0.75rem;    /* 12px - badges, overlines, kickers */
+  --text-sm: 0.875rem;   /* 14px - secondary body, form labels, metadata */
+  --text-base: 1rem;     /* 16px - standard body, inputs, links */
+  --text-lg: 1.125rem;   /* 18px - lead intro text, card subtitles */
+  --text-xl: 1.25rem;    /* 20px - card headers, sub-headings */
+  --text-2xl: 1.5rem;    /* 24px - section h3, key stat labels */
+  --text-3xl: 1.875rem;  /* 30px - section h2 (mobile/tablet) */
+  --text-4xl: 2.25rem;   /* 36px - section h2 (desktop), page h1 */
+  --text-5xl: 2.75rem;   /* 44px - hero main display headline */
+  --text-6xl: 3.25rem;   /* 52px - maximum display limit */
 }
 
 :root {
@@ -135,16 +136,11 @@
     border-color: #DCE3EA;
   }
   html {
-    font-size: 16.5px;
+    font-size: 16px;
     font-family: var(--font-sans);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
-  }
-  @media (min-width: 768px) {
-    html {
-      font-size: 17px;
-    }
   }
   body {
     background-color: #FAFBFC;
@@ -152,22 +148,21 @@
     font-family: var(--font-sans);
     font-size: var(--text-base);
     font-weight: 400;
-    line-height: 1.7;
-    letter-spacing: 0.01em;
+    line-height: 1.6;
   }
   p {
     font-size: var(--text-base);
-    line-height: 1.7;
+    line-height: 1.6;
   }
   h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-sans);
     color: #102F56;
-    letter-spacing: -0.025em;
+    letter-spacing: -0.02em;
     font-weight: 700;
     line-height: 1.25;
   }
   h1 {
-    letter-spacing: -0.03em;
+    letter-spacing: -0.025em;
     font-weight: 800;
   }
   button, input, select, textarea {
