@@ -754,140 +754,50 @@ Please share your availability and package quote. Thank you!`;
           </div>
 
           {/* Gallery Showcase Content */}
-          <div className="max-w-5xl mx-auto space-y-8">
+          <div className="max-w-5xl mx-auto">
             {filteredGalleryItems.length > 0 ? (
-              filteredGalleryItems.map((item) => (
-                <motion.div
-                  key={item.id}
-                  layout
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5 }}
-                  className="bg-white rounded-3xl border border-[#DCE3EA] shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 flex flex-col"
-                >
-                  {/* Image Container with Aspect Ratio and Lightbox Trigger */}
-                  <div
+              <div className="grid grid-cols-1 gap-8">
+                {filteredGalleryItems.map((item) => (
+                  <motion.div
+                    key={item.id}
+                    layout
+                    initial={{ opacity: 0, y: 15 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.4 }}
                     onClick={() => setActiveLightboxImage(item)}
-                    className="relative group cursor-pointer bg-[#092747] overflow-hidden flex items-center justify-center p-3 sm:p-5 md:p-8"
+                    className="group relative cursor-pointer bg-white rounded-2xl sm:rounded-3xl border border-[#DCE3EA] overflow-hidden shadow-md hover:shadow-2xl transition-all duration-300"
                   >
-                    <img
-                      src={item.image}
-                      alt={item.title}
-                      className="w-full h-auto max-h-[520px] object-contain rounded-xl sm:rounded-2xl transition-transform duration-500 group-hover:scale-[1.01]"
-                    />
+                    <div className="relative w-full overflow-hidden bg-[#092747] flex items-center justify-center p-2 sm:p-4 md:p-6">
+                      <img
+                        src={item.image}
+                        alt={item.title}
+                        className="w-full h-auto max-h-[600px] object-contain rounded-xl sm:rounded-2xl transition-transform duration-500 group-hover:scale-[1.01]"
+                      />
 
-                    {/* Hover Overlay Hint */}
-                    <div className="absolute inset-0 bg-[#092747]/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-2 text-white pointer-events-none">
-                      <span className="px-5 py-2.5 rounded-xl bg-black/80 backdrop-blur-md text-xs font-bold uppercase tracking-wider flex items-center gap-2 border border-white/20 shadow-xl">
-                        <Maximize2 className="w-4 h-4 text-[#E5A019]" />
-                        Click to View Full-Size Archive Photo
-                      </span>
-                    </div>
-
-                    {/* Top-Right Badge */}
-                    <div className="absolute top-4 right-4 flex items-center gap-2 pointer-events-none">
-                      <span className="px-3.5 py-1.5 rounded-full bg-black/60 backdrop-blur-md text-[#E5A019] text-[11px] font-bold uppercase tracking-wider border border-white/10">
-                        {item.era}
-                      </span>
-                    </div>
-                  </div>
-
-                  {/* Card Details Body */}
-                  <div className="p-6 sm:p-8 md:p-10 space-y-6">
-                    <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 pb-6 border-b border-[#DCE3EA]">
-                      <div>
-                        <span className="inline-block px-3 py-1 rounded-full bg-[#FEF3C7] text-[#92400E] border border-[#FDE68A] text-xs font-bold uppercase tracking-wider mb-2">
-                          {item.categoryLabel} • Historic Landmark
+                      {/* Subtle Hover Overlay Hint */}
+                      <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-2 pointer-events-none">
+                        <span className="px-5 py-2.5 rounded-xl bg-black/80 backdrop-blur-md text-white text-xs font-bold uppercase tracking-wider flex items-center gap-2 border border-white/20 shadow-xl">
+                          <Maximize2 className="w-4 h-4 text-[#E5A019]" />
+                          Click to View Full Image
                         </span>
-                        <h3 className="font-serif text-2xl sm:text-3xl font-bold text-[#102F56]">
-                          {item.title}
-                        </h3>
-                        <p className="text-xs sm:text-sm text-[#D97706] font-semibold mt-1">
-                          {item.subtitle}
-                        </p>
                       </div>
-
-                      <button
-                        onClick={() => setActiveLightboxImage(item)}
-                        className="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-[#102F56] hover:bg-[#092747] text-white text-xs font-bold uppercase tracking-wider transition-colors shadow-xs shrink-0 self-start md:self-auto"
-                      >
-                        <Eye className="w-4 h-4 text-[#E5A019]" />
-                        <span>View Full Image</span>
-                      </button>
                     </div>
-
-                    {/* Tamil Calligraphy Spotlight Note */}
-                    {item.tamilCaption && (
-                      <div className="bg-[#FFFBEB] border border-[#FDE68A] rounded-2xl p-5 flex flex-col sm:flex-row sm:items-center gap-4">
-                        <div className="text-2xl sm:text-3xl font-bold text-[#92400E] font-serif shrink-0">
-                          "{item.tamilCaption}"
-                        </div>
-                        <div className="text-xs sm:text-sm text-[#78350F] leading-relaxed">
-                          Archival inscription documenting this historic address delivered through <strong>A.B Dhanam Radio & Lightings</strong> audio reinforcement engineered by founder <strong>M. Alagirisamy</strong>.
-                        </div>
-                      </div>
-                    )}
-
-                    <p className="text-[#334155] text-sm sm:text-base leading-relaxed">
-                      {item.description}
-                    </p>
-
-                    {/* Tags */}
-                    <div className="flex flex-wrap items-center gap-2 pt-2">
-                      <span className="text-xs font-bold uppercase tracking-wider text-[#64748B] mr-2">
-                        Archive Tags:
-                      </span>
-                      {item.tags.map((tag, idx) => (
-                        <span
-                          key={idx}
-                          className="px-3 py-1 rounded-lg bg-[#F1F5F9] text-[#334155] text-xs font-medium border border-[#E2E8F0]"
-                        >
-                          {tag}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-                </motion.div>
-              ))
+                  </motion.div>
+                ))}
+              </div>
             ) : (
               <div className="bg-white rounded-2xl border border-[#DCE3EA] p-12 text-center text-[#64748B]">
                 <p className="text-base font-bold text-[#102F56] mb-1">
                   No images in this category yet.
                 </p>
-                <p className="text-xs text-[#64748B] mb-4">
-                  We are actively curating more event photographs for this collection.
-                </p>
                 <button
                   onClick={() => setActiveGalleryFilter("all")}
-                  className="px-4 py-2 rounded-lg bg-[#D97706] text-white font-bold text-xs uppercase"
+                  className="mt-3 px-4 py-2 rounded-lg bg-[#D97706] text-white font-bold text-xs uppercase"
                 >
-                  View All Archives
+                  View All Images
                 </button>
               </div>
             )}
-
-            {/* Upcoming Photo Catalog Notice & Submissions */}
-            <div className="bg-white rounded-2xl border border-dashed border-[#D97706]/50 p-6 sm:p-8 text-center flex flex-col sm:flex-row items-center justify-between gap-6 shadow-xs">
-              <div className="text-left">
-                <span className="text-xs font-bold uppercase tracking-widest text-[#D97706] block mb-1">
-                  Digital Archive Expansion
-                </span>
-                <h4 className="font-serif text-lg sm:text-xl font-bold text-[#102F56]">
-                  More Production & Heritage Photos Being Digitized
-                </h4>
-                <p className="text-xs sm:text-sm text-[#64748B] mt-1 max-w-2xl">
-                  Additional photo albums spanning temple Kumbabishekam, grand public concerts, and generator deployments are being curated into this gallery.
-                </p>
-              </div>
-
-              <a
-                href="#booking"
-                className="px-6 py-3 rounded-xl bg-[#D97706] hover:bg-[#B45309] text-white text-xs font-bold uppercase tracking-wider transition-colors shadow-md shrink-0 flex items-center gap-2"
-              >
-                <span>Book Event Coverage</span>
-                <ArrowRight className="w-4 h-4" />
-              </a>
-            </div>
           </div>
         </div>
       </section>
@@ -1195,73 +1105,33 @@ Please share your availability and package quote. Thank you!`;
         </div>
       </footer>
 
-      {/* ── LIGHTBOX MODAL FOR FULL-SIZE ARCHIVAL VIEW ── */}
+      {/* ── LIGHTBOX MODAL FOR FULL-SIZE IMAGE VIEW ── */}
       <AnimatePresence>
         {activeLightboxImage && (
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 z-50 bg-black/90 backdrop-blur-md flex items-center justify-center p-3 sm:p-6"
+            className="fixed inset-0 z-50 bg-black/95 backdrop-blur-md flex items-center justify-center p-3 sm:p-6"
             onClick={() => setActiveLightboxImage(null)}
           >
+            <button
+              onClick={() => setActiveLightboxImage(null)}
+              className="absolute top-5 right-5 z-50 p-3 rounded-full bg-white/10 hover:bg-white/25 text-white transition-colors"
+              aria-label="Close modal"
+            >
+              <X className="w-6 h-6" />
+            </button>
+
             <div
-              className="relative max-w-5xl w-full bg-[#092747] border border-white/10 rounded-2xl overflow-hidden shadow-2xl flex flex-col max-h-[95vh]"
+              className="relative max-w-6xl w-full flex items-center justify-center p-2"
               onClick={(e) => e.stopPropagation()}
             >
-              {/* Modal Header */}
-              <div className="flex items-center justify-between px-6 py-4 border-b border-white/10 bg-[#0B2545]">
-                <div>
-                  <span className="text-xs font-bold text-[#E5A019] uppercase tracking-wider block">
-                    {activeLightboxImage.era} • {activeLightboxImage.categoryLabel}
-                  </span>
-                  <h3 className="font-serif text-base sm:text-xl font-bold text-white leading-tight mt-0.5">
-                    {activeLightboxImage.title}
-                  </h3>
-                </div>
-                <button
-                  onClick={() => setActiveLightboxImage(null)}
-                  className="p-2 rounded-lg bg-white/10 hover:bg-white/20 text-white transition-colors shrink-0 ml-4"
-                  aria-label="Close modal"
-                >
-                  <X className="w-6 h-6" />
-                </button>
-              </div>
-
-              {/* Modal Image Area */}
-              <div className="bg-black/70 flex items-center justify-center p-3 sm:p-6 overflow-auto">
-                <img
-                  src={activeLightboxImage.image}
-                  alt={activeLightboxImage.title}
-                  className="max-h-[62vh] w-auto max-w-full object-contain rounded-lg shadow-2xl"
-                />
-              </div>
-
-              {/* Modal Caption Footer */}
-              <div className="p-5 sm:p-6 bg-[#092747] border-t border-white/10 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
-                <div className="space-y-1">
-                  {activeLightboxImage.tamilCaption && (
-                    <p className="text-[#E5A019] font-serif text-lg sm:text-xl font-bold">
-                      "{activeLightboxImage.tamilCaption}"
-                    </p>
-                  )}
-                  <p className="text-xs sm:text-sm text-[#DCE3EA] leading-relaxed max-w-2xl">
-                    {activeLightboxImage.description}
-                  </p>
-                </div>
-                <div className="shrink-0 flex items-center gap-3">
-                  <span className="text-[11px] text-[#E5A019] bg-white/10 px-3 py-1.5 rounded-lg border border-white/10 hidden md:inline-block">
-                    {activeLightboxImage.aspectRatio}
-                  </span>
-                  <a
-                    href="#booking"
-                    onClick={() => setActiveLightboxImage(null)}
-                    className="px-5 py-2.5 rounded-xl bg-[#D97706] hover:bg-[#B45309] text-white font-bold text-xs uppercase tracking-wider transition-all"
-                  >
-                    Book Event
-                  </a>
-                </div>
-              </div>
+              <img
+                src={activeLightboxImage.image}
+                alt={activeLightboxImage.title}
+                className="max-h-[90vh] w-auto max-w-full object-contain rounded-xl shadow-2xl"
+              />
             </div>
           </motion.div>
         )}
