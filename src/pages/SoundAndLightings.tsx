@@ -182,27 +182,13 @@ const GALLERY_ITEMS: GalleryItem[] = [
   }
 ];
 
-const GALLERY_CATEGORIES = [
-  { id: "all", label: "All Archives & Events" },
-  { id: "historic", label: "Historic Archives" },
-  { id: "concerts", label: "Concerts & Stage" },
-  { id: "temples", label: "Temple Illumination" },
-  { id: "generators", label: "Silent Generators" }
-];
-
 export default function SoundAndLightings() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [selectedService, setSelectedService] = useState<string>("sound");
   const [faqOpen, setFaqOpen] = useState<number | null>(null);
 
   // Gallery Section State
-  const [activeGalleryFilter, setActiveGalleryFilter] = useState("all");
   const [activeLightboxImage, setActiveLightboxImage] = useState<GalleryItem | null>(null);
-
-  const filteredGalleryItems =
-    activeGalleryFilter === "all"
-      ? GALLERY_ITEMS
-      : GALLERY_ITEMS.filter((item) => item.category === activeGalleryFilter);
 
   // Quote Generator Form State
   const [eventType, setEventType] = useState("Wedding");
@@ -720,84 +706,46 @@ Please share your availability and package quote. Thank you!`;
       <section id="gallery" className="py-24 md:py-32 bg-[#FAFBFC] border-t border-[#DCE3EA]">
         <div className="container mx-auto px-6 lg:px-12">
           {/* Section Header */}
-          <div className="text-center max-w-3xl mx-auto mb-16">
-            <span className="text-sm font-bold uppercase tracking-[0.25em] text-[#D97706] mb-3 block">
-              Historic & Production Archives
+          <div className="text-center max-w-xl mx-auto mb-10 md:mb-12">
+            <span className="text-xs font-bold uppercase tracking-[0.25em] text-[#D97706] mb-2 block">
+              GALLERY
             </span>
-            <div className="w-12 h-0.5 bg-[#D97706] mx-auto mb-6" />
-            <h2 className="font-serif text-2xl sm:text-3xl md:text-4xl font-bold text-[#102F56] tracking-tight">
-              Event Production & Archive Gallery
+            <h2 className="font-serif text-2xl sm:text-3xl font-bold text-[#102F56] tracking-tight">
+              Event & Production Gallery
             </h2>
-            <p className="text-[#64748B] text-sm sm:text-base leading-relaxed mt-3">
-              Witnessing seven decades of Tamil Nadu history — from historic public addresses to premier temple illuminations and modern concert line arrays.
-            </p>
-
-            {/* Category Filter Pills */}
-            <div className="flex flex-wrap items-center justify-center gap-2 mt-8">
-              {GALLERY_CATEGORIES.map((cat) => {
-                const isActive = activeGalleryFilter === cat.id;
-                return (
-                  <button
-                    key={cat.id}
-                    onClick={() => setActiveGalleryFilter(cat.id)}
-                    className={`px-4 py-2 rounded-full text-xs font-bold transition-all border ${
-                      isActive
-                        ? "bg-[#D97706] text-white border-[#D97706] shadow-xs"
-                        : "bg-white text-[#475569] border-[#DCE3EA] hover:border-[#D97706] hover:text-[#102F56]"
-                    }`}
-                  >
-                    {cat.label}
-                  </button>
-                );
-              })}
-            </div>
           </div>
 
           {/* Gallery Showcase Content */}
           <div className="max-w-5xl mx-auto">
-            {filteredGalleryItems.length > 0 ? (
-              <div className="grid grid-cols-1 gap-8">
-                {filteredGalleryItems.map((item) => (
-                  <motion.div
-                    key={item.id}
-                    layout
-                    initial={{ opacity: 0, y: 15 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.4 }}
-                    onClick={() => setActiveLightboxImage(item)}
-                    className="group relative cursor-pointer bg-white rounded-2xl sm:rounded-3xl border border-[#DCE3EA] overflow-hidden shadow-md hover:shadow-2xl transition-all duration-300"
-                  >
-                    <div className="relative w-full overflow-hidden bg-[#092747] flex items-center justify-center p-2 sm:p-4 md:p-6">
-                      <img
-                        src={item.image}
-                        alt={item.title}
-                        className="w-full h-auto max-h-[600px] object-contain rounded-xl sm:rounded-2xl transition-transform duration-500 group-hover:scale-[1.01]"
-                      />
-
-                      {/* Subtle Hover Overlay Hint */}
-                      <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-2 pointer-events-none">
-                        <span className="px-5 py-2.5 rounded-xl bg-black/80 backdrop-blur-md text-white text-xs font-bold uppercase tracking-wider flex items-center gap-2 border border-white/20 shadow-xl">
-                          <Maximize2 className="w-4 h-4 text-[#E5A019]" />
-                          Click to View Full Image
-                        </span>
-                      </div>
-                    </div>
-                  </motion.div>
-                ))}
-              </div>
-            ) : (
-              <div className="bg-white rounded-2xl border border-[#DCE3EA] p-12 text-center text-[#64748B]">
-                <p className="text-base font-bold text-[#102F56] mb-1">
-                  No images in this category yet.
-                </p>
-                <button
-                  onClick={() => setActiveGalleryFilter("all")}
-                  className="mt-3 px-4 py-2 rounded-lg bg-[#D97706] text-white font-bold text-xs uppercase"
+            <div className={`grid gap-6 ${GALLERY_ITEMS.length === 1 ? "grid-cols-1" : "grid-cols-1 md:grid-cols-2"}`}>
+              {GALLERY_ITEMS.map((item) => (
+                <motion.div
+                  key={item.id}
+                  layout
+                  initial={{ opacity: 0, y: 15 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.4 }}
+                  onClick={() => setActiveLightboxImage(item)}
+                  className="group relative cursor-pointer bg-white rounded-2xl sm:rounded-3xl border border-[#DCE3EA] overflow-hidden shadow-md hover:shadow-2xl transition-all duration-300"
                 >
-                  View All Images
-                </button>
-              </div>
-            )}
+                  <div className="relative w-full overflow-hidden bg-[#092747] flex items-center justify-center p-2 sm:p-4 md:p-6">
+                    <img
+                      src={item.image}
+                      alt={item.title}
+                      className="w-full h-auto max-h-[600px] object-contain rounded-xl sm:rounded-2xl transition-transform duration-500 group-hover:scale-[1.01]"
+                    />
+
+                    {/* Subtle Hover Overlay Hint */}
+                    <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-2 pointer-events-none">
+                      <span className="px-5 py-2.5 rounded-xl bg-black/80 backdrop-blur-md text-white text-xs font-bold uppercase tracking-wider flex items-center gap-2 border border-white/20 shadow-xl">
+                        <Maximize2 className="w-4 h-4 text-[#E5A019]" />
+                        Click to View Full Image
+                      </span>
+                    </div>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
