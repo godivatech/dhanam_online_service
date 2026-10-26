@@ -16,6 +16,8 @@ import {
   MapPin,
   CheckCircle2,
   ChevronDown,
+  ChevronLeft,
+  ChevronRight,
   ArrowRight,
   Menu,
   X,
@@ -148,37 +150,59 @@ const FAQS = [
 interface GalleryItem {
   id: string;
   title: string;
-  subtitle: string;
-  category: "all" | "historic" | "concerts" | "temples" | "generators";
-  categoryLabel: string;
-  era: string;
   image: string;
-  description: string;
-  tamilCaption?: string;
-  aspectRatio: string;
-  tags: string[];
 }
 
 const GALLERY_ITEMS: GalleryItem[] = [
   {
-    id: "historic-anna-rally",
+    id: "gallery-1",
     title: "Historic Speech Address by Arignar Anna",
-    subtitle: "Pioneer Public Address System by A.B Dhanam Radio & Lightings",
-    category: "historic",
-    categoryLabel: "Historic Archives",
-    era: "Circa 1960s",
-    image: "/images/lighitng%20website%20gallery/1.png",
-    description:
-      "Historic archival photograph capturing revered leader Arignar Anna delivering a monumental public address. The custom microphone and horn amplification network was engineered on-site in Madurai by founder M. Alagirisamy.",
-    tamilCaption: "அழகத்தமிழ்மீது ஆணை",
-    aspectRatio: "21/9 Panoramic (1983 × 793)",
-    tags: [
-      "Archival Rarity",
-      "Arignar Anna",
-      "Public Address Archive",
-      "Founder M. Alagirisamy",
-      "Madurai Heritage"
-    ]
+    image: "/images/lighitng%20website%20gallery/1.png"
+  },
+  {
+    id: "gallery-2",
+    title: "Community Felicitation & Leadership Landmark",
+    image: "/images/lighitng%20website%20gallery/2.png"
+  },
+  {
+    id: "gallery-3",
+    title: "Acoustic Distinction & Stage Award Presentation",
+    image: "/images/lighitng%20website%20gallery/3.png"
+  },
+  {
+    id: "gallery-4",
+    title: "Public Rally Address by Vaiko",
+    image: "/images/lighitng%20website%20gallery/4.png"
+  },
+  {
+    id: "gallery-5",
+    title: "Stage Event & Acoustic Archive 05",
+    image: "/images/lighitng%20website%20gallery/5.png"
+  },
+  {
+    id: "gallery-6",
+    title: "Stage Event & Acoustic Archive 06",
+    image: "/images/lighitng%20website%20gallery/6.png"
+  },
+  {
+    id: "gallery-7",
+    title: "Stage Event & Acoustic Archive 07",
+    image: "/images/lighitng%20website%20gallery/7.png"
+  },
+  {
+    id: "gallery-8",
+    title: "Stage Event & Acoustic Archive 08",
+    image: "/images/lighitng%20website%20gallery/8.png"
+  },
+  {
+    id: "gallery-9",
+    title: "Stage Event & Acoustic Archive 09",
+    image: "/images/lighitng%20website%20gallery/9.png"
+  },
+  {
+    id: "gallery-10",
+    title: "Stage Event & Acoustic Archive 10",
+    image: "/images/lighitng%20website%20gallery/10.png"
   }
 ];
 
@@ -715,9 +739,9 @@ Please share your availability and package quote. Thank you!`;
             </h2>
           </div>
 
-          {/* Gallery Showcase Content */}
-          <div className="max-w-5xl mx-auto">
-            <div className={`grid gap-6 ${GALLERY_ITEMS.length === 1 ? "grid-cols-1" : "grid-cols-1 md:grid-cols-2"}`}>
+          {/* Gallery Showcase Content - 2-Sided Grid */}
+          <div className="max-w-6xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
               {GALLERY_ITEMS.map((item) => (
                 <motion.div
                   key={item.id}
@@ -726,13 +750,13 @@ Please share your availability and package quote. Thank you!`;
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.4 }}
                   onClick={() => setActiveLightboxImage(item)}
-                  className="group relative cursor-pointer bg-white rounded-2xl sm:rounded-3xl border border-[#DCE3EA] overflow-hidden shadow-md hover:shadow-2xl transition-all duration-300"
+                  className="group relative cursor-pointer bg-white rounded-2xl sm:rounded-3xl border border-[#DCE3EA] hover:border-[#D97706] overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300"
                 >
-                  <div className="relative w-full overflow-hidden bg-[#092747] flex items-center justify-center p-2 sm:p-4 md:p-6">
+                  <div className="relative w-full aspect-[16/9] overflow-hidden bg-[#092747] flex items-center justify-center p-2 sm:p-3">
                     <img
                       src={item.image}
                       alt={item.title}
-                      className="w-full h-auto max-h-[600px] object-contain rounded-xl sm:rounded-2xl transition-transform duration-500 group-hover:scale-[1.01]"
+                      className="w-full h-full object-contain rounded-xl sm:rounded-2xl transition-transform duration-500 group-hover:scale-[1.02]"
                     />
 
                     {/* Subtle Hover Overlay Hint */}
@@ -1055,34 +1079,76 @@ Please share your availability and package quote. Thank you!`;
 
       {/* ── LIGHTBOX MODAL FOR FULL-SIZE IMAGE VIEW ── */}
       <AnimatePresence>
-        {activeLightboxImage && (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            className="fixed inset-0 z-50 bg-black/95 backdrop-blur-md flex items-center justify-center p-3 sm:p-6"
-            onClick={() => setActiveLightboxImage(null)}
-          >
-            <button
-              onClick={() => setActiveLightboxImage(null)}
-              className="absolute top-5 right-5 z-50 p-3 rounded-full bg-white/10 hover:bg-white/25 text-white transition-colors"
-              aria-label="Close modal"
-            >
-              <X className="w-6 h-6" />
-            </button>
+        {activeLightboxImage && (() => {
+          const currentIndex = GALLERY_ITEMS.findIndex((img) => img.id === activeLightboxImage.id);
+          const hasMultiple = GALLERY_ITEMS.length > 1;
 
-            <div
-              className="relative max-w-6xl w-full flex items-center justify-center p-2"
-              onClick={(e) => e.stopPropagation()}
+          const handlePrev = (e: React.MouseEvent) => {
+            e.stopPropagation();
+            const prevIndex = (currentIndex - 1 + GALLERY_ITEMS.length) % GALLERY_ITEMS.length;
+            setActiveLightboxImage(GALLERY_ITEMS[prevIndex]);
+          };
+
+          const handleNext = (e: React.MouseEvent) => {
+            e.stopPropagation();
+            const nextIndex = (currentIndex + 1) % GALLERY_ITEMS.length;
+            setActiveLightboxImage(GALLERY_ITEMS[nextIndex]);
+          };
+
+          return (
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              className="fixed inset-0 z-50 bg-black/95 backdrop-blur-md flex items-center justify-center p-3 sm:p-6"
+              onClick={() => setActiveLightboxImage(null)}
             >
-              <img
-                src={activeLightboxImage.image}
-                alt={activeLightboxImage.title}
-                className="max-h-[90vh] w-auto max-w-full object-contain rounded-xl shadow-2xl"
-              />
-            </div>
-          </motion.div>
-        )}
+              <button
+                onClick={() => setActiveLightboxImage(null)}
+                className="absolute top-5 right-5 z-50 p-3 rounded-full bg-white/10 hover:bg-white/25 text-white transition-colors"
+                aria-label="Close modal"
+              >
+                <X className="w-6 h-6" />
+              </button>
+
+              {hasMultiple && (
+                <>
+                  <button
+                    onClick={handlePrev}
+                    className="absolute left-3 sm:left-6 top-1/2 -translate-y-1/2 z-50 p-3 sm:p-4 rounded-full bg-white/10 hover:bg-white/25 text-white transition-colors flex items-center justify-center"
+                    aria-label="Previous image"
+                  >
+                    <ChevronLeft className="w-6 h-6" />
+                  </button>
+                  <button
+                    onClick={handleNext}
+                    className="absolute right-3 sm:right-6 top-1/2 -translate-y-1/2 z-50 p-3 sm:p-4 rounded-full bg-white/10 hover:bg-white/25 text-white transition-colors flex items-center justify-center"
+                    aria-label="Next image"
+                  >
+                    <ChevronRight className="w-6 h-6" />
+                  </button>
+                </>
+              )}
+
+              <div
+                className="relative max-w-6xl w-full flex flex-col items-center justify-center p-2"
+                onClick={(e) => e.stopPropagation()}
+              >
+                <img
+                  key={activeLightboxImage.id}
+                  src={activeLightboxImage.image}
+                  alt={activeLightboxImage.title}
+                  className="max-h-[85vh] w-auto max-w-full object-contain rounded-xl shadow-2xl"
+                />
+                {hasMultiple && (
+                  <div className="mt-3 text-xs text-white/60 tracking-wider">
+                    {currentIndex + 1} / {GALLERY_ITEMS.length}
+                  </div>
+                )}
+              </div>
+            </motion.div>
+          );
+        })()}
       </AnimatePresence>
     </div>
   );
