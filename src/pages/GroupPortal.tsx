@@ -68,14 +68,14 @@ export default function GroupPortal() {
                   onClick={() => setMobileMenuOpen(false)}
                   className="w-full text-center py-3 rounded-lg bg-[#102F56] text-white font-bold text-xs uppercase tracking-wider"
                 >
-                  Enter A.B. Dhanam Online Services (Legal) &rarr;
+                  Enter AB Dhanam Online Services (Legal) &rarr;
                 </Link>
                 <Link
                   href="/radio-and-lightings"
                   onClick={() => setMobileMenuOpen(false)}
                   className="w-full text-center py-3 rounded-lg bg-[#D97706] text-white font-bold text-xs uppercase tracking-wider"
                 >
-                  Enter A.B Dhanam Radio & Lightings &rarr;
+                  Enter AB Dhanam Radio & Lightings &rarr;
                 </Link>
               </div>
             </motion.div>
@@ -117,7 +117,7 @@ export default function GroupPortal() {
 
           {/* ── THE TWO DESTINATION BOXES (MATCHING REFERENCE SCREENSHOT) ── */}
           <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-            {/* ── BOX 1: A.B. DHANAM ONLINE SERVICES (LEGAL) ── */}
+            {/* ── BOX 1: AB DHANAM ONLINE SERVICES (LEGAL) ── */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -130,7 +130,7 @@ export default function GroupPortal() {
                   LEGAL & REGISTRATION
                 </span>
                 <h2 className="text-xl sm:text-2xl font-bold text-white tracking-tight">
-                  A.B. Dhanam Online Services
+                  AB Dhanam Online Services
                 </h2>
               </div>
 
@@ -151,7 +151,7 @@ export default function GroupPortal() {
               </div>
             </motion.div>
 
-            {/* ── BOX 2: A.B. DHANAM RADIO & LIGHTINGS (SOUND & LIGHTS) ── */}
+            {/* ── BOX 2: AB DHANAM RADIO & LIGHTINGS (SOUND & LIGHTS) ── */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -164,7 +164,7 @@ export default function GroupPortal() {
                   SOUND, LIGHTS & EVENTS
                 </span>
                 <h2 className="text-xl sm:text-2xl font-bold text-white tracking-tight">
-                  A.B Dhanam Radio & Lightings
+                  AB Dhanam Radio & Lightings
                 </h2>
               </div>
 

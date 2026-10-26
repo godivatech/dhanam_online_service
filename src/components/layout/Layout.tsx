@@ -146,7 +146,7 @@ export function Header() {
 
       <div className="container mx-auto px-4 lg:px-8 h-28 md:h-32 flex items-center justify-between">
         {/* Official Logo with Division Subtitle */}
-        <Link href="/legal" className="group flex items-center gap-3 py-1" data-testid="link-home-logo" aria-label="A.B. Dhanam Online Services">
+        <Link href="/legal" className="group flex items-center gap-3 py-1" data-testid="link-home-logo" aria-label="AB Dhanam Online Services">
           <img
             src="/images/Logo-2.png"
             alt="AB DHANAM GROUP"
@@ -154,7 +154,7 @@ export function Header() {
           />
           <div>
             <span className="font-serif text-lg md:text-xl font-black text-[#102F56] leading-tight block">
-              A.B. DHANAM
+              AB DHANAM
             </span>
             <span className="text-[11px] md:text-xs font-bold text-[#E5A019] uppercase tracking-wider block">
               Online Legal Services
@@ -384,7 +384,7 @@ export function Footer() {
         {/* Footer Sub-bar */}
         <div className="pt-8 border-t border-[#DCE3EA]/20 flex flex-col md:flex-row justify-between items-center gap-6 text-sm md:text-base text-[#DCE3EA]/90 tracking-wide">
           <div className="space-y-1.5 text-center md:text-left">
-            <p>© {new Date().getFullYear()} AB DHANAM GROUP (A.B. Dhanam Online Services). All rights reserved.</p>
+            <p>© {new Date().getFullYear()} AB DHANAM GROUP (AB Dhanam Online Services). All rights reserved.</p>
             <p>
               Designed and developed by{" "}
               <a

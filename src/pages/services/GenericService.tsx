@@ -14,7 +14,7 @@ export default function GenericService({ title, description }: { title: string, 
         <div className="prose dark:prose-invert max-w-4xl">
           <h2>Professional Service You Can Trust</h2>
           <p>
-            At A.B. Dhanam Online Services, we provide end-to-end assistance for {title.toLowerCase()}. With over 9 years of experience, we ensure your documentation is precise and compliant with all local laws and regulations in Tamil Nadu.
+            At AB Dhanam Online Services, we provide end-to-end assistance for {title.toLowerCase()}. With over 9 years of experience, we ensure your documentation is precise and compliant with all local laws and regulations in Tamil Nadu.
           </p>
           <div className="mt-8">
             <Link href="/book-consultation" className="inline-flex bg-accent text-primary px-6 py-3 rounded-md font-bold hover:bg-accent/90 transition-colors no-underline">

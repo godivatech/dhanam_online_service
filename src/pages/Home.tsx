@@ -33,7 +33,7 @@ const TESTIMONIALS = [
     service: "Property Registration",
     stars: 5,
     avatar: "KS",
-    content: "We have registered over a dozen residential layouts across Tamil Nadu with A.B. Dhanam. Their speed, precision, and deep knowledge of Sub-Registrar procedures is unmatched in the industry. Zero errors across every transaction."
+    content: "We have registered over a dozen residential layouts across Tamil Nadu with AB Dhanam. Their speed, precision, and deep knowledge of Sub-Registrar procedures is unmatched in the industry. Zero errors across every transaction."
   },
   {
     name: "Meenakshi Sundaram",
@@ -41,7 +41,7 @@ const TESTIMONIALS = [
     service: "Trust Registration",
     stars: 5,
     avatar: "MS",
-    content: "Setting up our educational trust for underprivileged children felt like an impossible bureaucratic maze until we contacted A.B. Dhanam. Mr. Alagiri Rajan guided us through every step with extraordinary patience and expertise."
+    content: "Setting up our educational trust for underprivileged children felt like an impossible bureaucratic maze until we contacted AB Dhanam. Mr. Alagiri Rajan guided us through every step with extraordinary patience and expertise."
   },
   {
     name: "Rajesh Kumar",
@@ -49,7 +49,7 @@ const TESTIMONIALS = [
     service: "Property Registration",
     stars: 5,
     avatar: "RK",
-    content: "My property purchase involved three co-owners, an existing loan encumbrance, and a tight timeline. A.B. Dhanam handled every complexity with quiet authority and caught a potential legal issue that saved me lakhs."
+    content: "My property purchase involved three co-owners, an existing loan encumbrance, and a tight timeline. AB Dhanam handled every complexity with quiet authority and caught a potential legal issue that saved me lakhs."
   },
   {
     name: "Ananya Krishnamurthy",
@@ -57,7 +57,7 @@ const TESTIMONIALS = [
     service: "Marriage Registration",
     stars: 5,
     avatar: "AK",
-    content: "We needed a Special Marriage Act registration done quickly for visa purposes. The team at A.B. Dhanam prepared every document flawlessly and accompanied us to the registrar's office. Completely seamless!"
+    content: "We needed a Special Marriage Act registration done quickly for visa purposes. The team at AB Dhanam prepared every document flawlessly and accompanied us to the registrar's office. Completely seamless!"
   },
   {
     name: "V. Raghunathan",
@@ -65,7 +65,7 @@ const TESTIMONIALS = [
     service: "Society Registration",
     stars: 5,
     avatar: "VR",
-    content: "Our community welfare society had been trying to get registered for eight months before we found A.B. Dhanam. They identified exactly what was missing and had us officially registered within three weeks."
+    content: "Our community welfare society had been trying to get registered for eight months before we found AB Dhanam. They identified exactly what was missing and had us officially registered within three weeks."
   },
   {
     name: "Priya Venkatesh",
@@ -73,7 +73,7 @@ const TESTIMONIALS = [
     service: "Encumbrance Certificate",
     stars: 5,
     avatar: "PV",
-    content: "I needed encumbrance certificates for two properties spanning 20 years for a legal matter. A.B. Dhanam retrieved everything accurately and quickly. Their attention to historical documentation is impressive."
+    content: "I needed encumbrance certificates for two properties spanning 20 years for a legal matter. AB Dhanam retrieved everything accurately and quickly. Their attention to historical documentation is impressive."
   },
   {
     name: "Senthilkumar Murugan",
@@ -81,7 +81,7 @@ const TESTIMONIALS = [
     service: "Legal Documentation",
     stars: 5,
     avatar: "SM",
-    content: "The partnership deed and commercial lease agreements drafted by A.B. Dhanam were thorough, legally sound, and clearly explained to us. We felt completely confident signing. Highly recommended!"
+    content: "The partnership deed and commercial lease agreements drafted by AB Dhanam were thorough, legally sound, and clearly explained to us. We felt completely confident signing. Highly recommended!"
   },
   {
     name: "Dr. Arun Balaji",
@@ -89,7 +89,7 @@ const TESTIMONIALS = [
     service: "Trust Registration",
     stars: 5,
     avatar: "AB",
-    content: "We registered our medical charitable foundation through A.B. Dhanam and were astonished by their thoroughness. They anticipated regulatory questions before they were asked and had every document prepared in advance."
+    content: "We registered our medical charitable foundation through AB Dhanam and were astonished by their thoroughness. They anticipated regulatory questions before they were asked and had every document prepared in advance."
   },
 ];
 
@@ -252,7 +252,7 @@ export default function Home() {
             </motion.div>
           </div>
 
-          {/* Right: A.B. Alagiri Rajan Standing Image with Static Name Tag */}
+          {/* Right: AB Alagiri Rajan Standing Image with Static Name Tag */}
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
@@ -261,13 +261,13 @@ export default function Home() {
           >
             <div className="relative flex flex-col items-center">
               <img
-                src="/images/A.B%20Alagiri%20Rajan.png"
-                alt="A.B. Alagiri Rajan - Managing Director"
+                src="/images/AB%20Alagiri%20Rajan.png"
+                alt="AB Alagiri Rajan - Managing Director"
                 className="h-[380px] sm:h-[480px] md:h-[580px] lg:h-[680px] xl:h-[780px] w-auto object-contain object-bottom drop-shadow-[0_25px_35px_rgba(0,0,0,0.65)]"
               />
               {/* Static Name Badge Tag below his image */}
               <div className="-mt-4 md:-mt-5 relative z-30 inline-flex items-center gap-2.5 bg-[#102F56]/95 backdrop-blur-md px-4 py-2.5 md:px-5 md:py-2.5 rounded shadow-xl border border-white/20 text-white font-bold text-xs md:text-sm uppercase tracking-wider">
-                <span>A.B. ALAGIRI RAJAN</span>
+                <span>AB ALAGIRI RAJAN</span>
                 <span className="w-2 h-2 rounded-full bg-[#E5A019]" />
                 <span>MANAGING DIRECTOR</span>
               </div>
@@ -325,7 +325,7 @@ export default function Home() {
                 Built on a Decade of Unwavering Client Trust
               </h2>
               <p className="text-[#334155] leading-relaxed mb-5 text-sm sm:text-base md:text-lg font-normal">
-                A.B. Dhanam Online Services was founded with a single mission: to make Tamil Nadu's complex registration landscape navigable and accessible for every citizen. Managing Director A.B. Alagiri Rajan has personally guided over 5,000 clients through property, marriage, trust, and society registrations.
+                AB Dhanam Online Services was founded with a single mission: to make Tamil Nadu's complex registration landscape navigable and accessible for every citizen. Managing Director AB Alagiri Rajan has personally guided over 5,000 clients through property, marriage, trust, and society registrations.
               </p>
               <p className="text-[#334155] leading-relaxed mb-8 text-base md:text-lg">
                 Our approach is meticulous, legally grounded, and client-first. We don't just process documents — we protect your rights and future.
@@ -658,7 +658,7 @@ export default function Home() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <p className="text-sm font-bold uppercase tracking-[0.25em] text-[#E5A019] mb-3">Why A.B. Dhanam</p>
+            <p className="text-sm font-bold uppercase tracking-[0.25em] text-[#E5A019] mb-3">Why AB Dhanam</p>
             <div className="w-12 h-0.5 bg-[#E5A019] mx-auto mb-6" />
             <h2 className="font-serif text-3xl md:text-5xl font-bold text-[#102F56]">The Standard of Excellence</h2>
           </motion.div>

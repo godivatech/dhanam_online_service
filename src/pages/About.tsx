@@ -10,10 +10,10 @@ const fadeUp = {
 const stagger = { hidden: {}, show: { transition: { staggerChildren: 0.12 } } };
 
 const TIMELINE = [
-  { year: "2015", title: "Foundation", desc: "A.B. Dhanam Online Services was established in Madurai with a singular vision: to make legal documentation transparent and accessible for every Tamil Nadu family and business." },
+  { year: "2015", title: "Foundation", desc: "AB Dhanam Online Services was established in Madurai with a singular vision: to make legal documentation transparent and accessible for every Tamil Nadu family and business." },
   { year: "2018", title: "1000 Clients Milestone", desc: "Crossed 1,000 satisfied clients, earning our reputation as Madurai's most trusted property registration consultancy. Expanded service offerings to include trust and society registrations." },
   { year: "2021", title: "Digital Transformation", desc: "Launched online consultation services, allowing clients across Tamil Nadu to access our expertise without geographical constraints. Processed over 5,000 documents digitally." },
-  { year: "2023", title: "5000+ Client Family", desc: "Our client family crossed the 5,000 milestone — a testament to the unwavering trust Tamil Nadu places in A.B. Dhanam's expertise and integrity." },
+  { year: "2023", title: "5000+ Client Family", desc: "Our client family crossed the 5,000 milestone — a testament to the unwavering trust Tamil Nadu places in AB Dhanam's expertise and integrity." },
   { year: "2025", title: "Today", desc: "Continuing our legacy of excellence with a team of dedicated legal professionals, serving clients across all major districts of Tamil Nadu with the same commitment as day one." },
 ];
 
@@ -86,7 +86,7 @@ export default function About() {
               <div className="w-12 h-0.5 bg-[#E5A019] mb-8" />
               <h2 className="font-serif text-4xl md:text-5xl font-bold text-[#102F56] mb-8">A Firm Built on Clarity, Speed, and Trust</h2>
               <p className="text-[#334155] leading-relaxed mb-6 text-lg md:text-xl font-normal">
-                A.B. Dhanam Online Services is Tamil Nadu's premier registration and documentation consultancy. We exist because navigating India's legal documentation system should not be a source of stress, confusion, or financial uncertainty for ordinary citizens.
+                AB Dhanam Online Services is Tamil Nadu's premier registration and documentation consultancy. We exist because navigating India's legal documentation system should not be a source of stress, confusion, or financial uncertainty for ordinary citizens.
               </p>
               <p className="text-[#334155] leading-relaxed mb-6 text-base md:text-lg">
                 From the moment a client walks in — or calls — until their final certified document is in hand, we handle everything. Our promise is simple: zero errors, complete transparency, and the fastest legally possible turnaround.
@@ -112,7 +112,7 @@ export default function About() {
                 <p className="text-[#334155] text-base md:text-lg italic leading-relaxed">
                   "Our clients trust us with the most important documents of their lives — their homes, their marriages, their legacies. That trust is something we protect with every resource we have."
                 </p>
-                <div className="mt-4 font-serif text-lg font-bold text-[#102F56]">A.B. Alagiri Rajan</div>
+                <div className="mt-4 font-serif text-lg font-bold text-[#102F56]">AB Alagiri Rajan</div>
                 <div className="text-sm text-[#E5A019] uppercase tracking-wider font-semibold mt-1">Managing Director</div>
               </div>
             </motion.div>
@@ -146,15 +146,15 @@ export default function About() {
             <div>
               <p className="text-sm uppercase tracking-[0.3em] text-[#E5A019] font-bold mb-4">Founder Profile</p>
               <div className="w-12 h-0.5 bg-[#E5A019] mb-8" />
-              <h2 className="font-serif text-4xl md:text-5xl font-bold mb-6">A.B. Alagiri Rajan</h2>
+              <h2 className="font-serif text-4xl md:text-5xl font-bold mb-6">AB Alagiri Rajan</h2>
               <p className="text-white/85 leading-relaxed mb-6 text-lg md:text-xl">
-                Managing Director of A.B. Dhanam Online Services, Mr. Alagiri Rajan is a veteran legal documentation consultant with over nine years of hands-on experience in Tamil Nadu's registration and documentation ecosystem.
+                Managing Director of AB Dhanam Online Services, Mr. Alagiri Rajan is a veteran legal documentation consultant with over nine years of hands-on experience in Tamil Nadu's registration and documentation ecosystem.
               </p>
               <p className="text-white/80 leading-relaxed mb-6 text-base md:text-lg">
                 Having personally guided more than 5,000 clients through complex property registrations, trust formations, society registrations, and marriage registrations, he brings a depth of practical knowledge that no textbook can replicate.
               </p>
               <p className="text-white/80 leading-relaxed mb-10 text-base md:text-lg">
-                His philosophy is simple: every client deserves the same level of precision, transparency, and dedication — whether they are registering a modest residential property or a multi-crore commercial layout. Under his leadership, A.B. Dhanam has maintained a zero-error record on all submitted documentation.
+                His philosophy is simple: every client deserves the same level of precision, transparency, and dedication — whether they are registering a modest residential property or a multi-crore commercial layout. Under his leadership, AB Dhanam has maintained a zero-error record on all submitted documentation.
               </p>
               <div className="flex flex-wrap gap-4">
                 {["Property Registration Expert", "Trust Law Specialist", "Documentation Consultant", "Tamil Nadu Sub-Registrar Liaison"].map((tag) => (
@@ -259,7 +259,7 @@ export default function About() {
           <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
             <h2 className="font-serif text-4xl md:text-5xl font-bold text-white mb-6">Ready to Work With Us?</h2>
             <p className="text-[#DCE3EA]/85 text-lg md:text-xl mb-10 max-w-xl mx-auto leading-relaxed">
-              Join over 5,000 satisfied clients who have trusted A.B. Dhanam with their most important legal documents.
+              Join over 5,000 satisfied clients who have trusted AB Dhanam with their most important legal documents.
             </p>
             <Link href="/book-consultation" className="inline-flex items-center bg-[#123E73] hover:bg-[#092747] text-white px-10 py-4 font-bold text-sm md:text-base uppercase tracking-wider transition-all shadow-xl border border-[#E5A019]/40" data-testid="button-cta-about-bottom">
               Book a Free Consultation <ArrowRight className="ml-2 w-4 h-4" />

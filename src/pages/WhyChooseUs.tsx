@@ -13,7 +13,7 @@ const REASONS = [
     icon: Users,
     num: "5000+",
     title: "Customers Served With Distinction",
-    desc: "Over five thousand clients — individuals buying their first home, developers registering entire townships, families completing marriages, and educators establishing trusts — have trusted A.B. Dhanam with their most important legal documents. Each case is handled with the same meticulous attention regardless of scale. This depth of experience means we have seen virtually every documentation challenge Tamil Nadu's registration landscape can present, and we know precisely how to navigate each one.",
+    desc: "Over five thousand clients — individuals buying their first home, developers registering entire townships, families completing marriages, and educators establishing trusts — have trusted AB Dhanam with their most important legal documents. Each case is handled with the same meticulous attention regardless of scale. This depth of experience means we have seen virtually every documentation challenge Tamil Nadu's registration landscape can present, and we know precisely how to navigate each one.",
   },
   {
     icon: Clock,
@@ -31,19 +31,19 @@ const REASONS = [
     icon: Shield,
     num: "Full",
     title: "Transparent Process, Zero Hidden Fees",
-    desc: "From your first consultation, you will receive a clear, comprehensive breakdown of every cost, every step, and every expected timeline. We do not believe in ambiguity when it comes to your money or your legal affairs. If a situation changes, we communicate immediately and proactively. The price we quote is the price you pay — no additional fees appear at submission, at collection, or anywhere in between. Complete financial transparency is a non-negotiable standard at A.B. Dhanam.",
+    desc: "From your first consultation, you will receive a clear, comprehensive breakdown of every cost, every step, and every expected timeline. We do not believe in ambiguity when it comes to your money or your legal affairs. If a situation changes, we communicate immediately and proactively. The price we quote is the price you pay — no additional fees appear at submission, at collection, or anywhere in between. Complete financial transparency is a non-negotiable standard at AB Dhanam.",
   },
   {
     icon: Clock,
     num: "Fast",
     title: "Fastest Legally Possible Service",
-    desc: "Speed and accuracy are not in tension at A.B. Dhanam — they are both delivered as standard. Our streamlined document preparation workflows, established relationships with Sub-Registrar offices, and proactive submission tracking ensure your registration moves at the fastest pace the legal system permits. We don't wait; we anticipate next steps and prepare for them in advance. Time is valuable, and we treat it that way.",
+    desc: "Speed and accuracy are not in tension at AB Dhanam — they are both delivered as standard. Our streamlined document preparation workflows, established relationships with Sub-Registrar offices, and proactive submission tracking ensure your registration moves at the fastest pace the legal system permits. We don't wait; we anticipate next steps and prepare for them in advance. Time is valuable, and we treat it that way.",
   },
   {
     icon: Headphones,
     num: "24/7",
     title: "Dedicated Support at Every Step",
-    desc: "Every A.B. Dhanam client is assigned a dedicated relationship manager from consultation to completion. You will never have to explain your situation to a new person or chase for updates. Your manager knows your case inside out, keeps you informed at every milestone, and is directly reachable when you have questions. Legal documentation can be stressful — we take that weight off your shoulders from start to finish.",
+    desc: "Every AB Dhanam client is assigned a dedicated relationship manager from consultation to completion. You will never have to explain your situation to a new person or chase for updates. Your manager knows your case inside out, keeps you informed at every milestone, and is directly reachable when you have questions. Legal documentation can be stressful — we take that weight off your shoulders from start to finish.",
   },
   {
     icon: Target,
@@ -69,10 +69,10 @@ export default function WhyChooseUs() {
             <span className="text-[#E5A019]">Why Choose Us</span>
           </div>
           <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }}>
-            <p className="text-sm uppercase tracking-[0.3em] text-[#E5A019] font-bold mb-4">The A.B. Dhanam Difference</p>
+            <p className="text-sm uppercase tracking-[0.3em] text-[#E5A019] font-bold mb-4">The AB Dhanam Difference</p>
             <div className="w-10 h-0.5 bg-[#E5A019] mb-6" />
             <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl font-bold leading-tight mb-5">
-              Seven Reasons to<br /><span className="text-[#E5A019] italic">Trust A.B. Dhanam</span>
+              Seven Reasons to<br /><span className="text-[#E5A019] italic">Trust AB Dhanam</span>
             </h1>
             <p className="text-white/80 text-base sm:text-lg max-w-2xl leading-relaxed">
               In legal documentation, the difference between ordinary and extraordinary is everything. Here is what sets us apart.
@@ -116,7 +116,7 @@ export default function WhyChooseUs() {
       <section className="py-24 bg-[#102F56] text-white border-t border-[#DCE3EA]/20">
         <div className="container mx-auto px-6 lg:px-12 text-center">
           <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
-            <h2 className="font-serif text-4xl md:text-5xl font-bold text-white mb-6">Experience the A.B. Dhanam Standard</h2>
+            <h2 className="font-serif text-4xl md:text-5xl font-bold text-white mb-6">Experience the AB Dhanam Standard</h2>
             <p className="text-[#DCE3EA]/85 text-lg md:text-xl mb-10 max-w-xl mx-auto leading-relaxed">
               Book a free consultation and discover why over 5,000 clients in Tamil Nadu trust us with their most important documents.
             </p>

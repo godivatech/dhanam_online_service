@@ -7,7 +7,7 @@ const SECTIONS = [
   { title: "Information We Collect", content: "When you contact us, book a consultation, or submit a form on our website, we collect information you provide — including your name, phone number, email address, and details about your legal documentation requirements. We may also collect general usage information such as the pages you visit and how you found our website." },
   { title: "How We Use Your Information", content: "We use the information you provide solely to respond to your enquiries, schedule and conduct consultations, deliver the services you have requested, and improve our service quality. We do not use your information for automated marketing without your consent, and we do not sell or rent your data to any third party." },
   { title: "Data Protection", content: "We take the security of your personal information seriously. All consultation communications and client documents are treated with strict confidentiality under professional legal obligations. Digital information is stored securely and access is restricted to authorised team members directly involved in your service." },
-  { title: "Sharing of Information", content: "A.B. Dhanam Online Services does not sell, trade, or transfer your personal information to outside parties. Information may only be shared with government authorities (Sub-Registrar offices, etc.) as necessary to complete your registration or documentation service, and only with your knowledge and consent." },
+  { title: "Sharing of Information", content: "AB Dhanam Online Services does not sell, trade, or transfer your personal information to outside parties. Information may only be shared with government authorities (Sub-Registrar offices, etc.) as necessary to complete your registration or documentation service, and only with your knowledge and consent." },
   { title: "Cookies", content: "Our website may use basic cookies to improve your browsing experience. These do not collect personally identifiable information and can be disabled through your browser settings at any time." },
   { title: "Your Rights", content: "You have the right to access the personal information we hold about you, request corrections, and request deletion. To exercise any of these rights, please contact us at the details provided below. We will respond within a reasonable timeframe." },
   { title: "Contact", content: "If you have questions about this Privacy Policy or how we handle your information, please contact us at contact@abdhanam.com or call +91 98765 43210." },
@@ -37,7 +37,7 @@ export default function PrivacyPolicy() {
         <div className="container mx-auto px-6 lg:px-12 max-w-3xl">
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
             <p className="text-[#334155] leading-relaxed text-lg mb-12">
-              A.B. Dhanam Online Services is committed to protecting your privacy and handling your personal information with complete transparency and care. This policy describes how we collect, use, and safeguard your information.
+              AB Dhanam Online Services is committed to protecting your privacy and handling your personal information with complete transparency and care. This policy describes how we collect, use, and safeguard your information.
             </p>
             <div className="space-y-10">
               {SECTIONS.map((s, i) => (

@@ -108,7 +108,7 @@ const HISTORIC_MILESTONES = [
   {
     year: "1955",
     title: "Founded by Pioneer M. Alagirisamy",
-    desc: "M. Alagirisamy launched A.B. Dhanam in Madurai as the city's very first dedicated radio broadcasting and stage lighting enterprise, bringing modern acoustic amplification to post-independence Tamil Nadu."
+    desc: "M. Alagirisamy launched AB Dhanam in Madurai as the city's very first dedicated radio broadcasting and stage lighting enterprise, bringing modern acoustic amplification to post-independence Tamil Nadu."
   },
   {
     year: "Historic",
@@ -118,7 +118,7 @@ const HISTORIC_MILESTONES = [
   {
     year: "1970s - 90s",
     title: "Pillar of Tamil Nadu Temple & Political Gatherings",
-    desc: "From the world-renowned Madurai Meenakshi Amman Temple festivals to historic public rallies and community weddings across Ramanathapuram, Dindigul, and Tirunelveli, A.B. Dhanam became a household name."
+    desc: "From the world-renowned Madurai Meenakshi Amman Temple festivals to historic public rallies and community weddings across Ramanathapuram, Dindigul, and Tirunelveli, AB Dhanam became a household name."
   },
   {
     year: "Present",
@@ -216,7 +216,7 @@ export default function SoundAndLightings() {
 
   const handleWhatsAppBooking = (e: React.FormEvent) => {
     e.preventDefault();
-    const message = `Hello A.B Dhanam Radio & Lightings!
+    const message = `Hello AB Dhanam Radio & Lightings!
 I would like to request an event quote:
 - Name: ${clientName || "Client"}
 - Phone: ${clientPhone || "Provided on call"}
@@ -273,7 +273,7 @@ Please share your availability and package quote. Thank you!`;
             </div>
             <div>
               <span className="font-serif text-lg sm:text-xl md:text-2xl font-black text-[#102F56] tracking-tight group-hover:text-[#D97706] transition-colors block leading-tight">
-                A.B DHANAM
+                AB DHANAM
               </span>
               <span className="text-xs md:text-sm font-bold text-[#D97706] tracking-wider uppercase block">
                 Radio & Lightings
@@ -457,7 +457,7 @@ Please share your availability and package quote. Thank you!`;
                 <ArrowRight className="w-5 h-5" />
               </a>
               <a
-                href="https://wa.me/919876543210?text=Hello%20A.B.%20Dhanam%20Radio%20and%20Lightings,%20I%20need%20sound%20and%20lighting%20services%20for%20my%20event."
+                href="https://wa.me/919876543210?text=Hello%20AB%20Dhanam%20Radio%20and%20Lightings,%20I%20need%20sound%20and%20lighting%20services%20for%20my%20event."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-full sm:w-auto px-8 py-4 rounded-xl border border-white/30 hover:border-white text-white hover:bg-white/10 font-bold text-sm md:text-base uppercase tracking-wider transition-all flex items-center justify-center gap-2.5"
@@ -516,7 +516,7 @@ Please share your availability and package quote. Thank you!`;
                   <span className="text-[#D97706]">1st Anniversary Acoustics & Lights</span>
                 </h2>
                 <p className="text-[#334155] text-sm sm:text-base leading-relaxed mb-4 font-normal">
-                  In the formative years of modern Tamil Nadu, when tens of thousands congregated to honor the revered leader <strong>Pasumpon Muthuramalingam Thevar</strong> on his 1st Anniversary, sound reinforcement and festival illumination were entrusted to <strong>M. Alagirisamy and A.B. Dhanam Radio & Lightings</strong>.
+                  In the formative years of modern Tamil Nadu, when tens of thousands congregated to honor the revered leader <strong>Pasumpon Muthuramalingam Thevar</strong> on his 1st Anniversary, sound reinforcement and festival illumination were entrusted to <strong>M. Alagirisamy and AB Dhanam Radio & Lightings</strong>.
                 </p>
                 <p className="text-[#334155] text-sm sm:text-base leading-relaxed mb-5 font-normal">
                   Through cutting-edge horn arrays, high-power audio distribution, and grand floodlights across the solemn grounds, our team ensured every voice reached the massive multitude clearly — establishing a benchmark of technical reliability that has stood unbroken for over 70 years.
@@ -935,7 +935,7 @@ Please share your availability and package quote. Thank you!`;
                 </div>
                 <div>
                   <h4 className="font-serif text-lg font-black text-white leading-tight">
-                    A.B DHANAM
+                    AB DHANAM
                   </h4>
                   <p className="text-xs text-[#E5A019] font-bold uppercase tracking-wider">
                     Radio & Lightings
@@ -971,7 +971,7 @@ Please share your availability and package quote. Thank you!`;
               </h5>
               <ul className="space-y-2 text-xs">
                 <li><Link href="/" className="hover:text-white font-bold transition-colors">&rarr; AB DHANAM GROUP Master Portal</Link></li>
-                <li><Link href="/legal" className="hover:text-white font-bold transition-colors">&rarr; A.B. Dhanam Online Services (Legal)</Link></li>
+                <li><Link href="/legal" className="hover:text-white font-bold transition-colors">&rarr; AB Dhanam Online Services (Legal)</Link></li>
                 <li><Link href="/about" className="hover:text-white transition-colors">About the Group Legacy</Link></li>
                 <li><Link href="/contact" className="hover:text-white transition-colors">Corporate Inquiries</Link></li>
               </ul>
@@ -996,7 +996,7 @@ Please share your availability and package quote. Thank you!`;
           </div>
 
           <div className="pt-8 border-t border-white/10 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs text-white/50">
-            <p>© {new Date().getFullYear()} A.B Dhanam Radio & Lightings. All rights reserved.</p>
+            <p>© {new Date().getFullYear()} AB Dhanam Radio & Lightings. All rights reserved.</p>
             <div className="flex gap-6">
               <Link href="/privacy-policy" className="hover:text-white transition-colors">Privacy Policy</Link>
               <Link href="/terms" className="hover:text-white transition-colors">Terms of Service</Link>

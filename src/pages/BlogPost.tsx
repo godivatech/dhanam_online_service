@@ -72,7 +72,7 @@ Form 15 EC is issued when transactions are found on the property during the requ
 
 **How to Obtain an EC**
 
-ECs can be applied for at the Sub-Registrar office where the property is registered, or online through the TNREGINET portal for recently digitised records. You need to specify the survey number, extent, and time period. A.B. Dhanam handles EC applications on clients' behalf as part of every property registration service.`,
+ECs can be applied for at the Sub-Registrar office where the property is registered, or online through the TNREGINET portal for recently digitised records. You need to specify the survey number, extent, and time period. AB Dhanam handles EC applications on clients' behalf as part of every property registration service.`,
   },
   "special-marriage-act-registration": {
     title: "Special Marriage Act Registration in Tamil Nadu: A Step-by-Step Guide",
@@ -95,7 +95,7 @@ On the day of solemnisation, bride and groom must appear in person alongside thr
 
 **Documentation Checklist**
 
-Documents required include birth proof (Passport or 10th Certificate), residence proof (Aadhaar or Voter ID), four individual passport-size photos each, and signed declarations of marital status. A.B. Dhanam ensures all filings are error-free to prevent delays.`,
+Documents required include birth proof (Passport or 10th Certificate), residence proof (Aadhaar or Voter ID), four individual passport-size photos each, and signed declarations of marital status. AB Dhanam ensures all filings are error-free to prevent delays.`,
   },
   "charitable-trust-registration-benefits": {
     title: "Registering a Charitable Trust in Tamil Nadu: Benefits, Process & Requirements",
@@ -148,7 +148,7 @@ Certain relief provisions exist, including stamp duty concessions for women buye
 
 **Avoiding Deficiency Penalties**
 
-Under-declaring guideline value or misclassifying survey boundaries can trigger document impoundment under Section 47A of the Indian Stamp Act, leading to heavy interest penalties. A.B. Dhanam conducts pre-calculation scrutiny to ensure exact compliance.`,
+Under-declaring guideline value or misclassifying survey boundaries can trigger document impoundment under Section 47A of the Indian Stamp Act, leading to heavy interest penalties. AB Dhanam conducts pre-calculation scrutiny to ensure exact compliance.`,
   },
   "sale-deed-vs-agreement-to-sell": {
     title: "Sale Deed vs Agreement to Sell: Understanding the Critical Difference",
@@ -178,7 +178,7 @@ Under Section 65 of the Indian Evidence Act, a certified copy issued by the Sub-
 
 **How Retrieval Works**
 
-Applications require document registration number, year of execution, executing party names, and the relevant Sub-Registrar jurisdiction. A.B. Dhanam manages both physical record searches and TNREGINET computerized extractions for documents dating back multiple decades.`,
+Applications require document registration number, year of execution, executing party names, and the relevant Sub-Registrar jurisdiction. AB Dhanam manages both physical record searches and TNREGINET computerized extractions for documents dating back multiple decades.`,
   },
 };
 
@@ -222,7 +222,7 @@ export default function BlogPost() {
             <div className="flex items-center gap-6 text-sm font-medium text-white/80">
               <span className="flex items-center gap-2"><Calendar className="w-4 h-4 text-[#E5A019]" />{post.date}</span>
               <span className="flex items-center gap-2"><Clock className="w-4 h-4 text-[#E5A019]" />{post.readTime}</span>
-              <span>A.B. Dhanam Team</span>
+              <span>AB Dhanam Team</span>
             </div>
           </motion.div>
         </div>

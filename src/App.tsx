@@ -36,11 +36,11 @@ function Router() {
       {/* ── MASTER GROUP LANDING PAGE (Root Domain Portal) ── */}
       <Route path="/" component={GroupPortal} />
 
-      {/* ── ENTERPRISE 1: A.B. DHANAM ONLINE SERVICES (Legal Division) ── */}
+      {/* ── ENTERPRISE 1: AB DHANAM ONLINE SERVICES (Legal Division) ── */}
       <Route path="/legal" component={Home} />
       <Route path="/online-services" component={Home} />
 
-      {/* ── ENTERPRISE 2: A.B. DHANAM RADIO & LIGHTINGS (Single-Page Site) ── */}
+      {/* ── ENTERPRISE 2: AB DHANAM RADIO & LIGHTINGS (Single-Page Site) ── */}
       <Route path="/radio-and-lightings" component={SoundAndLightings} />
       <Route path="/sound-and-lightings" component={SoundAndLightings} />
 

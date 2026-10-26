@@ -205,7 +205,7 @@ export default function Contact() {
               allowFullScreen
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
-              title="A.B. Dhanam Office Location"
+              title="AB Dhanam Office Location"
               className="border border-[#DCE3EA]"
             />
           </div>
