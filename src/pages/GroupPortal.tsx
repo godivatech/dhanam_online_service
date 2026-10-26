@@ -122,7 +122,7 @@ export default function GroupPortal() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.1 }}
-              className="bg-white rounded-2xl sm:rounded-3xl overflow-hidden shadow-2xl flex flex-col justify-between hover:-translate-y-1 transition-all duration-300"
+              className="bg-white rounded-2xl sm:rounded-3xl overflow-hidden shadow-2xl flex flex-col justify-between hover:-translate-y-1 transition-all duration-300 group"
             >
               {/* Dark Navy Top Header Block */}
               <div className="bg-[#0B2545] p-5 sm:p-6 text-white">
@@ -134,6 +134,15 @@ export default function GroupPortal() {
                 </h2>
               </div>
 
+              {/* Authentic Representative Image */}
+              <div className="relative h-48 sm:h-52 w-full overflow-hidden bg-slate-100 border-b border-[#DCE3EA]">
+                <img
+                  src="/images/services/Legal%20Documentation%20and%20Advisory.png"
+                  alt="AB Dhanam Legal Advisory and Registration Services in Tamil Nadu"
+                  className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
+                />
+              </div>
+
               {/* White Content Body */}
               <div className="p-5 sm:p-6 flex flex-col justify-between flex-1 gap-5">
                 <p className="text-xs sm:text-sm text-[#475569] leading-relaxed">
@@ -143,10 +152,10 @@ export default function GroupPortal() {
                 {/* CTA Button */}
                 <Link
                   href="/legal"
-                  className="w-full py-3.5 rounded-xl bg-[#0B2545] hover:bg-[#07192F] text-white font-bold text-xs sm:text-sm uppercase tracking-wider transition-all shadow-md flex items-center justify-center gap-2 group"
+                  className="w-full py-3.5 rounded-xl bg-[#0B2545] hover:bg-[#07192F] text-white font-bold text-xs sm:text-sm uppercase tracking-wider transition-all shadow-md flex items-center justify-center gap-2 group/btn"
                 >
                   <span>EXPLORE LEGAL WEBSITE</span>
-                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                  <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
                 </Link>
               </div>
             </motion.div>
@@ -156,7 +165,7 @@ export default function GroupPortal() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
-              className="bg-white rounded-2xl sm:rounded-3xl overflow-hidden shadow-2xl flex flex-col justify-between hover:-translate-y-1 transition-all duration-300"
+              className="bg-white rounded-2xl sm:rounded-3xl overflow-hidden shadow-2xl flex flex-col justify-between hover:-translate-y-1 transition-all duration-300 group"
             >
               {/* Dark Navy Top Header Block */}
               <div className="bg-[#0B2545] p-5 sm:p-6 text-white">
@@ -168,6 +177,15 @@ export default function GroupPortal() {
                 </h2>
               </div>
 
+              {/* Authentic Representative Image */}
+              <div className="relative h-48 sm:h-52 w-full overflow-hidden bg-slate-100 border-b border-[#DCE3EA]">
+                <img
+                  src="/images/sound-and-lightings-hero.jpg"
+                  alt="AB Dhanam Radio & Lightings Concert Stage and Illumination in Madurai"
+                  className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
+                />
+              </div>
+
               {/* White Content Body */}
               <div className="p-5 sm:p-6 flex flex-col justify-between flex-1 gap-5">
                 <p className="text-xs sm:text-sm text-[#475569] leading-relaxed">
@@ -177,10 +195,10 @@ export default function GroupPortal() {
                 {/* CTA Button */}
                 <Link
                   href="/radio-and-lightings"
-                  className="w-full py-3.5 rounded-xl bg-[#D97706] hover:bg-[#b45309] text-white font-bold text-xs sm:text-sm uppercase tracking-wider transition-all shadow-md flex items-center justify-center gap-2 group"
+                  className="w-full py-3.5 rounded-xl bg-[#D97706] hover:bg-[#b45309] text-white font-bold text-xs sm:text-sm uppercase tracking-wider transition-all shadow-md flex items-center justify-center gap-2 group/btn"
                 >
                   <span>EXPLORE SOUND & LIGHTINGS</span>
-                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                  <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
                 </Link>
               </div>
             </motion.div>
