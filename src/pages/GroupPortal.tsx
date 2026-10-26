@@ -49,11 +49,11 @@ export default function GroupPortal() {
       <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-[#DCE3EA] shadow-xs">
         <div className="container mx-auto px-6 lg:px-12 py-3.5 flex items-center justify-between">
           <Link href="/" className="flex items-center py-0.5 group" aria-label="AB DHANAM GROUP">
-            <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-2xl bg-white p-2 border border-[#DCE3EA] group-hover:border-[#E5A019] shadow-xs transition-all flex items-center justify-center shrink-0">
+            <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-xl bg-white p-1 border border-[#DCE3EA] group-hover:border-[#E5A019] shadow-xs transition-all flex items-center justify-center shrink-0 overflow-hidden">
               <img
-                src="/images/Logo-2.png"
+                src="/images/Logo-trimmed.png"
                 alt="AB DHANAM GROUP Logo"
-                className="w-full h-full object-contain group-hover:scale-105 transition-transform"
+                className="w-full h-full object-contain scale-110 group-hover:scale-120 transition-transform duration-300"
               />
             </div>
           </Link>
@@ -232,11 +232,11 @@ export default function GroupPortal() {
             {/* Column 1: Brand */}
             <div>
               <div className="mb-5">
-                <div className="w-20 h-20 sm:w-24 sm:h-24 rounded-2xl bg-white p-2 border border-[#E5A019]/40 flex items-center justify-center shadow-lg">
+                <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-2xl bg-white p-1.5 border border-[#E5A019]/40 flex items-center justify-center shadow-lg overflow-hidden">
                   <img
-                    src="/images/Logo-2.png"
+                    src="/images/Logo-trimmed.png"
                     alt="AB DHANAM GROUP"
-                    className="w-full h-full object-contain"
+                    className="w-full h-full object-contain scale-110"
                   />
                 </div>
               </div>
