@@ -117,7 +117,7 @@ export default function GroupPortal() {
                   onClick={() => setMobileMenuOpen(false)}
                   className="w-full text-center py-3 rounded-lg bg-[#D97706] text-white font-bold text-xs uppercase tracking-wider"
                 >
-                  Enter A.B. Dhanam Radio & Lightings &rarr;
+                  Enter A.B Dhanam Radio & Lightings &rarr;
                 </Link>
               </div>
             </motion.div>
@@ -246,7 +246,7 @@ export default function GroupPortal() {
                   FOUNDED IN 1955 BY M. ALAGIRISAMY
                 </p>
                 <h2 className="text-2xl sm:text-3xl font-bold text-white tracking-tight">
-                  A.B. Dhanam Radio & Lightings
+                  A.B Dhanam Radio & Lightings
                 </h2>
               </div>
 

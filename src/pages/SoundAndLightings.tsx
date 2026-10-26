@@ -226,10 +226,10 @@ Please share your availability and package quote. Thank you!`;
             </div>
             <div>
               <span className="font-serif text-lg sm:text-xl md:text-2xl font-black text-[#102F56] tracking-tight group-hover:text-[#D97706] transition-colors block leading-tight">
-                A.B. DHANAM
+                A.B DHANAM
               </span>
               <span className="text-xs md:text-sm font-bold text-[#D97706] tracking-wider uppercase block">
-                Radio & Lightings • Est. 1955
+                Radio & Lightings
               </span>
             </div>
           </Link>
@@ -880,10 +880,10 @@ Please share your availability and package quote. Thank you!`;
                 </div>
                 <div>
                   <h4 className="font-serif text-lg font-black text-white leading-tight">
-                    A.B. DHANAM
+                    A.B DHANAM
                   </h4>
                   <p className="text-xs text-[#E5A019] font-bold uppercase tracking-wider">
-                    Radio & Lightings (Est. 1955)
+                    Radio & Lightings
                   </p>
                 </div>
               </div>
