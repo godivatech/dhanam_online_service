@@ -16,12 +16,12 @@ export default function GroupPortal() {
     <div className="min-h-screen bg-[#FAFBFC] text-[#334155] font-sans selection:bg-[#E5A019]/30 selection:text-[#102F56] flex flex-col justify-between">
       {/* ── MAIN HEADER / BRAND BAR ── */}
       <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-[#DCE3EA] shadow-xs">
-        <div className="container mx-auto px-6 lg:px-12 py-2 flex items-center justify-between">
-          <Link href="/" className="flex items-center group py-0.5" aria-label="AB DHANAM GROUP">
+        <div className="container mx-auto px-6 lg:px-12 py-1 sm:py-1.5 flex items-center justify-between">
+          <Link href="/" className="flex items-center group" aria-label="AB DHANAM GROUP">
             <img
               src="/images/Logo-2.png"
               alt="AB DHANAM GROUP"
-              className="w-28 h-28 sm:w-32 sm:h-32 md:w-36 md:h-36 object-contain group-hover:scale-105 transition-transform duration-200"
+              className="w-28 h-28 sm:w-32 sm:h-32 md:w-36 md:h-36 object-contain group-hover:scale-105 transition-transform duration-200 -mb-4 sm:-mb-5 md:-mb-6 -mt-1 sm:-mt-2"
             />
           </Link>
 
