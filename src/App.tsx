@@ -77,8 +77,56 @@ function ScrollToTop() {
   const [pathname] = useLocation();
 
   useEffect(() => {
-    window.scrollTo(0, 0);
+    // If navigating to a URL with a hash, smoothly scroll to that anchor element
+    if (window.location.hash) {
+      const id = window.location.hash.slice(1);
+      const element = document.getElementById(id);
+      if (element) {
+        setTimeout(() => {
+          const headerOffset = 80;
+          const elementPosition = element.getBoundingClientRect().top;
+          const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+          window.scrollTo({
+            top: offsetPosition,
+            behavior: "smooth"
+          });
+        }, 120);
+        return;
+      }
+    }
+    window.scrollTo({ top: 0, behavior: "instant" as ScrollBehavior });
   }, [pathname]);
+
+  // Global smooth scrolling delegation for in-page anchor links (#services, #gallery, etc.)
+  useEffect(() => {
+    const handleAnchorClick = (e: MouseEvent) => {
+      const target = (e.target as HTMLElement).closest("a");
+      if (!target) return;
+      const href = target.getAttribute("href");
+      if (!href) return;
+
+      if (href.startsWith("#") && href.length > 1) {
+        const id = href.slice(1);
+        const element = document.getElementById(id);
+        if (element) {
+          e.preventDefault();
+          const headerOffset = 80;
+          const elementPosition = element.getBoundingClientRect().top;
+          const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+          window.scrollTo({
+            top: offsetPosition,
+            behavior: "smooth"
+          });
+
+          window.history.pushState(null, "", href);
+        }
+      }
+    };
+
+    document.addEventListener("click", handleAnchorClick);
+    return () => document.removeEventListener("click", handleAnchorClick);
+  }, []);
 
   return null;
 }

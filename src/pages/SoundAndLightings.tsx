@@ -503,7 +503,7 @@ Please share your availability and package quote. Thank you!`;
       </section>
 
       {/* ── HISTORIC SPOTLIGHT: PASUMPON MUTHURAMALINGAM THEVAR 1ST ANNIVERSARY (#F1F5F9) ── */}
-      <section id="legacy" className="py-24 md:py-32 bg-[#F1F5F9]">
+      <section id="legacy" className="scroll-mt-20 md:scroll-mt-24 py-24 md:py-32 bg-[#F1F5F9]">
         <div className="container mx-auto px-6 lg:px-12">
           <div className="max-w-5xl mx-auto bg-white border border-[#DCE3EA] rounded-3xl p-8 md:p-14 shadow-sm relative overflow-hidden">
             <div className="flex flex-col lg:flex-row items-center gap-10">
@@ -576,7 +576,7 @@ Please share your availability and package quote. Thank you!`;
       </section>
 
       {/* ── COMPREHENSIVE SERVICES SECTION (Clean White Background) ── */}
-      <section id="services" className="py-24 md:py-32 bg-[#FAFBFC]">
+      <section id="services" className="scroll-mt-20 md:scroll-mt-24 py-24 md:py-32 bg-[#FAFBFC]">
         <div className="container mx-auto px-6 lg:px-12">
           <div className="text-center max-w-3xl mx-auto mb-20">
             <span className="text-sm font-bold uppercase tracking-[0.25em] text-[#D97706] mb-3 block">
@@ -640,7 +640,7 @@ Please share your availability and package quote. Thank you!`;
       </section>
 
       {/* ── TECHNICAL EQUIPMENT & INVENTORY SPECIFICATION (#F1F5F9) ── */}
-      <section id="equipment" className="py-24 bg-[#F1F5F9] border-t border-[#DCE3EA]">
+      <section id="equipment" className="scroll-mt-20 md:scroll-mt-24 py-24 bg-[#F1F5F9] border-t border-[#DCE3EA]">
         <div className="container mx-auto px-6 lg:px-12">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <span className="text-sm font-bold uppercase tracking-[0.25em] text-[#D97706] mb-3 block">
@@ -704,7 +704,7 @@ Please share your availability and package quote. Thank you!`;
       </section>
 
       {/* ── PHOTO & ARCHIVAL GALLERY SECTION (#FAFBFC) ── */}
-      <section id="gallery" className="py-24 md:py-32 bg-[#FAFBFC] border-t border-[#DCE3EA]">
+      <section id="gallery" className="scroll-mt-20 md:scroll-mt-24 py-24 md:py-32 bg-[#FAFBFC] border-t border-[#DCE3EA]">
         <div className="container mx-auto px-6 lg:px-12">
           {/* Section Header */}
           <div className="text-center max-w-xl mx-auto mb-10 md:mb-12">
@@ -752,7 +752,7 @@ Please share your availability and package quote. Thank you!`;
       </section>
 
       {/* ── INTERACTIVE INSTANT EVENT QUOTE & BOOKING FORM ── */}
-      <section id="booking" className="py-24 md:py-32 bg-white border-t border-[#DCE3EA]">
+      <section id="booking" className="scroll-mt-20 md:scroll-mt-24 py-24 md:py-32 bg-white border-t border-[#DCE3EA]">
         <div className="container mx-auto px-6 lg:px-12">
           <div className="max-w-4xl mx-auto bg-[#FAFBFC] border border-[#DCE3EA] rounded-3xl p-8 md:p-14 shadow-md">
             <div className="text-center mb-10">
